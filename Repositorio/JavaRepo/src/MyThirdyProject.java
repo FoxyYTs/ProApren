@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import org.omg.CORBA.ValueMember;
-
 public class MyThirdyProject {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
