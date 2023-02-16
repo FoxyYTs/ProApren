@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Github.iml" filepath="$PROJECT_DIR$/Github.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Repositorio/JavaRepo/JavaRepo.iml" filepath="$PROJECT_DIR$/Repositorio/JavaRepo/JavaRepo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Repositorio/Repositorio.iml" filepath="$PROJECT_DIR$/Repositorio/Repositorio.iml" />
+    </modules>
+  </component>
+</project>

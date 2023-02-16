@@ -1,0 +1,2 @@
+class Cayment:
+    id = int
