@@ -1,5 +1,5 @@
 package Repositorio.CursoPOO.Java;
 
-public class payment {
+public class Payment {
     Integer id;
 }

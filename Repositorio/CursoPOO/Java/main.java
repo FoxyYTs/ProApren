@@ -1,9 +1,11 @@
 package Repositorio.CursoPOO.Java;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        /*sangria*/
-            /*sangria*/
-                /*sangria*/
+        Car car = new Car();
+        car.license = "QWE123";
+        car.driver = "Foxy";
+        car.passegenger = 4;
+        System.out.println("Placa: " + car.license);
     }
 }
