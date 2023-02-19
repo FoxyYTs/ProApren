@@ -7,7 +7,7 @@ public class Resta_sucesiva{
         
         restos = victima;
         for (i = 0; restos >= restante; i++) {
-            restos-=restante;-
+            restos-=restante;
         }
         System.out.println("Restas "+(victima/restante));
         System.out.println("Modulo "+(victima%restante));
