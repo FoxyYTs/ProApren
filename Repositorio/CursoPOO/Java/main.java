@@ -13,10 +13,10 @@ public class Main {
         car.setPassenger(4);
         car.printDataCar();
 
-        System.out.print("UberX");
+        System.out.print("UberX\n");
         UberX uberx = new UberX("PEP023", new Account("Freddy","Bear","freddy@gmail.com","1234"),"Toyota","Corolla");
         uberx.setPassenger(4); 
         uberx.printDataCar();
         
     }
-}   
+}    
