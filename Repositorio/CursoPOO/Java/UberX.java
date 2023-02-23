@@ -9,4 +9,6 @@ public class UberX extends Car {//UberX Hereda de Car
         this.brand = brand;
         this.model = model;
     }
+
+    
 }

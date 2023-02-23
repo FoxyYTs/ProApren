@@ -8,14 +8,15 @@ public class Main {
         } catch (Exception e){
 
         }
-        
-        Car car = new Car("QWE123", new Account("Foxy", "Fox","foxy@gmail.com","1234"));
-        car.passegenger = 4;
+        System.out.println("Carro");
+        Car car = new Car("QWE123", new Account("Foxy", "Fox","foxy@gmail.com","1234"));  
+        car.setPassenger(4);
         car.printDataCar();
 
-        Car car2 = new Car("PEP023", new Account("Freddy","Bear","freddy@gmail.com","1234"));
-        car2.passegenger = 4;
-        car2.printDataCar();
+        System.out.print("UberX");
+        UberX uberx = new UberX("PEP023", new Account("Freddy","Bear","freddy@gmail.com","1234"),"Toyota","Corolla");
+        uberx.setPassenger(4); 
+        uberx.printDataCar();
         
     }
-}
+}   
