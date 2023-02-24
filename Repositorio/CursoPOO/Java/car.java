@@ -4,7 +4,7 @@ public class Car {
     private Integer id;
     private String license;
     private Account driver;
-    private Integer passegenger;
+    private Integer passenger;
 
     public Car(String license, Account driver){
         this.license = license;
@@ -13,16 +13,15 @@ public class Car {
 
     
     void printDataCar(){
-        System.out.println("\nID: " + id + "\nLicense: " + license + "\nNombre Conductor: " + driver.name + "\nPasajeros: " + passegenger);
+        System.out.println("\nID: " + id + "\nLicense: " + license + "\nNombre Conductor: " + driver.name + "\nPasajeros: " + passenger);
     }
 
     public Integer getPassenger(){
-        return passegenger;
+        return passenger;
     }
-
     public void setPassenger(Integer passenger){
         if(passenger == 4){
-            this.passegenger = passenger;
+            this.passenger = passenger;
         }else{
             System.out.println("Necesitas 4 pasajeros");
         }

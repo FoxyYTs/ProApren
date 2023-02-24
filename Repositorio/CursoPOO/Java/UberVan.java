@@ -6,6 +6,7 @@ import java.util.Map;
 public class UberVan extends Car{//UberVan hereda de Car
     Map<String, Map<String,Integer>> typeCarAccepted;
     ArrayList<String> seatsMaterial;
+    private Integer passenger;
 
     public UberVan(String license, Account driver, String brand, String model, Map<String, Map<String,Integer>> typeCarAccepted, ArrayList<String> seatsMaterial){
         super(license,driver);
@@ -16,5 +17,14 @@ public class UberVan extends Car{//UberVan hereda de Car
     public UberVan(String license, Account driver){
 
         super(license,driver);
+    }
+
+    @Override
+    public void setPassenger(Integer passenger) {
+        if(passenger == 6){
+            this.passenger = passenger;
+        }else{
+            System.out.println("Necesitas 6 pasajeros");
+        }
     }
 }
