@@ -22,7 +22,7 @@ public class Main {
         if (opcion == 1){
             System.out.println("El resultado de Kelvin a Celcius es: " + operacion.KaC(temp));
         }else if (opcion == 2){
-            System.out.println("El resultado de Kelvin a Farenheit es: " + operacion.KaF(temp));
+            System.out.println("Eal resultado de Kelvin a Farenheit es: " + operacion.KaF(temp));
         }else if (opcion == 3){
             System.out.println("El resultado de Farenheit a Kelvin es: " + operacion.FaK(temp));
         }else if (opcion == 4){
