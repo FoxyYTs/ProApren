@@ -49,4 +49,5 @@ public class Funciones {
     public void BaD(int valor){//Binario a Decimal
 
     }
+
 }
