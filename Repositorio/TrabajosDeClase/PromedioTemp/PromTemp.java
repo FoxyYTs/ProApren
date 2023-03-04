@@ -2,8 +2,6 @@ package Repositorio.TrabajosDeClase.PromedioTemp;
 
 import java.util.Scanner;
 
-import Repositorio.TrabajosDeClase.Temperatura.Temperatura;
-
 public class PromTemp {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
