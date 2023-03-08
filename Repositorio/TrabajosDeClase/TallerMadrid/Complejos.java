@@ -1,8 +1,11 @@
 package Repositorio.TrabajosDeClase.TallerMadrid;
 
 import java.util.Scanner;
+import java.lang.Math;
+
 public class Complejos {
     public static void main(String[] args) {
+        Complejo2 z1 = new Complejo2(2, 4);
         Scanner leer = new Scanner(System.in);
 
         double numA = 0,numB = 0;
