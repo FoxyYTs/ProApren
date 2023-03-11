@@ -5,7 +5,7 @@ public class Main {
         Scanner leer = new Scanner(System.in);
         
         int opcionA = 0,opcionB = 0;
-        String valor;
+        String valor = "";
         boolean x = true;
 
         try {
@@ -56,7 +56,11 @@ public class Main {
             }
             System.out.println("El resultado de la conversion es: " + elecF(opcionA, opcionB, valor));
         }
-        
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 4; j++) {
+                System.out.println(elecF(i, j, valor));
+            }
+        }
     }
     public static int destino(int a, String op1){
         Scanner leer = new Scanner(System.in);
@@ -115,6 +119,8 @@ public class Main {
             return conv.HaB(valor);
         } else if (opcionA == 4 && opcionB == 3){
             return conv.HaO(valor);
+        }else {
+            System.out.println("Opcion no valida");
         }
         return "A";
     }
