@@ -14,11 +14,17 @@ public class Main {
 
         }
 
-        
 
         while (x) {
+            
             System.out.print("Ingrese el numero que quiera convertir: ");
             valor = leer.nextLine();
+
+            try {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } catch (Exception e){
+    
+            }
 
             System.out.println("En que base esta escrito este numero?\n1) Decimal\n2) Binario\n3) Octal\n4) Hexadecimal\n5) Cerrar Programa");
             opcionA = Integer.parseInt(leer.nextLine());
@@ -56,12 +62,9 @@ public class Main {
             }
             System.out.println("El resultado de la conversion es: " + elecF(opcionA, opcionB, valor));
         }
-        for (int i = 1; i <= 4; i++) {
-            for (int j = 1; j <= 4; j++) {
-                System.out.println(elecF(i, j, valor));
-            }
-        }
+
     }
+
     public static int destino(int a, String op1){
         Scanner leer = new Scanner(System.in);
         
@@ -92,7 +95,8 @@ public class Main {
 
         }
     }
-    public static String elecF(int opcionA,int opcionB, String valor){//12
+
+    public static String elecF(int opcionA,int opcionB, String valor){
         Funciones conv = new Funciones();
 
         if (opcionA == 1 && opcionB == 2){
