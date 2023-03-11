@@ -2,11 +2,25 @@ package Repositorio.TrabajosDeClase.numeros;
 
 public class Funciones {
     
-    public void DaO(int valor){//Decimal a Octogonal
-
+    /**
+     * 
+     * @param valor
+     * @return octal
+     */
+    public String DaO(int valor){
+        String octal = "";
+        int residuo = 0;
+    
+        while(valor > 0) {
+            residuo = valor % 8;
+            octal = residuo + octal;
+            valor = valor / 8;
+        }
+    
+        return octal;
     }
-
-    public void DaH(int valor){//Decimal a Hexadecimal
+    /**Decimal a Hexadecimal*/
+    public void DaH(int valor){
 
     }
 

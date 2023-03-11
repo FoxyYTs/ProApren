@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        Funciones conv = new Funciones();
+        
         int valor,opcionA = 0,opcionB = 0;
         boolean x = true;
 
@@ -25,22 +25,22 @@ public class Main {
             switch (opcionA) {
                 case 1:
                     System.out.println("El numero " + valor + " es en base Decimal");
-                    opcionB = destino(opcionA);
+                    opcionB = destino(opcionA, "D");
                     break;
     
                 case 2:
                     System.out.println("El numero " + valor + " es en base Binario");
-                    opcionB = destino(opcionA);
+                    opcionB = destino(opcionA, "B");
                     break;
                 
                 case 3:
                     System.out.println("El numero " + valor + " es en base Octal");
-                    opcionB = destino(opcionA);
+                    opcionB = destino(opcionA, "O");
                     break;
                 
                 case 4:
                     System.out.println("El numero " + valor + " es en base Hexadecimal");
-                    opcionB = destino(opcionA);
+                    opcionB = destino(opcionA, "H");
                     break;
 
                 case 5:
@@ -53,38 +53,68 @@ public class Main {
                     x = true;
                     break;
             }
+            System.out.println(opcionA + " y " + opcionB);
         }
         
     }
-    public static int destino(int a){
+    public static int destino(int a, String op1){
         Scanner leer = new Scanner(System.in);
+        
         String bases[] = {"Decimal","Binario","Octal", "Hexadecimal"};
         System.out.println("A que base lo quieres convertir?\n1) Decimal\n2) Binario\n3) Octal\n4) Hexadecimal\n5) Cerrar Programa");
         int opcion = Integer.parseInt(leer.nextLine());
         switch (opcion) {
             case 1:
                 System.out.println("Vas a convertir un numero de Base " + bases[a-1] + " a Base Decimal");
-                break;
+                return opcion;
 
             case 2:
                 System.out.println("Vas a convertir un numero de Base " + bases[a-1] + " a Base Binario");
-                break;
+                return opcion;
 
             case 3:
                 System.out.println("Vas a convertir un numero de Base " + bases[a-1] + " a Base Octal");
-                break;
+                return opcion;
 
             case 4:
                 System.out.println("Vas a convertir un numero de Base " + bases[a-1] + " a Base Hexadecimal");
-                break;
+                return opcion;
 
             default:
                 System.out.println("Opcion no valida");
-                opcion = 0;
+                return 0;
 
 
         }
-        return opcion;
-        
+    }
+    public static String elecF(int opcionA,int opcionB){//12
+        Funciones conv = new Funciones();
+
+        if (opcionA == 1 && opcionB == 2){
+            conv.dao
+        } else if (opcionA == 1 && opcionB == 3){
+
+        } else if (opcionA == 1 && opcionB == 4){
+            
+        } else if (opcionA == 2 && opcionB == 1){
+            
+        } else if (opcionA == 2 && opcionB == 3){
+            
+        } else if (opcionA == 2 && opcionB == 4){
+            
+        } else if (opcionA == 3 && opcionB == 1){
+            
+        } else if (opcionA == 3 && opcionB == 2){
+            
+        } else if (opcionA == 3 && opcionB == 4){
+            
+        } else if (opcionA == 4 && opcionB == 1){
+            
+        } else if (opcionA == 4 && opcionB == 2){
+            
+        } else if (opcionA == 4 && opcionB == 3){
+            
+        }
+        return "A";
     }
 }
