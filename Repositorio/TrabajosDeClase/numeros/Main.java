@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         
-        int valor,opcionA = 0,opcionB = 0;
+        int opcionA = 0,opcionB = 0;
+        String valor;
         boolean x = true;
 
         try {
@@ -17,7 +18,7 @@ public class Main {
 
         while (x) {
             System.out.print("Ingrese el numero que quiera convertir: ");
-            valor = Integer.parseInt(leer.nextLine());
+            valor = leer.nextLine();
 
             System.out.println("En que base esta escrito este numero?\n1) Decimal\n2) Binario\n3) Octal\n4) Hexadecimal\n5) Cerrar Programa");
             opcionA = Integer.parseInt(leer.nextLine());
@@ -53,7 +54,7 @@ public class Main {
                     x = true;
                     break;
             }
-            System.out.println(opcionA + " y " + opcionB);
+            System.out.println("El resultado de la conversion es: " + elecF(opcionA, opcionB, valor));
         }
         
     }
@@ -87,33 +88,33 @@ public class Main {
 
         }
     }
-    public static String elecF(int opcionA,int opcionB){//12
+    public static String elecF(int opcionA,int opcionB, String valor){//12
         Funciones conv = new Funciones();
 
         if (opcionA == 1 && opcionB == 2){
-            conv.dao
+            return conv.DaB(valor);
         } else if (opcionA == 1 && opcionB == 3){
-
+            return conv.DaO(valor);
         } else if (opcionA == 1 && opcionB == 4){
-            
+            return conv.DaH(valor);
         } else if (opcionA == 2 && opcionB == 1){
-            
+            return conv.BaD(valor);
         } else if (opcionA == 2 && opcionB == 3){
-            
+            return conv.BaO(valor);
         } else if (opcionA == 2 && opcionB == 4){
-            
+            return conv.BaH(valor);
         } else if (opcionA == 3 && opcionB == 1){
-            
+            return conv.OaD(valor);
         } else if (opcionA == 3 && opcionB == 2){
-            
+            return conv.OaB(valor);
         } else if (opcionA == 3 && opcionB == 4){
-            
+            return conv.OaH(valor);
         } else if (opcionA == 4 && opcionB == 1){
-            
+            return conv.HaD(valor);
         } else if (opcionA == 4 && opcionB == 2){
-            
+            return conv.HaB(valor);
         } else if (opcionA == 4 && opcionB == 3){
-            
+            return conv.HaO(valor);
         }
         return "A";
     }
