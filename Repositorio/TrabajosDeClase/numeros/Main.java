@@ -8,11 +8,8 @@ public class Main {
         String valor = "";
         boolean x = true;
 
-        try {
-            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-        } catch (Exception e){
-
-        }
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
 
 
         while (x) {
@@ -20,11 +17,8 @@ public class Main {
             System.out.print("Ingrese el numero que quiera convertir: ");
             valor = leer.nextLine();
 
-            try {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            } catch (Exception e){
-    
-            }
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
 
             System.out.println("En que base esta escrito este numero?\n1) Decimal\n2) Binario\n3) Octal\n4) Hexadecimal\n5) Cerrar Programa");
             opcionA = Integer.parseInt(leer.nextLine());

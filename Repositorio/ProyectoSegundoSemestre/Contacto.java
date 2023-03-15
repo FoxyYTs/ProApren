@@ -1,5 +1,7 @@
 package Repositorio.ProyectoSegundoSemestre;
 
+import java.util.ArrayList;
+
 public class Contacto {
     private String nombre;
     private String apellido;
@@ -43,6 +45,11 @@ public class Contacto {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    @Override
+    public String toString() {
+        return "Contacto [nombre: " + nombre + ", apellido: " + apellido + ", telefono: " + telefono + ", correo: " + correo + "]";
     }
 
 }
