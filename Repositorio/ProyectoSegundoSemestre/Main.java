@@ -7,8 +7,13 @@ public class Main {
         //Agenda agenda = new Agenda();
         Scanner leer = new Scanner(System.in);
 
+
+
         boolean seguir = true;
         int opcion = 0;
+
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
 
         System.out.println("Bienvenido al programa Agenda");
 
@@ -17,7 +22,8 @@ public class Main {
             opcion = Integer.parseInt(leer.nextLine());
             switch (opcion) {
                 case 1:
-                    
+                    System.out.println("Que quieres hacer en contactos ?\n1) Crear Contacto\n2) Eliminar Contacto\n3) Mostrar Contactos");
+                    menuContactos(opcion);
                     break;
 
                 case 2:
@@ -46,6 +52,94 @@ public class Main {
                 default:
                     break;
             }
+        }
+    }
+
+    public static void menuContactos(int opcion){
+        switch (opcion){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            
+        }
+    }
+
+    public static void menuGrupos(int opcion){
+        switch (opcion){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            
+        }
+    }
+
+    public static void menuCalendario(int opcion){
+        switch (opcion){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            
+        }
+    }
+
+    public static void menuConfiguracion(int opcion){
+        switch (opcion){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            
         }
     }
 }
