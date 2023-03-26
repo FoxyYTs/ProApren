@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Pedro",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.listas.Pedro",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Repositorio.CursoPOO.Java.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "Repositorio.ProyectoSegundoSemestre.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.Calculadora.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main(3)",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.PromedioTemp.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "PromTemp",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.PromedioTemp.PromTemp",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Convertir",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.Pruebas.Convertir",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main(4)",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.Pruebas.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Complejos",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.TallerMadrid.Complejos",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main(5)",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.Temperatura.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "eje1",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.listas.eje1",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main(6)",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.numeros.Main",
+            "projectName": "ProApren_840a8173"
+        }
+    ]
+}
