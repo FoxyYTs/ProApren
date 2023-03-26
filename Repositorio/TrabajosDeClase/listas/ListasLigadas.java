@@ -2,7 +2,9 @@ package Repositorio.TrabajosDeClase.listas;
 
 public class ListasLigadas {
     private Nodo cabeza;
-     
+
+    Nodo nuevo = new Nodo(1);
+
     public ListasLigadas() {
         this.cabeza = null;
     }
