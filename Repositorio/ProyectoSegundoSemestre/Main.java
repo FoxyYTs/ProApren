@@ -2,6 +2,8 @@ package Repositorio.ProyectoSegundoSemestre;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hola mundo");
+        Agenda agenda = new Agenda();
+
+        agenda.menu();
     }
 }

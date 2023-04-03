@@ -1,15 +1,13 @@
 package Repositorio.ProyectoSegundoSemestre;
 
-public class Grupo {
+public class Grupo extends Agenda{
     private String nombre;
     private Contacto head;
-    private Contacto pointer;
     public Grupo next;
 
     public Grupo(String nombre){
         this.nombre = nombre;
         this.head = null;
-        this.pointer = head;
         this.next = null;
     }
 
@@ -21,7 +19,7 @@ public class Grupo {
         this.nombre = nombre;
     }
     
-    public void insertarContacto(String nombre, String apellido, String correo, String telefono) {
+    public void insertarContactoGrupo(String nombre, String apellido, String correo, String telefono) {
         Contacto nuevo = new Contacto(nombre, apellido, correo, telefono);
         if (head == null) {
             head = nuevo;
@@ -34,7 +32,7 @@ public class Grupo {
         }
     }
 
-    public void eliminarContacto(String nombre) {
+    public void eliminarContactoGrupo(String nombre) {
         if (head == null) {
             return;
         }
@@ -51,7 +49,7 @@ public class Grupo {
         }
     }
 
-    public void mostrarContacto() {
+    public void mostrarContactoGrupo() {
         Contacto pointer = head;
         while (pointer != null) {
             configuracion.gruposMostrarContactos(pointer.getNombre(), pointer.getApellido(), pointer.getTelefono(), pointer.getCorreo());

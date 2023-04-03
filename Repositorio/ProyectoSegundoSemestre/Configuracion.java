@@ -5,20 +5,20 @@ import java.time.format.DateTimeFormatter;
 
 
 public class Configuracion {
-    private String formatoFechaHora;
+    private String formatoFechayHora;
     private String idioma;
 
     public Configuracion(String formatoFechaHora, String idioma){
-        this.formatoFechaHora = formatoFechaHora;
+        this.formatoFechayHora = formatoFechaHora;
         this.idioma = idioma;
     }
 
     public String getFormatoFechaHora() {
-        return formatoFechaHora;
+        return formatoFechayHora;
     }
 
     public void setFormatoFechaHora(String formatoFechaHora) {
-        this.formatoFechaHora = formatoFechaHora;
+        this.formatoFechayHora = formatoFechaHora;
     }
 
     public String getIdioma() {
@@ -29,9 +29,9 @@ public class Configuracion {
         this.idioma = idioma;
     }
 
-    public String fechaHora(LocalDateTime fechaYHora){
-        DateTimeFormatter formatoFechaHora = DateTimeFormatter.ofPattern(formatoFechaHora);
-        String fechaHoraFormateada = fechaYHora.format(formatoFechaHora);
+    public String fechaHora(LocalDateTime fechaHoraActual) {
+        DateTimeFormatter formatoFechaHora = DateTimeFormatter.ofPattern(formatoFechayHora);
+        String fechaHoraFormateada = fechaHoraActual.format(formatoFechaHora);
         return fechaHoraFormateada;
     }
 

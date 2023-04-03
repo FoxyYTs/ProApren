@@ -1,7 +1,5 @@
 package Repositorio.ProyectoSegundoSemestre;
 
-import java.util.ArrayList;
-
 public class Contacto {
     private String nombre;
     private String apellido;
