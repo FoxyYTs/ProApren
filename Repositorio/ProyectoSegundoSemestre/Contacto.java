@@ -7,12 +7,14 @@ public class Contacto {
     private String apellido;
     private String telefono;
     private String correo;
+    public Contacto next;
 
     public Contacto(String nombre, String apellido, String telefono, String correo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.correo = correo;
+        this.next = null;
     }
 
     public String getNombre() {
@@ -45,11 +47,6 @@ public class Contacto {
 
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    @Override
-    public String toString() {
-        return "Contacto [nombre: " + nombre + ", apellido: " + apellido + ", telefono: " + telefono + ", correo: " + correo + "]";
     }
 
 }

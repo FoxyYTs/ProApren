@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Repositorio.ProyectoSegundoSemestre.Main",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
             "name": "Pedro",
             "request": "launch",
             "mainClass": "Repositorio.TrabajosDeClase.listas.Pedro",
