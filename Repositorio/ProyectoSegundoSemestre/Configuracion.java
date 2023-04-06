@@ -51,7 +51,7 @@ public class Configuracion {
         }
     }
 
-    public void gruposMostrarContactos(String nombre, String apellido, String telefono, String correo) {
+    public void imprimirMostrarContactos(String nombre, String apellido, String telefono, String correo) {
         if (idioma == "en") {
             System.out.println("Contact [name: " + nombre + ", last name: " + apellido + ", phone: " + telefono + ", email: " + correo + "]");
         } else {
@@ -69,9 +69,9 @@ public class Configuracion {
 
     public void agendaMostrarGrupo(String nombre) {
         if (idioma == "en") {
-            System.out.println("Contact [name: " + nombre + "]");
+            System.out.println("Group [name: " + nombre + "]");
         } else {
-            System.out.println("Contacto [nombre: " + nombre + "]");
+            System.out.println("Grupo [nombre: " + nombre + "]");
         }
     }
 }

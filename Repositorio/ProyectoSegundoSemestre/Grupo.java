@@ -18,9 +18,9 @@ public class Grupo extends Agenda{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    public void insertarContactoGrupo(String nombre, String apellido, String correo, String telefono) {
-        Contacto nuevo = new Contacto(nombre, apellido, correo, telefono);
+
+    public void agregarContactoGrupo(Contacto conta){
+        Contacto nuevo = new Contacto(conta.getNombre(), conta.getApellido(), conta.getTelefono(), conta.getCorreo());
         if (head == null) {
             head = nuevo;
         } else {
@@ -31,17 +31,17 @@ public class Grupo extends Agenda{
             pointer.next = nuevo;
         }
     }
-
-    public void eliminarContactoGrupo(String nombre) {
+    
+    public void eliminarContactoGrupo(String nombre,String apellido) {
         if (head == null) {
             return;
         }
-        if (head.getNombre() == nombre) {
+        if (head.getNombre() == nombre && head.getApellido() == apellido) {
             head = head.next;
             return;
         }
         Contacto pointer = head;
-        while (pointer.next.getNombre() != nombre && pointer.next != null) {
+        while (pointer.next.getNombre() != nombre && pointer.next.getApellido() != apellido && pointer.next != null) {
             pointer = pointer.next;
         }
         if (pointer.next != null) {
@@ -52,7 +52,7 @@ public class Grupo extends Agenda{
     public void mostrarContactoGrupo() {
         Contacto pointer = head;
         while (pointer != null) {
-            configuracion.gruposMostrarContactos(pointer.getNombre(), pointer.getApellido(), pointer.getTelefono(), pointer.getCorreo());
+            configuracion.imprimirMostrarContactos(pointer.getNombre(), pointer.getApellido(), pointer.getTelefono(), pointer.getCorreo());
             pointer = pointer.next;
         }
         System.out.println();
