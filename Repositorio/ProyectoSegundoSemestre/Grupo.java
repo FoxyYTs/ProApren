@@ -31,17 +31,17 @@ public class Grupo extends Agenda{
             pointer.next = nuevo;
         }
     }
-    
-    public void eliminarContactoGrupo(String nombre,String apellido) {
+
+    public void eliminarContactoGrupo(Contacto conta) {
         if (head == null) {
             return;
         }
-        if (head.getNombre() == nombre && head.getApellido() == apellido) {
+        if (head.equals(conta)) {
             head = head.next;
             return;
         }
         Contacto pointer = head;
-        while (pointer.next.getNombre() != nombre && pointer.next.getApellido() != apellido && pointer.next != null) {
+        while (!pointer.next.equals(conta) && pointer.next != null) {
             pointer = pointer.next;
         }
         if (pointer.next != null) {
@@ -56,6 +56,16 @@ public class Grupo extends Agenda{
             pointer = pointer.next;
         }
         System.out.println();
+    }
+
+    public void buscarContactoGrupo(String nombre, String apellido){
+        Contacto pContacto = hContacto;
+        while (pContacto != null) {
+            if(pContacto.getNombre().equals(nombre) && pContacto.getApellido().equals(apellido)){
+                configuracion.imprimirMostrarContactos(pContacto.getNombre(), pContacto.getApellido(), pContacto.getTelefono(), pContacto.getCorreo());
+            }
+            pContacto = pContacto.next;
+        }
     }
 
 }

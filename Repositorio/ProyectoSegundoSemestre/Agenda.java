@@ -14,9 +14,15 @@ public class Agenda {
     }
     
     public void menu(){
+
         String nameG,nameC,lastname,email,phone;
-        System.out.print("creando nuevo Grupo\nIngresa el nombre del Grupo: ");
-        agregarGrupos(leer.nextLine());
+        System.out.print("Vamos a crear los grupos");
+        for (int i = 1; i <= 5; i++){
+            agregarGrupos("grupo" + i);
+        }
+        System.out.println("\nLista de grupos");
+        mostrarGrupos();
+
         System.out.println("Ahora vamos a crear los contactos");
         for (int i = 1; i <= 5; i++) {
             nameC = "nombre" + i;
@@ -27,21 +33,22 @@ public class Agenda {
         }
         System.out.println("La lista de contactos es: ");
         mostrarContacto();
-        System.out.println("Ingresa el Nombre de Grupo: ");
-        nameG = leer.nextLine();
-        System.out.println("ingresa el Nombre: ");
-        nameC = leer.nextLine();
-        System.out.print("Ingresa el Apellido: ");
-        lastname = leer.nextLine();
-        insertarAGrupo(nameG, nameC, lastname);
 
-        System.out.println("Lista de grupos");
-        mostrarGrupos();
-        System.out.println("ingrese el grupo que quiera ver: ");
-        nameG = leer.nextLine();
-        mostrarGrupo(nameG);
+        nameG = "grupo3";
+        for (int i = 1; i<= 5; i++) {
+            insertarAGrupo(nameG, "nombre" + i, "apellido" + i);
+        }
         
+        int i = 2;
 
+        System.out.println("Hola mundo\n");
+        eliminarDeGrupo("grupo", "nombre" + i, "apellido" + i);
+        System.out.println("\nPerro\n");
+        /*
+        for (int j = 1; j <= 5; j++) {
+            System.out.println("Grupo " + j);
+            mostrarGrupo("grupo" + j);
+        }*/
 
     }
     //Funciones Contactos
@@ -58,16 +65,16 @@ public class Agenda {
         }
     }
 
-    public static void eliminarContacto(String nombre) {
+    public static void eliminarContacto(String nombre, String apellido) {
         if (hContacto == null) {
             return;
         }
-        if (hContacto.getNombre() == nombre) {
+        if (hContacto.getNombre().equals(nombre) && hContacto.getApellido().equals(apellido)) {
             hContacto = hContacto.next;
             return;
         }
         Contacto pContacto = hContacto;
-        while (pContacto.next.getNombre() != nombre && pContacto.next != null) {
+        while (!pContacto.next.getNombre().equals(nombre) && !pContacto.next.getApellido().equals(apellido) && pContacto.next != null) {
             pContacto = pContacto.next;
         }
         if (pContacto.next != null) {
@@ -76,6 +83,9 @@ public class Agenda {
     }
 
     public static void mostrarContacto() {
+        if (hContacto == null){
+            System.out.println("No existe");
+        }
         Contacto pContacto = hContacto;
         while (pContacto != null) {
             configuracion.imprimirMostrarContactos(pContacto.getNombre(), pContacto.getApellido(), pContacto.getTelefono(), pContacto.getCorreo());
@@ -114,12 +124,12 @@ public class Agenda {
         if (hGrupo == null) {
             return;
         }
-        if (hGrupo.getNombre() == nombre) {
+        if (hGrupo.getNombre().equals(nombre)) {
             hGrupo = hGrupo.next;
             return;
         }
         Grupo pointerGrupos = hGrupo;
-        while (pointerGrupos.next.getNombre() != nombre && pointerGrupos.next != null) {
+        while (!pointerGrupos.next.getNombre().equals(nombre) && pointerGrupos.next != null) {
             pointerGrupos = pointerGrupos.next;
         }
         if (pointerGrupos.next != null) {
@@ -148,10 +158,23 @@ public class Agenda {
         return;
     }
     
+    public static void eliminarDeGrupo(String nombreG, String nombreC, String apellido){
+        Grupo pGrupo = hGrupo;
+        while (pGrupo != null) {
+            if(pGrupo.getNombre().equals(nombreG)){
+                pGrupo.buscarContactoGrupo(nombreC, apellido);
+                return;
+            }
+            pGrupo = pGrupo.next;
+        }
+        return;
+    }
+    
     public static void mostrarGrupo(String nombreG){
         Grupo pGrupo = hGrupo;
         while (pGrupo != null) {
             if(pGrupo.getNombre().equals(nombreG)){
+                configuracion.agendaMostrarGrupo(pGrupo.getNombre());
                 pGrupo.mostrarContactoGrupo();
                 return;
             }
