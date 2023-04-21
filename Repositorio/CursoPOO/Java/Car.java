@@ -1,7 +1,6 @@
 package Repositorio.CursoPOO.Java;
 
 public class Car {
-    private int id;
     private String placa;
     private Account conductor;
     protected int pasajeros;
