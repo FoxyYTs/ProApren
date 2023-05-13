@@ -9,7 +9,7 @@ public class Primero {
         this.cola = null;
     }
     
-    public void insertar(int dato) {
+    public void insertar(String dato) {
         Nodo nuevo = new Nodo(dato);
         if (cabeza == null) {
             cabeza = nuevo;
@@ -19,8 +19,21 @@ public class Primero {
             while (actual.siguiente != null) {
                 actual = actual.siguiente;
             }
-            actual.siguiente = nuevo;
+            cola = actual.siguiente = nuevo;
+            nuevo.atras = actual;
         }
+    }
+
+    public void eliminar(String dato) {
+        if (cabeza.dato.equals(dato)){
+            cabeza = cabeza.siguiente;
+            cabeza.atras = null;
+        }
+        Nodo actual = cabeza;
+        while(!actual.dato.equals(dato)){
+            actual = actual.siguiente;
+        }
+        if ()
     }
     
     public void mostrar() {
@@ -30,5 +43,16 @@ public class Primero {
             actual = actual.siguiente;
         }
         System.out.println();
+        System.out.println("Cabeza: " + cabeza.dato + " Cola: " + cola.dato);
+    }
+
+    public void invmostrar() {
+        Nodo actual = cola;
+        while (actual != null) {
+            System.out.print(actual.dato + " ");
+            actual = actual.atras;
+        }
+        System.out.println();
+        System.out.println("Cabeza: " + cabeza.dato + " Cola: " + cola.dato);
     }
 }

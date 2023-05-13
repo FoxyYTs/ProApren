@@ -2,17 +2,18 @@ package Repositorio.TrabajosDeClase.listasligadasdobles;
 
 public class Main {
     public static void main(String[] args) {
-        Nodo nodo1 = new Nodo(0);
-        Nodo head = nodo1;
-        Nodo pointer = head;
-        
-        for (int i = 0; i <= 10; i++) {
-            Nodo nodi = new Nodo(i);
+        Primero primero = new Primero();
+
+        for (int i = 1; i <= 10; i++) {
+            primero.insertar("hola" + i);
         }
 
-        for (int i = 0; pointer != null; i++) {
-            pointer = pointer.siguiente;
-            System.out.println(pointer);
-        }
+        primero.mostrar();
+
+        primero.eliminar("hola1");
+
+        primero.mostrar();
+        System.out.println("========");
+        primero.invmostrar();
     }
 }
