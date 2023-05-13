@@ -2,17 +2,18 @@ package Repositorio.TrabajosDeClase.listasligadasdobles;
 
 public class Primero {
     private Nodo cabeza;
-
-    Nodo nuevo = new Nodo(1);
+    private Nodo cola;
 
     public Primero() {
         this.cabeza = null;
+        this.cola = null;
     }
     
     public void insertar(int dato) {
         Nodo nuevo = new Nodo(dato);
         if (cabeza == null) {
             cabeza = nuevo;
+            cola = nuevo;
         } else {
             Nodo actual = cabeza;
             while (actual.siguiente != null) {
