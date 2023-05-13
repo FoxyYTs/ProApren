@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.listasligadasdobles.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Repositorio.TrabajosDeClase.Calculadora.Main",
             "projectName": "Github_54fd86f7"
         },
