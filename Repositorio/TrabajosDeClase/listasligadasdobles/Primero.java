@@ -33,10 +33,14 @@ public class Primero {
         while(!actual.dato.equals(dato)){
             actual = actual.siguiente;
         }
-        if ()
+        if (actual != null){
+            actual.atras.siguiente = actual.siguiente;
+            actual.siguiente.atras = actual.atras;
+        }
     }
     
     public void mostrar() {
+        System.out.println("Mostrar: ");
         Nodo actual = cabeza;
         while (actual != null) {
             System.out.print(actual.dato + " ");
@@ -47,6 +51,7 @@ public class Primero {
     }
 
     public void invmostrar() {
+        System.out.println("Mostrar inverso: ");
         Nodo actual = cola;
         while (actual != null) {
             System.out.print(actual.dato + " ");

@@ -1,7 +1,6 @@
 package Repositorio.Java;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.*;
 
 public class VentanaHolaMundo {
     public static void main(String[] args) {

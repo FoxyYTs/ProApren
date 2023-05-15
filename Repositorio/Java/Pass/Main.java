@@ -1,2 +1,7 @@
-package Pass;public class Main {
+package Pass;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
 }

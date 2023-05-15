@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "JuegoDeLaVida03",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.JuegoDeLaVida.JuegoDeLaVida03",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "JuegoDeLaVida02",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.JuegoDeLaVida.JuegoDeLaVida02",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.JuegoDeLaVida.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "JuegoDeLaVida",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.JuegoDeLaVida.JuegoDeLaVida",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Pepo",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Pepo",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Repositorio.CursoPOO.Java.JuegoDeLaVida.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "VentanaHolaMundo",
+            "request": "launch",
+            "mainClass": "Repositorio.CursoPOO.Java.VentanaHolaMundo",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.Pilas.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Repositorio.TrabajosDeClase.listasligadasdobles.Main",
