@@ -7,6 +7,9 @@ public class ListasLigadaSImple {
         if(head == null){
             head = nuevo;
         }else{
+
+
+    
             
         }
     }
