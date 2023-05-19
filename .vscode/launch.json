@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Recursividad.Fibonacci",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Recursividad1",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Recursividad.Recursividad1",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
             "name": "JuegoDeLaVida03",
             "request": "launch",
             "mainClass": "Repositorio.Java.JuegoDeLaVida.JuegoDeLaVida03",
