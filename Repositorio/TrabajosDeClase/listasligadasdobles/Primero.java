@@ -33,7 +33,10 @@ public class Primero {
         while(!actual.dato.equals(dato)){
             actual = actual.siguiente;
         }
-        if ()
+        if (actual.siguiente != null){
+            actual.siguiente = actual.siguiente.siguiente;
+            actual.atras = actual.atras.atras;
+        }
     }
     
     public void mostrar() {
