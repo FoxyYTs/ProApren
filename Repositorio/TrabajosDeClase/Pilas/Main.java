@@ -5,6 +5,7 @@ public class Main {
         Pilas pilas = new Pilas();
         pilasBasicas(pilas);
 
+
         
         
     }
@@ -18,8 +19,17 @@ public class Main {
             pilas.insertarB(i);
         }
 
+        pilas.insertarC();
+
+        pilas.insertarD();
+
         pilas.mostrarA();
 
         pilas.mostrarB();
+
+        pilas.mostrarC();
+
+        pilas.mostrarD();
     }
+
 }

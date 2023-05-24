@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.Pilas.Main",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
             "name": "factorial",
             "request": "launch",
             "mainClass": "Repositorio.Java.Recursividad.factorial",
