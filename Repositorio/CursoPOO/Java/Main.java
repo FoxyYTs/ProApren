@@ -1,4 +1,4 @@
-package Repositorio.CursoPOO.Java;
+package CursoPOO.Java;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Repositorio.Java.Recursividad;
+package Java.Recursividad;
 
 public class Recursividad1 {
     public static void main(String[] args) {

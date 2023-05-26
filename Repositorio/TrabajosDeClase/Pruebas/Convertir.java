@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.Pruebas;
+package TrabajosDeClase.Pruebas;
 
 public class Convertir {
     public static void main(String[] args) {

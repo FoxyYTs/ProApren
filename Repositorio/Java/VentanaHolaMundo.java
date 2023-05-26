@@ -1,4 +1,4 @@
-package Repositorio.Java;
+package Java;
 
 import javax.swing.*;
 

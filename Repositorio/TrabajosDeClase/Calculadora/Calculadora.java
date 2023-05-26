@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.Calculadora;
+package TrabajosDeClase.Calculadora;
 
 public class Calculadora {
     public int sumar(int a, int b){

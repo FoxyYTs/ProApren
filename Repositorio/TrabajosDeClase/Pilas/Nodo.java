@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.Pilas;
+package TrabajosDeClase.Pilas;
 
 public class Nodo {
     int a;

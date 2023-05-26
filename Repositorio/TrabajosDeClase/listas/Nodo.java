@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.listas;
+package TrabajosDeClase.listas;
 
 public class Nodo {
     public int dato;

@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.Pruebas;
+package TrabajosDeClase.Pruebas;
 
 public class Complejo {
     private double real;

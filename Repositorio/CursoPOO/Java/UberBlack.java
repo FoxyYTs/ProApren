@@ -1,4 +1,4 @@
-package Repositorio.CursoPOO.Java;
+package CursoPOO.Java;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package Repositorio.Alison;
+package Alison;
 
 public class ListasLigadaSImple {
     Nodo head;

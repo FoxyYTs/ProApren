@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.TallerMadrid;
+package TrabajosDeClase.TallerMadrid;
 
 import java.util.Scanner;
 import java.lang.Math;

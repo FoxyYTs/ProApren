@@ -1,4 +1,4 @@
-package Repositorio.Java.JuegoDeLaVida;
+package Java.JuegoDeLaVida;
 
 import java.awt.Color;
 import java.awt.Dimension;

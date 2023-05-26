@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.PromedioTemp;
+package TrabajosDeClase.PromedioTemp;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.Temperatura;
+package TrabajosDeClase.Temperatura;
 
 public class Temperatura {
 

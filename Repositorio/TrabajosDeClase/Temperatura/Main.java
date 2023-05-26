@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.Temperatura;
+package TrabajosDeClase.Temperatura;
 import java.util.Scanner;
 
 public class Main {

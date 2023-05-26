@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.listas;
+package TrabajosDeClase.listas;
 
 public class Pedro {
     public static void main(String[] args) {

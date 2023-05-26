@@ -1,4 +1,4 @@
-package Repositorio.CursoPOO.Java;
+package CursoPOO.Java;
 
 public class UberPool extends Car{
     private String marca;

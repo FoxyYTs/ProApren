@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.listasligadasdobles;
+package TrabajosDeClase.listasligadasdobles;
 
 public class Nodo {
     public String dato;

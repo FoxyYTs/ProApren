@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.listas;
+package TrabajosDeClase.listas;
 
 public class ListasLigadas {
     private Nodo cabeza;

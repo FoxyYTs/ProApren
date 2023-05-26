@@ -1,4 +1,4 @@
-package Repositorio.Java.Recursividad;
+package Java.Recursividad;
 
 public class Rango {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.numeros;
+package TrabajosDeClase.numeros;
 
 public class Funciones {
     

@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.TallerMadrid;
+package TrabajosDeClase.TallerMadrid;
 
 public class Complejo2 {
     private double real;

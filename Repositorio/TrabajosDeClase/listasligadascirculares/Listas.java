@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.listasligadascirculares;
+package TrabajosDeClase.listasligadascirculares;
 
 public class Listas {
     private Nodo cabeza;

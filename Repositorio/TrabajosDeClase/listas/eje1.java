@@ -1,4 +1,4 @@
-package Repositorio.TrabajosDeClase.listas;
+package TrabajosDeClase.listas;
 
 import java.util.*;
 public class eje1 {
