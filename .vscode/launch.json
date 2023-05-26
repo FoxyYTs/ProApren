@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Repositorio.TrabajosDeClase.Pilas.Main",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Recursividad.factorial",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
+            "name": "Rango",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Recursividad.Rango",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
+            "name": "invertir",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Recursividad.invertir",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Recursividad.Fibonacci",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
+            "name": "Recursividad1",
+            "request": "launch",
+            "mainClass": "Repositorio.Java.Recursividad.Recursividad1",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
             "name": "Fibonacci",
             "request": "launch",
             "mainClass": "Repositorio.Java.Recursividad.Fibonacci",
