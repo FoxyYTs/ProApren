@@ -18,10 +18,7 @@ public class Listas {
             nuevo.siguiente = nuevo;
             nuevo.atras = nuevo;
         } else {
-            Nodo actual = cabeza;
-            while (actual != cola) {
-                actual = actual.siguiente;
-            }
+            Nodo actual = cola;
             cabeza.atras = cola = actual.siguiente = nuevo;
             nuevo.atras = actual;
             cola.siguiente = cabeza;
