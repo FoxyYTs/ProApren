@@ -15,11 +15,18 @@ public class ListasLigadas {
             cabeza = nuevo;
         } else {
             Nodo actual = cabeza;
-            while (actual.siguiente != null) {
-                actual = actual.siguiente;
-            }
+            
+            recorrer(actual);
             actual.siguiente = nuevo;
         }
+    }
+
+    public static Nodo recorrer(Nodo actual){
+        if(actual.siguiente != null){
+            recorrer(actual);
+            actual = actual.siguiente;
+        }
+        return actual;
     }
     
     public void mostrar() {
