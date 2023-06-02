@@ -15,26 +15,23 @@ public class ListasLigadas {
             cabeza = nuevo;
         } else {
             Nodo actual = cabeza;
-            
-            recorrer(actual);
+            while(actual.siguiente != null){
+                actual = actual.siguiente;
+            }
             actual.siguiente = nuevo;
         }
-    }
-
-    public static Nodo recorrer(Nodo actual){
-        if(actual.siguiente != null){
-            recorrer(actual);
-            actual = actual.siguiente;
-        }
-        return actual;
     }
     
     public void mostrar() {
         Nodo actual = cabeza;
-        while (actual != null) {
-            System.out.print(actual.dato + " ");
-            actual = actual.siguiente;
-        }
+        mostrarRecu(actual);
         System.out.println();
+    }
+
+    public static void mostrarRecu(Nodo actual){
+        if (actual != null){
+            mostrarRecu(actual.siguiente);
+            System.out.println(actual.dato + " ");
+        }
     }
 }

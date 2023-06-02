@@ -9,6 +9,13 @@
             "name": "eje1",
             "request": "launch",
             "mainClass": "TrabajosDeClase.listas.eje1",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
+            "name": "eje1",
+            "request": "launch",
+            "mainClass": "TrabajosDeClase.listas.eje1",
             "projectName": "ProApren_840a8173"
         },
         {
