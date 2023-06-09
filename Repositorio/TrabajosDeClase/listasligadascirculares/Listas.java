@@ -1,7 +1,7 @@
 package TrabajosDeClase.listasligadascirculares;
 
 public class Listas {
-    private Nodo cabeza;
+    private static Nodo cabeza;
     private Nodo cola;
 
     public Listas () {
@@ -26,24 +26,69 @@ public class Listas {
     }
     
     public void mostrar() {
+        if(cabeza == null){
+            return;
+        }
         System.out.println("Mostrar: ");
         Nodo actual = cabeza;
-        for (int i = 0; actual != null && i < 20; i++) {
-            System.out.print(actual.dato + " ");
-            actual = actual.siguiente;
-        }
+        mostrarrecu(actual);;
+
         System.out.println();
         System.out.println("Cabeza: " + cabeza.dato + " Cola: " + cola.dato);
     }
 
-    public void invmostrar() {
-        System.out.println("Mostrar inverso: ");
+    public static void mostrarrecu(Nodo actual){
+        System.out.print(actual.dato + " ");
+        if (actual.siguiente != cabeza){
+            mostrarrecu(actual.siguiente);
+        }
+        
+    }
+
+    public void mostrars() {
+        if(cabeza == null){
+            return;
+        }
+        Nodo actual = cabeza;
+        for (int i = 0; i < 20; i++) {
+            System.out.print(actual.dato + " ");
+            actual = actual.siguiente;
+        }
+
+        System.out.println();
+        System.out.println("Cabeza: " + cabeza.dato + " Cola: " + cola.dato);
+    }
+
+    public void mostrarsinv() {
+        if(cabeza == null){
+            return;
+        }
         Nodo actual = cola;
-        for (int i = 0; actual != null && i < 20; i++) {
+        for (int i = 0; i < 20; i++) {
             System.out.print(actual.dato + " ");
             actual = actual.atras;
         }
+
         System.out.println();
         System.out.println("Cabeza: " + cabeza.dato + " Cola: " + cola.dato);
+    }
+
+    public void eliminar(String dato) {
+        
+        Nodo actual = cabeza;
+        while(!actual.dato.equals(dato)){
+            actual = actual.siguiente;
+        }
+        if (cabeza.dato.equals(dato)){
+            cabeza = cabeza.siguiente;
+        }
+        if (cola.dato.equals(dato)){
+            cola = cola.atras;
+        }
+        if (actual != null){
+            actual.atras.siguiente = actual.siguiente;
+            actual.siguiente.atras = actual.atras;
+        }
+        
     }
 }

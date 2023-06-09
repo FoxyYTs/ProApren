@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "TrabajosDeClase.listasligadascirculares.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
             "name": "eje1",
             "request": "launch",
             "mainClass": "TrabajosDeClase.listas.eje1",
