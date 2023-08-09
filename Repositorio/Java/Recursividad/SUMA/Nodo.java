@@ -6,4 +6,7 @@ public class Nodo {
         this.dato = dato;
         this.siguiente = null;
     }
+
+    public Nodo(String elemento) {
+    }
 }

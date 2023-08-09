@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CorchetesParecentesisLlaves",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.EJercicio1.CorchetesParecentesisLlaves",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
