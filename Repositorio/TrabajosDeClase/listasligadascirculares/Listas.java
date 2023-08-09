@@ -74,7 +74,6 @@ public class Listas {
     }
 
     public void eliminar(String dato) {
-        
         Nodo actual = cabeza;
         while(!actual.dato.equals(dato)){
             actual = actual.siguiente;
