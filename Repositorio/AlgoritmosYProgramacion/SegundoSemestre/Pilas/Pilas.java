@@ -1,4 +1,4 @@
-package TrabajosDeClase.Pilas;
+package AlgoritmosYProgramacion.SegundoSemestre.Pilas;
 
 public class Pilas {
     Nodo top1,top2,top3,top4;

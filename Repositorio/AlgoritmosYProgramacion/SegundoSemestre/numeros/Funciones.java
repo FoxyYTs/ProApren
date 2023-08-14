@@ -1,4 +1,4 @@
-package TrabajosDeClase.numeros;
+package AlgoritmosYProgramacion.SegundoSemestre.numeros;
 
 public class Funciones {
     

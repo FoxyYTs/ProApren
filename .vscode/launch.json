@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.SegundoSemestre.Pilas.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "CorchetesParecentesisLlaves",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.EJercicio1.CorchetesParecentesisLlaves",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
             "name": "CorchetesParecentesisLlaves",
             "request": "launch",
             "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.EJercicio1.CorchetesParecentesisLlaves",

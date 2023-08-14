@@ -1,4 +1,4 @@
-package TrabajosDeClase.PromedioTemp;
+package AlgoritmosYProgramacion.SegundoSemestre.PromedioTemp;
 
 import java.util.*;
 

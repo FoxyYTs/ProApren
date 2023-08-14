@@ -1,12 +1,11 @@
 package AlgoritmosYProgramacion.TercerSemestre.Taller1.EJercicio1;
 
 public class Nodo {
-    String elemento;
-    Nodo next, back;
+    char elemento;
+    Nodo next;
 
-    public Nodo(String elemento){
+    public Nodo(char elemento){
         this.elemento = elemento;
         this.next = null;
-        this.back = null;
     }
 }
