@@ -1,10 +1,8 @@
-package AlgoritmosYProgramacion.TercerSemestre.Taller1.EJercicio1;
+package AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio1;
 
 public class Funcion {
     static Pila pila = new Pila();
-    public boolean estaBalanceado(String entrada) {
-        Pila pila = new Pila();
-        
+    public boolean estaBalanceado(String entrada) {        
         char[] caracteres = entrada.toCharArray();
         for (int i = 0; i < caracteres.length; i++) {
             char caracter = caracteres[i];
@@ -18,7 +16,6 @@ public class Funcion {
                 }
             }
         }
-        
         return pila.isEmpty();
     }
     

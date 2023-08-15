@@ -1,4 +1,4 @@
-package AlgoritmosYProgramacion.TercerSemestre.Taller1.EJercicio1;
+package AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio1;
 
 public class Nodo {
     char elemento;
