@@ -5,7 +5,6 @@ public class Pila {
     static Nodo top2;
     static Nodo top3;
     static String pPartida, destino;
-    static int ficha;
     
     public Pila() {
         top1 = null;
@@ -33,13 +32,14 @@ public class Pila {
     }
         
     public static int pop1() {
+        pPartida = "Torre 1";
         if (top1 == null) {
             return '0' ;
         }
         int caracter = top1.elemento;
         top1 = top1.next;
         return caracter;
-        pPartida = ""
+        
     }
 
     public static void push2(int elemento) {
@@ -55,6 +55,7 @@ public class Pila {
     }
         
     public static int pop2() {
+        pPartida = "Torre 2";
         if (top2 == null) {
             return '0' ;
         }
@@ -76,6 +77,7 @@ public class Pila {
     }
         
     public static int pop3() {
+        pPartida = "Torre 3";
         if (top3 == null) {
             return '0' ;
         }
@@ -84,18 +86,32 @@ public class Pila {
         return caracter;
     }
 
-    public static void print() {
+    public static void print(int ficha) {
         System.out.println("La Ficha " + ficha + " salio de " + pPartida + " y se puso en " + destino);
     }
 
     public void juego(){
+
         push3(pop1());
+        print(pop1());
+
         push2(pop1());
+        print(pop1());
+
         push2(pop3());
+        print(pop3());
+
         push3(pop1());
+        print(pop1());
+
         push1(pop2());
+        print(pop2());
+
         push3(pop2());
+        print(pop2());
+        
         push3(pop1());
+        print(pop1());
     }
 
 }
