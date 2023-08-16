@@ -1,35 +1,48 @@
 package AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio2;
 
 public class Pila {
-    Nodo top1, top2, top3;
+    static Nodo top1;
+    static Nodo top2;
+    static Nodo top3;
+    static String pPartida, destino;
+    static int ficha;
     
     public Pila() {
         top1 = null;
         top2 = null;
         top3 = null;
     }
+
+    public static void llenado(){
+        for (int i = 3; i >= 1; i--) {
+            push1(i);
+        }
+    }
         
-    public void push1(int elemento) {
+    public static void push1(int elemento) {
         Nodo nuevoNodo = new Nodo(elemento);
         if (top1 == null) {
             top1 = nuevoNodo;
+
         } else {
             top1.back = nuevoNodo;
             nuevoNodo.next = top1;
             top1 = top1.back;
         }
+        destino = "Torre 1";
     }
         
-    public int pop1() {
+    public static int pop1() {
         if (top1 == null) {
             return '0' ;
         }
         int caracter = top1.elemento;
         top1 = top1.next;
         return caracter;
+        pPartida = ""
     }
 
-    public void push2(int elemento) {
+    public static void push2(int elemento) {
         Nodo nuevoNodo = new Nodo(elemento);
         if (top2 == null) {
             top2 = nuevoNodo;
@@ -38,9 +51,10 @@ public class Pila {
             nuevoNodo.next = top2;
             top2 = top2.back;
         }
+        destino = "Torre 2";
     }
         
-    public int pop2() {
+    public static int pop2() {
         if (top2 == null) {
             return '0' ;
         }
@@ -49,7 +63,7 @@ public class Pila {
         return caracter;
     }
 
-    public void push3(int elemento) {
+    public static void push3(int elemento) {
         Nodo nuevoNodo = new Nodo(elemento);
         if (top3 == null) {
             top3 = nuevoNodo;
@@ -58,9 +72,10 @@ public class Pila {
             nuevoNodo.next = top3;
             top3 = top3.back;
         }
+        destino = "Torre 3";
     }
         
-    public int pop3() {
+    public static int pop3() {
         if (top3 == null) {
             return '0' ;
         }
@@ -69,8 +84,18 @@ public class Pila {
         return caracter;
     }
 
-    public void print() {
-        
+    public static void print() {
+        System.out.println("La Ficha " + ficha + " salio de " + pPartida + " y se puso en " + destino);
+    }
+
+    public void juego(){
+        push3(pop1());
+        push2(pop1());
+        push2(pop3());
+        push3(pop1());
+        push1(pop2());
+        push3(pop2());
+        push3(pop1());
     }
 
 }

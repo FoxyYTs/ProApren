@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TorreHanoi",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio2.TorreHanoi",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "AlgoritmosYProgramacion.SegundoSemestre.Pilas.Main",
