@@ -6,9 +6,9 @@ pygame.init()
 width, height = 1000, 1000
 screen = pygame.display.set_mode((height, width))
 
-bg = 255,0,0
+bg = 25,25,25
 
 screen.fill(bg)
 
-while true:
+while True:
     pass
