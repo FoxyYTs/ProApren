@@ -3,38 +3,64 @@ package AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio3;
 import java.util.Scanner;
 
 public class Menu {
-
-    static Scanner leer = new Scanner(System.in);
-    static Cola  cola = new Cola();
-
     public static void main(String[] args) {
-        for (int i = 0; i <= 5; i++) {
-            cola.ingreso();
-        }
+
+        Scanner leer = new Scanner(System.in);
+        Cola cola = new Cola();
+
         int opcion;
         boolean continuar = true;
-        while (continuar) {
-            System.out.println("Bienvenido al Menu de atencion\n1) Ingresar\n2) Atender\n3) Eliminar\n4) Cerrar");
-            opcion = Integer.parseInt(leer.nextLine());
-            if (opcion == 1) {
-                System.out.println("Ingresando nueva gente a la fila");
-                leer.nextLine();
-                cola.ingreso();
-            } else if (opcion == 2){
-                cola.atender();
-            } else if (opcion == 3){
-                System.out.println("Eliminaste a todos de la fila");
-                leer.nextLine();
-                cola.eliminar();
-            } else if (opcion == 4){
-                System.out.println("Cerrando menu");
-                leer.nextLine();
-                continuar = false;
-            }
-        }
-        
 
+        while (continuar) {
+            leer.nextLine();
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.print("Menú de Operaciones:\n1) Adicionar persona a la cola\n2) Atender persona de la cola\n3) Cambiar prioridad de atención\n4) Eliminar cola\n5) Salir\nIngrese su opción: ");
+            opcion = leer.nextInt();
+
+            if (opcion == 1){
+                int edad = (int) (Math.floor(Math.random()*(60-18+1)+18));
+                System.out.println("Edad del cliente: " + edad);
+
+                boolean embarazada = false;
+
+                if((int)(Math.random()*5) == 1){
+                    System.out.println("La Clienta esta Embarazada");
+                    embarazada = true;
+                }
+
+                System.out.print("Ingrese nombre: ");
+                String nombre = leer.next();
+
+                cola.encolar(nombre, edad, embarazada);
+                leer.nextLine();
+            } else if (opcion == 2){
+                Nodo atendida = cola.desencolar();
+                if (atendida != null) {
+                    System.out.println("Persona atendida: " + atendida.nombre);
+                } else {
+                    System.out.println("La cola está vacía.");
+                }
+                leer.nextLine();
+            } else if (opcion == 3){
+                System.out.print("Ingrese el nombre de la persona para cambiar prioridad: ");
+                cola.cambiarPrioridad(leer.next());
+                leer.nextLine();
+            } else if (opcion == 4){
+                cola.eliminarCola();
+                System.out.println("Cola eliminada.");
+                leer.nextLine();
+            } else if (opcion == 5){
+                System.out.println("Saliendo...");
+                continuar = false;
+                leer.nextLine();
+            } else {
+                System.out.println("Opción inválida."); 
+                leer.nextLine();
+            }
+
+            System.out.println("Cola actual: ");
+            cola.print();
+        }
     }
-    
-    
 }

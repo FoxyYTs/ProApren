@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Menu",
             "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio31.Menu",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio3_2.Menu",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio3.Menu",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
             "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio3.Menu",
             "projectName": "Github_54fd86f7"
         },

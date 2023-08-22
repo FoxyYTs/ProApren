@@ -1,56 +1,62 @@
 package AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio3;
 
 public class Cola {
-    static Nodo cabeza, cola;
+    Nodo cabeza, cola;
 
-    public static void push(boolean embarazo, int edad){
-        if (embarazo) {
-            System.out.println("Acaba de ingresar una embarazada");
-        }
-        System.out.println("Ingreso alguien con: " + edad + " Años");
-        
-        Nodo nuevo = new Nodo(embarazo, edad);
-        if (cabeza == null && cola == null){
-            cola = cabeza = nuevo;
+    public void encolar(String nombre, int edad, boolean embarazada) {
+        Nodo nuevo = new Nodo(nombre, edad, embarazada);
+        if (cabeza == null) {
+            cabeza = cola = nuevo;
         } else {
-            cola.back = nuevo;
-            nuevo.next = cola;
-            cola = nuevo;
-        }
-        prioridad();
-    }
-
-    public void ingreso(){
-        boolean embarazo = false;
-        int edad = (int) (Math.floor(Math.random()*(100-18+1)+18)) ;
-
-        if((int)(Math.random()*2) == 1){
-            embarazo = true;
-        }
-
-        push(embarazo, edad);
-    }
-
-    public  void atender(){
-        if (cabeza != null){
-            cabeza.back = cabeza;
-            System.out.println("Cliente atendido");
+            Nodo temp = cola;
+            cola = temp.next = nuevo; 
+            nuevo.back = temp;
         }
     }
 
-    public static void prioridad(){
-        System.out.println("Se acaba de dar prioridad a alguien");
-        if (cola.embarazo == true || cola.edad > 50){
-            cola = cabeza.next;
-            cabeza = cabeza.next;
-            cola.back = null;
+    public Nodo desencolar() {
+        if (cabeza == null) {
+            return null;
         }
-    }
-
-    public void eliminar(){
-        if (cabeza != null && cola != null){
-            cabeza = null;
+        
+        Nodo cAtendido = cabeza;
+        cabeza = cabeza.next;
+        cabeza.back = null;
+        if (cabeza == null) {
             cola = null;
+        }
+        return cAtendido;
+    }
+
+    public void cambiarPrioridad(String nombre) {
+        if (cabeza == null){
+            System.out.println("Cola Vacia");
+        }
+        if (cabeza.nombre.equals(nombre)){
+            cabeza = cabeza.next;
+            cabeza.back = null;
+            return;
+        }
+        Nodo pointer = cabeza;
+        while (!pointer.next.nombre.equals(nombre) && pointer.next != null) {
+            pointer = pointer.next;
+        }
+        if (pointer.next != null) {
+            pointer.back.next = pointer.next;
+            pointer.next.back = pointer.back;
+        }
+        return;
+    }
+
+    public void eliminarCola() {
+        cabeza = cola = null;
+    }
+
+    public void print() {
+        Nodo pointer = cabeza;
+        while (pointer != null) {
+            System.out.println("Nombre: " + pointer.nombre + " Edad: " + pointer.edad + " Embarazo: " + pointer.embarazada);
+            pointer = pointer.next; 
         }
     }
 }

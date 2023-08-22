@@ -1,14 +1,15 @@
 package AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio3;
 
 public class Nodo {
-    boolean embarazo;
+    String nombre;
     int edad;
-    Nodo next,back;
+    boolean embarazada;
+    Nodo next, back;
 
-    public Nodo(boolean embarazo, int edad){
-        this.embarazo = embarazo;
+    public Nodo(String nombre, int edad, boolean embarazada) {
+        this.nombre = nombre;
         this.edad = edad;
+        this.embarazada = embarazada;
         this.next = null;
-        this.back = null;
     }
 }
