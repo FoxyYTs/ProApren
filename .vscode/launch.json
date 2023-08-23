@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Funciones",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller2.Funciones",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller2.Menu",
+            "projectName": "Github_54fd86f7"
+        },
+        {
+            "type": "java",
             "name": "Menu",
             "request": "launch",
             "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller1.Ejercicio31.Menu",
