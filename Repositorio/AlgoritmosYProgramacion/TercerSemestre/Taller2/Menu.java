@@ -24,24 +24,29 @@ public class Menu {
                     System.out.flush();
                     System.out.println("Cargando Registro...");
                     leer.nextLine();
-                    System.out.print("Ingrese el nombre de la persona que tendra este asiento: ");
-                    nombre = leer.nextLine();
-                    if (fun.contadorVip < 5) {
-                        System.out.print("Quiere Comprar un Tiquete VIP (Y/N): ");
-                        vip = leer.nextLine();
-                        if (vip != "Y" || vip != "N") {
-                            System.out.println("OPCION NO VALIDA");
-                            leer.nextLine();
-                            break;
-                        } else if(vip == "Y"){
-                            vipB = true;
+                    if (fun.contadorOcupado < fun.cantSilla) {
+                        System.out.print("Ingrese el nombre de la persona que tendra este asiento: ");
+                        nombre = leer.nextLine();
+                        if (fun.contadorVip < 5) {
+                            System.out.print("Quiere Comprar un Tiquete VIP (Y/N): ");
+                            vip = leer.nextLine();
+                            if (vip.equals("N")) {
+                                vipB = false;
+                                break;
+                            } else if(vip.equals("Y")){
+                                vipB = true;
+                            } else {
+                                System.out.println("OPCION NO VALIDA");
+                                leer.nextLine();
+                            }
                         } else {
-                            vipB = false;
+                            System.out.println("Los Asientos VIP estan llenos");
                         }
+                        fun.compra(nombre, vipB);
                     } else {
-                        System.out.println("Los Asientos VIP estan llenos");
+                        System.out.println("El Avion se encuentra lleno");
                     }
-                    fun.compra(nombre, vipB);
+                    leer.nextLine();
                     break;
                 
                 case "2":

@@ -7,7 +7,7 @@ public class Funciones {
 
     int contadorVip = 0, contadorOcupado = 0;
 
-    Nodo[] puestos = new Nodo[12];
+    Nodo[] puestos = new Nodo[13];
 
     public String valor(){
         return "El Valor Base del tiquete es \nBASE: " + (int) pBase + "\nCOMBUSTIBLE 15%: " + (int) fuel + "\nTASA ADMINISTRACION 7%: " + (int) admin + "\nSEGURO 10%: " + (int) seguro + "\nTOTAL: " + (int) total + "\nVIP 65% + TOTAL: " + (int) vipP ;
@@ -18,8 +18,8 @@ public class Funciones {
             System.out.println("El Avion esta Vacio");
             return;
         }
-        for (int i = 0; i <= cantSilla; i++) {
-            System.out.println("Puesto #" + i + " Nombre Pasajero: " + puestos[i].dueño + " VIP: " + puestos[i].vip);
+        for (int i = 0; i < contadorOcupado; i++) {
+            System.out.println("Puesto #" + i+1 + " Nombre Pasajero: " + puestos[i].dueño + " VIP: " + puestos[i].vip);
         }
     }
 
