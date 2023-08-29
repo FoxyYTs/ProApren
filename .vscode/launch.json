@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller2.Vectores.Menu",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller2.Vectores.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller2.Menu",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
             "name": "Funciones",
             "request": "launch",
             "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Taller2.Funciones",

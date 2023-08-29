@@ -1,4 +1,4 @@
-package AlgoritmosYProgramacion.TercerSemestre.Taller2;
+package AlgoritmosYProgramacion.TercerSemestre.Taller2.Vectores;
 
 import java.util.Scanner;
 
@@ -27,7 +27,8 @@ public class Menu {
                     if (fun.contadorOcupado < fun.cantSilla) {
                         System.out.print("Ingrese el nombre de la persona que tendra este asiento: ");
                         nombre = leer.nextLine();
-                        if (fun.contadorVip < 5) {
+                        vipB = false;
+                        if (fun.contadorVip < fun.sillaVip) {
                             System.out.print("Quiere Comprar un Tiquete VIP (Y/N): ");
                             vip = leer.nextLine();
                             if (vip.equals("N")) {

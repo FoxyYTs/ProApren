@@ -1,4 +1,4 @@
-package AlgoritmosYProgramacion.TercerSemestre.Taller2;
+package AlgoritmosYProgramacion.TercerSemestre.Taller2.Arrays;
 
 public class Nodo {
     String dueño = "VACIO";
