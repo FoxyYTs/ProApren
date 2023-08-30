@@ -7,43 +7,56 @@ public class Main {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         Funciones fun = new Funciones();
-    
-        int opcion1, seleccionPeli, pelicula;
-        String nombre, tipoAsiento;
+
+        fun.inicio();
+
+        int opcion1, pelicula, columna;
+        String nombre, fila;
         boolean seguir = true;
 
         while (seguir) {
             System.out.flush();
             System.out.print("\033[H\033[2J");
-            System.out.println("MENU 1\n1) Reservar asiento.\n2. Mostrar ocupacion sala.\n3. Consultar reserva.");
+            System.out.println("MENU 1\n1) Reservar asiento\n2) Mostrar ocupacion sala\n3) Consultar reserva\n4) Cerrar");
             opcion1=Integer.parseInt(leer.nextLine());
 
         
             if(opcion1==1){
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
-                System.out.println("MENU 1.1. RESERVA.");
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
-                System.out.println("MENU 1.1. SELECCION PELICULA\n1) Gran Turismo PoliSpeed-JIC\n2) PoliNinja Turtles \u2013 Caos Mutante");
+                System.out.println("SELECCION PELICULA\n1) Gran Turismo PoliSpeed-JIC\n2) PoliNinja Turtles 2013 Caos Mutante");
                 pelicula=Integer.parseInt(leer.nextLine());
                 if (pelicula == 1) {
-                    System.out.println("A2-3-4 Movilidad reducida\nB0-6 C0-6 Descuento 10%\nC2-3-4 Sonido y Vibracion");
+                    System.out.print("\033[H\033[2J");
+                    System.out.flush();
+                    fun.mapaSala1();
                 } else if(pelicula ==2) {
-                    System.out.println("A2-3-4 Movilidad reducida\nA0-6 Descuento 10%\nB2-3-4 C1-2-3-4-5 Sonido y Vibracion");
+                    fun.mapaSala2();
                 } else {
                     System.out.println("Opcion no valida");
                 }
-                tipoAsiento=leer.nextLine();
+                System.out.print("\n\nEscribe la LETRA de la fila: ");
+                fila = leer.nextLine();
+                System.out.print("\nEscribe el NUMERO de la columna: ");
+                columna = Integer.parseInt(leer.nextLine());
                 System.out.print("Ingrese el nombre del cliente: ");
-                nombre = leer.nextLine();
+                nombre = "leer.nextLine();";
 
-                fun.reseva(pelicula, tipoAsiento, nombre);
+                fun.reseva(pelicula, fila, columna , nombre);
+                leer.nextLine();
 
-            }else if(opcion1==2){
+            }else if(opcion1 == 2){
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
-                System.out.println("MENU 2.1. MOSTRAR OCUPACION SALA.\n1. SALA 1.\n2. SALA 2.");
+                System.out.println("MOSTRAR OCUPACION SALA.\n1) SALA 1.\n2) SALA 2.");
+                pelicula=Integer.parseInt(leer.nextLine());
+                if (pelicula == 1) {
+                    fun.mapaSala1();
+                } else if (pelicula == 2){
+                    fun.mapaSala2();
+                }
+                System.out.println("\n|X| = Ocupado\n|G| = General\n|S| = Sonido y Vibracion\n|M| = Movilidad Reducida");
+                leer.next();
             }else if(opcion1==3){
                 System.out.print("\033[H\033[2J");
                 System.out.flush();

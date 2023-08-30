@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Prueba",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Quiz1.Prueba",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Quiz1.Main",
+            "projectName": "ProApren_840a8173"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "AlgoritmosYProgramacion.TercerSemestre.Quiz1.Main",
