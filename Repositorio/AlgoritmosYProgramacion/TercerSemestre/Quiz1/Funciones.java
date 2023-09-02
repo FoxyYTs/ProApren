@@ -24,7 +24,7 @@ public class Funciones {
     public void inicio(){
         if (Sala1[1] == null){
             for (int i = 0; i < 8; i++) {
-            Sala1[i] = new Nodo(new Puesto("VACIO", conversor(pS1TOP[i]), pS1TOP[i], calcuprecio2(conversor(pS1TOP[i]))), new Puesto("VACIO", conversor(pS1A[i]), pS1A[i], calcuprecio2(conversor(pS1A[i]))), new Puesto("VACIO", conversor(pS1B[i]), pS1B[i], calcuprecio2(conversor(pS1B[i]))) ,new Puesto("VACIO", conversor(pS1C[i]), pS1C[i], calcuprecio2(conversor(pS1C[i]))));
+            Sala1[i] = new Nodo(new Puesto("VACIO", conversor(pS1TOP[i]), pS1TOP[i], calcuprecio1(conversor(pS1TOP[i]))), new Puesto("VACIO", conversor(pS1A[i]), pS1A[i], calcuprecio1(conversor(pS1A[i]))), new Puesto("VACIO", conversor(pS1B[i]), pS1B[i], calcuprecio1(conversor(pS1B[i]))) ,new Puesto("VACIO", conversor(pS1C[i]), pS1C[i], calcuprecio1(conversor(pS1C[i]))));
             }
         }
 
@@ -114,12 +114,15 @@ public class Funciones {
             if (fila.toUpperCase().equals("A")){
                 Sala1[columna+1].getA().setCliente(nombre);
                 Sala1[columna+1].getA().setOcupado("\t|X|");
+                System.out.println("Se a comprado un tiquete para la Sala 1 en la ubicacion " + fila.toUpperCase() + columna + " para la persona " + nombre + " en un asiento de tipo " + Sala1[columna+1].getA().getTipo() + " y con un precio de: " + Sala1[columna+1].getA().getPrecio());
             } else if (fila.toUpperCase().equals("B")) {
                 Sala1[columna+1].getB().setCliente(nombre);
                 Sala1[columna+1].getB().setOcupado("\t|X|");
+                System.out.println("Se a comprado un tiquete para la Sala 1 en la ubicacion " + fila.toUpperCase() + columna + " para la persona " + nombre + " en un asiento de tipo " + Sala1[columna+1].getB().getTipo() + " y con un precio de: " + Sala1[columna+1].getB().getPrecio());
             } else if (fila.toUpperCase().equals("C")) {
                 Sala1[columna+1].getC().setCliente(nombre);
                 Sala1[columna+1].getC().setOcupado("\t|X|");
+                System.out.println("Se a comprado un tiquete para la Sala 1 en la ubicacion " + fila.toUpperCase() + columna + " para la persona " + nombre + " en un asiento de tipo " + Sala1[columna+1].getC().getTipo() + " y con un precio de: " + Sala1[columna+1].getC().getPrecio());
             } else {
                 System.out.println("Opcion no valida");
             }
@@ -128,12 +131,44 @@ public class Funciones {
             if (fila.toUpperCase().equals("A")){
                 Sala2[columna+1].getA().setCliente(nombre);
                 Sala2[columna+1].getA().setOcupado("\t|X|");
+                System.out.println("Se a comprado un tiquete para la Sala 2 en la ubicacion " + fila.toUpperCase() + columna + " para la persona " + nombre + " en un asiento de tipo " + Sala2[columna+1].getA().getTipo() + " y con un precio de: " + Sala2[columna+1].getA().getPrecio());
             } else if (fila.toUpperCase().equals("B")) {
                 Sala2[columna+1].getB().setCliente(nombre);
                 Sala2[columna+1].getB().setOcupado("\t|X|");
+                System.out.println("Se a comprado un tiquete para la Sala 2 en la ubicacion " + fila.toUpperCase() + columna + " para la persona " + nombre + " en un asiento de tipo " + Sala2[columna+1].getA().getTipo() + " y con un precio de: " + Sala2[columna+1].getA().getPrecio());
             } else if (fila.toUpperCase().equals("C")) {
                 Sala2[columna+1].getC().setCliente(nombre);
                 Sala2[columna+1].getC().setOcupado("\t|X|");
+                System.out.println("Se a comprado un tiquete para la Sala 2 en la ubicacion " + fila.toUpperCase() + columna + " para la persona " + nombre + " en un asiento de tipo " + Sala2[columna+1].getA().getTipo() + " y con un precio de: " + Sala2[columna+1].getA().getPrecio());
+            } else {
+                System.out.println("Opcion no valida");
+            }
+        } else {
+            System.out.println("Error de seleccion.");
+        }
+        
+        
+    }
+
+    public void consulta(int peli, String fila, int columna){
+        if (peli == 1) {
+            if (fila.toUpperCase().equals("A")){
+                System.out.println("En el Puesto " + fila.toUpperCase() + columna + " de la Sala 1, Se encuentra el Usuario: " + Sala1[columna+1].getA().getCliente() + " En un asiento de tipo " + Sala1[columna+1].getA().getTipo());
+            } else if (fila.toUpperCase().equals("B")) {    
+                System.out.println("En el Puesto " + fila.toUpperCase() + columna + " de la Sala 1, Se encuentra el Usuario: " + Sala1[columna+1].getB().getCliente() + " En un asiento de tipo " + Sala1[columna+1].getB().getTipo());
+            } else if (fila.toUpperCase().equals("C")) {
+                System.out.println("En el Puesto " + fila.toUpperCase() + columna + " de la Sala 1, Se encuentra el Usuario: " + Sala1[columna+1].getC().getCliente() + " En un asiento de tipo " + Sala1[columna+1].getC().getTipo());
+            } else {
+                System.out.println("Opcion no valida");
+            }
+            
+        } else if (peli == 2) {
+            if (fila.toUpperCase().equals("A")){
+                System.out.println("En el Puesto " + fila.toUpperCase() + columna + " de la Sala 1, Se encuentra el Usuario: " + Sala2[columna+1].getA().getCliente() + " En un asiento de tipo " + Sala2[columna+1].getA().getTipo());
+            } else if (fila.toUpperCase().equals("B")) {
+                System.out.println("En el Puesto " + fila.toUpperCase() + columna + " de la Sala 1, Se encuentra el Usuario: " + Sala2[columna+1].getB().getCliente() + " En un asiento de tipo " + Sala2[columna+1].getB().getTipo());
+            } else if (fila.toUpperCase().equals("C")) {
+                System.out.println("En el Puesto " + fila.toUpperCase() + columna + " de la Sala 1, Se encuentra el Usuario: " + Sala2[columna+1].getC().getCliente() + " En un asiento de tipo " + Sala2[columna+1].getA().getTipo());
             } else {
                 System.out.println("Opcion no valida");
             }
@@ -143,3 +178,4 @@ public class Funciones {
         
     }
 }
+

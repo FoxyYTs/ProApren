@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Main {
 
+    /*Jose Andres Daza Gallego
+     Cristian Camilo Grajales Serna */
+
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         Funciones fun = new Funciones();
@@ -30,8 +33,12 @@ public class Main {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                     fun.mapaSala1();
+                    System.out.println("\n");
+                    System.out.println("\n|X| = Ocupado\n|G| = General\n|S| = Sonido y Vibracion\n|M| = Movilidad Reducida");
                 } else if(pelicula ==2) {
                     fun.mapaSala2();
+                    System.out.println("\n");
+                    System.out.println("\n|X| = Ocupado\n|G| = General\n|S| = Sonido y Vibracion\n|M| = Movilidad Reducida");
                 } else {
                     System.out.println("Opcion no valida");
                 }
@@ -39,8 +46,8 @@ public class Main {
                 fila = leer.nextLine();
                 System.out.print("\nEscribe el NUMERO de la columna: ");
                 columna = Integer.parseInt(leer.nextLine());
-                System.out.print("Ingrese el nombre del cliente: ");
-                nombre = "leer.nextLine();";
+                System.out.print("\nIngrese el nombre del cliente: ");
+                nombre = leer.nextLine();
 
                 fun.reseva(pelicula, fila, columna , nombre);
                 leer.nextLine();
@@ -55,12 +62,22 @@ public class Main {
                 } else if (pelicula == 2){
                     fun.mapaSala2();
                 }
+                System.out.println("\n");
                 System.out.println("\n|X| = Ocupado\n|G| = General\n|S| = Sonido y Vibracion\n|M| = Movilidad Reducida");
                 leer.next();
             }else if(opcion1==3){
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
-                System.out.println("MENU 3.1. CONSULTAR RESERVA.\n1. Escriba la ubicacion de su reserva.");
+                System.out.print("Que sala quieres consultar\n1) Sala 1\n2) Sala 2\n Escribe la opcion: ");
+                pelicula=Integer.parseInt(leer.nextLine());
+                System.out.print("\nEscribe la LETRA de la fila: ");
+                fila = leer.nextLine();
+                System.out.print("\nEscribe el NUMERO de la columna: ");
+                columna = Integer.parseInt(leer.nextLine());
+
+                fun.consulta(pelicula, fila, columna);
+
+                leer.nextLine();
             }else if(opcion1==4){
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
