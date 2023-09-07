@@ -1,4 +1,4 @@
-package com.salifm.tetris;
+package AlgoritmosYProgramacion.TercerSemestre.Tetris;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,11 +13,11 @@ import java.io.*;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.JOptionPane;
-import  javax.swing.UIManager;
+import javax.swing.UIManager;
 
-import tetris.Tetromino.Tetrominoes;
+import AlgoritmosYProgramacion.TercerSemestre.Tetris.Tetromino.Tetrominoes;
 
-public class GameBoardPanel extends JPanel implements ActionListener {
+public class Funciones extends JPanel implements ActionListener {
     private static final int BoardWidth = 10;    // game board x size
     private static final int BoardHeight = 22;    // game board y size
 
@@ -44,10 +44,10 @@ public class GameBoardPanel extends JPanel implements ActionListener {
     private String currentLevel;
     private int currentTimerResolution;
 
-    private GameWindow tetrisFrameD;
+    private Interfaz tetrisFrameD;
 
 
-    public GameBoardPanel(GameWindow tetrisFrame, int timerResolution) {
+    public Funciones(Interfaz tetrisFrame, int timerResolution) {
 
         setFocusable(true);
         setBackground(new Color(0, 30, 30));
@@ -443,3 +443,4 @@ public class GameBoardPanel extends JPanel implements ActionListener {
         }
     }
 }
+
