@@ -22,7 +22,8 @@ public class Main {
                 bus = leer.nextLine();
                 if (!bus.equals("1") || !bus.equals("2")) {
                     System.out.println("Opcion no valida");
-                    break;
+                    leer.nextLine();
+                    continue;
                 }
                 System.out.println("Puestos\n1) Seleccionar puesto\n2) Asignar Aleatorio");
                 opcion = leer.nextLine();
@@ -32,9 +33,13 @@ public class Main {
                     
                 }
             } else if (opcion.equals("2")){
+                System.out.flush();
+                System.out.print("\033[H\033[2J");
                 fun.mapaB1();
                 leer.nextLine();
             } else if (opcion.equals("3")){
+                System.out.flush();
+                System.out.print("\033[H\033[2J");
                 fun.mapaB2();
                 leer.nextLine();    
             } else if (opcion.equals("4")){
