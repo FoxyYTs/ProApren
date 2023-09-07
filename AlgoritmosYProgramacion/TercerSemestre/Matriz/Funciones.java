@@ -3,8 +3,6 @@ package AlgoritmosYProgramacion.TercerSemestre.Matriz;
 public class Funciones {
     String bus1[][] = new String[5][10];
     String bus2p1[][] = new String[3][10];
-
-
     String bus2p2[][] = new String[5][6];
 
     public void inicio(){
@@ -13,7 +11,7 @@ public class Funciones {
                 if (j == 0 && i == 0) {
                     bus1[i][j] = "X  ";
                 } else if (j == 0) {
-                    bus1[i][j] = (char)('A' + i) + " ";
+                    bus1[i][j] = i + " ";
                 } else if (i == 0){
                     bus1[i][j] = j + "  ";
                 } else {
@@ -27,7 +25,7 @@ public class Funciones {
                 if (j == 0 && i == 0) {
                     bus2p1[i][j] = "X  ";
                 } else if (j == 0) {
-                    bus2p1[i][j] = (char)('A' + i) + " ";
+                    bus2p1[i][j] = i + " ";
                 } else if (i == 0){
                     bus2p1[i][j] = j + "  ";
                 } else {
@@ -41,7 +39,7 @@ public class Funciones {
                 if (j == 0 && i == 0) {
                     bus2p2[i][j] = "X  ";
                 } else if (j == 0) {
-                    bus2p2[i][j] = (char)('A' + i) + " ";
+                    bus2p2[i][j] = i + " ";
                 } else if (i == 0){
                     bus2p2[i][j] = j + "  ";
                 } else {
@@ -87,5 +85,28 @@ public class Funciones {
             System.out.println();
         }
         System.out.println("\n|O| = VACIO\n|X| = OCUPADO");
+    }
+
+    public boolean Ocupar1(int fila, int columna){
+        if(bus1[fila][columna].equals("|O|")){
+            bus1[fila][columna] = "|X|";
+            return true;
+        }
+        return false;
+    }
+
+    public boolean Ocupar2(int piso, int fila, int columna){
+        if (piso == 1) {
+            if(bus2p1[fila][columna].equals("|O|")){
+            bus2p1[fila][columna] = "|X|";
+            return true;
+            }
+        } else if (piso == 2){
+            if(bus2p2[fila][columna].equals("|O|")){
+            bus2p2[fila][columna] = "|X|";
+            return true;
+            }
+        }
+        return false;
     }
 }

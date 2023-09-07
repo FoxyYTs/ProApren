@@ -10,6 +10,7 @@ public class Main {
         fun.inicio();
 
         String opcion = "",bus;
+        int fila = 1, columna = 1, piso = (int) (Math.floor(Math.random()*2+1));;
 
 
         while (!opcion.equals("5")) {
@@ -20,17 +21,64 @@ public class Main {
             if (opcion.equals("1")) {
                 System.out.println("Selecciona el Bus\n1) Bus Basico\n2) Bus 2 pisos");
                 bus = leer.nextLine();
-                if (!bus.equals("1") || !bus.equals("2")) {
+                if (bus.equals("1")){
+                    System.out.println("Puestos\n1) Seleccionar puesto\n2) Asignar Aleatorio");
+                    opcion = leer.nextLine();
+                    if (opcion.equals("1")) {
+                        fun.mapaB1();
+                        System.out.print("\n\nEscribe el numero de la fila: ");
+                        fila = Integer.parseInt(leer.nextLine());
+                        System.out.print("\nEscribe el NUMERO de la columna: ");
+                        columna = Integer.parseInt(leer.nextLine());
+                        if (!fun.Ocupar1(fila,columna)) {
+                            System.out.println("El asiento que elegiste esta ocupado");
+                            leer.nextLine();
+                            continue;
+                        }
+                        leer.nextLine();
+                    } else if (opcion.equals("2")) {
+                        while (!fun.Ocupar1(fila, columna)) {
+                            if (!fun.Ocupar1(fila, columna)){
+                                fila = (int) (Math.floor(Math.random()*4+1));
+                                columna = (int) (Math.floor(Math.random()*9+1));
+                            }
+                        }
+                    }
+                } else if (bus.equals("2")){
+                    System.out.println("Puestos\n1) Seleccionar puesto\n2) Asignar Aleatorio");
+                    opcion = leer.nextLine();
+                    if (opcion.equals("1")) {
+                        fun.mapaB2();
+                        System.out.println("\n\nEscribe el numero de PISO");
+                        piso = Integer.parseInt(leer.nextLine());
+                        System.out.print("\nEscribe el numero de la FILA: ");
+                        fila = Integer.parseInt(leer.nextLine());
+                        System.out.print("\nEscribe el numero de la COLUMNA: ");
+                        columna = Integer.parseInt(leer.nextLine());
+                        if (!fun.Ocupar2(piso, fila, columna)) {
+                            System.out.println("El asiento que elegiste esta ocupado");
+                            leer.nextLine();
+                            continue;
+                        }
+                        leer.nextLine();
+                    } else if (opcion.equals("2")) {
+                        while (!fun.Ocupar2(piso, fila, columna)) {
+                            if (!fun.Ocupar2(piso ,fila, columna)){
+                                piso = (int) (Math.floor(Math.random()*2+1));
+                                if (piso == 1){
+                                    fila = (int) (Math.floor(Math.random()*2+1));
+                                    columna = (int) (Math.floor(Math.random()*9+1));
+                                } else {
+                                    fila = (int) (Math.floor(Math.random()*4+1));
+                                    columna = (int) (Math.floor(Math.random()*5+1));
+                                }
+                            }
+                        }
+                    }
+                } else if (!bus.equals("1") && !bus.equals("2")) {
                     System.out.println("Opcion no valida");
                     leer.nextLine();
                     continue;
-                }
-                System.out.println("Puestos\n1) Seleccionar puesto\n2) Asignar Aleatorio");
-                opcion = leer.nextLine();
-                if (opcion.equals("1")) {
-                    
-                } else if (opcion.equals("2")) {
-                    
                 }
             } else if (opcion.equals("2")){
                 System.out.flush();
