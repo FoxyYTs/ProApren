@@ -1,4 +1,4 @@
-package AlgoritmosYProgramacion.TercerSemestre.Tetris;
+package AlgoritmosYProgramacion.TercerSemestre.TetrisPru;
 
 import java.util.Random;
 

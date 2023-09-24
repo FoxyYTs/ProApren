@@ -1,4 +1,4 @@
-package AlgoritmosYProgramacion.TercerSemestre.Tetris;
+package AlgoritmosYProgramacion.TercerSemestre.TetrisPru;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -15,7 +15,7 @@ import javax.swing.Timer;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-import AlgoritmosYProgramacion.TercerSemestre.Tetris.Tetromino.Tetrominoes;
+import AlgoritmosYProgramacion.TercerSemestre.TetrisPru.Tetromino.Tetrominoes;
 
 public class Funciones extends JPanel implements ActionListener {
     private static final int BoardWidth = 10;    // game board x size
@@ -26,7 +26,7 @@ public class Funciones extends JPanel implements ActionListener {
     private boolean isFallingDone = false;
     private boolean isStarted = false;
     private boolean isPaused = false;
-    private int currentScore = 0; // removed lines == score
+    private int currentScore = 100; // removed lines == score
 
     // position of current block
     private int curX = 0;
