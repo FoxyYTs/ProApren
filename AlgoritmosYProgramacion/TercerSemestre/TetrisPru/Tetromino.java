@@ -1,13 +1,10 @@
 package AlgoritmosYProgramacion.TercerSemestre.TetrisPru;
-
 import java.util.Random;
 
 public class Tetromino {
     enum Tetrominoes {
         NO_BLOCK, Z_SHAPE, S_SHAPE, I_SHAPE, T_SHAPE, O_SHAPE, L_SHAPE, J_SHAPE
-    }
-
-    ;
+    };
 
     private Tetrominoes tetrominoes;
     private int coords[][];                // current shape of a tetromino

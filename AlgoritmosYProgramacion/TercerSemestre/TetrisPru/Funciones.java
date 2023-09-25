@@ -1,19 +1,9 @@
 package AlgoritmosYProgramacion.TercerSemestre.TetrisPru;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.*;
+import java.awt.event.*;
 import java.io.*;
-
-import javax.swing.JPanel;
-import javax.swing.Timer;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
+import javax.swing.*;
 
 import AlgoritmosYProgramacion.TercerSemestre.TetrisPru.Tetromino.Tetrominoes;
 
@@ -26,7 +16,7 @@ public class Funciones extends JPanel implements ActionListener {
     private boolean isFallingDone = false;
     private boolean isStarted = false;
     private boolean isPaused = false;
-    private int currentScore = 100; // removed lines == score
+    private int currentScore; // removed lines == score
 
     // position of current block
     private int curX = 0;
@@ -44,10 +34,9 @@ public class Funciones extends JPanel implements ActionListener {
     private String currentLevel;
     private int currentTimerResolution;
 
-    private Interfaz tetrisFrameD;
 
 
-    public Funciones(Interfaz tetrisFrame, int timerResolution) {
+    public Funciones(int timerResolution) {
 
         setFocusable(true);
         setBackground(new Color(0, 30, 30));
@@ -118,7 +107,6 @@ public class Funciones extends JPanel implements ActionListener {
             }
         });
 
-        tetrisFrameD = tetrisFrame;
         initBoard();
     }
 
@@ -426,7 +414,7 @@ public class Funciones extends JPanel implements ActionListener {
         }
     }
 
-    private void writeDB(int dbScore) {
+    private void writeDB(int tbScore) {
         try {
             File UIFile = new File("Tetris.score");
             if (!UIFile.exists()) {
@@ -434,9 +422,7 @@ public class Funciones extends JPanel implements ActionListener {
             }
             FileWriter filewriter = new FileWriter(UIFile.getAbsoluteFile());
             BufferedWriter outputStream = new BufferedWriter(filewriter);
-            outputStream.write(String.valueOf(dbScore));
-            outputStream.newLine();
-            outputStream.write("This is database for Tetris game - https://github.com/salifm/Tetris");
+            outputStream.write(String.valueOf(tbScore));
             outputStream.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());

@@ -1,7 +1,8 @@
 package AlgoritmosYProgramacion.TercerSemestre.TetrisPru;
 
-import javax.swing.JFrame;
-import java.awt.GridLayout; 
+import java.awt.*;
+
+import javax.swing.*;
 
 public class Interfaz extends JFrame{
 
@@ -12,9 +13,9 @@ public class Interfaz extends JFrame{
 
         setLayout(new GridLayout(1, 2));
 
-        Funciones gameBoard = new Funciones(this, 400);
-        add(gameBoard);
-        gameBoard.start();
+        Funciones tablero = new Funciones(400);
+        add(tablero);
+        tablero.start();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
