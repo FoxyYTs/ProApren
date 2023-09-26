@@ -147,7 +147,6 @@ public class Funciones extends JPanel implements ActionListener {
             String sonido = "D:/programacion/Github/ProApren/AlgoritmosYProgramacion/TercerSemestre/Tetris/song.wav";
             InputStream in = new FileInputStream(sonido);
             audio = new AudioStream(in);
-            audio.loop()
             
         } catch (Exception e) {
             // TODO: handle exception
