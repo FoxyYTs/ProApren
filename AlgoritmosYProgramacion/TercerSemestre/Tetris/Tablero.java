@@ -7,19 +7,25 @@ import javax.swing.*;
 public class Tablero {
 
     private JFrame ventana = new JFrame("Tetris");
-    int x = 0;
     public Tablero(){
-        ventana.setSize(500, 1000);
+        ventana.setSize(1000, 1000);
+        
 
+        ventana.setLayout(new GridLayout(1, 2));
+
+        Prueba prueba = new Prueba();
         Funciones tablero = new Funciones(400);
-        while (x < 3) {
-            ventana.add(tablero);
-            x++;
-        }
+        
+        ventana.add(tablero);
+        
+        ventana.add(prueba);
+
         tablero.inicio();
         
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setResizable(false);
+        ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
     }
+
 }
