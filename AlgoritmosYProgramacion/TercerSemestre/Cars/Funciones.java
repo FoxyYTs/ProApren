@@ -1,11 +1,11 @@
-package AlgoritmosYProgramacion.TercerSemestre.TetrisPru;
+package AlgoritmosYProgramacion.TercerSemestre.Cars;
 
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
 
-import AlgoritmosYProgramacion.TercerSemestre.TetrisPru.Tetromino.Tetrominoes;
+import AlgoritmosYProgramacion.TercerSemestre.Cars.Tetromino.Tetrominoes;
 
 public class Funciones extends JPanel implements ActionListener {
     private static final int BoardWidth = 10;    // game board x size

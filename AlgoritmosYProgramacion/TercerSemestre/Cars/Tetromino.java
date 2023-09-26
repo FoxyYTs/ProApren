@@ -1,4 +1,4 @@
-package AlgoritmosYProgramacion.TercerSemestre.TetrisPru;
+package AlgoritmosYProgramacion.TercerSemestre.Cars;
 import java.util.Random;
 
 public class Tetromino {
