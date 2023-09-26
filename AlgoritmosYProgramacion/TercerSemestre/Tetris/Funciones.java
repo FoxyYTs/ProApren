@@ -30,7 +30,7 @@ public class Funciones extends JPanel implements ActionListener {
     public Funciones(int timerResolution){
         setFocusable(true);
         musica();
-        setBackground(new Color(250, 250, 250));
+        setBackground(new Color(0, 0, 0));
         figuraActual = new Tetromino();
         tiempo = new Timer(timerResolution, this);
         tiempo.start();
