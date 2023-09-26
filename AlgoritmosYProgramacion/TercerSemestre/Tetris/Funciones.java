@@ -3,8 +3,9 @@ package AlgoritmosYProgramacion.TercerSemestre.Tetris;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+
+import javax.sound.sampled.*;
 import javax.swing.*;
-import sun.audio.*;
 
 import AlgoritmosYProgramacion.TercerSemestre.Tetris.Tetromino.Tetrominoes;
 
@@ -24,7 +25,7 @@ public class Funciones extends JPanel implements ActionListener {
     private String estatusActual;
     private String nivelActual;
     private int velocidadActual;
-    private AudioStream audio;
+    private Clip clip;
 
     public Funciones(int timerResolution){
         setFocusable(true);
@@ -144,12 +145,15 @@ public class Funciones extends JPanel implements ActionListener {
 
     public void musica() {
         try {
-            String sonido = "D:/programacion/Github/ProApren/AlgoritmosYProgramacion/TercerSemestre/Tetris/song.wav";
-            InputStream in = new FileInputStream(sonido);
-            audio = new AudioStream(in);
-            
+            clip = AudioSystem.getClip();
+            // Load the sound file into the Clip object.
+            clip.open(AudioSystem.getAudioInputStream(new java.io.File("AlgoritmosYProgramacion/TercerSemestre/Tetris/song.wav")));
+            FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+            gainControl.setValue(-10.0f);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            clip.start();
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("Secretos del Gobierno");
         }
     }
 
@@ -160,8 +164,9 @@ public class Funciones extends JPanel implements ActionListener {
         iniciado = true;
         caida = false;
         puntuacionActual = 0;
+
         initBoard();
-        AudioPlayer.player.start(audio);
+
         nuevaPieza();
         tiempo.start();
     }
@@ -174,10 +179,11 @@ public class Funciones extends JPanel implements ActionListener {
         pausado = !pausado;
         if (pausado) {
             tiempo.stop();
-            AudioPlayer.player.stop(audio);
+            clip.stop();
+
         } else {
             tiempo.start();
-            AudioPlayer.player.start(audio);
+            clip.start();
         }
 
         repaint();
