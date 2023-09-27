@@ -146,14 +146,12 @@ public class Funciones extends JPanel implements ActionListener {
     public void musica() {
         try {
             clip = AudioSystem.getClip();
-            // Load the sound file into the Clip object.
             clip.open(AudioSystem.getAudioInputStream(new java.io.File("AlgoritmosYProgramacion/TercerSemestre/Tetris/song.wav")));
             FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
             gainControl.setValue(-10.0f);
             clip.loop(Clip.LOOP_CONTINUOUSLY);
-            clip.start();
         } catch (Exception e) {
-            System.out.println("Secretos del Gobierno");
+            System.out.println("Secretos del Gobierno contactar a Daza");
         }
     }
 
@@ -183,7 +181,7 @@ public class Funciones extends JPanel implements ActionListener {
 
         } else {
             tiempo.start();
-            clip.start();
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
         }
 
         repaint();
