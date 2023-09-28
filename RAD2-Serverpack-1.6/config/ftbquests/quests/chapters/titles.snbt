@@ -1,0 +1,701 @@
+{
+	id: "409837DC5DB00439"
+	group: ""
+	order_index: 3
+	filename: "titles"
+	title: "Titles"
+	icon: {
+		id: "titles:title_scroll_rare"
+		Count: 1b
+		ForgeCaps: {
+			"dungeons_libraries:built_in_enchantments": {
+				BuiltInEnchantments: [ ]
+			}
+		}
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: "kubejs:scroll_01c"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Press 't' (you will most likely have to change this if it conflicts with something) to open the Titles gui."
+				""
+				"Understand that you may not have any titles to choose from at first."
+				""
+				"Simply complete advancements to start growing your selection."
+			]
+			id: "4B93CE8715CACD5A"
+			tasks: [{
+				id: "5392A0BFA52D6B1C"
+				type: "checkmark"
+				title: "Titles"
+			}]
+			rewards: [{
+				id: "3D3AC225061A725D"
+				type: "item"
+				item: {
+					id: "minecraft:golden_carrot"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "the §6§lC§6§lo§6§ln§6§lt§6§lr§6§li§6§lb§6§lu§6§lt§6§lo§6§lr"
+			x: -6.0d
+			y: 5.0d
+			shape: "hexagon"
+			subtitle: "Earned by completing the Feedback Form during beta."
+			description: [
+				"Link to form: bit.ly/RAD2FeedbackTEST"
+				""
+				"If you provide your username if the form, you will be added to a list of users who will receive this title in the next update."
+			]
+			optional: true
+			id: "555DE2027606D5B7"
+			tasks: [{
+				id: "5D6983FD863F51B3"
+				type: "custom"
+				title: "Provide Feedback"
+				icon: {
+					id: "itemfilters:tag"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [{
+				id: "11C10744446F9668"
+				type: "command"
+				title: "the §6§lC§6§lo§6§ln§6§lt§6§lr§6§li§6§lb§6§lu§6§lt§6§lo§6§lr"
+				icon: "titles:title_scroll_rare"
+				team_reward: false
+				command: "/titles add @p titles:feedbacker"
+				player_command: false
+			}]
+		}
+		{
+			x: 0.0d
+			y: -1.5d
+			description: [
+				"Title Fragments can be found in loot, and are used to trade for Title Scrolls with villagers."
+				""
+				"There is a limited amount of titles you can unlock with each scroll."
+			]
+			dependencies: ["4B93CE8715CACD5A"]
+			id: "13BF5C3D53C0B1F5"
+			tasks: [{
+				id: "017B57A2699363CC"
+				type: "item"
+				item: {
+					id: "titles:title_fragment"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [{
+				id: "0A45A0266C2853D7"
+				type: "xp"
+				xp: 100
+			}]
+		}
+		{
+			x: -6.0d
+			y: 3.0d
+			shape: "hexagon"
+			subtitle: "Granted to users who helped develop the pack. Please do not impersonate developers by giving yourself this title."
+			optional: true
+			id: "70E5ACFA41387822"
+			tasks: [{
+				id: "6237C8565A36FFF9"
+				type: "custom"
+				title: "the §c§lD§6§le§e§lv§a§le§d§ll§b§lo§d§lp§c§le§6§lr"
+				icon: {
+					id: "kubejs:ruby"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [{
+				id: "7CEEC0584CF0E4D4"
+				type: "command"
+				title: "the §c§lD§6§le§e§lv§a§le§d§ll§b§lo§d§lp§c§le§6§lr"
+				icon: "titles:title_scroll_rare"
+				team_reward: false
+				command: "/titles add @p titles:developer"
+				player_command: false
+			}]
+		}
+		{
+			x: -1.5d
+			y: 1.5d
+			dependencies: ["4B93CE8715CACD5A"]
+			id: "0F9346DF7CD6A468"
+			tasks: [{
+				id: "148F8B1BB36109F0"
+				type: "item"
+				item: {
+					id: "titles:title_scroll_common"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "2EB99B9EB1797D28"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "374036F978BD3094"
+					type: "ftbmoney:money"
+					ftb_money: 5L
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: 1.5d
+			dependencies: ["4B93CE8715CACD5A"]
+			id: "264F6C7AD7012C95"
+			tasks: [{
+				id: "1C9C14229F56A712"
+				type: "item"
+				item: {
+					id: "titles:title_scroll_uncommon"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "003DF8D2870BCBAE"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "3CEBB97B1324EB08"
+					type: "ftbmoney:money"
+					ftb_money: 10L
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 1.5d
+			dependencies: ["4B93CE8715CACD5A"]
+			id: "0696C455FFFED2FA"
+			tasks: [{
+				id: "25032BB0085AAEF0"
+				type: "item"
+				item: {
+					id: "titles:title_scroll_rare"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "5D172E211F662DDB"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+				{
+					id: "61B8204CEA1F1458"
+					type: "ftbmoney:money"
+					ftb_money: 10L
+				}
+			]
+		}
+		{
+			title: "the §6§lP§f§la§6§lt§f§lr§6§lo§f§ln"
+			x: -6.0d
+			y: 4.0d
+			shape: "hexagon"
+			subtitle: "Granted to users who subscribe to dreams01 on Patreon."
+			description: [
+				""
+				"https://www.patreon.com/Dreams01"
+				""
+				"Please msg me your Minecraft username in Patreon messages, Discord messages(dreams#0285), or Discord Hall-Of-Heroes channel."
+			]
+			optional: true
+			id: "746A3F9BEE5F8477"
+			tasks: [{
+				id: "035217898B130AB7"
+				type: "custom"
+				icon: {
+					id: "kubejs:heart"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [{
+				id: "11E518256C81330E"
+				type: "command"
+				title: "the §6§lP§f§la§6§lt§f§lr§6§lo§f§ln"
+				icon: {
+					id: "titles:title_scroll_rare"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+				team_reward: false
+				command: "/titles add @p titles:patreon"
+				player_command: false
+			}]
+		}
+		{
+			title: "§4§kDO§r§4CURSED§kOM"
+			x: -3.0d
+			y: 3.0d
+			subtitle: "Wear the Ring of Seven Curses"
+			optional: true
+			id: "7B90BE75C03FC842"
+			tasks: [{
+				id: "755C3F13B67C9364"
+				type: "advancement"
+				advancement: "rad_recipes:has_ring_of_seven_curses"
+				criterion: ""
+			}]
+		}
+		{
+			title: "§1the Champion"
+			x: -1.5d
+			y: 3.0d
+			subtitle: "Defeat a Demonic Champion (Tier 5)"
+			id: "5E09DAF586A91C01"
+			tasks: [{
+				id: "09483474EDBB26C7"
+				type: "advancement"
+				advancement: "rad_recipes:slay_5_star_champion"
+				criterion: ""
+			}]
+		}
+		{
+			title: "§7Defier of Death"
+			x: -1.5d
+			y: 4.0d
+			subtitle: "Defeat a Blasphemous Harbinger (Tier 6)"
+			id: "0F86D8591149BD11"
+			tasks: [{
+				id: "3A7EC45CDBEF987B"
+				type: "advancement"
+				advancement: "rad_recipes:slay_6_star_champion"
+				criterion: ""
+			}]
+		}
+		{
+			title: "§5the §kDreaded"
+			x: 0.0d
+			y: 3.0d
+			subtitle: "Complete a set of dreadsteel armor"
+			id: "3D080F094832612B"
+			tasks: [{
+				id: "39363838F22031BC"
+				type: "advancement"
+				advancement: "rad_recipes:dreadsteel_set"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Gambler"
+			x: 1.5d
+			y: 3.0d
+			subtitle: "Defeat Dame Fortuna to get a Fortune's Favor"
+			id: "756D91C669861D90"
+			tasks: [{
+				id: "1F7A456E6C11FDC8"
+				type: "advancement"
+				advancement: "meetyourfight:main/dame_fortuna_kill"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Chef"
+			icon: {
+				id: "dungeons_mobs:chef_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: 3.0d
+			y: 3.0d
+			subtitle: "Place a cooking pot and start your chef journey"
+			description: [""]
+			id: "4DA9BF75AA123CCC"
+			tasks: [{
+				id: "5CE16E8AF2837DF9"
+				type: "advancement"
+				advancement: "farmersdelight:main/place_cooking_pot"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Seagull Magnet"
+			icon: {
+				id: "twilightforest:ore_magnet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 4.5d
+			y: 3.0d
+			subtitle: "Obtained by feeding a seagull"
+			description: [""]
+			id: "4C23F119C971EE8D"
+			tasks: [{
+				id: "3A44934BFAF90576"
+				type: "advancement"
+				advancement: "alexsmobs:alexsmobs/seagull_steal"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Chad"
+			x: -4.5d
+			y: 3.0d
+			subtitle: "Defeat the Warped Mosco and claim the title of Chad"
+			description: [""]
+			id: "2A973F38FD6E0B08"
+			tasks: [{
+				id: "7B1D271057BED93A"
+				type: "item"
+				item: {
+					id: "alexsmobs:spawn_egg_warped_mosco"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "the Assassin"
+			x: 6.0d
+			y: 3.0d
+			subtitle: "defeat an Assassin in Atum and gain the title for yourself"
+			description: [""]
+			id: "4803B7176940EDF9"
+			tasks: [{
+				id: "50D37FE907B9E0AC"
+				type: "advancement"
+				advancement: "atum:core/assassinassin"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Food Critic"
+			icon: {
+				id: "dungeons_mobs:wooden_ladle"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 3.0d
+			y: 4.0d
+			subtitle: "Give every dish from farmer's delight a taste to become the ultimate Food Critic"
+			description: [""]
+			id: "3F13F86497060869"
+			tasks: [{
+				id: "7D1FE4BDDB938965"
+				type: "advancement"
+				advancement: "farmersdelight:main/master_chef"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Dreamer"
+			x: -4.5d
+			y: 6.0d
+			subtitle: "Enter the dream dimension and get a RAD title"
+			id: "09908626ADFAD48F"
+			tasks: [{
+				id: "598BF46DB4AE8BF4"
+				type: "advancement"
+				advancement: "good_nights_sleep:dream/dream"
+				criterion: ""
+			}]
+		}
+		{
+			title: "Herobrine's Bane"
+			x: -3.0d
+			y: 6.0d
+			subtitle: "Defeat Herobrine in the Nightmare dimension"
+			description: [""]
+			id: "7ABDB4D872CD85AF"
+			tasks: [{
+				id: "4CCEA9A64A09F393"
+				type: "advancement"
+				advancement: "good_nights_sleep:nightmare/kill_herobrine"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Dragonslayer"
+			x: -1.5d
+			y: 6.0d
+			subtitle: "Slay a dragon."
+			description: ["Pretty much everyone goes for this for some reason so you should get this one really quick"]
+			id: "4DA0C9352F8BBA87"
+			tasks: [{
+				id: "21537AE7C67D4471"
+				type: "advancement"
+				advancement: "iceandfire:iceandfire/kill_if_dragon"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "7EEDC06EAE308F30"
+				type: "command"
+				title: "Dragonslayer's Message"
+				icon: "iceandfire:manuscript"
+				auto: "enabled"
+				command: "/tellraw @p {\"text\":\"Congratulations on defeating your first dragon! Embarking on the dragonsteel journey will be a long and difficult scavenger hunt as the dragons now aware of your presence have went into hiding to escape your grasp. Good Luck finding them.\",\"color\":\"yellow\"}"
+				player_command: false
+			}]
+		}
+		{
+			x: 0.0d
+			y: 6.0d
+			subtitle: "Relocate a full bee's nest with silk touch and become the keeper of bees"
+			id: "64344C1296F6BA6A"
+			tasks: [{
+				id: "16A5122A2DE6D314"
+				type: "advancement"
+				title: "the Beekeeper"
+				icon: {
+					id: "dungeons_gear:buzzy_nest"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+				advancement: "minecraft:husbandry/silk_touch_nest"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Dendrologist"
+			icon: {
+				id: "twilightforest:minotaur_axe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 3.0d
+			y: 6.0d
+			subtitle: "Collect and Craft every type of block made of wood from the \"Unfinished\" Forest and question your life decisions"
+			id: "1628D6C6E5CB1CBB"
+			tasks: [{
+				id: "0BBB182F4D8BDDEC"
+				type: "advancement"
+				advancement: "twilightforest:arborist"
+				criterion: ""
+			}]
+		}
+		{
+			x: 1.5d
+			y: 6.0d
+			subtitle: "Defeat the extremely rare Pied Piper and steal his title"
+			id: "7A6B7E410672A9BE"
+			tasks: [{
+				id: "31639C090BD00959"
+				type: "advancement"
+				advancement: "rats:rats/piper"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the Noob"
+			x: 4.5d
+			y: 6.0d
+			subtitle: "Die two times in a row"
+			id: "28F38CEA8870B961"
+			tasks: [{
+				id: "4E17CA73423FFB12"
+				type: "advancement"
+				icon: {
+					id: "kubejs:skull3"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+				advancement: "tombstone:adventure/chain_death"
+				criterion: ""
+			}]
+		}
+		{
+			title: "the §aTester"
+			icon: {
+				id: "supplementaries:wrench"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -6.0d
+			y: 6.0d
+			subtitle: "Granted to users who test RAD2 pre-release versions."
+			description: ["Best of us"]
+			optional: true
+			id: "290AB1813B3A9515"
+			tasks: [{
+				id: "1EDA9B202A8A35A2"
+				type: "custom"
+				title: "Test modpack pre-release"
+				icon: {
+					id: "supplementaries:wrench"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [{
+				id: "1F290226068867C5"
+				type: "command"
+				title: "The Tester"
+				icon: "titles:title_scroll_rare"
+				team_reward: false
+				auto: "disabled"
+				command: "/titles add @p titles:tester"
+				player_command: false
+			}]
+		}
+		{
+			title: "§5§lMad Mage"
+			x: 7.0d
+			y: 4.5d
+			subtitle: "Collect all 88 glyphs from Ars Nouveau and then go insane trying to craft the last glyphs."
+			id: "7F643383AC98A054"
+			tasks: [{
+				id: "6E6251E2BE42E90F"
+				type: "advancement"
+				advancement: "rad_recipes:mad_mage"
+				criterion: ""
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:spawner"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 6.0d
+			y: 6.0d
+			description: ["Complete the Break 500 Spawners Quest in the \"Meet your Fight!\" Chapter."]
+			dependencies: ["40FF66BE65AF171D"]
+			id: "4B455D9DA6A65FFC"
+			tasks: [{
+				id: "13D3A43216E49AE5"
+				type: "checkmark"
+				title: "Spawner Smasher"
+			}]
+			rewards: [{
+				id: "74215E966E019CB8"
+				type: "command"
+				title: "§2Spawner Smasher"
+				icon: {
+					id: "titles:title_scroll_uncommon"
+					Count: 1b
+					tag: {
+						Enchantments: [{
+							lvl: 1
+							id: "minecraft:efficiency"
+						}]
+					}
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+				command: "/titles add @p rad_recipes:spawner_buster"
+				player_command: false
+			}]
+		}
+	]
+}

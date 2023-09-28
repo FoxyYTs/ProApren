@@ -1,0 +1,30 @@
+{
+    "type": "farmersdelight:cooking",
+    "ingredients": [
+      {
+        "tag": "forge:vegetables/pepper"
+      },
+      {
+        "tag": "forge:crops/onion"
+      },
+      {
+        "tag": "forge:crops/tomato"
+      },
+      {
+        "tag": "forge:crops/zucchini"
+      },
+      {
+        "tag": "forge:crops/squash"
+      },
+      {
+        "tag": "forge:crops/eggplant"
+      }
+    ],
+    "container": {
+        "item": "minecraft:golden_carrot"
+      },
+    "result": {
+      "item": "rats:assorted_vegetables"
+    },
+    "cookingtime": 100
+  }

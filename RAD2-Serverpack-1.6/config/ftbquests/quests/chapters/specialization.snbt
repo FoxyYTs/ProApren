@@ -1,0 +1,5946 @@
+{
+	id: "0954925BF18F6751"
+	group: "241F1DC7B6D6E9D6"
+	order_index: 3
+	filename: "specialization"
+	title: "Specialization"
+	icon: {
+		id: "kubejs:mark_miner"
+		Count: 1b
+		ForgeCaps: {
+			"dungeons_libraries:built_in_enchantments": {
+				BuiltInEnchantments: [ ]
+			}
+		}
+	}
+	disable_toast: true
+	default_quest_shape: "rsquare"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: -1.0d
+			subtitle: "Starter kits with tiers!"
+			description: [
+				""
+				"Specialzations give you kits of gear that will help you get started. §lYour specialization cannot be changed once picked."
+				""
+				"All the rewards for each kit are obtainable in normal gameplay, excluding the Mark, which is an emblem that gives bonuses to stats related to your Specialization."
+				""
+				"To acquire higher tiers of your Specialization, you will have to complete tasks related to them."
+				""
+				"WARNING FOR PLAYERS ON SERVERS"
+				""
+				"Activating this quest while in a team will reward all players in the team the same specilization,"
+			]
+			optional: true
+			id: "7D7A71EA9FCC15E2"
+			tasks: [{
+				id: "0358255126AF5F51"
+				type: "checkmark"
+				title: "Choose your Specialization"
+			}]
+			rewards: [{
+				id: "4149E0BDD7A35D3D"
+				type: "xp"
+				xp: 50
+			}]
+		}
+		{
+			title: "Miner"
+			icon: {
+				id: "minecraft:iron_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -7.5d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+			]
+			id: "683225884B0525D7"
+			tasks: [{
+				id: "1904783AB1C16D6F"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "5E876B253B2194F6"
+					type: "item"
+					item: {
+						id: "minecraft:water_bucket"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2EF09BD3F96859BA"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "alexsmobs:clinging"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4AD1B0AFCD71AB77"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "12C58ED04C14B30F"
+					type: "item"
+					item: {
+						id: "roughtweaks:plaster"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "25EDE524C9C12BCE"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "0376597CF5125159"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "goblintraders:extended_night_vision"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "47C43E748C6F80E3"
+					type: "item"
+					item: {
+						id: "minecraft:stone_pickaxe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 2
+				}
+				{
+					id: "00FF20687BB5740A"
+					type: "item"
+					item: {
+						id: "nethers_delight:strider_moss_stew"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2EF2313E1DA9758B"
+					type: "item"
+					item: {
+						id: "kubejs:mark_miner"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Farmer"
+			icon: "minecraft:wheat"
+			x: -6.0d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"683225884B0525D7"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+			]
+			id: "4124F9EEBAA895F0"
+			tasks: [{
+				id: "3DE75C0DFC3A63E3"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "0E6FA5503452F897"
+					type: "item"
+					item: {
+						id: "minecraft:melon_seeds"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "35892C2F5A26B062"
+					type: "item"
+					item: {
+						id: "minecraft:pumpkin_seeds"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "772D192CC4BB9DE6"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "44AB0A8117B493DF"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "2CEEECAC7CD2C694"
+					type: "item"
+					item: {
+						id: "roughtweaks:plaster"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "78E5CA23A3BF4E0E"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "usefulhats:straw_hat"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "35B364010468E2F7"
+					type: "item"
+					item: {
+						id: "minecraft:cocoa_beans"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "17E1E444FC13FF9E"
+					type: "item"
+					item: {
+						id: "minecraft:stone_hoe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "731DB3E6679B950D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "quark:long_danger_sight"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2D2BB435AB5EA99F"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "abundance:supportive_strong"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6BE59974EF919616"
+					type: "item"
+					item: {
+						id: "minecraft:beetroot_seeds"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "03799763A9E5A202"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "majruszs_accessories:giant_seed"
+						Count: 1b
+						tag: {
+							Effectiveness: {
+								Value: 0.3d
+							}
+							itemModifier: "modifiers:angry"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6E70686287BFAE26"
+					type: "item"
+					item: {
+						id: "buzzier_bees:honey_apple"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "2A98BEBCBA69D51D"
+					type: "item"
+					item: {
+						id: "kubejs:mark_farmer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "6AC6060AFC71B4B4"
+					type: "item"
+					item: {
+						id: "rats:farmer_hat"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Warrior"
+			icon: {
+				id: "minecraft:iron_sword"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -4.5d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"683225884B0525D7"
+				"4124F9EEBAA895F0"
+				"3A9272D0C456214D"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"0243EC598DB0583C"
+			]
+			id: "2B8432D35FB49159"
+			tasks: [{
+				id: "55608B7B4994E924"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "75BFC8E9C0A4BD00"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:resistance"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3A340075039AF287"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "1B8B3F0E0D520841"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4AB8A7AD0018827A"
+					type: "item"
+					item: {
+						id: "roughtweaks:plaster"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "0D97E79B1051F9A3"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_regeneration"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7E4D602B180F2F44"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:stone_sword"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "06C85F334E7AF459"
+					type: "item"
+					item: {
+						id: "minecraft:cooked_beef"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 21
+				}
+				{
+					id: "390233019279D745"
+					type: "item"
+					item: {
+						id: "kubejs:mark_warrior"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Archer"
+			icon: {
+				id: "minecraft:bow"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -3.0d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+				"683225884B0525D7"
+			]
+			id: "3A9272D0C456214D"
+			tasks: [{
+				id: "0FCB5E46587E824B"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "734BC22EA1BC3108"
+					type: "item"
+					item: {
+						id: "minecraft:cooked_salmon"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "6281F8EC73EF1B36"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "63A1E2D9139C414F"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "0490DA710D1DED7C"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "dungeons_gear:short_speed"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "27D665D697C5EEE1"
+					type: "item"
+					item: {
+						id: "minecraft:arrow"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 33
+				}
+				{
+					id: "3CCDB5D593DE4FA7"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:bow"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+							"dungeons_gear:bow": {
+								lastFiredTime: 0L
+								fuseShotCounter: 0
+								crossbowChargeTime: 0
+							}
+						}
+					}
+				}
+				{
+					id: "04BD984E5E522D90"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "undergarden:glowing"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4570C66E864BA161"
+					type: "item"
+					item: {
+						id: "roughtweaks:plaster"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6C8C09C11F1F9322"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_slow_falling"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "27ACD866A868C969"
+					type: "item"
+					item: {
+						id: "kubejs:mark_archer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Wizard"
+			icon: {
+				id: "eidolon:warlock_hat"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -1.5d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"683225884B0525D7"
+			]
+			id: "0243EC598DB0583C"
+			tasks: [{
+				id: "450A0C70E038DAAB"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "2BEB7368C856AD59"
+					type: "item"
+					item: {
+						id: "minecraft:golden_carrot"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 20
+				}
+				{
+					id: "62B83DB7A70FFD85"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "7195A0E2F3B8BE08"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:healing"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 2
+				}
+				{
+					id: "375AD6B0C7D4AD36"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "ars_nouveau:mana_regen_potion_long"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "162B33A34AD7293F"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "ars_nouveau:mana_regen_potion"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6A395BB7C0DF0938"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "ars_nouveau:spell_damage_long"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2B747E0CACB684F7"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:updraft_tome"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4CBA69261989D0A3"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "eidolon:warlock_hat"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7D1E44FB6D46E90D"
+					type: "item"
+					item: {
+						id: "kubejs:mark_wizard"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Pirate"
+			icon: "pirate_hat:pirate_helmet"
+			x: 0.0d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+				"683225884B0525D7"
+			]
+			id: "5ABCBE93E9B7A41E"
+			tasks: [{
+				id: "27BD35DF4CB624CD"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "5D438713DAE63B8E"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_swiftness"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "023820C1A4F6A589"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "7320F1564D4D1BB6"
+					type: "item"
+					item: {
+						id: "roughtweaks:plaster"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "346F6F2EDABA2816"
+					type: "item"
+					item: {
+						id: "minecraft:cooked_salmon"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "049808729794354C"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:luck"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "666BA1D027FDF741"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "pirate_hat:eyepatch_helmet"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7ED6EACD48646D40"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "spartanweaponry:rapier_stone"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "485E1F146C7EB45D"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "38EB2AB1E47E2E0F"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_slow_falling"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "13B9FF54480ABEFE"
+					type: "item"
+					item: {
+						id: "kubejs:mark_pirate"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Thief"
+			icon: {
+				id: "atum:iron_dagger"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 1.5d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+				"683225884B0525D7"
+			]
+			id: "17B7928C5E72DF4A"
+			tasks: [{
+				id: "1C6FE385255D21A7"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "4D98DEB9B899192D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_swiftness"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2C6AF0FE1CE1F115"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:light_feather"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2647AA6E4164FA39"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:invisibility"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "72290944407FE738"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:haste"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "0FBEC69DA008C19D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:dagger"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "farmersdelight:backstabbing"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+					count: 2
+				}
+				{
+					id: "5580874D20FBC880"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "0E33B9B7973774A4"
+					type: "item"
+					item: {
+						id: "roughtweaks:plaster"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "28734B4D32CDAFEF"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "5EDCB8642A110B03"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "alexsmobs:speed_iii"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7D77EEE029683B69"
+					type: "item"
+					item: {
+						id: "kubejs:mark_thief"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Huntsman"
+			icon: "minecraft:leather"
+			x: 3.0d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+				"683225884B0525D7"
+			]
+			id: "04399280EC946CB6"
+			tasks: [{
+				id: "0231924AE59559D9"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "49BD4B32FA0EA551"
+					type: "item"
+					item: {
+						id: "betterdefaultbiomes:hunter_arrow"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 28
+				}
+				{
+					id: "4F1C6824581A3A9E"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "23C21EE29A328C1F"
+					type: "item"
+					item: {
+						id: "roughtweaks:plaster"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6EAE26D20711EF95"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:long_knowledge"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1D9CDEE79069E892"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:hunting_bow"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "dungeons_gear:masters_call"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+							"dungeons_gear:bow": {
+								lastFiredTime: 0L
+								fuseShotCounter: 0
+								crossbowChargeTime: 0
+							}
+						}
+					}
+				}
+				{
+					id: "43276BF5186F8085"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:long_forceful"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "08AA90618FCCBE97"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "alexsmobs:speed_iii"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "24A52423B4911FE7"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "199EEACD05F73094"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:boots_of_swiftness"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "041C6805E1E4BCFC"
+					type: "item"
+					item: {
+						id: "minecraft:bone"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 5
+				}
+				{
+					id: "463C02E9D5AEF5D1"
+					type: "item"
+					item: {
+						id: "kubejs:mark_huntsman"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Healer"
+			icon: {
+				id: "roughtweaks:medkit"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 4.5d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+				"683225884B0525D7"
+			]
+			id: "591E749ECBF3BF91"
+			tasks: [{
+				id: "575563DEB347D2F6"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "1DAE3D1282AD6B70"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:gong_of_weakening"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4495BF03C323843D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:healing"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 3
+				}
+				{
+					id: "24ECBC007E2A0A86"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "roughtweaks:medkit"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6F6ABB58D6B308E9"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "abundance:supportive_strong"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "61CAB824200577A5"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "quark:long_danger_sight"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1FC9133125E03859"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "1A90159760DEF7E7"
+					type: "item"
+					item: {
+						id: "kubejs:mark_healer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Pitfighter"
+			icon: {
+				id: "dungeons_gear:mauler"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 6.0d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"75434610CC4789B4"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+				"683225884B0525D7"
+			]
+			id: "064CD4861C2413A8"
+			tasks: [{
+				id: "3306566555B8C564"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "0927300223230674"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:iron_hide_amulet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "492BF00FBBFB6341"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:light_feather"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "503F2B46D2D7B587"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "dungeons_gear:shadow_brew"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7774A01BCB41E517"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "64F6CF717B0901B2"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "0BB4823987FD6968"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_swiftness"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "34B9C8BCCC85B207"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:long_forceful"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "5A4FDD4D84F4CF42"
+					type: "item"
+					item: {
+						id: "roughtweaks:bandage"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "53084EE34C8CFB6B"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:gauntlet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_gear:dualwield": {
+								fake: 0b
+								wrapped: {
+									ForgeCaps: {
+										"dungeons_libraries:built_in_enchantments": {
+											BuiltInEnchantments: [ ]
+										}
+									}
+									id: "minecraft:air"
+									Count: 0b
+								}
+							}
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+					count: 2
+				}
+				{
+					id: "132290CECB0FC20E"
+					type: "item"
+					item: {
+						id: "kubejs:mark_pitfighter"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Tamer"
+			icon: "ars_nouveau:glyph_summon_wolves"
+			x: 7.5d
+			y: 1.0d
+			dependencies: ["7D7A71EA9FCC15E2"]
+			optional: true
+			incompatible: [
+				"3A9272D0C456214D"
+				"4124F9EEBAA895F0"
+				"591E749ECBF3BF91"
+				"04399280EC946CB6"
+				"5ABCBE93E9B7A41E"
+				"064CD4861C2413A8"
+				"17B7928C5E72DF4A"
+				"2B8432D35FB49159"
+				"0243EC598DB0583C"
+				"683225884B0525D7"
+			]
+			id: "75434610CC4789B4"
+			tasks: [{
+				id: "0DD6278B39D732AE"
+				type: "checkmark"
+				title: "Select this Specialization"
+			}]
+			rewards: [
+				{
+					id: "48671746BE486F62"
+					type: "item"
+					item: {
+						id: "minecraft:bone"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 8
+				}
+				{
+					id: "40152F120884A56A"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "doggytalents:training_treat"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "5237BDB227D4B4D1"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_swiftness"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "19925036C0D50D45"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "56DCFC66CF34FBE6"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "abundance:supportive_strong"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "21EE5B8E33FA9256"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "quark:long_danger_sight"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2532A777C75E7259"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "doggytalents:super_treat"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3F51AD9AFFAA7A21"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "spartanweaponry:parrying_dagger_stone"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7201E560B31F0E0C"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:healing"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "792E1B74FE8DFA33"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "losttrinkets:piggy"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3B1D8BF993FAEC19"
+					type: "item"
+					item: {
+						id: "kubejs:mark_tamer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Spelunkerer"
+			icon: {
+				id: "losttrinkets:miners_pick"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: -7.5d
+			y: 2.5d
+			dependencies: ["683225884B0525D7"]
+			optional: true
+			id: "23D32CEF3529DC11"
+			tasks: [
+				{
+					id: "306118CD623F792B"
+					type: "item"
+					item: {
+						id: "kubejs:mark_miner"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "30F113DC491F6CDD"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "0D847F4E91F811D8"
+					type: "pmmo:skill"
+					skill: "mining"
+					requiredLevel: 20.0d
+				}
+				{
+					id: "16EF934E7FC8DE9C"
+					type: "questsadditions:break"
+					icon: {
+						id: "minecraft:stone"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					block: "minecraft:stone"
+					value: 250L
+					checkItem: false
+				}
+			]
+			rewards: [
+				{
+					id: "573D84C16AA560D8"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "infernalexp:long_luminous"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "414DFC619952E2E5"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_swiftness"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "739FD7F5D7C18819"
+					type: "item"
+					item: {
+						id: "losttrinkets:miners_pick"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3A7CF81D153AD82A"
+					type: "item"
+					item: {
+						id: "dungeons_gear:spelunker_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:wild"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "5003460B7419AF42"
+					type: "item"
+					item: {
+						id: "dungeons_gear:spelunker_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "077236A77A0869B6"
+					type: "item"
+					item: {
+						id: "kubejs:mark_spelunker"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Rancher"
+			icon: {
+				id: "losttrinkets:lunch_bag"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: -6.0d
+			y: 2.5d
+			dependencies: ["4124F9EEBAA895F0"]
+			optional: true
+			id: "2D76206095D119CB"
+			tasks: [
+				{
+					id: "6CE5E63971CBDED4"
+					type: "item"
+					item: {
+						id: "kubejs:mark_farmer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "375B49ED84325655"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "1D096012501701C9"
+					type: "pmmo:skill"
+					skill: "farming"
+					requiredLevel: 15.0d
+				}
+			]
+			rewards: [
+				{
+					id: "2BD0A420438D9FB2"
+					type: "item"
+					item: {
+						id: "minecraft:nether_wart"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "006CBF035095E794"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "upgrade_aquatic:repellence_long"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "197518FEA7DE0351"
+					type: "item"
+					item: {
+						id: "usefulhats:chopping_hat"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:rash"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4D2ED61BE77B9FC0"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "quark:long_danger_sight"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2CF076BCAD0CB54C"
+					type: "item"
+					item: {
+						id: "dungeons_gear:corrupted_seeds"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "62578987D9A682EE"
+					type: "item"
+					item: {
+						id: "minecraft:soul_sand"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4872D6FB93ACF9FB"
+					type: "item"
+					item: {
+						id: "kubejs:mark_rancher"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "13C9E4603614B6FD"
+					type: "item"
+					item: {
+						id: "dungeons_gear:shear_dagger"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "dungeons_gear:swirling"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "4DB2B21C055129ED"
+					type: "item"
+					item: {
+						id: "losttrinkets:lunch_bag"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Mercenary"
+			icon: {
+				id: "dungeons_gear:mercenary_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: -4.5d
+			y: 2.5d
+			dependencies: ["2B8432D35FB49159"]
+			optional: true
+			id: "0B619314C9EEA318"
+			tasks: [
+				{
+					id: "7664573FCB589386"
+					type: "item"
+					item: {
+						id: "kubejs:mark_warrior"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "545F1DD91B98499C"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "2E47700E21977FD0"
+					type: "pmmo:skill"
+					skill: "combat"
+					requiredLevel: 20.0d
+				}
+				{
+					id: "525F564998AE70A0"
+					type: "kill"
+					entity: "minecraft:zombie"
+					value: 50L
+				}
+			]
+			rewards: [
+				{
+					id: "3D705C31972DB3B9"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:strong_resistance"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "21EC47315F2AFA81"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:long_resistance"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "75B067DD5CB29C77"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:long_absorption"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "16228D95D65D6CF1"
+					type: "item"
+					item: {
+						id: "dungeons_gear:mercenary_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4732439AE36C7A4C"
+					type: "item"
+					item: {
+						id: "dungeons_gear:mercenary_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "452232F9DC240261"
+					type: "item"
+					item: {
+						id: "dungeons_gear:death_cap_mushroom"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "70196AC16958A08F"
+					type: "item"
+					item: {
+						id: "kubejs:mark_mercenary"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Arbalester"
+			icon: {
+				id: "dungeons_gear:rapid_crossbow"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+					"dungeons_gear:bow": {
+						lastFiredTime: 0L
+						fuseShotCounter: 0
+						crossbowChargeTime: 0
+					}
+				}
+			}
+			x: -3.0d
+			y: 2.5d
+			dependencies: ["3A9272D0C456214D"]
+			optional: true
+			id: "457B4C8DB54B2C78"
+			tasks: [
+				{
+					id: "75714E1D034C0CBC"
+					type: "item"
+					item: {
+						id: "kubejs:mark_archer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "7D54C122F992532B"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "66C3A3A43E3B8631"
+					type: "pmmo:skill"
+					skill: "archery"
+					requiredLevel: 30.0d
+				}
+			]
+			rewards: [
+				{
+					id: "3A69DE3AEE152CAF"
+					type: "item"
+					item: {
+						id: "spartanweaponry:arrow_iron"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 16
+				}
+				{
+					id: "16B644B52EAAF98C"
+					type: "item"
+					item: {
+						id: "dungeons_gear:archers_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "dungeons_gear:arrow_hoarder"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "6EB8798AF933DA9A"
+					type: "item"
+					item: {
+						id: "dungeons_gear:archers_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "7FBAC937038248A7"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "dungeons_gear:oakwood_brew"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "34E5259813340736"
+					type: "item"
+					item: {
+						id: "dungeons_gear:rapid_crossbow"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "apotheosis:crescendo"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+							"dungeons_gear:bow": {
+								lastFiredTime: 0L
+								fuseShotCounter: 0
+								crossbowChargeTime: 0
+							}
+						}
+					}
+				}
+				{
+					id: "2CC6E5115E8E3E94"
+					type: "item"
+					item: {
+						id: "kubejs:mark_arbalester"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Alchemist"
+			icon: {
+				id: "dungeons_gear:ember_robes_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: -1.5d
+			y: 2.5d
+			dependencies: ["0243EC598DB0583C"]
+			optional: true
+			id: "150C2D107C30D787"
+			tasks: [
+				{
+					id: "4856C0D7D76E491A"
+					type: "item"
+					item: {
+						id: "kubejs:mark_wizard"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "7C1D1566B5D7319E"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "76203B53471BF16D"
+					type: "pmmo:skill"
+					skill: "magic"
+					requiredLevel: 16.0d
+				}
+			]
+			rewards: [
+				{
+					id: "487024FECB5AF48E"
+					type: "item"
+					item: {
+						id: "dungeons_gear:ember_robes_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "ars_nouveau:mana_boost"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "4E3DFC889F29DD7C"
+					type: "item"
+					item: {
+						id: "dungeons_gear:ember_robes_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "ars_nouveau:mana_boost"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "124CC3E0F1190F3F"
+					type: "item"
+					item: {
+						id: "ars_nouveau:amulet_of_mana_boost"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "763DC659B52D9F3D"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "ars_nouveau:spell_damage_strong"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3FF9E1A89D7B4845"
+					type: "item"
+					item: {
+						id: "apotheosis:potion_charm"
+						Count: 1b
+						tag: {
+							Damage: 0
+							Potion: "ars_nouveau:mana_regen_potion_long"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "48D52B943C1A0067"
+					type: "item"
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "ars_nouveau:mana_regen_potion_strong"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1BD5A7311D104C35"
+					type: "item"
+					item: {
+						id: "ars_nouveau:source_berry_pie"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4F07EAAC5CD576EB"
+					type: "item"
+					item: {
+						id: "dungeons_gear:battlestaff"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "66C522FF213C9E7A"
+					type: "item"
+					item: {
+						id: "kubejs:mark_alchemist"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Corsair"
+			icon: {
+				id: "dungeons_gear:cutlass"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: 0.0d
+			y: 2.5d
+			dependencies: ["5ABCBE93E9B7A41E"]
+			optional: true
+			id: "7FE110B6FD08031B"
+			tasks: [
+				{
+					id: "064A3E0E65176FE5"
+					type: "item"
+					item: {
+						id: "kubejs:mark_pirate"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "470D90C31CB542A0"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "02A5FBA21B583705"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 10.0d
+				}
+				{
+					id: "3DA9DEE22160663F"
+					type: "pmmo:skill"
+					skill: "swimming"
+					requiredLevel: 5.0d
+				}
+			]
+			rewards: [
+				{
+					id: "04EC6DB0840DC464"
+					type: "item"
+					item: {
+						id: "dungeons_gear:cutlass"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "374B520369273861"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "goblintraders:dolphins_grace"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "0DD01C63326A0F94"
+					type: "item"
+					item: {
+						id: "pirate_hat:sailor_helmet"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3F2F771F14E961A6"
+					type: "item"
+					item: {
+						id: "artifacts:charm_of_sinking"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1207953AD7786EF3"
+					type: "item"
+					item: {
+						id: "kubejs:mark_corsair"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Bandit"
+			icon: {
+				id: "dungeons_gear:shadow_walker_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: 1.5d
+			y: 2.5d
+			dependencies: ["17B7928C5E72DF4A"]
+			optional: true
+			id: "75803607F74E0EA9"
+			tasks: [
+				{
+					id: "20FF86079C9B8C4B"
+					type: "item"
+					item: {
+						id: "kubejs:mark_thief"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "00BB12562D01A0A6"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "3573C91BF7CFBFDF"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 15.0d
+				}
+			]
+			rewards: [
+				{
+					id: "160ECB2CE1A636C8"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:long_forceful"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "23EA3ED03D3ED93B"
+					type: "item"
+					item: {
+						id: "dungeons_gear:shadow_walker_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "4546540FBA62D44D"
+					type: "item"
+					item: {
+						id: "dungeons_gear:shadow_walker_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "529074AFB9FDE8ED"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:strong_haste"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "09E064C1AEE9DEB1"
+					type: "item"
+					item: {
+						id: "dungeons_gear:shortbow"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+							"dungeons_gear:bow": {
+								lastFiredTime: 0L
+								fuseShotCounter: 0
+								crossbowChargeTime: 0
+								bowChargeTime: 0.0f
+							}
+						}
+					}
+				}
+				{
+					id: "2ADCAEE9E5B12485"
+					type: "item"
+					item: {
+						id: "dungeons_gear:ghost_cloak"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7F166A7387D74150"
+					type: "item"
+					item: {
+						id: "betterdefaultbiomes:bandit_arrow"
+						Count: 32b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 32
+				}
+				{
+					id: "1D4A4B93B2B650B2"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:long_endurance"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1CF6A5FFB31A384B"
+					type: "item"
+					item: {
+						id: "kubejs:mark_bandit"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Tracker"
+			icon: {
+				id: "relics:hunter_belt"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 3.0d
+			y: 2.5d
+			dependencies: ["04399280EC946CB6"]
+			optional: true
+			id: "46B016B40B360CEF"
+			tasks: [
+				{
+					id: "3281D85AD3F95397"
+					type: "item"
+					item: {
+						id: "kubejs:mark_huntsman"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "246017A0813D481D"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "0EAC1933F7963572"
+					type: "pmmo:skill"
+					skill: "archery"
+					requiredLevel: 15.0d
+				}
+				{
+					id: "38FF42ED78299F8B"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 10.0d
+				}
+			]
+			rewards: [
+				{
+					id: "76EA768B1BD2907B"
+					type: "item"
+					item: {
+						id: "betterdefaultbiomes:hunter_arrow"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 16
+				}
+				{
+					id: "3734EACFC1FA78DE"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:strong_replenishment"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4A23959C1F02081D"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:strong_knowledge"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "5A089A5E01DB1C42"
+					type: "item"
+					item: {
+						id: "relics:hunter_belt"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "04160D457710300D"
+					type: "item"
+					item: {
+						id: "dungeons_gear:hunters_promise"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+							"dungeons_gear:bow": {
+								lastFiredTime: 0L
+								fuseShotCounter: 0
+								crossbowChargeTime: 0
+								bowChargeTime: 0.0f
+							}
+						}
+					}
+				}
+				{
+					id: "64D904E7242989A0"
+					type: "item"
+					item: {
+						id: "dungeons_gear:hunters_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "dungeons_gear:arrow_hoarder"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "03D9966681D6C945"
+					type: "item"
+					item: {
+						id: "kubejs:mark_tracker"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Spiritualist"
+			icon: {
+				id: "dungeons_gear:totem_of_regeneration"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 4.5d
+			y: 2.5d
+			dependencies: ["591E749ECBF3BF91"]
+			optional: true
+			id: "50DB09954A68BDF3"
+			tasks: [
+				{
+					id: "13B95D75C2E163A6"
+					type: "item"
+					item: {
+						id: "kubejs:mark_healer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "2CCF6816D4B66F70"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "519ABC56C5C924E6"
+					type: "pmmo:skill"
+					skill: "magic"
+					requiredLevel: 10.0d
+				}
+				{
+					id: "302EBC5AC1B04FE9"
+					type: "pmmo:skill"
+					skill: "alchemy"
+					requiredLevel: 5.0d
+				}
+			]
+			rewards: [
+				{
+					id: "24E2E5F9658B475E"
+					type: "item"
+					item: {
+						id: "dungeons_gear:totem_of_regeneration"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2AA7BB9217F42FCB"
+					type: "item"
+					item: {
+						id: "dungeons_gear:fox_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "10D4454FFD025ADF"
+					type: "item"
+					item: {
+						id: "dungeons_gear:fox_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "2A784F465DC30A80"
+					type: "item"
+					item: {
+						id: "atum:isis_healing"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "79D7E9F1192977B2"
+					type: "item"
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:strong_healing"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 3
+				}
+				{
+					id: "1BF8ED4E003C7AF5"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:strong_healing"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "785D752883ACF8AF"
+					type: "item"
+					item: {
+						id: "roughtweaks:medkit_enchanted"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4127CB5AFB59031C"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "abundance:supportive_strong"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "5BD0FAFCB4807079"
+					type: "item"
+					item: {
+						id: "majruszs_accessories:secret_ingredient"
+						Count: 1b
+						tag: {
+							Effectiveness: {
+								Value: 0.0d
+							}
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4A17798AEAA056A9"
+					type: "item"
+					item: {
+						id: "kubejs:mark_spiritualist"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Fighter"
+			icon: {
+				id: "dungeons_gear:highland_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: 6.0d
+			y: 2.5d
+			dependencies: ["064CD4861C2413A8"]
+			optional: true
+			id: "42CC938BE615A4AF"
+			tasks: [
+				{
+					id: "23F2D3C3E71EAB2E"
+					type: "item"
+					item: {
+						id: "kubejs:mark_pitfighter"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "7BD900BA4BC983AE"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "0052526AEC9AAC84"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 20.0d
+				}
+				{
+					id: "17267B1D3B6F9DA4"
+					type: "pmmo:skill"
+					skill: "combat"
+					requiredLevel: 20.0d
+				}
+			]
+			rewards: [
+				{
+					id: "2EAB4269E49997AC"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "alexsmobs:speed_iii"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "5D9D6B2B0E654975"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:strong_replenishment"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3293C946E5DD15C3"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:long_endurance"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1EBDD4F682EFC962"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:highland_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "5CC0CB65B818DDAF"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:highland_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "30254351AF4A09CE"
+					type: "item"
+					item: {
+						id: "kubejs:mark_fighter"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Summoner"
+			icon: {
+				id: "dungeons_gear:tasty_bone"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 7.5d
+			y: 2.5d
+			dependencies: ["75434610CC4789B4"]
+			optional: true
+			id: "18156A17C2B04B79"
+			tasks: [
+				{
+					id: "1515C27AAFCB2DBF"
+					type: "item"
+					item: {
+						id: "kubejs:mark_tamer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "094EDAC887634B23"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "4852577B8B371079"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 20.0d
+				}
+				{
+					id: "04C43C0F33B9F9A9"
+					type: "pmmo:skill"
+					skill: "magic"
+					requiredLevel: 15.0d
+				}
+			]
+			rewards: [
+				{
+					id: "3765CA26B01A48FF"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:grim_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "4F5ECE1360941D04"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:grim_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "1C0EF8424DA46E8D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:tasty_bone"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "77CC104B0C829516"
+					type: "item"
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "undergarden:glowing"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "06E7BE5E494A832A"
+					type: "item"
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:strength"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1F25BC1DDF37E120"
+					type: "item"
+					item: {
+						id: "kubejs:mark_summoner"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Cavemaster"
+			icon: {
+				id: "artifacts:digging_claws"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: -7.5d
+			y: 4.0d
+			dependencies: ["23D32CEF3529DC11"]
+			optional: true
+			id: "25FE6F8D9076C909"
+			tasks: [
+				{
+					id: "55DECC181D8DD7A8"
+					type: "item"
+					item: {
+						id: "kubejs:mark_spelunker"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "19B6D8E7DC0898A7"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "285D301B6391A5FF"
+					type: "questsadditions:break"
+					block: "minecraft:stone"
+					value: 1280L
+					checkItem: false
+				}
+				{
+					id: "7FCF37CAE16B510C"
+					type: "pmmo:skill"
+					skill: "mining"
+					requiredLevel: 45.0d
+				}
+			]
+			rewards: [
+				{
+					id: "619D8A3670D7A2D3"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:cave_crawler_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:jagged"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "12241DD6FF74763D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:cave_crawler_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:armored"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "483333C59D674CD9"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "alexsmobs:centipede_leggings"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:brisk"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3FD4D58388BCA004"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "artifacts:digging_claws"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6C6B0487DC7247D3"
+					type: "item"
+					item: {
+						id: "kubejs:mark_cavemaster"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Agrarian"
+			icon: {
+				id: "dungeons_gear:satchel_of_snacks"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: -6.0d
+			y: 4.0d
+			dependencies: ["2D76206095D119CB"]
+			optional: true
+			id: "228F0BED78F0BD1F"
+			tasks: [
+				{
+					id: "59A7E63D9703D7DA"
+					type: "item"
+					item: {
+						id: "kubejs:mark_rancher"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "5A666E6FE6907561"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "4F2626E223C35FE7"
+					type: "item"
+					title: "Any #forge:hay_bales"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "forge:hay_bales"
+						}
+					}
+				}
+				{
+					id: "7306515762EBA772"
+					type: "pmmo:skill"
+					skill: "farming"
+					requiredLevel: 30.0d
+				}
+			]
+			rewards: [
+				{
+					id: "2244D45DA2A15129"
+					type: "item"
+					item: {
+						id: "farmersdelight:honey_glazed_ham"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1D273B6659EEE244"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "ars_nouveau:mana_bloom_crop"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "5F412E6AA630CDDE"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:vine_whip"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "dungeons_gear:poison_cloud"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "3EFFC2FF67EAAC23"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:enchanted_grass"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "29F63496EC74CB09"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:satchel_of_snacks"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6DD42D183016F700"
+					type: "item"
+					item: {
+						id: "kubejs:mark_agrarian"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "4500232B846CBA8A"
+					type: "item"
+					item: {
+						id: "dungeons_mobs:chef_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "ensorcellation:gourmand"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "7C25E7AD8A86DAE8"
+					type: "item"
+					item: {
+						id: "dungeons_mobs:chef_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "ensorcellation:vitality"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Champion"
+			icon: {
+				id: "dungeons_gear:champions_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: -4.5d
+			y: 4.0d
+			dependencies: ["0B619314C9EEA318"]
+			optional: true
+			id: "79B3B9D8435C6B6C"
+			tasks: [
+				{
+					id: "06CF43D161090C05"
+					type: "item"
+					item: {
+						id: "kubejs:mark_mercenary"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "076AE8CE64A3C009"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "571FC1F8AB3D9335"
+					type: "kill"
+					entity: "minecraft:zombie"
+					value: 200L
+				}
+				{
+					id: "48796F8B570BBFC9"
+					type: "kill"
+					entity: "minecraft:skeleton"
+					value: 50L
+				}
+			]
+			rewards: [
+				{
+					id: "4B8D1712A73CF68F"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:powershaker"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:half_hearted"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3A3636F4C821289B"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:full_metal_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "746748BBB0D3F3CC"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:full_metal_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "294448B0B550DC54"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "losttrinkets:tha_golem"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "56DD8E522C68F391"
+					type: "item"
+					item: {
+						id: "kubejs:mark_champion"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Artillerist"
+			icon: {
+				id: "dungeons_gear:masters_bow"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [
+								{
+									lvl: 1s
+									id: "dungeons_gear:masters_call"
+								}
+								{
+									lvl: 1s
+									id: "minecraft:power"
+								}
+							]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+					"dungeons_gear:bow": {
+						lastFiredTime: 0L
+						fuseShotCounter: 0
+						crossbowChargeTime: 0
+					}
+				}
+			}
+			x: -3.0d
+			y: 4.0d
+			dependencies: ["457B4C8DB54B2C78"]
+			optional: true
+			id: "27155BAC83580A64"
+			tasks: [
+				{
+					id: "792127B6EE82CEE9"
+					type: "item"
+					item: {
+						id: "kubejs:mark_arbalester"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "729529B7C220F7FD"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "46E462FC5E954E92"
+					type: "pmmo:skill"
+					skill: "archery"
+					requiredLevel: 55.0d
+				}
+				{
+					id: "6C8A6EDA82F4B21B"
+					type: "advancement"
+					advancement: "minecraft:adventure/sniper_duel"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "7CF706DD04BFDC4E"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:ghost_cloak"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1B8C7844E7CF477D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:masters_bow"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [
+										{
+											lvl: 1s
+											id: "dungeons_gear:masters_call"
+										}
+										{
+											lvl: 1s
+											id: "minecraft:power"
+										}
+									]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+							"dungeons_gear:bow": {
+								lastFiredTime: 0L
+								fuseShotCounter: 0
+								crossbowChargeTime: 0
+							}
+						}
+					}
+				}
+				{
+					id: "3C93EFCD6A3BFF62"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:flaming_quiver"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "399641B3713D6F10"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "losttrinkets:slingshot"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3EDBD654BBAFC7D3"
+					type: "item"
+					item: {
+						id: "kubejs:mark_artillerist"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Thaumaturge"
+			icon: {
+				id: "artifacts:antidote_vessel"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: -1.5d
+			y: 4.0d
+			dependencies: ["150C2D107C30D787"]
+			optional: true
+			id: "6E51D4735105419A"
+			tasks: [
+				{
+					id: "61C4BF9F8BB33C0C"
+					type: "item"
+					item: {
+						id: "kubejs:mark_alchemist"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "46B41E8C8CF4198C"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "28ADBA223D9055DD"
+					type: "pmmo:skill"
+					skill: "magic"
+					requiredLevel: 30.0d
+				}
+				{
+					id: "77AB69C81471391D"
+					type: "pmmo:skill"
+					skill: "alchemy"
+					requiredLevel: 10.0d
+				}
+			]
+			rewards: [
+				{
+					id: "695F5C420AF2F9C2"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:satchel_of_elixirs"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:spiked"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "29B770F4871F5BAF"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "apotheosis:potion_charm"
+						Count: 1b
+						tag: {
+							Damage: 0
+							Potion: "ars_nouveau:mana_regen_potion_strong"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "0D93C592502318A9"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "artifacts:antidote_vessel"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3A9F13F4E79B78DA"
+					type: "item"
+					item: {
+						id: "kubejs:mark_thaumaturge"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Captain"
+			icon: {
+				id: "artifacts:golden_hook"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 0.0d
+			y: 4.0d
+			dependencies: ["7FE110B6FD08031B"]
+			optional: true
+			id: "5835821DED0B50BB"
+			tasks: [
+				{
+					id: "38F970647A89D7D5"
+					type: "item"
+					item: {
+						id: "kubejs:mark_corsair"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "7976E3D48EAFDCB9"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "197B4B6271894EAA"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 20.0d
+				}
+				{
+					id: "3AAC7A60C14B9A83"
+					type: "pmmo:skill"
+					skill: "endurance"
+					requiredLevel: 25.0d
+				}
+			]
+			rewards: [
+				{
+					id: "724E4BA045309611"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "pirate_hat:pirate_helmet"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3A443B62EF887FC7"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:shock_powder"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1E9A03F25500B6BE"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "artifacts:golden_hook"
+						Count: 1b
+						tag: {
+							Damage: 0
+							itemModifier: "modifiers:fleeting"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7BE2D40431872A1B"
+					type: "item"
+					item: {
+						id: "kubejs:mark_captain"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Rogue"
+			icon: {
+				id: "dungeons_gear:spider_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [{
+							data: [ ]
+							source: "dungeons_libraries:gear_config"
+						}]
+					}
+				}
+			}
+			x: 1.5d
+			y: 4.0d
+			dependencies: ["75803607F74E0EA9"]
+			optional: true
+			id: "086467EF70DFCE43"
+			tasks: [
+				{
+					id: "0271739DDB565603"
+					type: "item"
+					item: {
+						id: "kubejs:mark_bandit"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "10111D4E3B91C96E"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "301B01C65748B024"
+					type: "ftbmoney:money"
+					value: 100L
+				}
+				{
+					id: "4180C084FCC49DE0"
+					type: "item"
+					item: {
+						id: "minecraft:gold_block"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+				{
+					id: "04FC480747C20CE8"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 40.0d
+				}
+			]
+			rewards: [
+				{
+					id: "74C8BEC0E95C74BE"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:spider_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "06B54CEB98FF11F9"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:spider_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [ ]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "0DD1510D48511BFD"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:strong_replenishment"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "475282ACB35B9595"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:totem_of_shielding"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2911861434202D5E"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "losttrinkets:tha_spirit"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "53467E4724B40C98"
+					type: "item"
+					item: {
+						id: "kubejs:mark_rogue"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Pursuer"
+			icon: {
+				id: "losttrinkets:minds_eye"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 3.0d
+			y: 4.0d
+			dependencies: ["46B016B40B360CEF"]
+			optional: true
+			id: "289B1DE30DC52A57"
+			tasks: [
+				{
+					id: "7C4AC19A47A181C4"
+					type: "item"
+					item: {
+						id: "kubejs:mark_tracker"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "29F5968B904A3A1A"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "4FFAA05251EF3A60"
+					type: "pmmo:skill"
+					skill: "archery"
+					requiredLevel: 30.0d
+				}
+				{
+					id: "7729F05C84004CA8"
+					type: "item"
+					title: "Any #forge:leather"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "forge:leather"
+						}
+					}
+					count: 64L
+				}
+				{
+					id: "36599E4562A8488A"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 15.0d
+				}
+			]
+			rewards: [
+				{
+					id: "10900A6CD8BA20CF"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:long_swiftness"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "434BD6DFBEB6CF7D"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "dungeons_gear:shadow_brew"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "097F047F79FF0485"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "artifacts:aqua_dashers"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "014CA1636AD7F05A"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "losttrinkets:minds_eye"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6C89B5822F061BA2"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:love_medallion"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2BD166D2AA98B783"
+					type: "item"
+					item: {
+						id: "kubejs:mark_pursuer"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Shaman"
+			icon: {
+				id: "dungeons_gear:totem_of_soul_protection"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 4.5d
+			y: 4.0d
+			dependencies: ["50DB09954A68BDF3"]
+			optional: true
+			id: "2541699B18497F4D"
+			tasks: [
+				{
+					id: "430789429978685A"
+					type: "item"
+					item: {
+						id: "kubejs:mark_spiritualist"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "3395FCD7FD353ACF"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "73171AEABB4D03DF"
+					type: "pmmo:skill"
+					skill: "alchemy"
+					requiredLevel: 20.0d
+				}
+				{
+					id: "7530F623A83D1970"
+					type: "pmmo:skill"
+					skill: "magic"
+					requiredLevel: 15.0d
+				}
+			]
+			rewards: [
+				{
+					id: "73FECF9A9B96090B"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:wind_horn"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "64EAA4053F1EF29A"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "goblintraders:powerful_instant_health"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "795F29673D0A5895"
+					type: "item"
+					item: {
+						id: "minecraft:splash_potion"
+						Count: 1b
+						tag: {
+							Potion: "goblintraders:powerful_instant_health"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 2
+				}
+				{
+					id: "1DA2EF8D75118D8A"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:totem_of_soul_protection"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "12364DDD3CD5E8F8"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "artifacts:crystal_heart"
+						Count: 1b
+						tag: {
+							itemModifier: "modifiers:hard"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "7841BECD7D368C59"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "losttrinkets:tha_wizard"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3261E39C2F665FA6"
+					type: "item"
+					item: {
+						id: "kubejs:mark_shaman"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Underdog"
+			icon: {
+				id: "artifacts:vampiric_glove"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 6.0d
+			y: 4.0d
+			dependencies: ["42CC938BE615A4AF"]
+			optional: true
+			id: "366092E413554761"
+			tasks: [
+				{
+					id: "72D3BEBBBBD1B29D"
+					type: "item"
+					item: {
+						id: "kubejs:mark_fighter"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "41DEF53ABF666073"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "7D272BCEB4AB9F5F"
+					type: "pmmo:skill"
+					skill: "endurance"
+					requiredLevel: 30.0d
+				}
+				{
+					id: "3FD172AE8B6F2C3A"
+					type: "pmmo:skill"
+					skill: "combat"
+					requiredLevel: 40.0d
+				}
+				{
+					id: "6FC702D450811FBE"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 40.0d
+				}
+			]
+			rewards: [
+				{
+					id: "3C9C882755DD04FC"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "dungeons_gear:shadow_brew"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "425E9DCE53FC03AA"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "apotheosis:long_absorption"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 2
+				}
+				{
+					id: "48244D3668B427B5"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "artifacts:vampiric_glove"
+						Count: 1b
+						tag: {
+							itemModifier: "modifiers:half_hearted"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "3B5F722AA3770502"
+					type: "item"
+					item: {
+						id: "twilightforest:charm_of_life_1"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "4A62B7B23FC44EC4"
+					type: "item"
+					item: {
+						id: "kubejs:mark_underdog"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Beastmaster"
+			icon: {
+				id: "spartanweaponry:lance_diamond"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 7.5d
+			y: 4.0d
+			dependencies: ["18156A17C2B04B79"]
+			optional: true
+			id: "5E27B6A9814D748F"
+			tasks: [
+				{
+					id: "1FE7EEDF6536FB2D"
+					type: "item"
+					item: {
+						id: "kubejs:mark_summoner"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "1C65BEE8F2A35636"
+					type: "xp"
+					value: 60L
+					points: false
+				}
+				{
+					id: "5A756A7514668C57"
+					type: "pmmo:skill"
+					skill: "magic"
+					requiredLevel: 25.0d
+				}
+				{
+					id: "41A6163FDD56AA61"
+					type: "pmmo:skill"
+					skill: "agility"
+					requiredLevel: 30.0d
+				}
+			]
+			rewards: [
+				{
+					id: "7064AE921A7CB508"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "majruszs_accessories:taming_certificate"
+						Count: 1b
+						tag: {
+							Effectiveness: {
+								Value: 0.0d
+							}
+							itemModifier: "modifiers:jagged"
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "1930BF9E8656C912"
+					type: "item"
+					team_reward: false
+					item: {
+						id: "dungeons_gear:golem_kit"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "55B9A6F0978B2402"
+					type: "item"
+					item: {
+						id: "kubejs:mark_beastmaster"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [{
+									data: [{
+										lvl: 1s
+										id: "tombstone:soulbound"
+									}]
+									source: "dungeons_libraries:gear_config"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "38083DDA40547949"
+					type: "item"
+					item: {
+						id: "spartanweaponry:lance_diamond"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "6530D68578B7C544"
+					type: "item"
+					item: {
+						id: "doggytalents:super_treat"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+					count: 10
+				}
+			]
+		}
+	]
+}

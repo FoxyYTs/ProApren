@@ -1,0 +1,670 @@
+{
+	"aquaculture:neptunium_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"ars_nouveau:spell_bow":
+	{
+		"archeryWeapon": 1,
+		"magicWeapon": 1
+	},
+	"botania:crystal":
+	{
+		"archeryWeapon": 1
+	},
+	"botania:livingwood_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"botaniaadditions:terra_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:ancient_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:auto_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:azure_seeker":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:baby_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:bonebow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:bow_of_lost_souls":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:burst_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:butterfly_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:corrupted_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:doom_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:dual_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:elite_power_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:exploding_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:feral_soul_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:firebolt_thrower":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:guardian_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:harp_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:haunted_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:heavy_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:hunters_promise":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:hunting_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:imploding_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:lighting_harp_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:lightning_harp_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:longbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:love_spell_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:masters_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:mechanical_shorbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:mechanical_shortbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:nocturnal_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:power_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:purple_storm":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:rapid_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:red_snake":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:saberwing":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:sabrewing":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:scatter_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:shortbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:slayer_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:snow_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:soul_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:soul_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:soul_hunter_crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:the_green_menace":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:the_pink_scoundrel":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:the_slicer":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:trickbow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:twin_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:voidcaller":
+	{
+		"archeryWeapon": 1
+	},
+	"dungeons_gear:winters_touch":
+	{
+		"archeryWeapon": 1
+	},
+	"expanded_combat:diamond_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"expanded_combat:diamond_bow_half":
+	{
+		"archeryWeapon": 1
+	},
+	"expanded_combat:gold_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"expanded_combat:gold_bow_half":
+	{
+		"archeryWeapon": 1
+	},
+	"expanded_combat:iron_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"expanded_combat:iron_bow_half":
+	{
+		"archeryWeapon": 1
+	},
+	"expanded_combat:netherite_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"extrabows:diamond_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"extrabows:electric_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"extrabows:emerald_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"extrabows:golden_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"extrabows:iron_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"extrabows:stone_bow":
+	{
+		"archeryWeapon": 1
+	},
+	"minecraft:bow":
+	{
+		"archeryWeapon": 1
+	},
+	"minecraft:crossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"minecraft:stone_pickaxe":
+	{
+		"autoValueOffsetTool": -10
+	},
+	"minecraft:wooden_pickaxe":
+	{
+		"autoValueOffsetTool": -10
+	},
+	"spartanweaponry:heavy_crossbow_bronze":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_copper":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_diamond":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_electrum":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_gold":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_invar":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_iron":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_lead":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_leather":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_netherite":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_nickel":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_platinum":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_silver":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_steel":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_tin":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:heavy_crossbow_wood":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_bronze":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_copper":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_diamond":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_electrum":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_gold":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_invar":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_iron":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_lead":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_leather":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_netherite":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_nickel":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_platinum":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_silver":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_steel":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_tin":
+	{
+		"archeryWeapon": 1
+	},
+	"spartanweaponry:longbow_wood":
+	{
+		"archeryWeapon": 1
+	},
+	"switchbow:switchbow":
+	{
+		"archeryWeapon": 1
+	},
+	"switchbow:switchcrossbow":
+	{
+		"archeryWeapon": 1
+	},
+	"eidolon:soulfire_wand":
+	{
+		"magicWeapon": 1
+	},
+	"eidolon:bonechill_wand":
+	{
+		"magicWeapon": 1
+	},
+	"iceandfire:ghost_sword":
+	{
+		"meleeWeapon": 1
+	},
+	"dreadsteel:dreadsteel_scythe":
+	{
+		"meleeWeapon": 1
+	},
+	"rats:plague_scythe":
+	{
+		"meleeWeapon": 1
+	},
+	"spartanweaponry:throwing_knife_wood": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_stone": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_iron": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_gold": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_diamond": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_netherite": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_copper": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_tin": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_silver": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:throwing_knife_lead": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_wood": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_stone": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_iron": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_gold": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_diamond": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_netherite": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_copper": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_tin": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_silver": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:tomahawk_lead": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_wood": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_stone": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_iron": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_gold": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_diamond": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_netherite": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_copper": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_tin": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_silver": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:javelin_lead": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_wood": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_stone": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_iron": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_gold": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_diamond": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_netherite": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_copper": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_tin": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_silver": {
+        "meleeWeapon": 1
+    },
+	"spartanweaponry:boomerang_lead": {
+        "meleeWeapon": 1
+    },
+	"spartantwilight:boomerang_fiery": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:boomerang_ironwood": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:boomerang_knightly": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:boomerang_steeleaf": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:heavy_crossbow_fiery": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:heavy_crossbow_ironwood": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:heavy_crossbow_knightly": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:heavy_crossbow_steeleaf": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:javelin_fiery": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:javelin_ironwood": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:javelin_knightly": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:javelin_steeleaf": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:longbow_fiery": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:longbow_ironwood": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:longbow_knightly": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:longbow_steeleaf": {
+        "archeryWeapon": 1
+    },
+    "spartantwilight:throwing_knife_fiery": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:throwing_knife_ironwood": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:throwing_knife_knightly": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:throwing_knife_steeleaf": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:tomahawk_fiery": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:tomahawk_ironwood": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:tomahawk_knightly": {
+        "meleeWeapon": 1
+    },
+    "spartantwilight:tomahawk_steeleaf": {
+        "meleeWeapon": 1
+    },
+    "spartanweaponry:boomerang_bronze": {
+        "meleeWeapon": 1
+    },
+    "spartanweaponry:dagger_bronze": {
+        "meleeWeapon": 1
+    },
+    "spartanweaponry:javelin_bronze": {
+        "meleeWeapon": 1
+    },
+    "spartanweaponry:throwing_knife_bronze": {
+        "meleeWeapon": 1
+    },
+    "spartanweaponry:tomahawk_bronze": {
+        "meleeWeapon": 1
+    },
+	"iceandfire:pixie_wand":
+	{
+		"magicWeapon": 1
+	},
+	"iceandfire:cockatrice_scepter":
+	{
+		"magicWeapon": 1
+	},
+	"twilightforest:twilight_scepter":
+	{
+		"magicWeapon": 1
+	},
+	"twilightforest:lifedrain_scepter":
+	{
+		"magicWeapon": 1
+	}
+}

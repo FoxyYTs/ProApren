@@ -1,0 +1,2278 @@
+{
+	"eidolon:basic_ring": {
+		"magic": 1
+	},
+	"eidolon:basic_amulet": {
+		"magic": 2
+	},
+	"eidolon:prestigious_palm": {
+		"magic": 2
+	},
+	"eidolon:warded_mail": {
+		"magic": 5
+	},
+	"eidolon:warlock_cloak": {
+		"magic": 20,
+		"shadow": 20
+	},
+	"eidolon:warlock_hat": {
+		"magic": 20,
+		"shadow": 20
+	},
+	"eidolon:warlock_boots": {
+		"magic": 20,
+		"shadow": 20
+	},
+	"dungeons_gear:lightning_rod":
+	{
+		"shadow": 10
+	},
+	"dungeons_gear:harvester":
+	{
+		"shadow": 10,
+		"magic": 10
+	},
+	"dungeons_gear:soul_healer":
+	{
+		"magic": 10,
+		"shadow": 10
+	},
+	"dungeons_gear:cave_crawler_helmet": {
+		"combat": 5,
+		"mining": 5,
+		"gathering": 6
+	},
+	"dungeons_gear:cave_crawler_chestplate": {
+		"combat": 5,
+		"mining": 5,
+		"gathering": 6
+	},
+	"dungeons_gear:cave_crawler_leggings": {
+		"combat": 5,
+		"mining": 5,
+		"gathering": 6
+	},
+	"dungeons_gear:cave_crawler_boots": {
+		"combat": 5,
+		"mining": 5,
+		"gathering": 6
+	},
+	"dungeons_gear:dark_helmet": {
+		"combat": 10,
+		"shadow": 1
+	},
+	"dungeons_gear:dark_chestplate": {
+		"combat": 10,
+		"shadow": 1
+	},
+	"dungeons_gear:dark_leggings": {
+		"combat": 10,
+		"shadow": 1
+	},
+	"dungeons_gear:dark_boots": {
+		"combat": 10,
+		"shadow": 1
+	},
+	"dungeons_gear:frost_bite_helmet": {
+		"endurance": 8
+	},
+	"dungeons_gear:frost_bite_chestplate": {
+		"endurance": 8
+	},
+	"dungeons_gear:frost_bite_leggings": {
+		"endurance": 8
+	},
+	"dungeons_gear:frost_bite_boots": {
+		"endurance": 8
+	},
+	"dungeons_gear:grim_helmet": {
+		"dungeoneering": 10
+	},
+	"dungeons_gear:grim_chestplate": {
+		"dungeoneering": 10
+	},
+	"dungeons_gear:grim_leggings": {
+		"dungeoneering": 10
+	},
+	"dungeons_gear:grim_boots": {
+		"dungeoneering": 10
+	},
+	"dungeons_gear:phantom_helmet": {
+		"flying": 10
+	},
+	"dungeons_gear:phantom_chestplate": {
+		"flying": 12
+	},
+	"dungeons_gear:phantom_leggings": {
+		"flying": 10
+	},
+	"dungeons_gear:phantom_boots": {
+		"flying": 10
+	},
+	"dungeons_mobs:royal_guard_helmet": {
+		"combat": 10
+	},
+	"dungeons_mobs:royal_guard_chestplate": {
+		"combat": 10
+	},
+	"dungeons_mobs:royal_guard_leggings": {
+		"combat": 10
+	},
+	"dungeons_mobs:royal_guard_boots": {
+		"combat": 10
+	},
+	"dungeons_mobs:royal_guard_shield": {
+		"combat": 6,
+		"endurance": 12.5
+	},
+	"dungeons_gear:soul_helmet": {
+		"endurance": 5,
+		"combat": 10,
+		"magic": 5
+	},
+	"dungeons_gear:soul_chestplate": {
+		"endurance": 5,
+		"combat": 10,
+		"magic": 5
+	},
+	"dungeons_gear:soul_leggings": {
+		"endurance": 5,
+		"combat": 10,
+		"magic": 5
+	},
+	"dungeons_gear:soul_boots": {
+		"endurance": 5,
+		"combat": 10,
+		"magic": 5
+	},
+	"dungeons_gear:souldancer_helmet": {
+		"endurance": 10,
+		"agility": 5,
+		"magic": 5.5
+	},
+	"dungeons_gear:souldancer_chestplate": {
+		"endurance": 10,
+		"agility": 5,
+		"magic": 5.5
+	},
+	"dungeons_gear:souldancer_leggings": {
+		"endurance": 10,
+		"agility": 5,
+		"magic": 5.5
+	},
+	"dungeons_gear:souldancer_boots": {
+		"endurance": 10,
+		"agility": 5,
+		"magic": 5.5
+	},
+	"dungeons_gear:spelunker_helmet": {
+		"combat": 5,
+		"mining": 5,
+		"gathering": 5
+	},
+	"dungeons_gear:spelunker_chestplate": {
+		"combat": 5,
+		"mining": 5,
+		"gathering": 5
+	},
+	"dungeons_gear:titans_shroud_helmet": {
+		"endurance": 10
+	},
+	"dungeons_gear:titans_shroud_chestplate": {
+		"endurance": 10
+	},
+	"dungeons_gear:titans_shroud_leggings": {
+		"endurance": 10
+	},
+	"dungeons_gear:titans_shroud_boots": {
+		"endurance": 10
+	},
+	"dungeons_gear:wither_helmet": {
+		"combat": 8,
+		"dungeoneering": 8
+	},
+	"dungeons_gear:wither_chestplate": {
+		"combat": 8,
+		"dungeoneering": 8
+	},
+	"dungeons_gear:wither_leggings": {
+		"combat": 8,
+		"dungeoneering": 8
+	},
+	"dungeons_gear:wither_boots": {
+		"combat": 8,
+		"dungeoneering": 8
+	},
+	"mysticalworld:copper_helmet": {
+		"combat": 5
+	},
+	"mysticalworld:copper_chestplate": {
+		"combat": 5
+	},
+	"mysticalworld:copper_leggings": {
+		"combat": 5
+	},
+	"mysticalworld:copper_boots": {
+		"combat": 5
+	},
+	"iceandfire:armor_copper_metal_boots": {
+		"combat": 5
+	},
+	"iceandfire:armor_copper_metal_chestplate": {
+		"combat": 5
+	},
+	"iceandfire:armor_copper_metal_helmet": {
+		"combat": 5
+	},
+	"iceandfire:armor_copper_metal_leggings": {
+		"combat": 5
+	},
+	"iceandfire:armor_silver_metal_boots": {
+		"endurance": 2.5,
+		"combat": 5,
+		"magic": 2.5
+	},
+	"iceandfire:armor_silver_metal_chestplate": {
+		"endurance": 2.5,
+		"combat": 5,
+		"magic": 2.5
+	},
+	"iceandfire:armor_silver_metal_helmet": {
+		"endurance": 2.5,
+		"combat": 5,
+		"magic": 2.5
+	},
+	"iceandfire:armor_silver_metal_leggings": {
+		"endurance": 2.5,
+		"combat": 5,
+		"magic": 2.5
+	},
+	"iceandfire:blindfold": {
+		"endurance": 5
+	},
+	"iceandfire:deathworm_red_boots": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_red_chestplate": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_red_helmet": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_red_leggings": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_white_boots": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_white_chestplate": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_white_helmet": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_white_leggings": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_yellow_boots": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_yellow_chestplate": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_yellow_helmet": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:deathworm_yellow_leggings": {
+		"agility": 5,
+		"excavation": 5,
+		"combat": 2.5,
+		"gathering": 5
+	},
+	"iceandfire:earplugs": {
+		"endurance": 5,
+		"farming": 2.5,
+		"woodcutting": 2.5,
+		"gathering": 2.5
+	},
+	"iceandfire:myrmex_desert_boots": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 2.5
+	},
+	"iceandfire:myrmex_desert_chestplate": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 2.5
+	},
+	"iceandfire:myrmex_desert_helmet": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 5
+	},
+	"iceandfire:myrmex_desert_leggings": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 2.5
+	},
+	"iceandfire:myrmex_jungle_boots": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 2.5
+	},
+	"iceandfire:myrmex_jungle_chestplate": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 2.5
+	},
+	"iceandfire:myrmex_jungle_helmet": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 5
+	},
+	"iceandfire:myrmex_jungle_leggings": {
+		"agility": 5,
+		"farming": 5,
+		"combat": 2.5
+	},
+	"iceandfire:sheep_boots": {
+		"endurance": 2.5,
+		"farming": 5,
+		"woodcutting": 2.5,
+		"gathering": 2.5
+	},
+	"iceandfire:sheep_chestplate": {
+		"endurance": 2.5,
+		"farming": 5,
+		"woodcutting": 2.5,
+		"gathering": 2.5
+	},
+	"iceandfire:sheep_helmet": {
+		"endurance": 2.5,
+		"farming": 5,
+		"woodcutting": 2.5,
+		"gathering": 2.5
+	},
+	"iceandfire:sheep_leggings": {
+		"endurance": 2.5,
+		"farming": 5,
+		"woodcutting": 2.5,
+		"gathering": 2.5
+	},
+	"iceandfire:tide_blue_boots": {
+		"swimming": 5
+	},
+	"iceandfire:tide_blue_chestplate": {
+		"swimming": 5
+	},
+	"iceandfire:tide_blue_helmet": {
+		"swimming": 5
+	},
+	"iceandfire:tide_blue_leggings": {
+		"swimming": 5
+	},
+	"iceandfire:tide_bronze_boots": {
+		"swimming": 5
+	},
+	"iceandfire:tide_bronze_chestplate": {
+		"swimming": 5
+	},
+	"iceandfire:tide_bronze_helmet": {
+		"swimming": 5
+	},
+	"iceandfire:tide_bronze_leggings": {
+		"swimming": 5
+	},
+	"iceandfire:tide_deepblue_boots": {
+		"swimming": 5
+	},
+	"iceandfire:tide_deepblue_chestplate": {
+		"swimming": 5
+	},
+	"iceandfire:tide_deepblue_helmet": {
+		"swimming": 5
+	},
+	"iceandfire:tide_deepblue_leggings": {
+		"swimming": 5
+	},
+	"iceandfire:tide_green_boots": {
+		"swimming": 5
+	},
+	"iceandfire:tide_green_chestplate": {
+		"swimming": 5
+	},
+	"iceandfire:tide_green_helmet": {
+		"swimming": 5
+	},
+	"iceandfire:tide_green_leggings": {
+		"swimming": 5
+	},
+	"iceandfire:tide_purple_boots": {
+		"swimming": 5
+	},
+	"iceandfire:tide_purple_chestplate": {
+		"swimming": 5
+	},
+	"iceandfire:tide_purple_helmet": {
+		"swimming": 5
+	},
+	"iceandfire:tide_purple_leggings": {
+		"swimming": 5
+	},
+	"iceandfire:tide_red_boots": {
+		"swimming": 5
+	},
+	"iceandfire:tide_red_chestplate": {
+		"swimming": 5
+	},
+	"iceandfire:tide_red_helmet": {
+		"swimming": 5
+	},
+	"iceandfire:tide_red_leggings": {
+		"swimming": 5
+	},
+	"iceandfire:tide_teal_boots": {
+		"swimming": 5
+	},
+	"iceandfire:tide_teal_chestplate": {
+		"swimming": 5
+	},
+	"iceandfire:tide_teal_helmet": {
+		"swimming": 5
+	},
+	"iceandfire:tide_teal_leggings": {
+		"swimming": 5
+	},
+	"minecraft:carved_pumpkin": {
+		"combat": 5
+	},
+	"minecraft:chainmail_boots": {
+		"combat": 5
+	},
+	"minecraft:chainmail_chestplate": {
+		"combat": 5
+	},
+	"minecraft:chainmail_helmet": {
+		"combat": 5
+	},
+	"minecraft:chainmail_leggings": {
+		"combat": 5
+	},
+	"minecraft:diamond_boots": {
+		"magic": 2.5
+	},
+	"minecraft:diamond_chestplate": {
+		"magic": 2.5
+	},
+	"minecraft:diamond_helmet": {
+		"magic": 2.5
+	},
+	"minecraft:diamond_leggings": {
+		"magic": 2.5
+	},
+	"minecraft:dragon_head": {
+		"flying": 50,
+		"combat": 25
+	},
+	"minecraft:enchanting_table": {
+		"magic": 10,
+		"alchemy": 10
+	},
+	"minecraft:golden_boots": {
+		"mining": 5,
+		"endurance": 5,
+		"gathering": 5
+	},
+	"minecraft:golden_chestplate": {
+		"mining": 5,
+		"endurance": 5,
+		"gathering": 5
+	},
+	"minecraft:golden_helmet": {
+		"mining": 5,
+		"endurance": 5,
+		"gathering": 5
+	},
+	"minecraft:golden_leggings": {
+		"mining": 5,
+		"endurance": 5,
+		"gathering": 5
+	},
+	"minecraft:heart_of_the_sea": {
+		"swimming": 25,
+		"fishing": 10
+	},
+	"minecraft:totem_of_undying": {
+		"magic": 10
+	},
+	"minecraft:iron_boots": {
+		"smithing": 2.5
+	},
+	"minecraft:iron_chestplate": {
+		"smithing": 2.5
+	},
+	"minecraft:iron_helmet": {
+		"smithing": 2.5
+	},
+	"minecraft:iron_leggings": {
+		"smithing": 2.5
+	},
+	"minecraft:leather_boots": {
+		"agility": 2.5,
+		"farming": 2.5,
+		"woodcutting": 2.5,
+		"fishing": 2.5,
+		"gathering": 2.5
+	},
+	"minecraft:leather_chestplate": {
+		"agility": 2.5,
+		"farming": 2.5,
+		"woodcutting": 2.5,
+		"fishing": 2.5,
+		"gathering": 2.5
+	},
+	"minecraft:leather_helmet": {
+		"agility": 2.5,
+		"farming": 2.5,
+		"woodcutting": 2.5,
+		"fishing": 2.5,
+		"gathering": 2.5
+	},
+	"minecraft:leather_leggings": {
+		"agility": 2.5,
+		"farming": 2.5,
+		"woodcutting": 2.5,
+		"fishing": 2.5,
+		"gathering": 2.5
+	},
+	"minecraft:nether_star": {
+		"combat": 10,
+		"endurance": 10,
+		"archery": 10,
+		"magic": 10,
+		"flying": 20
+	},
+	"minecraft:shield": {
+		"endurance": 12.5,
+		"combat": 5
+	},
+	"minecraft:turtle_helmet": {
+		"swimming": 15,
+		"fishing": 7.5
+	},
+	"minecraft:netherite_helmet": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"minecraft:netherite_chestplate": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"minecraft:netherite_leggings": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"minecraft:netherite_boots": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_bronze": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_constantan": {
+		"endurance": 25,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_copper": {
+		"endurance": 12.5,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_diamond": {
+		"endurance": 30,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_electrum": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_gold": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_invar": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_iron": {
+		"endurance": 12.5,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_lead": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_netherite": {
+		"endurance": 50,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_nickel": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_obsidian": {
+		"endurance": 40,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_platinum": {
+		"endurance": 30,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_silver": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_steel": {
+		"endurance": 25,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_stone": {
+		"endurance": 12,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_tin": {
+		"endurance": 12.5,
+		"combat": 10
+	},
+	"spartanshields:shield_basic_wood": {
+		"endurance": 10,
+		"combat": 10
+	},
+	"spartanshields:shield_botania_elementium": {
+		"endurance": 40,
+		"combat": 10
+	},
+	"spartanshields:shield_botania_manasteel": {
+		"endurance": 30,
+		"combat": 10
+	},
+	"spartanshields:shield_botania_terrasteel": {
+		"endurance": 50,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_lapis_lazuli": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_osmium": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_powered_advanced": {
+		"endurance": 30,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_powered_basic": {
+		"endurance": 25,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_powered_elite": {
+		"endurance": 35,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_powered_ultimate": {
+		"endurance": 40,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_refined_glowstone": {
+		"endurance": 25,
+		"combat": 10
+	},
+	"spartanshields:shield_mekanism_refined_obsidian": {
+		"endurance": 40,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_bronze": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_constantan": {
+		"endurance": 25,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_copper": {
+		"endurance": 12.5,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_diamond": {
+		"endurance": 30,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_electrum": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_gold": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_invar": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_iron": {
+		"endurance": 12.5,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_lead": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_netherite": {
+		"endurance": 50,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_nickel": {
+		"endurance": 20,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_obsidian": {
+		"endurance": 40,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_platinum": {
+		"endurance": 30,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_silver": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_steel": {
+		"endurance": 25,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_stone": {
+		"endurance": 12,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_tin": {
+		"endurance": 12.5,
+		"combat": 10
+	},
+	"spartanshields:shield_tower_wood": {
+		"endurance": 10,
+		"combat": 10
+	},
+	"atum:stoneguard_shield": {
+		"endurance": 10,
+		"combat": 10
+	},
+	"atum:brigand_shield": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"blue_skies:moonstone_shield": {
+		"endurance": 15,
+		"combat": 10
+	},
+	"blue_skies:spike_shield": {
+		"endurance": 20,
+		"combat": 20
+	},
+	"alexsmobs:shield_of_the_deep": {
+		"endurance": 20,
+		"combat": 10,
+		"swimming": 10
+	},
+	"undergarden:cloggrum_shield": {
+		"endurance": 25,
+		"combat": 10
+	},
+	"twilightforest:knightmetal_shield": {
+		"endurance": 45,
+		"combat": 10
+	},
+	"twilightforest:knightmetal_chestplate": {
+		"endurance": 7,
+		"combat": 7
+	},
+	"twilightforest:knightmetal_leggings": {
+		"endurance": 5,
+		"combat": 4
+	},
+	"twilightforest:knightmetal_helmet": {
+		"endurance": 6,
+		"combat": 4
+	},
+	"twilightforest:knightmetal_boots": {
+		"endurance": 7
+	},
+	"twilightforest:steeleaf_chestplate": {
+		"farming": 10,
+		"woodcutting": 5,
+		"agility": 4,
+		"gathering": 5
+	},
+	"twilightforest:steeleaf_helmet": {
+		"farming": 5,
+		"woodcutting": 5,
+		"agility": 4,
+		"gathering": 5
+	},
+	"twilightforest:steeleaf_leggings": {
+		"farming": 5,
+		"woodcutting": 3,
+		"agility": 4,
+		"gathering": 3
+	},
+	"twilightforest:steeleaf_boots": {
+		"farming": 5,
+		"woodcutting": 2,
+		"agility": 5,
+		"gathering": 2
+	},
+	"twilightforest:ironwood_helmet": {
+		"woodcutting": 4,
+		"smithing": 3,
+		"mining": 2,
+		"gathering": 6
+	},
+	"twilightforest:ironwood_chestplate": {
+		"woodcutting": 5,
+		"smithing": 5,
+		"mining": 5,
+		"gathering": 10
+	},
+	"twilightforest:ironwood_leggings": {
+		"woodcutting": 3,
+		"smithing": 3,
+		"mining": 3,
+		"gathering": 6
+	},
+	"twilightforest:ironwood_boots": {
+		"woodcutting": 2,
+		"smithing": 2,
+		"mining": 3,
+		"gathering": 5
+	},
+	"twilightforest:yeti_helmet": {
+		"combat": 3,
+		"archery": 5
+	},
+	"twilightforest:yeti_chestplate": {
+		"combat": 10,
+		"archery": 5
+	},
+	"twilightforest:yeti_leggings": {
+		"combat": 4,
+		"archery": 5
+	},
+	"twilightforest:yeti_boots": {
+		"combat": 3,
+		"archery": 1
+	},
+	"twilightforest:arctic_helmet": {
+		"combat": 3,
+		"endurance": 2,
+		"archery": 2
+	},
+	"twilightforest:arctic_chestplate": {
+		"combat": 5,
+		"endurance": 5,
+		"archery": 3
+	},
+	"twilightforest:arctic_leggings": {
+		"combat": 5,
+		"endurance": 3,
+		"archery": 5
+	},
+	"twilightforest:arctic_boots": {
+		"combat": 3,
+		"endurance": 1,
+		"archery": 2
+	},
+	"twilightforest:fiery_helmet": {
+		"endurance": 4,
+		"smithing": 3,
+		"alchemy": 5
+	},
+	"twilightforest:fiery_chestplate": {
+		"endurance": 4,
+		"smithing": 5,
+		"alchemy": 5
+	},
+	"twilightforest:fiery_leggings": {
+		"endurance": 4,
+		"smithing": 5,
+		"alchemy": 2
+	},
+	"twilightforest:fiery_boots": {
+		"endurance": 2,
+		"smithing": 4,
+		"alchemy": 3
+	},
+	"twilightforest:naga_chestplate": {
+		"endurance": 5,
+		"swimming": 10
+	},
+	"twilightforest:naga_leggings": {
+		"endurance": 5,
+		"swimming": 10
+	},
+	"twilightforest:phantom_helmet": {
+		"endurance": 5,
+		"magic": 5
+	},
+	"twilightforest:phantom_chestplate": {
+		"endurance": 5,
+		"magic": 10
+	},
+	"blue_skies:horizonite_helmet": {
+		"mining": 2,
+		"excavation": 1,
+		"gathering": 3
+	},
+	"blue_skies:horizonite_chestplate": {
+		"mining": 2,
+		"excavation": 3,
+		"gathering": 5
+	},
+	"blue_skies:horizonite_leggings": {
+		"mining": 2,
+		"excavation": 4,
+		"gathering": 6
+	},
+	"blue_skies:horizonite_boots": {
+		"mining": 2,
+		"excavation": 2,
+		"gathering": 4
+	},
+	"undergarden:froststeel_helmet": {
+		"mining": 5,
+		"excavation": 5,
+		"gathering": 10
+	},
+	"undergarden:froststeel_leggings": {
+		"mining": 5,
+		"excavation": 5,
+		"gathering": 10
+	},
+	"undergarden:froststeel_chestplate": {
+		"mining": 5,
+		"excavation": 3,
+		"gathering": 8
+	},
+	"undergarden:froststeel_boots": {
+		"mining": 3,
+		"excavation": 2,
+		"gathering": 5
+	},
+	"blue_skies:aquite_helmet": {
+		"swimming": 25,
+		"agility": 3
+	},
+	"blue_skies:aquite_chestplate": {
+		"swimming": 25,
+		"agility": 3
+	},
+	"blue_skies:aquite_leggings": {
+		"swimming": 25,
+		"agility": 3
+	},
+	"blue_skies:aquite_boots": {
+		"swimming": 25,
+		"agility": 2
+	},
+	"undergarden:utheric_helmet": {
+		"mining": 5,
+		"excavation": 2,
+		"gathering": 7,
+		"light": 12.5
+	},
+	"undergarden:utheric_chestplate": {
+		"mining": 8,
+		"excavation": 3,
+		"gathering": 11,
+		"light": 12.5
+	},
+	"undergarden:utheric_leggings": {
+		"mining": 5,
+		"excavation": 3,
+		"gathering": 8,
+		"light": 12.5
+	},
+	"undergarden:utheric_boots": {
+		"mining": 5,
+		"excavation": 2,
+		"gathering": 7,
+		"light": 12.5
+	},
+	"blue_skies:diopside_helmet": {
+		"agility": 4,
+		"alchemy": 15
+	},
+	"blue_skies:diopside_chestplate": {
+		"agility": 4,
+		"endurance": 4,
+		"alchemy": 17
+	},
+	"blue_skies:diopside_leggings": {
+		"agility": 3,
+		"endurance": 6,
+		"alchemy": 13
+	},
+	"blue_skies:diopside_boots": {
+		"agility": 5,
+		"endurance": 7,
+		"alchemy": 15
+	},
+	"blue_skies:pyrope_helmet": {
+		"mining": 13,
+		"woodcutting": 16,
+		"gathering": 17
+	},
+	"blue_skies:pyrope_chestplate": {
+		"mining": 14,
+		"woodcutting": 15,
+		"gathering": 18
+	},
+	"blue_skies:pyrope_leggings": {
+		"mining": 13,
+		"woodcutting": 16,
+		"gathering": 18
+	},
+	"blue_skies:pyrope_boots": {
+		"mining": 15,
+		"woodcutting": 13,
+		"gathering": 17
+	},
+	"blue_skies:charoite_helmet": {
+		"mining": 1,
+		"endurance": 4,
+		"farming": 7,
+		"excavation": 3,
+		"gathering": 4
+	},
+	"blue_skies:charoite_chestplate": {
+		"mining": 2,
+		"endurance": 4,
+		"farming": 6,
+		"excavation": 7,
+		"gathering": 9
+	},
+	"blue_skies:charoite_leggings": {
+		"mining": 2,
+		"endurance": 4,
+		"farming": 7,
+		"excavation": 2,
+		"gathering": 4
+	},
+	"blue_skies:charoite_boots": {
+		"mining": 1,
+		"endurance": 4,
+		"farming": 7,
+		"excavation": 2,
+		"gathering": 3
+	},
+	"blue_skies:shadow_helmet": {
+		"shadow": 10
+	},
+	"blue_skies:shadow_chestplate": {
+		"shadow": 10
+	},
+	"blue_skies:shadow_leggings": {
+		"shadow": 10
+	},
+	"blue_skies:shadow_boots": {
+		"shadow": 10
+	},
+	"the_afterlight:moonsteel_armor_helmet": {
+		"mining": 3,
+		"endurance": 1,
+		"gathering": 3
+	},
+	"the_afterlight:moonsteel_armor_chestplate": {
+		"mining": 10,
+		"endurance": 2,
+		"combat": 2,
+		"gathering": 10
+	},
+	"the_afterlight:moonsteel_armor_leggings": {
+		"mining": 8,
+		"endurance": 2,
+		"gathering": 8
+	},
+	"the_afterlight:moonsteel_armor_boots": {
+		"mining": 6,
+		"endurance": 2,
+		"gathering": 6
+	},
+	"the_afterlight:crystillium_armor_helmet": {
+		"mining": 2,
+		"endurance": 4,
+		"gathering": 2
+	},
+	"the_afterlight:crystillium_armor_chestplate": {
+		"mining": 7,
+		"endurance": 4,
+		"combat": 2,
+		"gathering": 7
+	},
+	"the_afterlight:crystillium_armor_leggings": {
+		"mining": 4,
+		"endurance": 4,
+		"gathering": 4
+	},
+	"the_afterlight:crystillium_armor_boots": {
+		"mining": 2,
+		"endurance": 4,
+		"gathering": 2
+	},
+	"the_afterlight:lunarite_armor_helmet": {
+		"mining": 4,
+		"endurance": 4,
+		"farming": 7,
+		"fishing": 6,
+		"gathering": 4
+	},
+	"the_afterlight:lunarite_armor_chestplate": {
+		"magic": 7,
+		"endurance": 8,
+		"farming": 7,
+		"woodcutting": 8,
+		"gathering": 8
+	},
+	"the_afterlight:lunarite_armor_leggings": {
+		"mining": 5,
+		"endurance": 4,
+		"farming": 7,
+		"excavation": 4,
+		"gathering": 9
+	},
+	"the_afterlight:lunarite_armor_boots": {
+		"alchemy": 7,
+		"endurance": 8,
+		"farming": 8,
+		"agility": 3
+	},
+	"ars_nouveau:jar_of_light": {
+		"light": 100
+	},
+	"dungeons_gear:mercenary_helmet": {
+		"endurance": 10,
+		"combat": 3
+	},
+	"dungeons_gear:mercenary_chestplate": {
+		"endurance": 10,
+		"combat": 3
+	},
+	"dungeons_gear:mercenary_leggings": {
+		"endurance": 10,
+		"combat": 3
+	},
+	"dungeons_gear:mercenary_boots": {
+		"endurance": 10,
+		"combat": 3
+	},
+	"dungeons_gear:renegade_helmet": {
+		"endurance": 12,
+		"combat": 3
+	},
+	"dungeons_gear:renegade_chestplate": {
+		"endurance": 8,
+		"combat": 5
+	},
+	"dungeons_gear:renegade_leggings": {
+		"endurance": 12,
+		"combat": 3
+	},
+	"dungeons_gear:renegade_boots": {
+		"endurance": 8,
+		"combat": 5
+	},
+	"dungeons_gear:guards_helmet": {
+		"combat": 4,
+		"archery": 4,
+		"endurance": 4
+	},
+	"dungeons_gear:guards_chestplate": {
+		"combat": 4,
+		"archery": 4,
+		"endurance": 4
+	},
+	"dungeons_gear:guards_leggings": {
+		"combat": 4,
+		"archery": 4,
+		"endurance": 4
+	},
+	"dungeons_gear:guards_boots": {
+		"combat": 4,
+		"archery": 4,
+		"endurance": 4
+	},
+	"dungeons_gear:curious_helmet": {
+		"agility": 4.44,
+		"archery": 4.44,
+		"flying": 4.44
+	},
+	"dungeons_gear:curious_chestplate": {
+		"agility": 4.44,
+		"archery": 4.44,
+		"flying": 4.44
+	},
+	"dungeons_gear:curious_leggings": {
+		"agility": 4.44,
+		"archery": 4.44,
+		"flying": 4.44
+	},
+	"dungeons_gear:curious_boots": {
+		"agility": 4.44,
+		"archery": 4.44,
+		"flying": 4.44
+	},
+	"dungeons_gear:champions_helmet": {
+		"endurance": 12,
+		"combat": 3
+	},
+	"dungeons_gear:champions_chestplate": {
+		"endurance": 12,
+		"combat": 3
+	},
+	"dungeons_gear:champions_leggings": {
+		"endurance": 12,
+		"combat": 3
+	},
+	"dungeons_gear:champions_boots": {
+		"endurance": 12,
+		"combat": 3
+	},
+	"dungeons_gear:heros_helmet": {
+		"endurance": 5,
+		"light": 5,
+		"alchemy": 5
+	},
+	"dungeons_gear:heros_chestplate": {
+		"endurance": 5,
+		"light": 5,
+		"alchemy": 5
+	},
+	"dungeons_gear:heros_leggings": {
+		"endurance": 5,
+		"light": 5,
+		"alchemy": 5
+	},
+	"dungeons_gear:heros_boots": {
+		"endurance": 5,
+		"light": 5,
+		"alchemy": 5
+	},
+	"dungeons_gear:plate_helmet": {
+		"endurance": 12
+	},
+	"dungeons_gear:plate_chestplate": {
+		"endurance": 15
+	},
+	"dungeons_gear:plate_leggings": {
+		"endurance": 15
+	},
+	"dungeons_gear:plate_boots": {
+		"endurance": 12
+	},
+	"dungeons_gear:full_metal_helmet": {
+		"endurance": 12
+	},
+	"dungeons_gear:full_metal_chestplate": {
+		"endurance": 15
+	},
+	"dungeons_gear:full_metal_leggings": {
+		"endurance": 15
+	},
+	"dungeons_gear:full_metal_boots": {
+		"endurance": 12
+	},
+	"dungeons_gear:reinforced_mail_helmet": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:reinforced_mail_chestplate": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:reinforced_mail_leggings": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:reinforced_mail_boots": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:stalwart_helmet": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:stalwart_chestplate": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:stalwart_leggings": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:stalwart_boots": {
+		"endurance": 6,
+		"smithing": 6
+	},
+	"dungeons_gear:snow_helmet": {
+		"wayfaring": 6.66
+	},
+	"dungeons_gear:snow_chestplate": {
+		"wayfaring": 6.66
+	},
+	"dungeons_gear:snow_leggings": {
+		"wayfaring": 6.66
+	},
+	"dungeons_gear:snow_boots": {
+		"wayfaring": 6.66
+	},
+	"dungeons_gear:frost_helmet": {
+		"combat": 4.20,
+		"wayfaring": 4.20
+	},
+	"dungeons_gear:frost_chestplate": {
+		"combat": 4.20,
+		"wayfaring": 4.20
+	},
+	"dungeons_gear:frost_leggings": {
+		"combat": 4.20,
+		"wayfaring": 4.20
+	},
+	"dungeons_gear:frost_boots": {
+		"combat": 4.20,
+		"wayfaring": 4.20
+	},
+	"dungeons_gear:scale_mail_helmet": {
+		"combat": 6,
+		"swimming": 3
+	},
+	"dungeons_gear:scale_mail_chestplate": {
+		"combat": 6,
+		"swimming": 3
+	},
+	"dungeons_gear:scale_mail_leggings": {
+		"combat": 6,
+		"swimming": 3
+	},
+	"dungeons_gear:scale_mail_boots": {
+		"combat": 6,
+		"swimming": 3
+	},
+	"dungeons_gear:highland_helmet": {
+		"combat": 6,
+		"smithing": 3,
+		"swimming": 3
+	},
+	"dungeons_gear:highland_chestplate": {
+		"combat": 6,
+		"smithing": 3,
+		"swimming": 3
+	},
+	"dungeons_gear:highland_leggings": {
+		"combat": 6,
+		"smithing": 3,
+		"swimming": 3
+	},
+	"dungeons_gear:highland_boots": {
+		"combat": 6,
+		"smithing": 3,
+		"swimming": 3
+	},
+	"dungeons_gear:archers_helmet": {
+		"agility": 7,
+		"archery": 10
+	},
+	"dungeons_gear:archers_chestplate": {
+		"agility": 7,
+		"archery": 10
+	},
+	"dungeons_gear:archers_leggings": {
+		"agility": 7,
+		"archery": 10
+	},
+	"dungeons_gear:archers_boots": {
+		"agility": 7,
+		"archery": 10
+	},
+	"dungeons_gear:arctic_fox_helmet": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:arctic_fox_chestplate": {
+		"agility": 5,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:arctic_fox_leggings": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:arctic_fox_boots": {
+		"agility": 5,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:battle_robes_helmet": {
+		"combat": 6,
+		"magic": 6
+	},
+	"dungeons_gear:battle_robes_chestplate": {
+		"combat": 6,
+		"magic": 6
+	},
+	"dungeons_gear:climbing_helmet": {
+		"endurance": 7,
+		"gathering": 7,
+		"excavation": 7
+	},
+	"dungeons_gear:climbing_chestplate": {
+		"endurance": 7,
+		"gathering": 7,
+		"excavation": 7
+	},
+	"dungeons_gear:climbing_leggings": {
+		"endurance": 7,
+		"gathering": 7,
+		"excavation": 7
+	},
+	"dungeons_gear:climbing_boots": {
+		"endurance": 7,
+		"gathering": 7,
+		"excavation": 7
+	},
+	"dungeons_gear:rugged_climbing_helmet": {
+		"endurance": 5,
+		"gathering": 5,
+		"excavation": 5,
+		"woodcutting": 2,
+		"wayfaring": 2,
+		"swimming": 1
+	},
+	"dungeons_gear:rugged_climbing_chestplate": {
+		"endurance": 5,
+		"gathering": 5,
+		"excavation": 5,
+		"woodcutting": 2,
+		"wayfaring": 2,
+		"swimming": 1
+	},
+	"dungeons_gear:rugged_climbing_leggings": {
+		"endurance": 5,
+		"gathering": 5,
+		"excavation": 5,
+		"woodcutting": 2,
+		"wayfaring": 2,
+		"swimming": 1
+	},
+	"dungeons_gear:rugged_climbing_boots": {
+		"endurance": 5,
+		"gathering": 5,
+		"excavation": 5,
+		"woodcutting": 2,
+		"wayfaring": 2,
+		"swimming": 1
+	},
+	"dungeons_gear:goat_helmet": {
+		"agility": 13,
+		"gathering": 7,
+		"mining": 7,
+		"fishing": -1
+	},
+	"dungeons_gear:goat_chestplate": {
+		"agility": 13,
+		"gathering": 8,
+		"mining": 8,
+		"fishing": -1
+	},
+	"dungeons_gear:goat_leggings": {
+		"agility": 13,
+		"gathering": 7,
+		"mining": 7,
+		"fishing": -1
+	},
+	"dungeons_gear:goat_boots": {
+		"agility": 13,
+		"gathering": 7,
+		"mining": 7,
+		"fishing": -1
+	},
+	"dungeons_gear:emerald_helmet": {
+		"agility": 5,
+		"magic": 5
+	},
+	"dungeons_gear:emerald_chestplate": {
+		"agility": 5,
+		"magic": 5
+	},
+	"dungeons_gear:emerald_leggings": {
+		"agility": 5,
+		"magic": 5
+	},
+	"dungeons_gear:emerald_boots": {
+		"agility": 5,
+		"magic": 5
+	},
+	"dungeons_gear:gilded_glory_helmet": {
+		"agility": 5,
+		"shadow": 5
+	},
+	"dungeons_gear:gilded_glory_chestplate": {
+		"agility": 5,
+		"shadow": 5
+	},
+	"dungeons_gear:gilded_glory_leggings": {
+		"agility": 5,
+		"shadow": 5
+	},
+	"dungeons_gear:gilded_glory_boots": {
+		"agility": 5,
+		"shadow": 5
+	},
+	"dungeons_gear:opulent_helmet": {
+		"agility": 5,
+		"light": 5
+	},
+	"dungeons_gear:opulent_chestplate": {
+		"agility": 5,
+		"light": 5
+	},
+	"dungeons_gear:opulent_leggings": {
+		"agility": 5,
+		"light": 5
+	},
+	"dungeons_gear:opulent_boots": {
+		"agility": 5,
+		"light": 5
+	},
+	"dungeons_gear:beenest_helmet": {
+		"farming": 15,
+		"archery": 5,
+		"magic": 5,
+		"combat": -5
+	},
+	"dungeons_gear:beenest_chestplate": {
+		"farming": 15,
+		"archery": 5,
+		"magic": 5,
+		"combat": -5
+	},
+	"dungeons_gear:beenest_leggings": {
+		"farming": 15,
+		"archery": 5,
+		"magic": 5,
+		"combat": -5
+	},
+	"dungeons_gear:beenest_boots": {
+		"farming": 15,
+		"archery": 5,
+		"magic": 5,
+		"combat": -5
+	},
+	"dungeons_gear:beehive_helmet": {
+		"farming": 15,
+		"endurance": 5,
+		"magic": 4,
+		"combat": -3
+	},
+	"dungeons_gear:beehive_chestplate": {
+		"farming": 15,
+		"endurance": 5,
+		"magic": 4,
+		"combat": -3
+	},
+	"dungeons_gear:beehive_leggings": {
+		"farming": 15,
+		"endurance": 5,
+		"magic": 4,
+		"combat": -3
+	},
+	"dungeons_gear:beehive_boots": {
+		"farming": 15,
+		"endurance": 5,
+		"magic": 4,
+		"combat": -3
+	},
+	"dungeons_gear:evocation_robes_helmet": {
+		"magic": 8,
+		"agility": 2
+	},
+	"dungeons_gear:evocation_robes_chestplate": {
+		"magic": 8,
+		"agility": 2
+	},
+	"dungeons_gear:evocation_robes_leggings": {
+		"magic": 8,
+		"agility": 2
+	},
+	"dungeons_gear:evocation_robes_boots": {
+		"magic": 8,
+		"agility": 2
+	},
+	"dungeons_gear:ember_robes_helmet": {
+		"magic": 9,
+		"agility": 1
+	},
+	"dungeons_gear:ember_robes_chestplate": {
+		"magic": 9,
+		"agility": 1
+	},
+	"dungeons_gear:ember_robes_leggings": {
+		"magic": 9,
+		"agility": 1
+	},
+	"dungeons_gear:ember_robes_boots": {
+		"magic": 9,
+		"agility": 1
+	},
+	"dungeons_gear:fox_helmet": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:fox_chestplate": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:fox_leggings": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:fox_boots": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 7
+	},
+	"dungeons_gear:hunters_helmet": {
+		"agility": 7,
+		"combat": 3,
+		"archery": 9
+	},
+	"dungeons_gear:hunters_chestplate": {
+		"agility": 7,
+		"combat": 3,
+		"archery": 9
+	},
+	"dungeons_gear:hunters_leggings": {
+		"agility": 7,
+		"combat": 3,
+		"archery": 9
+	},
+	"dungeons_gear:hunters_boots": {
+		"agility": 7,
+		"combat": 3,
+		"archery": 9
+	},
+	"dungeons_gear:hungry_horror_helmet": {
+		"combat": 15,
+		"shadow": 10,
+		"light": -5
+	},
+	"dungeons_gear:hungry_horror_chestplate": {
+		"combat": 15,
+		"shadow": 10,
+		"light": -5
+	},
+	"dungeons_gear:hungry_horror_leggings": {
+		"combat": 15,
+		"shadow": 10,
+		"light": -5
+	},
+	"dungeons_gear:hungry_horror_boots": {
+		"combat": 15,
+		"shadow": 10,
+		"light": -5
+	},
+	"dungeons_gear:ocelot_helmet": {
+		"agility": 10,
+		"shadow": 2
+	},
+	"dungeons_gear:ocelot_chestplate": {
+		"agility": 10,
+		"shadow": 2
+	},
+	"dungeons_gear:ocelot_leggings": {
+		"agility": 10,
+		"shadow": 2
+	},
+	"dungeons_gear:ocelot_boots": {
+		"agility": 10,
+		"shadow": 2
+	},
+	"dungeons_gear:shadow_walker_helmet": {
+		"agility": 10,
+		"shadow": 10
+	},
+	"dungeons_gear:shadow_walker_chestplate": {
+		"agility": 10,
+		"shadow": 10
+	},
+	"dungeons_gear:shadow_walker_leggings": {
+		"agility": 10,
+		"shadow": 10
+	},
+	"dungeons_gear:shadow_walker_boots": {
+		"agility": 10,
+		"shadow": 10
+	},
+	"dungeons_gear:thief_helmet": {
+		"agility": 11,
+		"shadow": 1.5
+	},
+	"dungeons_gear:thief_chestplate": {
+		"agility": 12,
+		"shadow": 1.5
+	},
+	"dungeons_gear:thief_leggings": {
+		"agility": 12,
+		"shadow": 1.5
+	},
+	"dungeons_gear:thief_boots": {
+		"agility": 11,
+		"shadow": 1.5
+	},
+	"dungeons_gear:spider_helmet": {
+		"agility": 11,
+		"shadow": 1,
+		"dungeoneering": 1
+	},
+	"dungeons_gear:spider_chestplate": {
+		"agility": 12,
+		"shadow": 1,
+		"dungeoneering": 1
+	},
+	"dungeons_gear:spider_leggings": {
+		"agility": 12,
+		"shadow": 1,
+		"dungeoneering": 1
+	},
+	"dungeons_gear:spider_boots": {
+		"agility": 11,
+		"shadow": 1,
+		"dungeoneering": 1
+	},
+	"dungeons_gear:wolf_helmet": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 9
+	},
+	"dungeons_gear:wolf_chestplate": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 9
+	},
+	"dungeons_gear:wolf_leggings": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 9
+	},
+	"dungeons_gear:wolf_boots": {
+		"agility": 6,
+		"combat": 3,
+		"archery": 9
+	},
+	"atum:wanderer_helmet": {
+		"wayfaring": 10,
+		"agility": 10
+	},
+	"atum:wanderer_chest": {
+		"wayfaring": 10,
+		"agility": 10
+	},
+	"atum:wanderer_legs": {
+		"wayfaring": 10,
+		"agility": 10
+	},
+	"atum:wanderer_boots": {
+		"wayfaring": 10,
+		"agility": 10
+	},
+	"atum:desert_helmet_iron": {
+		"wayfaring": 10,
+		"excavation": 10,
+		"gathering": 10
+	},
+	"atum:desert_chest_iron": {
+		"wayfaring": 10,
+		"excavation": 10,
+		"gathering": 10
+	},
+	"atum:desert_legs_iron": {
+		"wayfaring": 10,
+		"excavation": 10,
+		"gathering": 10
+	},
+	"atum:desert_boots_iron": {
+		"wayfaring": 10,
+		"excavation": 10,
+		"gathering": 10
+	},
+	"atum:desert_helmet_gold": {
+		"wayfaring": 10,
+		"mining": 10,
+		"gathering": 10
+	},
+	"atum:desert_chest_gold": {
+		"wayfaring": 10,
+		"mining": 10,
+		"gathering": 10
+	},
+	"atum:desert_legs_gold": {
+		"wayfaring": 10,
+		"mining": 10,
+		"gathering": 10
+	},
+	"atum:desert_boots_gold": {
+		"wayfaring": 10,
+		"mining": 10,
+		"gathering": 10
+	},
+	"atum:desert_helmet_diamond": {
+		"wayfaring": 10,
+		"dungeoneering": 10
+	},
+	"atum:desert_chest_diamond": {
+		"wayfaring": 10,
+		"dungeoneering": 10
+	},
+	"atum:desert_legs_diamond": {
+		"wayfaring": 10,
+		"dungeoneering": 10
+	},
+	"atum:desert_boots_diamond": {
+		"wayfaring": 10,
+		"dungeoneering": 10
+	},
+	"atum:relic_silver_idol": {
+		"combat": 1
+	},
+	"atum:relic_gold_idol": {
+		"combat": 2
+	},
+	"atum:relic_sapphire_idol": {
+		"combat": 5
+	},
+	"atum:relic_ruby_idol": {
+		"combat": 10
+	},
+	"atum:relic_emerald_idol": {
+		"combat": 15
+	},
+	"atum:relic_diamond_idol": {
+		"combat": 20
+	},
+	"atum:relic_silver_necklace": {
+		"magic": 1
+	},
+	"atum:relic_gold_necklace": {
+		"magic": 2
+	},
+	"atum:relic_sapphire_necklace": {
+		"magic": 5
+	},
+	"atum:relic_ruby_necklace": {
+		"magic": 10
+	},
+	"atum:relic_emerald_necklace": {
+		"magic": 15
+	},
+	"atum:relic_diamond_necklace": {
+		"magic": 20
+	},
+	"atum:relic_silver_ring": {
+		"mining": 1,
+		"gathering": 1
+	},
+	"atum:relic_gold_ring": {
+		"mining": 2,
+		"gathering": 2
+	},
+	"atum:relic_sapphire_ring": {
+		"mining": 5,
+		"gathering": 5
+	},
+	"atum:relic_ruby_ring": {
+		"mining": 10,
+		"gathering": 10
+	},
+	"atum:relic_emerald_ring": {
+		"mining": 15,
+		"gathering": 15
+	},
+	"atum:relic_diamond_ring": {
+		"mining": 20,
+		"gathering": 20
+	},
+	"atum:relic_silver_brooch": {
+		"endurance": 1
+	},
+	"atum:relic_gold_brooch": {
+		"endurance": 2
+	},
+	"atum:relic_sapphire_brooch": {
+		"endurance": 5
+	},
+	"atum:relic_ruby_brooch": {
+		"endurance": 10
+	},
+	"atum:relic_emerald_brooch": {
+		"endurance": 15
+	},
+	"atum:relic_diamond_brooch": {
+		"endurance": 20
+	},
+	"atum:relic_silver_bracelet": {
+		"archery": 1
+	},
+	"atum:relic_gold_bracelet": {
+		"archery": 2
+	},
+	"atum:relic_sapphire_bracelet": {
+		"archery": 5
+	},
+	"atum:relic_ruby_bracelet": {
+		"archery": 10
+	},
+	"atum:relic_emerald_bracelet": {
+		"archery": 15
+	},
+	"atum:relic_diamond_bracelet": {
+		"archery": 20
+	},
+	"iceandfire:dread_torch": {
+		"dungeoneering": 20
+	},
+	"minecraft:soul_torch": {
+		"dungeoneering": 5
+	},
+	"undergarden:shard_torch": {
+		"dungeoneering": 10
+	},
+	"iceandfire:dragon_skull_ice": {
+		"dragonslayer": 100,
+		"combat": 50
+	},
+	"iceandfire:dragon_skull_lightning": {
+		"dragonslayer": 100,
+		"combat": 50
+	},
+	"iceandfire:dragon_skull_fire": {
+		"dragonslayer": 100,
+		"combat": 50
+	},
+	"iceandfire:hippogryph_skull": {
+		"farming": 50,
+		"agility": 25
+	},
+	"iceandfire:cyclops_skull": {
+		"wayfaring": 50,
+		"woodcutting": 50,
+		"gathering": 50
+	},
+	"iceandfire:cockatrice_skull": {
+		"farming": 50,
+		"magic": 25
+	},
+	"iceandfire:stymphalian_skull": {
+		"smithing": 50
+	},
+	"iceandfire:stymphalian_bird_dagger": {
+		"smithing": 50
+	},
+	"iceandfire:amphithere_skull": {
+		"flying": 50,
+		"archery": 25
+	},
+	"iceandfire:seaserpent_skull": {
+		"swimming": 50,
+		"fishing": 50
+	},
+	"iceandfire:hydra_skull": {
+		"alchemy": 50,
+		"endurance": 25
+	},
+	"iceandfire:troll_skull": {
+		"mining": 25,
+		"excavation": 50,
+		"gathering": 75
+	},
+	"enigmaticlegacy:cursed_ring": {
+		"combat": 50,
+		"endurance": 50,
+		"light": 50,
+		"shadow": 50
+	},
+	"enigmaticlegacy:enchanter_pearl": {
+		"magic": 50
+	},
+	"enigmaticlegacy:earth_heart": {
+		"mining": 10,
+		"excavation": 10,
+		"woodcutting": 10,
+		"farming": 10,
+		"gathering": 30
+	},
+	"enigmaticlegacy:mining_charm": {
+		"mining": 30,
+		"excavation": 30,
+		"woodcutting": 30,
+		"farming": 30,
+		"gathering": 50
+	},
+	"enigmaticlegacy:twisted_core": {
+		"combat": 10,
+		"endurance": 10,
+		"magic": 10,
+		"archery": 10,
+		"shadow": 30
+	},
+	"enigmaticlegacy:berserk_emblem": {
+		"combat": 30,
+		"endurance": 30,
+		"magic": 30,
+		"archery": 30,
+		"shadow": 50
+	},
+	"enigmaticlegacy:monster_charm": {
+		"combat": 10,
+		"endurance": 10,
+		"magic": 10,
+		"archery": 10,
+		"light": 30
+	},
+	"enigmaticlegacy:guardian_heart": {
+		"fishing": 25,
+		"swimming": 10
+	},
+	"enigmaticlegacy:cursed_stone": {
+		"combat": 50,
+		"endurance": 50,
+		"magic": 50,
+		"archery": 50,
+		"shadow": 100
+	},
+	"enigmaticlegacy:evil_essence": {
+		"shadow": 50
+	},
+	"quark:diamond_heart": {
+		"mining": 5,
+		"excavation": 5,
+		"gathering": 10
+	},
+	"betterendforge:crystalite_helmet": {
+		"magic": 10
+	},
+	"betterendforge:crystalite_chestplate": {
+		"magic": 10
+	},
+	"betterendforge:crystalite_leggings": {
+		"magic": 10
+	},
+	"betterendforge:crystalite_boots": {
+		"magic": 10
+	},
+	"betterendforge:thallasium_helmet": {
+		"smithing": 5
+	},
+	"betterendforge:thallasium_chestplate": {
+		"smithing": 5
+	},
+	"betterendforge:thallasium_leggings": {
+		"smithing": 5
+	},
+	"betterendforge:thallasium_boots": {
+		"smithing": 5
+	},
+	"betterendforge:terminite_helmet": {
+		"smithing": 10
+	},
+	"betterendforge:terminite_chestplate": {
+		"smithing": 10
+	},
+	"betterendforge:terminite_leggings": {
+		"smithing": 10
+	},
+	"betterendforge:terminite_boots": {
+		"smithing": 10
+	},
+	"kubejs:mark_miner": {
+		"mining": 75,
+		"gathering": 75
+	},
+	"kubejs:mark_spelunker": {
+		"mining": 150,
+		"gathering": 150
+	},
+	"kubejs:mark_cavemaster": {
+		"mining": 300,
+		"gathering": 300
+	},
+	"kubejs:mark_farmer": {
+		"farming": 75
+	},
+	"kubejs:mark_rancher": {
+		"farming": 150
+	},
+	"kubejs:mark_agrarian": {
+		"farming": 300
+	},
+	"kubejs:mark_warrior": {
+		"combat": 50,
+		"endurance": 25
+	},
+	"kubejs:mark_mercenary": {
+		"combat": 100,
+		"endurance": 50
+	},
+	"kubejs:mark_champion": {
+		"combat": 200,
+		"endurance": 100
+	},
+	"kubejs:mark_archer": {
+		"archery": 75
+	},
+	"kubejs:mark_arbalester": {
+		"archery": 150
+	},
+	"kubejs:mark_artillerist": {
+		"archery": 300
+	},
+	"kubejs:mark_wizard": {
+		"magic": 75
+	},
+	"kubejs:mark_alchemist": {
+		"magic": 150
+	},
+	"kubejs:mark_thaumaturge": {
+		"magic": 300
+	},
+	"kubejs:mark_pirate": {
+		"combat": 25,
+		"wayfaring": 75,
+		"swimming": 75,
+		"fishing": 75
+	},
+	"kubejs:mark_corsair": {
+		"combat": 50,
+		"wayfaring": 150,
+		"swimming": 150,
+		"fishing": 150
+	},
+	"kubejs:mark_captain": {
+		"combat": 100,
+		"wayfaring": 300,
+		"swimming": 300,
+		"fishing": 300
+	},
+	"kubejs:mark_thief": {
+		"agility": 100,
+		"shadow": 50
+	},
+	"kubejs:mark_bandit": {
+		"agility": 200,
+		"shadow": 100
+	},
+	"kubejs:mark_rogue": {
+		"agility": 400,
+		"shadow": 200
+	},
+	"kubejs:mark_huntsman": {
+		"archery": 50,
+		"agility": 50
+	},
+	"kubejs:mark_tracker": {
+		"archery": 100,
+		"agility": 100
+	},
+	"kubejs:mark_pursuer": {
+		"archery": 200,
+		"agility": 200
+	},
+	"kubejs:mark_healer": {
+		"light": 75,
+		"alchemy": 75,
+		"magic": 50
+	},
+	"kubejs:mark_spiritualist": {
+		"light": 150,
+		"alchemy": 150,
+		"magic": 100
+	},
+	"kubejs:mark_shaman": {
+		"light": 300,
+		"alchemy": 300,
+		"magic": 200
+	},
+	"kubejs:mark_pitfighter": {
+		"agility": 50,
+		"combat": 25,
+		"endurance": 25
+	},
+	"kubejs:mark_fighter": {
+		"agility": 100,
+		"combat": 75,
+		"endurance": 75
+	},
+	"kubejs:mark_underdog": {
+		"agility": 200,
+		"combat": 100,
+		"endurance": 100
+	},
+	"kubejs:mark_tamer": {
+		"agility": 50,
+		"magic": 25
+	},
+	"kubejs:mark_summoner": {
+		"agility": 100,
+		"magic": 50
+	},
+	"kubejs:mark_beastmaster": {
+		"agility": 200,
+		"magic": 100
+	}
+}

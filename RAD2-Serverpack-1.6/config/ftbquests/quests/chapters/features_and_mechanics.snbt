@@ -1,0 +1,1836 @@
+{
+	id: "2A79FAE23F150F49"
+	group: ""
+	order_index: 0
+	filename: "features_and_mechanics"
+	title: "Features | mechanics"
+	icon: {
+		id: "losttrinkets:book_o_enchanting"
+		Count: 1b
+		ForgeCaps: {
+			"dungeons_libraries:built_in_enchantments": {
+				BuiltInEnchantments: [ ]
+			}
+		}
+	}
+	default_quest_shape: "square"
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: -1.0d
+			y: -6.5d
+			width: 13.0d
+			height: 2.5d
+			rotation: 0.0d
+			image: "rad2:textures/misc/rad.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 0.5d
+			y: 3.0d
+			width: 10.0d
+			height: 19.0d
+			rotation: 0.0d
+			image: "rad2:textures/misc/rad_frame_white.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 5.0d
+			y: 10.5d
+			width: 6.0d
+			height: 6.0d
+			rotation: 0.0d
+			image: "rad2:textures/misc/rad_dice.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -0.5d
+			y: -3.0d
+			width: 5.0d
+			height: 1.0d
+			rotation: 0.0d
+			image: "rad2:textures/misc/qb_dif_mech.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -1.0d
+			y: 4.0d
+			width: 4.0d
+			height: 1.0d
+			rotation: 0.0d
+			image: "rad2:textures/misc/qb_player.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -1.0d
+			y: 1.5d
+			width: 3.8d
+			height: 1.0d
+			rotation: 0.0d
+			image: "rad2:textures/misc/qb_world.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			icon: "itemfilters:weak_nbt"
+			x: -1.0d
+			y: -0.5d
+			description: [
+				"There are couple of new mechanics that this pack employs, descriptions of which you will find following this quest."
+				"You can always come back here to read them again."
+				""
+				"- Gain variable benefits for eating a greater variety of foods."
+				"- Harvest groups of blocks at time to speed up mining, harvesting, and tilling."
+				"- more Piglins behaviors"
+				"- progressive difficulty(including bosses)"
+				"- bleeding"
+				"- new nether portal mechanics"
+			]
+			id: "56127AAF761DC8DA"
+			tasks: [{
+				id: "6FCE6B669DDF6914"
+				type: "checkmark"
+				title: "New mechanics and features"
+			}]
+			rewards: [{
+				id: "53256419445952A3"
+				type: "item"
+				item: "minecraft:apple"
+			}]
+		}
+		{
+			icon: {
+				id: "losttrinkets:mad_piggy"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: -2.5d
+			y: 0.0d
+			description: [
+				"- Piglins now have a reputation system that works similarly to Villagers. Doing things like fighting alongside them against Wither mobs, giving them gifts and bartering with them increases your reputation. Doing things like hurting or killing Piglin mobs and engaging in unauthorized mining/chest opening around them decreases your reputation."
+				""
+				"- At +50 reputation with a Piglin, you will no longer be required to wear gold armor around them. At +100 reputation, you will be authorized to open chests and mine gold around them."
+				""
+				"- At -50 reputation with a Piglin, you will no longer receive items from bartering. At -100 reputation, you will be attacked on sight regardless of whether or not you are wearing gold armor."
+				""
+				"- Piglins seek out and pick up food items (by default, porkchops and cooked porkchops) and consume them, complete with an eating animation. Players can also right-click them with their food items if the Piglin has not already recently eaten and they will accept it. Eating food will also restore a Piglin's health in an amount identical to the food item's hunger value."
+				""
+				"- Piglins can now barter with gold nuggets and gold blocks. Gold nuggets make you far more likely to receive common barter items, with all item stack sizes halved. Gold blocks make you far more likely to receive rare barter items, with all item stack sizes doubled."
+				""
+				"- Piglins now shake their heads like Villagers when declining an offered item."
+				""
+				" Piglins now emit particles/make sounds when accepting an item from you or declining it."
+				""
+				""
+			]
+			dependencies: ["56127AAF761DC8DA"]
+			id: "0DA780E82198E59C"
+			tasks: [{
+				id: "4C371DDFD42B66C2"
+				type: "checkmark"
+				title: "New Piglins Behavior"
+			}]
+			rewards: [{
+				id: "665866DA9908B914"
+				type: "item"
+				item: "minecraft:golden_carrot"
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:nether_star"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 0.0d
+			y: 2.5d
+			description: [
+				"Nether portals now come in the form of Dimensional Rifts, which you'll find scattered deep underground. You'll have to find one of these Rifts in order to get to the Nether - but be careful, because it's now a one-way trip!"
+				""
+				"To get back from the Nether, you'll have to search for a Monolith. These are new, semi-rare structures that can be easily spotted from far away thanks to the beams they shoot into the sky."
+				""
+				"The block at the center of each Monolith that shoots this beam is called a Reclaimer, and it's the key to returning to the Overworld. However, the Reclaimer won't do much without a little power. In order to power it, you'll have to place a gold block on each of its four sides - something that shouldn't be too difficult to pull off in the Nether. "
+				""
+				"Once powered, the Reclaimer has the ability to lift you back into the Overworld."
+				"================================="
+				" You can bucket the Dimensional Plasma from a Dimensional Rift to bring it closer to your base, and you can mine the Reclaimer from a Monolith and place it right by where your Plasma teleports you to in the Nether."
+				""
+				"So, it's pretty close to a two-way portal, the only real difference being you'll have to find a Dimensional Rift and a Monolith first."
+			]
+			id: "25045A0059F4E280"
+			tasks: [{
+				id: "7C18E741D1CA3145"
+				type: "checkmark"
+				title: "New nether portal mechanics"
+			}]
+			rewards: [{
+				id: "079877221EB51759"
+				type: "item"
+				item: {
+					id: "minecraft:golden_carrot"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "ars_nouveau:ritual_moonfall"
+			x: -2.5d
+			y: -2.0d
+			description: [
+				"Blood Moon:"
+				"- Increases monster spawn cap and prevents sleeping."
+				""
+				"Harvest Moon:"
+				"Increases crop growth rate and drop rate."
+				""
+				"Blue Moon:"
+				"Gives players the Luck effect, increasing some loot quality and fishing loot."
+				""
+				"Sometimes a super version of lunar events occurs that has an amplified effect."
+			]
+			dependencies: ["56127AAF761DC8DA"]
+			id: "1D7B582F298ADFDF"
+			tasks: [{
+				id: "2166672F8EECC3D0"
+				type: "checkmark"
+				title: "New Lunar events"
+			}]
+			rewards: [{
+				id: "3BD45027CC335B19"
+				type: "xp"
+				xp: 100
+			}]
+		}
+		{
+			icon: "blue_skies:everbright_portal"
+			x: -2.0d
+			y: 2.5d
+			shape: "square"
+			subtitle: "Current dimensions count: 10"
+			description: [
+				"• Atum 2 - a new and unique desert dimension full of sand, temples, as well as many new enemies! Traveling through the dimension you can discover new artifacts, making your way to them through mountains of sand and enemies."
+				""
+				"• Blue skies: Everbright and Everdawn - two new dimensions, one lighter and colder, and the other darker and warmer. In each of them you will find new blocks, mobs, tools, weapons and bosses."
+				""
+				"• Dimensional Dungeons - limitless procedurally generated dungeons dimension."
+				""
+				"• The Bumblezone - an unBEElievable dimension full of bees that become REALLY angry if you take their honey!"
+				""
+				"• Tropicraft - dimension adding tropical world"
+				""
+				"• Twilight forest - a realm basked in mystery and eerie twilight."
+				""
+				"• Undergarden - a dark, subterranean world located deep below the bedrock of the Overworld. The flora here has adapted to their conditions and can grow anywhere, independent of light. Strange creatures call these dark lands home, and are plagued by the invasive Rotspawn, monsters originating from a chaotic, mysterious realm."
+			]
+			id: "6EAF4C02AC262FC0"
+			tasks: [{
+				id: "1A3AEEE0A82E3188"
+				type: "checkmark"
+				title: "New dimensions!"
+			}]
+			rewards: [{
+				id: "59B1B5BF66E28F2F"
+				type: "item"
+				item: {
+					id: "minecraft:golden_carrot"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "ars_nouveau:glyph_haste"
+			x: -1.5d
+			y: -2.0d
+			subtitle: "In-Depth, Well Balanced and Seamlessly Integrated Dodging"
+			description: [
+				"The blue/gray feather icons above your hunger indicate your Dodge Meter."
+				""
+				"Every armor has a weight that affects your maximum dodges. Gray feathers indicate armor weight."
+				""
+				"The Lightweight enchantment can decrease armor weight, granting you feathers back."
+				""
+				"You can dash by holding any direction and pressing the Dodge keybind (Default: Left Alt)."
+			]
+			dependencies: ["56127AAF761DC8DA"]
+			id: "55DE8B3522A4F8A6"
+			tasks: [{
+				id: "36478D84CB178449"
+				type: "checkmark"
+				title: "Dodge"
+			}]
+			rewards: [
+				{
+					id: "012430C1D7AE5D6B"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "elenaidodge2:long_replenishment"
+						}
+					}
+				}
+				{
+					id: "54785A567EA1C042"
+					type: "ftbmoney:money"
+					ftb_money: 5L
+				}
+			]
+		}
+		{
+			title: "New Enchantment system by Apotheosis"
+			icon: {
+				id: "minecraft:enchanted_book"
+				Count: 1b
+				tag: {
+					StoredEnchantments: [{
+						lvl: 1s
+						id: "minecraft:protection"
+					}]
+				}
+			}
+			x: -2.0d
+			y: 9.5d
+			description: [
+				"There is now a new system for enchanting that uses three stats, instead of the original single stat system."
+				""
+				"To support the new enchantment stat system, Apotheosis adds 11 new bookshelves, each with their own unique enchanting stat combinations.  Shown here are the Endshelves, Seashelves, Hellshelves, the Beeshelf and the Melonshelf.  Combinations of these shelves can allow for any stat values you could dream of, however, reaching significantly high Eterna levels requires Endshelves."
+				""
+				""
+			]
+			id: "6FCA404FDB2D82CC"
+			tasks: [{
+				id: "07F42EA7E8CC38A5"
+				type: "checkmark"
+				title: "New Enchanting mechanics"
+			}]
+			rewards: [{
+				id: "25FD19220EA221C0"
+				type: "xp"
+				xp: 100
+			}]
+		}
+		{
+			title: "New and overhauled structures!"
+			icon: "ars_nouveau:familiar_wixie"
+			x: 1.0d
+			y: 2.5d
+			description: [
+				"- underground and flying villages"
+				"- overhauled mineshaft, strongholds, dungeons, caves"
+			]
+			id: "6560CFA3F7737BBB"
+			tasks: [{
+				id: "3E8E9CE8F8302CF2"
+				type: "checkmark"
+				title: "New structures!"
+			}]
+			rewards: [{
+				id: "1387A24745731B2C"
+				type: "item"
+				item: {
+					id: "minecraft:golden_carrot"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "archers_paradox:redstone_arrow"
+			x: 0.5d
+			y: -2.0d
+			description: [
+				"Damage from sharp objects, bites, and cactuses will cause entities to bleed."
+				""
+				"Bleeding causes damage over time, like poison, and is lethal. Bandages can cure bleeding and provide regeneration."
+				""
+				"Each piece of armor equipped reduces bleed chance by 10%."
+				""
+				"In Expert and Master Mode, the level of Bleeding is increased."
+			]
+			dependencies: ["56127AAF761DC8DA"]
+			id: "04CC7C1C1BFE864D"
+			tasks: [{
+				id: "344ADACFCEB0D8A7"
+				type: "checkmark"
+				title: "Bleeding"
+			}]
+			rewards: [{
+				id: "0721D0DFC9A4BC06"
+				type: "item"
+				item: "majruszs_difficulty:bandage"
+				count: 2
+			}]
+		}
+		{
+			icon: {
+				id: "losttrinkets:golden_skull"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 1.5d
+			y: -0.5d
+			description: [
+				"Difficulty will increase over time per-player, after 3 in-game days."
+				""
+				"As the difficulty increases mobs gain increased stats (damage, speed, health, knockback, magic resistance) and will spawn with more equipment that can be enchanted."
+				""
+				"The strength of mobs is determined by the average difficulty of nearby players."
+			]
+			dependencies: ["56127AAF761DC8DA"]
+			id: "0F19628AC9F04F38"
+			tasks: [{
+				id: "7006A7CF76CC94F9"
+				type: "checkmark"
+				title: "Scaling Difficulty"
+				icon: "scalinghealth:heart_crystal"
+			}]
+			rewards: [{
+				id: "0BD8646D6609FB8F"
+				type: "item"
+				item: {
+					id: "majruszs_difficulty:bandage"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "rats:rat_upgrade_creative"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 1.5d
+			y: -2.0d
+			description: [
+				"Each time you kill the Wither, Elder Guardian or Ender Dragon, the difficulty of the fight increases, giving them stronger stats and abilities, while also giving increased rewards and experience."
+				""
+				"Wither"
+				"- Summons Wither Skeletons. Drops Nether Star Shards."
+				""
+				"Ender Dragon"
+				"- Summons Shulkers and Endermite."
+				""
+				"Elder Guardian"
+				"- Summons Guardians. Drops Sponges and Elder Guardian Spikes."
+			]
+			dependencies: ["0F19628AC9F04F38"]
+			id: "68203BBBB58B26EA"
+			tasks: [{
+				id: "6C079A785E1D9855"
+				type: "checkmark"
+				title: "Progressive Bosses"
+				icon: "productivebees:upgrade_productivity"
+			}]
+			rewards: [{
+				id: "3678E73DDD73B55C"
+				type: "item"
+				item: {
+					id: "minecraft:potion"
+					Count: 1b
+					tag: {
+						Potion: "minecraft:long_strength"
+					}
+				}
+			}]
+		}
+		{
+			icon: "majruszs_difficulty:undead_battle_standard"
+			x: 2.5d
+			y: -0.5d
+			description: [
+				"The game progress is divided into three parts: Normal Mode, Expert Mode, and Master Mode. These are not per-player, and affect the whole world."
+				""
+				"- Normal Mode starts at the beginning of the game."
+				""
+				"- Expert Mode starts when anyone kills the Wither. (or enters the End)"
+				""
+				"- Master Mode starts when the Ender Dragon is defeated by someone."
+			]
+			dependencies: ["0F19628AC9F04F38"]
+			id: "577182F7C0C5B85B"
+			tasks: [{
+				id: "654635E50ADA3AD9"
+				type: "checkmark"
+				title: "Progressive Difficulty"
+			}]
+			rewards: [{
+				id: "203EF8DF6395F7A6"
+				type: "item"
+				item: {
+					id: "minecraft:potion"
+					Count: 1b
+					tag: {
+						Potion: "minecraft:healing"
+					}
+				}
+			}]
+		}
+		{
+			title: "Normal mode changes"
+			icon: "minecraft:skeleton_skull"
+			x: 3.5d
+			y: -1.5d
+			subtitle: "Some of the new difficulty mechanics:"
+			description: [
+				"- Groups of enemies"
+				"Enemies appear in groups with one leader and followers who attack the same target as the leader. Followers are more likely to have weapons and leaders to have armors."
+				""
+				"- Undead Army (new Raid)"
+				"The new raid starts after killing a certain amount of undead enemies. It has 3-5 waves, scales difficulty over time, and rewards the player with a treasure bag after finishing it. Also scales difficulty with each player participating in!"
+				""
+				"- fall damage can causes Slowness and Nausea"
+				""
+				"- drowning damage can causes Nausea and Weakness"
+				""
+				"- Creepers may spawn with a negative effect"
+				""
+				"- animals (like Wolves), Zombies, and Spiders can bite you causing Bleeding"
+				""
+				"- arrows and direct damage from sharp items (tools, weapons, shears) also can cause Bleeding"
+				""
+				"- touching a cactus also may cause Bleeding"
+			]
+			dependencies: ["577182F7C0C5B85B"]
+			id: "6E509EA1B20B6476"
+			tasks: [{
+				id: "413AD55DBDF6F7A1"
+				type: "checkmark"
+				title: "New difficulty mechanics"
+			}]
+			rewards: [
+				{
+					id: "1741242638737932"
+					type: "item"
+					item: "majruszs_difficulty:bandage"
+					count: 2
+				}
+				{
+					id: "680F2DF9758F6039"
+					type: "ftbmoney:money"
+					ftb_money: 5L
+				}
+			]
+		}
+		{
+			icon: "farmersdelight:cake_slice"
+			x: 2.5d
+			y: 5.5d
+			subtitle: "Benefits for eating variety of foods"
+			description: [
+				"Eating a variety of nutrients, with the right balance, will grant you buffs, while having a bad diet will give you debuffs."
+				""
+				"Food now has tooltips that show which nutrients they provide, along with the total number of Nutritional Units (NUs)."
+				""
+				"To see Nutritional Balance, press the Nutrient Gui keybind (Default: N) or click the bread icon in your inventory."
+				""
+				"- Blue indicates your current NUs for each category"
+				"- Green lines show the range for buffs"
+				"- Red lines indicate malnourishment and engorgement, which gives you debuffs"
+			]
+			id: "35190DA84895073D"
+			tasks: [{
+				id: "6331E4029462A823"
+				type: "checkmark"
+				title: "Dietary Diversity"
+			}]
+			rewards: [{
+				id: "4A593D39CE5A8B79"
+				type: "item"
+				item: {
+					id: "minecraft:golden_carrot"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "fins:spindly_emerald"
+			x: -1.0d
+			y: 2.5d
+			description: [
+				"There are new villager jobs, trades, workstations, and advancements!"
+				""
+				"- Oceanographer (Oceanography Table)"
+				""
+				"- Forester (Forestry Bench)"
+				""
+				"- Engineer (Blueprint Table)"
+				""
+				"- Florist (Gardening Table)"
+				""
+				"- Hunter (Hunting Post)"
+				""
+				"- Netherologist (Decayed Workbench)"
+				""
+				"- Enderologist (Purpur Altar)"
+				""
+				"- Apiarist (Honey Pot)"
+				""
+			]
+			id: "2574DDCEFF8FE519"
+			tasks: [{
+				id: "62AD44FDD001C367"
+				type: "checkmark"
+				title: "Improved villagers"
+			}]
+			rewards: [{
+				id: "1A3E8B8ABF4D5B26"
+				type: "item"
+				item: {
+					id: "minecraft:golden_carrot"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "relics:stellar_catalyst"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 2.5d
+			y: 6.5d
+			description: [
+				"Lost Trinkets adds more than 50 unlockable trinkets with different abilities and rarities."
+				""
+				"Trinkets are randomly unlocked during some activities like killing enemies and bosses, trading, mining ores, cutting trees, and farming. Each activity has a different chance of unlocking a trinket."
+				""
+				"You can access the Trinkets GUI with its keybind (Default: R). Here you can equip them and unlock more slots."
+				""
+				"========================"
+				""
+				"There are also countless curios which have their own slot in your Curio Inventory which you can open with the icon in your inventory, or with a keybind (Default: G)."
+			]
+			id: "0E5AE2A43020AFC3"
+			tasks: [{
+				id: "0904DC2D17454C24"
+				type: "checkmark"
+				title: "Trinkets and Curios"
+			}]
+			rewards: [{
+				id: "70CB36DD6DEEB01C"
+				type: "item"
+				item: {
+					id: "minecraft:golden_carrot"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "ars_nouveau:glyph_wither"
+			x: 3.5d
+			y: -0.5d
+			subtitle: "- Expert Mode starts when the first player kills the Wither"
+			description: [
+				"- loot has a 25% chance to be doubled"
+				""
+				"- experience from all sources is increased by 20%"
+				""
+				"- all monsters have their health and damage increased by 20%(at night the bonus is doubled to 40%)"
+				""
+				"- Illusioner spawn naturally during the night"
+				""
+				"- new Elite Skeleton spawn naturally during the night(shoots arrows extremely precisely)"
+				""
+				"- Piglins may spawn in a group"
+				""
+				"- Pillagers may spawn in a group"
+				""
+				"- Creepers on explosion may spawn more Creeperlings"
+				""
+				"- Slimes have a chance to inflict Slowness effect"
+				""
+				"- Wither Skeletons may spawn with the Wither Sword instead of the Stone Sword"
+				""
+				"- Undead Army now has 4 waves"
+				""
+				"- undead spawned during the Undead Army are twice as likely to have enchanted items"
+				""
+				"- undead spawned during the Undead Army are twice as likely to have armor pieces"
+				""
+				"- Undead Army gives 100% more experience for completing it"
+				""
+				"- whenever you die from Bleeding or are killed by a Zombie there spawns a special Zombie with your head"
+			]
+			dependencies: ["577182F7C0C5B85B"]
+			id: "78655B49D92DA1AB"
+			tasks: [{
+				id: "4F575278249F1D60"
+				type: "kill"
+				entity: "minecraft:wither"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "211DA38465A84BB6"
+					type: "item"
+					item: {
+						id: "majruszs_difficulty:golden_bandage"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "382323F735456BD6"
+					type: "item"
+					item: {
+						id: "roughtweaks:medkit"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			icon: {
+				id: "minecraft:end_crystal"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 3.5d
+			y: 0.5d
+			subtitle: "- Master Mode starts when you defeat the Ender Dragon."
+			description: [
+				"- loot has a 75% chance to be doubled"
+				""
+				"- experience from all sources is increased by 50%"
+				""
+				"- all monsters have their health and damage increased by 40% (instead of 20% chance)(at night the bonus is doubled to 80%)"
+				""
+				"- Phantom and new End Keeper spawn naturally near new structures"
+				""
+				"- Elite Skeleton may spawn in a group"
+				""
+				"- Enderman may teleport target on hit"
+				""
+				"- Shulker may inflict Blindness effect"
+				""
+				"- Creepers on explosion may spawn more Creeperlings"
+				""
+				"- Undead Army now has 5 waves"
+				""
+				"- undead spawned during the Undead Army are quadruple as likely to have enchanted items"
+				""
+				"- undead spawned during the Undead Army are thrice as likely to have armor pieces"
+				""
+				"- Undead Army now rewards with 2 Treasure Bags (instead of 1)"
+				""
+				"- Undead Army gives 200% more experience for completing it (instead of 100%)"
+				""
+			]
+			dependencies: ["577182F7C0C5B85B"]
+			id: "13FD3ACE5C674BD1"
+			tasks: [{
+				id: "15A903EF1D063764"
+				type: "advancement"
+				advancement: "minecraft:end/kill_dragon"
+				criterion: ""
+			}]
+			rewards: [
+				{
+					id: "39492D8B75AEE13F"
+					type: "item"
+					item: {
+						id: "majruszs_difficulty:golden_bandage"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "106880E710C077BF"
+					type: "item"
+					item: {
+						id: "roughtweaks:medkit_enchanted"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 2.5d
+			y: 7.5d
+			subtitle: "Keeps safe your inventory items on death with many features for better survivability and exploration"
+			description: [
+				"Corail Tombstone handles your death in Minecraft by providing tons of configuration options, many features to encourage to discover the world and several compatibilities between mods."
+				""
+				"It also introduces a perk system : the Knowledge of Death, and a magic system based on some enchantable items with the help of the Souls haunting the Decorative Graves and waiting for a way to be freed for their eternal sentence.A screen in game allows to configure player preferences, access a Compendium of infos and the selection of the perks."
+			]
+			id: "00EEAE0FACC02300"
+			tasks: [{
+				id: "6121BA739D1C7316"
+				type: "advancement"
+				advancement: "tombstone:adventure/first_knowledge"
+				criterion: ""
+			}]
+			rewards: [
+				{
+					id: "3D72B5E03815639D"
+					type: "item"
+					item: {
+						id: "minecraft:bone"
+						Count: 1b
+						ForgeCaps: {
+							"dungeons_libraries:built_in_enchantments": {
+								BuiltInEnchantments: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "2304ED8288AB39AC"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			icon: "kubejs:arrow_left"
+			x: -4.5d
+			y: 1.0d
+			subtitle: "Move your mouse to the left side to open quest menu!"
+			size: 1.5d
+			id: "7FF57EE6F8F6FC1C"
+			tasks: [{
+				id: "1A4B7F6D74AF92E1"
+				type: "checkmark"
+				title: "MORE QUESTS ARE WAITING!"
+			}]
+		}
+		{
+			title: "Character progression and skills"
+			icon: "itemfilters:item_group"
+			x: -0.30000000000000004d
+			y: 6.69d
+			subtitle: "(brief explanation about stats)"
+			description: [
+				"Project MMO adds stats that level up while doing certain activities."
+				""
+				"You can access the Project MMO menu with the Open Menu key (Default: P). Here you can see stats, skills and their benefits, how to get experience, and much more."
+				""
+				"Higher skill levels gives you bonuses related to the skill, and allows you to use more items."
+				""
+				"Certain items will grant a boost to Skill XP gain, when either held in your hands or worn."
+				""
+				"Some biomes and dimensions also adjust Skill XP gain, information like this can be found in the Glossary as well."
+				""
+				"You can create a party with the \"/pmmo party\" command, which gives increased XP gain, reduced friendly fire, and minor Skill XP sharing."
+			]
+			size: 1.55d
+			id: "000000000000009D"
+			tasks: [{
+				id: "000000000000009E"
+				type: "checkmark"
+				title: "Project MMO"
+			}]
+			rewards: [{
+				id: "0C08BE9D98246BDB"
+				type: "item"
+				item: "minecraft:golden_carrot"
+			}]
+		}
+		{
+			icon: "minecraft:brewing_stand"
+			x: -1.15d
+			y: 8.4d
+			description: [
+				"Alchemy experience is gained by crafting brewing ingredients and brewing potions in a brewing stand."
+				""
+				"Higher levels increase the chance for extra potions to be brewed."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "64F9EE8910E19872"
+			tasks: [{
+				id: "3FE9F9324A9A75ED"
+				type: "checkmark"
+				title: "Alchemy"
+			}]
+			rewards: [{
+				id: "42EF83110DC99AC4"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:iron_boots"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 1.4d
+			y: 6.69d
+			description: [
+				"Agility experience is gained from multiple sources related to movement."
+				""
+				"- Sprinting: the faster you are going, the more experience you gain."
+				""
+				"- Jumping: the higher you jump the more experience you gain."
+				""
+				"- Being saved from fall damage by this skill"
+				""
+				"Higher levels will increase the chance to prevent fall damage."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "63F8E2CB45B9803D"
+			tasks: [{
+				id: "3C321FB0BBBB71CF"
+				type: "checkmark"
+				title: "Agility"
+			}]
+			rewards: [{
+				id: "213C8DF50385C565"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "minecraft:tropical_fish"
+			x: 0.55d
+			y: 8.4d
+			description: [
+				"Swimming experience. Yep."
+				""
+				"Reaching level 25 will unlock underwater night vision."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "214CDC923D179E56"
+			tasks: [{
+				id: "5FFBB579483535DF"
+				type: "checkmark"
+				title: "Swimming"
+			}]
+			rewards: [{
+				id: "27A876A72644EE4A"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:elytra"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 1.4d
+			y: 7.55d
+			description: [
+				"Flying experience is gained during Elytra flight."
+				""
+				"Higher levels do not give any bonuses."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "0A0E3A6CA17F84F9"
+			tasks: [{
+				id: "6AA18B31884A0323"
+				type: "checkmark"
+				title: "Flying"
+			}]
+			rewards: [{
+				id: "1F9CC79DD8FA4F59"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:iron_chestplate"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 1.4d
+			y: 5.85d
+			description: [
+				"Endurance experience is gained by taking damage."
+				""
+				"Higher levels will increase damage reduction and max health."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "78DB7D7B18894DA4"
+			tasks: [{
+				id: "329A1625CD6214D1"
+				type: "checkmark"
+				title: "Endurance"
+			}]
+			rewards: [{
+				id: "2042E69D2F7D8D6A"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:iron_sword"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -2.0d
+			y: 5.85d
+			description: [
+				"Combat experience is gained by attacking mobs."
+				""
+				"Less experience is gained if the mob dies, or is one-shot from full health."
+				""
+				"Higher levels increase melee damage."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "71C94DF46703BB3F"
+			tasks: [{
+				id: "4E7CAB038758BA54"
+				type: "checkmark"
+				title: "Combat"
+			}]
+			rewards: [{
+				id: "7FA838BD50290BEE"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:bow"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -2.0d
+			y: 6.69d
+			description: [
+				"Archery experience is gained by attacking mobs with ranged weapons."
+				""
+				"More experience is gained if the mob dies, is one-shot from full health, and if the distance was more than 16 blocks."
+				""
+				"Higher levels increase ranged damage."
+				""
+				"NOTICE: Experience gain has issues, and we can't fix it on our end."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "261FF95C675A0E98"
+			tasks: [{
+				id: "5CB7A94DEE4ADAD5"
+				type: "checkmark"
+				title: "Archery"
+			}]
+			rewards: [{
+				id: "4CF3274B22645B32"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:iron_shovel"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 0.55d
+			y: 5.0d
+			description: [
+				"Excavation experience is gained by digging blocks like dirt, sand and snow."
+				""
+				"Higher levels allow you to dig faster and to find treasure when digging."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "5AC9081752E85D51"
+			tasks: [{
+				id: "1E0BD10C0AEDDA2C"
+				type: "checkmark"
+				title: "Excavation"
+			}]
+			rewards: [{
+				id: "747ABF4AEDD1C134"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:iron_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -0.3d
+			y: 5.0d
+			description: [
+				"Mining experience is gained by breaking stone-based blocks."
+				""
+				"Higher levels allow you to mine faster and mine extra ore."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "5562C277365DF050"
+			tasks: [{
+				id: "27065C11D7892632"
+				type: "checkmark"
+				title: "Mining"
+			}]
+			rewards: [{
+				id: "0A6359E4B13C16B9"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:iron_axe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -1.15d
+			y: 5.0d
+			description: [
+				"Woodcutting experience is gained by breaking wood blocks (logs, planks, etc.)."
+				""
+				"Higher levels allow you to chop faster and sometimes chop extra wood."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "416E81CE76446066"
+			tasks: [{
+				id: "53F6058FA66F0D87"
+				type: "checkmark"
+				title: "Woodcutting"
+			}]
+			rewards: [{
+				id: "27B553667632567D"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:iron_hoe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -2.0d
+			y: 5.0d
+			description: [
+				"Farming experience is gained from crops maturing, harvesting certain crops, and breeding animals."
+				""
+				"Higher levels increase harvest size and growth speed."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "128C6C5B6273C0F3"
+			tasks: [{
+				id: "11AA91F96D236C7E"
+				type: "checkmark"
+				title: "Farming"
+			}]
+			rewards: [{
+				id: "537A67485463EC65"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:fishing_rod"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -0.3d
+			y: 8.4d
+			description: [
+				"You'll never guess what Fishing experience is gained from. That's right, fishing. Craziest thing."
+				""
+				"Higher levels increase the chance of catching better items and enchantments."
+				""
+				"You can see detailed info on this in the Glossary."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "4C18DC09C5FFB372"
+			tasks: [{
+				id: "26DAF84205172A75"
+				type: "checkmark"
+				title: "Fishing"
+			}]
+			rewards: [{
+				id: "1C1A31BE2C5DDBD2"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "ars_nouveau:wand"
+			x: -2.0d
+			y: 7.55d
+			description: [
+				"Magic experience is gained by mining magical ores, reading tomes, and casting spells."
+				""
+				"Higher levels grant increased maximum mana, mana regeneration, and magic damage."
+				""
+				"NOTICE: Experience gain has issues, and we can't fix it on our end."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "777FFBDE3AD629F9"
+			tasks: [{
+				id: "15EB7D2E5444C8BB"
+				type: "checkmark"
+				title: "Magic"
+			}]
+			rewards: [{
+				id: "7487E97E1F0700C7"
+				type: "item"
+				item: "ars_nouveau:mana_gem"
+			}]
+		}
+		{
+			icon: "minecraft:smithing_table"
+			x: -2.0d
+			y: 8.4d
+			description: [
+				"Smithing experience is gained from repairing items in an anvil and salvaging items at a smithing table (sneak-use)."
+				""
+				"Higher levels give multiple benefits."
+				""
+				"- Bonus ores smelted"
+				"- Increased salvage success rate"
+				"- Increased repair amount in anvil"
+				"- Reduced chance of anvil damage"
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "41F4A32BEA5C4295"
+			tasks: [{
+				id: "3B673FE9BA9A3CC0"
+				type: "checkmark"
+				title: "Smithing"
+			}]
+			rewards: [{
+				id: "54F73585773748D8"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Waystones"
+			x: 2.0d
+			y: 2.5d
+			description: [
+				"Waystones allows players to return to them once they've been activated, either through a Warp Scroll, a Warp Stone, or another waystone."
+				""
+				"You can find some in the wild, in towers, and in villages."
+				""
+				"You can also buy one in the shop and put it wherever you want."
+			]
+			id: "6AA5B436C67A93FF"
+			tasks: [{
+				id: "6AA055C5A9696592"
+				type: "item"
+				item: {
+					id: "waystones:waystone"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [{
+				id: "0BE7676AB6C019ED"
+				type: "xp"
+				xp: 100
+			}]
+		}
+		{
+			icon: {
+				id: "bountifulbaubles:gloves_digging_iron"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 1.4d
+			y: 5.0d
+			description: [
+				"Gathering skill is the sum of your Mining, Woodcutting and Excavating experience."
+				""
+				"Higher levels allow you to equip and use higher quality items."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			id: "6754527124EA8B6B"
+			tasks: [{
+				id: "75B1CF2CFE5E288F"
+				type: "checkmark"
+				title: "Gathering"
+			}]
+			rewards: [{
+				id: "16655502056D1B37"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Eterna"
+			x: -0.875d
+			y: 9.5d
+			description: ["Eterna is the stat that controls what level your enchanting table is at.  Certain types of bookshelves are only capable of providing certain max levels of Eterna, so be sure to check the max on the block."]
+			dependencies: ["6FCA404FDB2D82CC"]
+			id: "0A7911EB233F4FD6"
+			tasks: [{
+				id: "15DC3E6F6598D84C"
+				type: "checkmark"
+				title: "Eterna"
+				icon: {
+					id: "buzzier_bees:lime_candle"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 0.25d
+			y: 9.5d
+			description: [
+				"Quanta determines how much flux is in your enchanting process.  When you begin an enchantment process, after spending your experience, your Quanta level will work behind the scenes to change your enchantment level."
+				""
+				"This is not always beneficial, as Quanta is capable of both increasing and decreasing the actual enchanting level."
+				""
+				"With a lot of Quanta, and a little luck, you could technically receive an enchantment equal to spending 200 levels!"
+			]
+			dependencies: ["0A7911EB233F4FD6"]
+			id: "09F74D0C27C859A1"
+			tasks: [{
+				id: "28FEC88005A016BF"
+				type: "checkmark"
+				title: "Quanta"
+				icon: {
+					id: "buzzier_bees:orange_candle"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Arcana"
+			icon: "buzzier_bees:purple_candle"
+			x: 1.375d
+			y: 9.5d
+			description: [
+				"Arcana determines how hard it is to get rare enchantments.  At 0%, the base rules for enchantment rarity apply, but as your Arcana increases, rare enchantments will become more common, and common enchantments will become quite rare."
+				""
+				"At 100% Arcana, the rarities are flipped on their heads entirely, and Very Rare enchantments will show up at the rate of common enchantments, while Common enchantments will be hard to find!  Finally, at 25% and 75% Arcana, every time you enchant, you are guaranteed an extra enchantment."
+			]
+			dependencies: ["09F74D0C27C859A1"]
+			id: "0054E85C9D29551B"
+			tasks: [{
+				id: "6BE566D5A9954337"
+				type: "checkmark"
+				title: "Arcana"
+				icon: {
+					id: "buzzier_bees:purple_candle"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "apotheosis:enchantment_library"
+			x: 2.5d
+			y: 9.5d
+			description: [
+				"The Enchantment Library is a block focused on storing enchantments.  Simply insert an enchanted book, and every enchantment on that book will be stored in the library internally.  "
+				""
+				"Each enchantment on a deposited book will be stored as points.  A point is simply equivalent to a level 1 enchantment, and as such an enchantment is worth the amount of points it would take to combine it from level one books (2^(level -1) points per level)."
+				""
+				"The library also records the max level it has ever seen for a given enchantment, and you may only extract enchantments up to that level. Meaning if you want to be able to extract a higher level of an enchantment, the library will need to have had that level deposited at least one time."
+				""
+				"To extract enchantments from the library, simply click the tile of the enchantment you want to extract, and it will be extracted to the output slot.  If the output slot is empty, a new enchanted book will be generated.  If it is not empty, it will apply the next level of that enchantment to the book (if you have enough points).  "
+				""
+				"Shift-clicking on a tile will attempt to extract the max level available (if you have enough points).  The point cost for extracting is shown in the tooltip.  If that tooltip is red, you do not have enough points for that operation."
+			]
+			dependencies: ["0054E85C9D29551B"]
+			id: "094A8038AC83777E"
+			tasks: [{
+				id: "70DDB00D88744A9C"
+				type: "item"
+				item: {
+					id: "apotheosis:enchantment_library"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "kubejs:mark_miner"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 2.5d
+			y: 4.5d
+			description: [
+				"You can choose starter gear in the Specialization chapter. These are just items, there are no other benefits."
+				""
+				"You only get to choose one path, and get three sets of rewards total."
+			]
+			id: "0A8694E6D7E5B93E"
+			tasks: [{
+				id: "2371A22BE0EE5213"
+				type: "checkmark"
+				title: "Specialization"
+			}]
+		}
+		{
+			icon: "ars_nouveau:glyph_leap"
+			x: -0.5d
+			y: -2.0d
+			subtitle: "Even more new movement features!"
+			description: [
+				"Wall Cling: Jump towards a wall and hold the Wall Jump / Cling keybind (Default: Left Shift)."
+				""
+				"Wall Jump: While wall clinging, keep holding W and let go of the keybind to wall jump"
+				""
+				"You can chain together wall jumps to go as high as you want!"
+			]
+			dependencies: ["56127AAF761DC8DA"]
+			id: "0617314E10C6AEF9"
+			tasks: [{
+				id: "5E69C9DEC9B3F925"
+				type: "checkmark"
+				title: "Wall-Jump!"
+			}]
+			rewards: [{
+				id: "19A9DBC835F1A160"
+				type: "item"
+				item: {
+					id: "minecraft:potion"
+					Count: 1b
+					tag: {
+						Potion: "minecraft:leaping"
+					}
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "bountifulbaubles:broken_black_dragon_scale"
+			x: 1.4d
+			y: 8.4d
+			subtitle: "Dragonslayer, Shadow, Light, Wayfaring, Dungeoneering"
+			description: [
+				"These skills do not have bonuses like the others, but are used solely for item requirements."
+				""
+				"Dragonslayer is gained from... slaying dragons."
+				""
+				"Shadow is gained from killing certain mobs (see Glossary's Mobs Info section) and crafting Eidolon items."
+				""
+				"Light is gained from killing certain mobs (see Glossary's Mobs Info section)."
+				""
+				"Wayfaring is gained from exploring new structures and areas."
+				""
+				"Dungeoneering is gained from crafting and mining dungeon related items and blocks."
+			]
+			dependencies: ["000000000000009D"]
+			size: 0.85d
+			optional: true
+			id: "22CB70395C58370B"
+			tasks: [{
+				id: "4544ECA11FB881CE"
+				type: "checkmark"
+				title: "Other Skills"
+			}]
+			rewards: [{
+				id: "528630BD504D98F0"
+				type: "item"
+				item: {
+					id: "minecraft:cookie"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: -2.5d
+			y: -1.0d
+			subtitle: "Elite Mobs"
+			description: [
+				"Mobs now have a chance to spawn as Champions, elite mobs with enhanced stats, extra abilities, and extra loot (Enchanted Books and Coins)."
+				""
+				"Champions have affixes that grant them powers, with higher tiers having more affixes."
+				""
+				"There are currently 6 tiers of Champions, locked behind game stages."
+				""
+				"- Tier 1 and 2: Always Spawn"
+				"- Tier 3, 4, 5 and 6: Master Mode"
+				""
+				"For information on what coins which tiers drop, check out the Coin Shop!"
+			]
+			dependencies: ["56127AAF761DC8DA"]
+			id: "38049609F73B874B"
+			tasks: [{
+				id: "72DE9AD07435F340"
+				type: "checkmark"
+				title: "Champions"
+				icon: {
+					id: "kubejs:skull"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+			rewards: [{
+				id: "5B1856CC55FD4B38"
+				type: "item"
+				item: {
+					id: "roughtweaks:salve"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: {
+				id: "enigmaticlegacy:enchantment_transposer"
+				Count: 1b
+				ForgeCaps: {
+					"dungeons_libraries:built_in_enchantments": {
+						BuiltInEnchantments: [ ]
+					}
+				}
+			}
+			x: 2.5d
+			y: 8.5d
+			description: [
+				"There are multiple methods to perform disenchanting."
+				""
+				"Cobwebs can be used in an anvil to remove non-curse enchantments."
+				""
+				"Prismatic Cobwebs can be used in an anvil to remove curse enchantments."
+				""
+				"Book of Disenchantment can be used with a Grave Soul to strip multiple enchantments from items (not books), into individual books. Knowledge of Death perks can increase the amount extracted."
+				""
+				"Tome of Hungering Knowledge crafts together with an enchanted item to transfer all enchantments to one book."
+				""
+				"Tome of Scrapping is the only method that destroys the item, and it only takes some enchantments."
+			]
+			id: "4FFE28F3DB5EC162"
+			tasks: [{
+				id: "4C7B1B6EFBA461F3"
+				type: "checkmark"
+				title: "Disenchanting"
+			}]
+			rewards: [{
+				id: "48EE2F06FDD8213D"
+				type: "item"
+				icon: {
+					id: "minecraft:enchanted_book"
+					Count: 1b
+					tag: {
+						StoredEnchantments: [{
+							lvl: 5s
+							id: "minecraft:protection"
+						}]
+					}
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+				item: {
+					id: "minecraft:book"
+					Count: 1b
+					ForgeCaps: {
+						"dungeons_libraries:built_in_enchantments": {
+							BuiltInEnchantments: [ ]
+						}
+					}
+				}
+			}]
+		}
+	]
+}

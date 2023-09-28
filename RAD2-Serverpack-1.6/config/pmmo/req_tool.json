@@ -1,0 +1,1733 @@
+{
+	"minecraft:stone_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+	"pickletweaks:flint_pickaxe":
+	{
+		"gathering": 3,
+		"mining": 0
+	},
+	"mysticalworld:cactus_axe":
+	{
+		"gathering": 1,
+		"woodcutting": 0
+	},
+	"mysticalworld:cactus_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+	"mysticalworld:cactus_shovel":
+	{
+		"gathering": 1,
+		"excavation": 0
+	},
+	"mysticalworld:copper_pickaxe":
+	{
+		"gathering": 10,
+		"mining": 0
+	},
+	"mysticalworld:copper_axe":
+	{
+		"gathering": 10,
+		"woodcutting": 0
+	},
+	"mysticalworld:copper_hoe":
+	{
+		"gathering": 10
+	},
+	"mysticalworld:copper_shovel":
+	{
+		"gathering": 10,
+		"excavation": 0
+	},
+	"mysticalworld:tin_pickaxe":
+	{
+		"gathering": 8,
+		"mining": 0
+	},
+	"mysticalworld:quicksilver_pickaxe":
+	{
+		"gathering": 999,
+		"mining": 999
+	},
+	"mysticalworld:lead_pickaxe":
+	{
+		"gathering": 25,
+		"mining": 0
+	},
+	"minecraft:iron_pickaxe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},	
+	"iceandfire:silver_pickaxe":
+	{
+		"gathering": 18,
+		"mining": 0
+	},
+	"mysticalworld:sapphire_pickaxe":
+	{
+		"gathering": 30,
+		"mining": 0
+	},
+	"mysticalworld:sapphire_axe":
+	{
+		"gathering": 30,
+		"woodcutting": 0
+	},
+	"mysticalworld:sapphire_hoe":
+	{
+		"gathering": 30
+	},
+	"mysticalworld:sapphire_shovel":
+	{
+		"gathering": 30,
+		"excavation": 0
+	},
+	"twilightforest:steeleaf_pickaxe":
+	{
+		"gathering": 27,
+		"mining": 0
+	},
+	"twilightforest:steeleaf_axe":
+	{
+		"gathering": 35,
+		"woodcutting": 0
+	},
+	"twilightforest:steeleaf_hoe":
+	{
+		"gathering": 35
+	},
+	"twilightforest:steeleaf_shovel":
+	{
+		"gathering": 35,
+		"excavation": 0
+	},
+	"twilightforest:knightmetal_pickaxe":
+	{
+		"gathering": 33,
+		"mining": 0
+	},
+	"twilightforest:knightmetal_axe":
+	{
+		"gathering": 35,
+		"woodcutting": 0
+	},
+	"stalwart_dungeons:chorundum_pickaxe":
+	{
+		"gathering": 65,
+		"mining": 0
+	},
+	"stalwart_dungeons:chorundum_shovel":
+	{
+		"gathering": 22,
+		"excavation": 0
+	},
+	"stalwart_dungeons:chorundum_axe":
+	{
+		"gathering": 22,
+		"woodcutting": 0
+	},
+	"stalwart_dungeons:tungsten_pickaxe":
+	{
+		"gathering": 43,
+		"mining": 0
+	},
+	"stalwart_dungeons:tungsten_axe":
+	{
+		"gathering": 30,
+		"woodcutting": 0
+	},
+	"stalwart_dungeons:tungsten_hoe":
+	{
+		"gathering": 30
+	},
+	"stalwart_dungeons:tungsten_shovel":
+	{
+		"gathering": 30,
+		"excavation": 0
+	},
+	"eidolon:reversal_pick":
+	{
+		"gathering": 32,
+		"mining": 0
+	},
+	"randomloot:pickaxe":
+	{
+		"gathering": 30
+	},
+	"minecraft:diamond_pickaxe":
+	{
+		"gathering": 40,
+		"mining": 0
+	},
+	"minecraft:netherite_pickaxe":
+	{
+		"gathering": 60,
+		"mining": 0
+	},
+	"mysticalworld:quicksilver_shovel":
+	{
+		"gathering": 999,
+		"excavation": 999
+	},
+	"mysticalworld:silver_shovel":
+	{
+		"gathering": 999,
+		"excavation": 999
+	},
+	"mysticalworld:silver_axe":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"mysticalworld:quicksilver_axe":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"mysticalworld:tin_axe":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+	"mysticalworld:tin_shovel":
+	{
+		"gathering": 8,
+		"excavation": 0
+	},
+	"mysticalworld:tin_hoe":
+	{
+		"gathering": 8
+	},
+	"mysticalworld:amethyst_axe":
+	{
+		"gathering": 25,
+		"woodcutting": 0
+	},
+	"mysticalworld:amethyst_shovel":
+	{
+		"gathering": 25,
+		"excavation": 0
+	},
+	"pickletweaks:wooden_paxel":
+	{
+		"gathering": 1,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"pickletweaks:stone_paxel":
+	{
+		"gathering": 1,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"pickletweaks:flint_paxel":
+	{
+		"gathering": 3,
+		"excavation": 0,
+		"mining": 0,
+		"woodcutting": 0
+	},
+	"pickletweaks:iron_paxel":
+	{
+		"gathering": 15,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"pickletweaks:golden_paxel":
+	{
+		"gathering": 5,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"pickletweaks:diamond_paxel":
+	{
+		"gathering": 40,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"pickletweaks:emerald_paxel":
+	{
+		"gathering": 45,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"pickletweaks:netherite_paxel":
+	{
+		"gathering": 60,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"pickletweaks:flint_scythe":
+	{
+		"farming": 5
+	},
+"pickletweaks:flint_shovel":
+	{
+		"gathering": 3,
+		"excavation": 0
+	},
+"pickletweaks:flint_axe":
+	{
+		"gathering": 3,
+		"woodcutting": 0
+	},
+"pickletweaks:flint_hoe":
+	{
+		"gathering": 3
+	},
+"pickletweaks:emerald_shovel":
+	{
+		"gathering": 45,
+		"excavation": 0
+	},
+"pickletweaks:emerald_axe":
+	{
+		"gathering": 45,
+		"woodcutting": 0
+	},
+"pickletweaks:emerald_hoe":
+	{
+		"gathering": 45
+	},
+"pickletweaks:emerald_pickaxe":
+	{
+		"gathering": 45,
+		"mining": 0
+	},
+"druidcraft:bone_shovel":
+	{
+		"gathering": 3
+	},
+"druidcraft:bone_axe":
+	{
+		"gathering": 3
+	},
+"druidcraft:bone_hoe":
+	{
+		"gathering": 3
+	},
+"druidcraft:bone_pickaxe":
+	{
+		"gathering": 3
+	},
+"mysticalworld:lead_axe":
+	{
+		"gathering": 25,
+		"woodcutting": 0
+	},
+"mysticalworld:lead_hoe":
+	{
+		"gathering": 25
+	},
+"mysticalworld:lead_shovel":
+	{
+		"gathering": 25,
+		"excavation": 0
+	},
+"aquaculture:neptunium_axe":
+	{
+		"gathering": 30,
+		"woodcutting": 0
+	},
+"aquaculture:neptunium_hoe":
+	{
+		"gathering": 40
+	},
+"aquaculture:neptunium_pickaxe":
+	{
+		"gathering": 47,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+"aquaculture:neptunium_shovel":
+	{
+		"gathering": 30,
+		"mining": 0,
+		"excavation": 0,
+		"woodcutting": 0
+	},
+	"create:deforester":
+	{
+		"gathering": 92
+	},
+	"endreborn:end_stone_axe":
+	{
+		"gathering": 20
+	},
+	"endreborn:end_stone_hoe":
+	{
+		"gathering": 20
+	},
+	"endreborn:end_stone_pickaxe":
+	{
+		"gathering": 20
+	},
+	"endreborn:end_stone_shovel":
+	{
+		"gathering": 20
+	},
+	"endreborn:endorium_axe":
+	{
+		"gathering": 60
+	},
+	"endreborn:endorium_hoe":
+	{
+		"gathering": 60
+	},
+	"endreborn:endorium_pickaxe":
+	{
+		"gathering": 60
+	},
+	"endreborn:endorium_shovel":
+	{
+		"gathering": 60
+	},
+	"endreborn:wolframium_axe":
+	{
+		"gathering": 35
+	},
+	"endreborn:wolframium_hoe":
+	{
+		"gathering": 35
+	},
+	"endreborn:wolframium_pickaxe":
+	{
+		"gathering": 35
+	},
+	"endreborn:wolframium_shovel":
+	{
+		"gathering": 35
+	},
+	"extendednether:netherite_axe":
+	{
+		"gathering": 60
+	},
+	"extendednether:netherite_hoe":
+	{
+		"gathering": 40
+	},
+	"extendednether:netherite_pickaxe":
+	{
+		"gathering": 60
+	},
+	"extendednether:netherite_shovel":
+	{
+		"gathering": 60
+	},
+	"twilightforest:fiery_pickaxe":
+	{
+		"gathering": 55,
+		"mining": 0
+	},
+	"enigmaticlegacy:etherium_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+	"enigmaticlegacy:etherium_axe":
+	{
+		"gathering": 70,
+		"woodcutting": 0
+	},
+	"enigmaticlegacy:etherium_shovel":
+	{
+		"gathering": 70,
+		"excavation": 0
+	},
+	"iceandfire:copper_axe":
+	{
+		"gathering": 5
+	},
+	"iceandfire:copper_hoe":
+	{
+		"gathering": 5
+	},
+	"iceandfire:copper_shovel":
+	{
+		"gathering": 5
+	},
+	"iceandfire:dragonbone_axe":
+	{
+		"gathering": 50,
+		"dragonslayer": 2,
+		"woodcutting": 0
+	},
+	"iceandfire:dragonbone_hoe":
+	{
+		"gathering": 50,
+		"dragonslayer": 2
+	},
+	"iceandfire:dragonbone_pickaxe":
+	{
+		"gathering": 50,
+		"dragonslayer": 2,
+		"mining": 0
+	},
+	"iceandfire:dragonbone_shovel":
+	{
+		"gathering": 50,
+		"dragonslayer": 2,
+		"excavation": 0
+	},
+	"iceandfire:dragonsteel_fire_axe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"woodcutting": 0
+	},
+	"iceandfire:dragonsteel_fire_hoe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13
+	},
+	"iceandfire:dragonsteel_fire_pickaxe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"mining": 0
+	},
+	"iceandfire:dragonsteel_fire_shovel":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"excavation": 0
+	},
+	"iceandfire:dragonsteel_ice_axe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"woodcutting": 0
+	},
+	"iceandfire:dragonsteel_ice_hoe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13
+	},
+	"iceandfire:dragonsteel_ice_pickaxe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"mining": 0
+	},
+	"iceandfire:dragonsteel_ice_shovel":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"excavation": 0
+	},
+	"iceandfire:dragonsteel_lightning_axe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"woodcutting": 0
+	},
+	"iceandfire:dragonsteel_lightning_hoe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13
+	},
+	"iceandfire:dragonsteel_lightning_pickaxe":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"mining": 0
+	},
+	"iceandfire:dragonsteel_lightning_shovel":
+	{
+		"gathering": 60,
+		"dragonslayer": 13,
+		"excavation": 0
+	},
+	"iceandfire:myrmex_jungle_axe":
+	{
+		"gathering": 30,
+		"woodcutting": 0
+	},
+	"iceandfire:myrmex_jungle_hoe":
+	{
+		"gathering": 30
+	},
+	"iceandfire:myrmex_desert_axe":
+	{
+		"gathering": 30,
+		"woodcutting": 0
+	},
+	"iceandfire:myrmex_desert_hoe":
+	{
+		"gathering": 30
+	},
+	"iceandfire:myrmex_desert_pickaxe":
+	{
+		"gathering": 30,
+		"mining": 0
+	},
+	"iceandfire:myrmex_desert_shovel":
+	{
+		"gathering": 30,
+		"excavation": 0
+	},
+	"iceandfire:myrmex_jungle_pickaxe":
+	{
+		"gathering": 30,
+		"mining": 0
+	},
+	"iceandfire:myrmex_jungle_shovel":
+	{
+		"gathering": 30,
+		"excavation": 0
+	},
+	"iceandfire:silver_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"iceandfire:silver_hoe":
+	{
+		"gathering": 18
+	},
+	"iceandfire:silver_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+	"minecraft:diamond_axe":
+	{
+		"gathering": 40,
+		"woodcutting": 0
+	},
+	"minecraft:diamond_hoe":
+	{
+		"gathering": 40
+	},
+	"minecraft:diamond_shovel":
+	{
+		"gathering": 40,
+		"excavation": 0
+	},
+	"minecraft:golden_axe":
+	{
+		"gathering": 5,
+		"woodcutting": 0
+	},
+	"minecraft:golden_hoe":
+	{
+		"gathering": 5
+	},
+	"minecraft:golden_pickaxe":
+	{
+		"gathering": 5,
+		"mining": 0
+	},
+	"minecraft:golden_shovel":
+	{
+		"gathering": 5,
+		"excavation": 0
+	},
+	"minecraft:iron_axe":
+	{
+		"gathering": 15,
+		"woodcutting": 0
+	},
+	"minecraft:iron_hoe":
+	{
+		"farming": 15
+	},
+	"minecraft:iron_shovel":
+	{
+		"gathering": 15,
+		"excavation": 0
+	},
+	"minecraft:netherite_axe":
+	{
+		"gathering": 60,
+		"woodcutting": 0
+	},
+	"minecraft:netherite_hoe":
+	{
+		"gathering": 40
+	},
+	"minecraft:netherite_shovel":
+	{
+		"gathering": 60,
+		"excavation": 0
+	},
+	"minecraft:stone_axe":
+	{
+		"gathering": 1,
+		"woodcutting": 0
+	},
+	"minecraft:stone_hoe":
+	{
+		"gathering": 1
+	},
+	"minecraft:stone_shovel":
+	{
+		"gathering": 1,
+		"excavation": 0
+	},
+	"minecraft:wooden_axe":
+	{
+		"gathering": 1,
+		"woodcutting": 0
+	},
+	"minecraft:wooden_hoe":
+	{
+		"gathering": 1
+	},
+	"minecraft:wooden_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+	"minecraft:wooden_shovel":
+	{
+		"gathering": 1,
+		"excavation": 0
+	},
+	"dungeons_gear:pickaxe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"dungeons_gear:diamond_pickaxe":
+	{
+		"gathering": 18,
+		"mining": 0
+	},
+	"majruszs_difficulty:end_shovel":
+	{
+		"gathering": 75,
+		"excavation": 0
+	},
+	"majruszs_difficulty:end_pickaxe":
+	{
+		"gathering": 75,
+		"mining": 0
+	},
+	"majruszs_difficulty:end_axe":
+	{
+		"gathering": 75,
+		"woodcutting": 0
+	},
+	"majruszs_difficulty:end_hoe":
+	{
+		"gathering": 75
+	},
+	"twilightforest:ironwood_shovel":
+	{
+		"gathering": 17,
+		"excavation": 0
+	},
+	"twilightforest:ironwood_pickaxe":
+	{
+		"gathering": 17,
+		"mining": 0
+	},
+	"twilightforest:ironwood_axe":
+	{
+		"gathering": 17,
+		"woodcutting": 0
+	},
+	"twilightforest:ironwood_hoe":
+	{
+		"gathering": 17
+	},
+	"buddycards:luminis_pickaxe":
+	{
+		"gathering": 33,
+		"mining": 0
+	},
+	"buddycards:buddysteel_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+	"buddycards:buddysteel_pickaxe":
+	{
+		"gathering": 18,
+		"mining": 0
+	},
+	"buddycards:buddysteel_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"buddycards:buddysteel_hoe":
+	{
+		"gathering": 18
+	},
+	"buddycards:perfect_buddysteel_shovel":
+	{
+		"gathering": 35,
+		"excavation": 0
+	},
+	"buddycards:perfect_buddysteel_pickaxe":
+	{
+		"gathering": 35,
+		"mining": 0
+	},
+	"buddycards:perfect_buddysteel_axe":
+	{
+		"gathering": 35,
+		"woodcutting": 0
+	},
+	"buddycards:perfect_buddysteel_hoe":
+	{
+		"gathering": 35
+	},
+	"upgradednetherite:gold_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+	"upgradednetherite:gold_upgraded_netherite_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+	"upgradednetherite:gold_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"upgradednetherite:poison_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"upgradednetherite:wither_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+"upgradednetherite:fire_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+"upgradednetherite:fire_upgraded_netherite_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+"upgradednetherite:fire_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+"upgradednetherite:ender_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+"upgradednetherite:ender_upgraded_netherite_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+"upgradednetherite:ender_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+"upgradednetherite:water_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+"upgradednetherite:water_upgraded_netherite_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+"upgradednetherite:water_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+"upgradednetherite:phantom_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+"upgradednetherite:phantom_upgraded_netherite_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+"upgradednetherite:phantom_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+"upgradednetherite:feather_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+"upgradednetherite:feather_upgraded_netherite_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+"upgradednetherite:feather_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+"upgradednetherite:ultimate_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+"upgradednetherite:corrupt_upgraded_netherite_pickaxe":
+	{
+		"gathering": 70,
+		"mining": 0
+	},
+"upgradednetherite:corrupt_upgraded_netherite_shovel":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+"upgradednetherite:corrupt_upgraded_netherite_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+"blue_skies:bluebright_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:lunar_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:lunar_stone_shovel":
+	{
+		"gathering": 8,
+		"excavation": 0
+	},
+"blue_skies:lunar_stone_axe":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+"blue_skies:starlit_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:dusk_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:frostbright_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:maple_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:cherry_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:cherry_shovel":
+	{
+		"gathering": 1,
+		"excavation": 0
+	},
+"blue_skies:cherry_axe":
+	{
+		"gathering": 1,
+		"woodcutting": 0
+	},
+"blue_skies:turquoise_stone_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:turquoise_stone_axe":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+"blue_skies:turquoise_stone_shovel":
+	{
+		"gathering": 8,
+		"excavation": 0
+	},
+"blue_skies:lunar_stone_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"blue_skies:pyrope_pickaxe":
+	{
+		"gathering": 6,
+		"mining": 0
+	},
+"blue_skies:pyrope_shovel":
+	{
+		"gathering": 22,
+		"excavation": 0
+	},
+"blue_skies:pyrope_axe":
+	{
+		"gathering": 22,
+		"woodcutting": 0
+	},
+"blue_skies:aquite_pickaxe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+"blue_skies:aquite_shovel":
+	{
+		"gathering": 12,
+		"excavation": 0
+	},
+"blue_skies:aquite_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+"blue_skies:diopside_pickaxe":
+	{
+		"gathering": 33,
+		"mining": 0
+	},
+"blue_skies:diopside_shovel":
+	{
+		"gathering": 12,
+		"excavation": 0
+	},
+"blue_skies:diopside_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+"blue_skies:charoite_pickaxe":
+	{
+		"gathering": 40,
+		"mining": 0
+	},
+"blue_skies:charoite_shovel":
+	{
+		"gathering": 16,
+		"excavation": 0
+	},
+"blue_skies:charoite_axe":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+"blue_skies:horizonite_pickaxe":
+	{
+		"gathering": 43,
+		"mining": 0
+	},
+"blue_skies:horizonite_shovel":
+	{
+		"gathering": 16,
+		"excavation": 0
+	},
+"blue_skies:horizonite_axe":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+"atum:limestone_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"atum:limestone_axe":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+"atum:limestone_shovel":
+	{
+		"gathering": 8,
+		"excavation": 0
+	},
+"good_nights_sleep:candy_pickaxe":
+	{
+		"gathering": 1,
+		"mining": 0
+	},
+"good_nights_sleep:candy_shovel":
+	{
+		"gathering": 8,
+		"excavation": 0
+	},
+"good_nights_sleep:candy_axe":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+"good_nights_sleep:necrum_pickaxe":
+	{
+		"gathering": 3,
+		"mining": 0
+	},
+"good_nights_sleep:necrum_shovel":
+	{
+		"gathering": 12,
+		"excavation": 0
+	},
+"good_nights_sleep:necrum_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+"good_nights_sleep:zitrite_pickaxe":
+	{
+		"gathering": 33,
+		"mining": 0
+	},
+"good_nights_sleep:zitrite_shovel":
+	{
+		"gathering": 16,
+		"excavation": 0
+	},
+"good_nights_sleep:zitrite_axe":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+"good_nights_sleep:rainbow_pickaxe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+"good_nights_sleep:rainbow_shovel":
+	{
+		"gathering": 12,
+		"excavation": 0
+	},
+"good_nights_sleep:rainbow_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+"good_nights_sleep:positite_pickaxe":
+	{
+		"gathering": 47,
+		"mining": 0
+	},
+"good_nights_sleep:positite_shovel":
+	{
+		"gathering": 16,
+		"excavation": 0
+	},
+"good_nights_sleep:positite_axe":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+"good_nights_sleep:negatite_pickaxe":
+	{
+		"gathering": 50,
+		"mining": 0
+	},
+"good_nights_sleep:negatite_shovel":
+	{
+		"gathering": 20,
+		"excavation": 0
+	},
+"good_nights_sleep:negatite_axe":
+	{
+		"gathering": 20,
+		"woodcutting": 0
+	},
+"druidcraft:moonstone_pickaxe":
+	{
+		"gathering": 55,
+		"mining": 0
+	},
+"tropicraft:zircon_pickaxe":
+	{
+		"gathering": 10,
+		"mining": 0
+	},
+"tropicraft:zircon_shovel":
+	{
+		"gathering": 9,
+		"excavation": 0
+	},
+"tropicraft:zircon_axe":
+	{
+		"gathering": 9,
+		"woodcutting": 0
+	},
+"tropicraft:eudialyte_pickaxe":
+	{
+		"gathering": 17,
+		"mining": 0
+	},
+"tropicraft:eudialyte_shovel":
+	{
+		"gathering": 13,
+		"excavation": 0
+	},
+"tropicraft:eudialyte_axe":
+	{
+		"gathering": 13,
+		"woodcutting": 0
+	},
+"tropicraft:zirconium_pickaxe":
+	{
+		"gathering": 45,
+		"mining": 0
+	},
+"tropicraft:zirconium_shovel":
+	{
+		"gathering": 17,
+		"excavation": 0
+	},
+"tropicraft:zirconium_axe":
+	{
+		"gathering": 17,
+		"woodcutting": 0
+	},
+"undergarden:cloggrum_pickaxe":
+	{
+		"gathering": 21,
+		"mining": 0
+	},
+"undergarden:cloggrum_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+"undergarden:cloggrum_shovel":
+	{
+		"gathering": 12,
+		"excavation": 0
+	},
+"undergarden:froststeel_pickaxe":
+	{
+		"gathering": 30,
+		"mining": 0
+	},
+"undergarden:froststeel_shovel":
+	{
+		"gathering": 12,
+		"excavation": 0
+	},
+"undergarden:froststeel_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+"undergarden:utheric_pickaxe":
+	{
+		"gathering": 49,
+		"mining": 0
+	},
+"undergarden:utheric_shovel":
+	{
+		"gathering": 16,
+		"excavation": 0
+	},
+"undergarden:utheric_axe":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+"undergarden:forgotten_pickaxe":
+	{
+		"gathering": 60,
+		"mining": 0
+	},
+"undergarden:forgotten_shovel":
+	{
+		"gathering": 20,
+		"excavation": 0
+	},
+"undergarden:forgotten_axe":
+	{
+		"gathering": 20,
+		"woodcutting": 0
+	},
+"the_afterlight:moonsteel_pickaxe":
+	{
+		"gathering": 23,
+		"mining": 0
+	},
+"the_afterlight:crystillium_pickaxe":
+	{
+		"gathering": 18,
+		"mining": 0
+	},
+"the_afterlight:lunarite_pickaxe":
+	{
+		"gathering": 50,
+		"farming": 40,
+		"mining": 0
+	},
+"the_afterlight:eclipse_crystal_pickaxe":
+	{
+		"gathering": 30,
+		"mining": 0
+	},
+"betterendforge:thallasium_pickaxe":
+	{
+		"gathering": 13,
+		"mining": 0
+	},
+"betterendforge:thallasium_shovel":
+	{
+		"gathering": 14,
+		"excavation": 0
+	},
+"betterendforge:thallasium_axe":
+	{
+		"gathering": 14,
+		"woodcutting": 0
+	},
+"betterendforge:terminite_pickaxe":
+	{
+		"gathering": 37,
+		"mining": 0
+	},
+"betterendforge:terminite_shovel":
+	{
+		"gathering": 17,
+		"excavation": 0
+	},
+"betterendforge:terminite_axe":
+	{
+		"gathering": 17,
+		"woodcutting": 0
+	},
+"betterendforge:aeternium_pickaxe":
+	{
+		"gathering": 47,
+		"smithing": 19,
+		"mining": 0
+	},
+"betterendforge:aeternium_shovel":
+	{
+		"gathering": 20,
+		"excavation": 0
+	},
+"betterendforge:aeternium_axe":
+	{
+		"gathering": 20,
+		"woodcutting": 0
+	},
+"bountifulbaubles:gloves_digging_iron":
+	{
+		"gathering": 15,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+"bountifulbaubles:gloves_digging_diamond":
+	{
+		"gathering": 40,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+"enigmaticlegacy:astral_breaker":
+	{
+		"gathering": 80,
+		"mining": 0,
+		"woodcutting": 0,
+		"excavation": 0
+	},
+	"betterendforge:iron_hammer":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"betterendforge:thallasium_hammer":
+	{
+		"gathering": 17,
+		"mining": 0
+	},
+	"betterendforge:diamond_hammer":
+	{
+		"gathering": 40,
+		"mining": 0
+	},
+	"betterendforge:terminite_hammer":
+	{
+		"gathering": 43,
+		"mining": 0
+	},
+	"betterendforge:netherite_hammer":
+	{
+		"gathering": 60,
+		"mining": 0
+	},
+	"betterendforge:aeternium_hammer":
+	{
+		"gathering": 100,
+		"mining": 0
+	},
+	"betterendforge:golden_hammer":
+	{
+		"gathering": 5,
+		"mining": 0
+	},
+	"dungeons_gear:axe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"dungeons_gear:gold_axe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"dungeons_gear:highland_axe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"dungeons_gear:double_axe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"dungeons_gear:cursed_axe":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"dungeons_gear:whirlwind":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"dungeons_gear:firebrand":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"stalwart_dungeons:wooden_hammer":
+	{
+		"mining": 0
+	},
+	"stalwart_dungeons:stone_hammer":
+	{
+		"mining": 0
+	},
+	"stalwart_dungeons:golden_hammer":
+	{
+		"gathering": 5,
+		"mining": 0
+	},
+	"stalwart_dungeons:iron_hammer":
+	{
+		"gathering": 15,
+		"mining": 0
+	},
+	"stalwart_dungeons:diamond_hammer":
+	{
+		"gathering": 40,
+		"mining": 0
+	},
+	"stalwart_dungeons:netherite_hammer":
+	{
+		"gathering": 60,
+		"mining": 0
+	},
+	"stalwart_dungeons:nether_hammer":
+	{
+		"gathering": 20,
+		"mining": 0
+	},
+	"stalwart_dungeons:tungsten_hammer":
+	{
+		"gathering": 43,
+		"mining": 0
+	},
+	"mysticalworld:silver_pickaxe":
+	{
+		"gathering": 999,
+		"mining": 999
+	},
+	"dungeons_mobs:gold_mountaineer_axe":
+	{
+		"gathering": 18,
+		"mining": 0
+	},
+	"dungeons_mobs:mountaineer_axe":
+	{
+		"gathering": 18,
+		"mining": 0
+	},
+	"twilightforest:giant_pickaxe":
+	{
+		"gathering": 12,
+		"mining": 0
+	},
+	"twilightforest:mazebreaker_pickaxe":
+	{
+		"gathering": 24,
+		"mining": 0
+	},
+	"dungeons_mobs:diamond_mountaineer_axe":
+	{
+		"gathering": 18,
+		"mining": 0
+	},
+	"twilightforest:block_and_chain":
+	{
+		"gathering": 24,
+		"mining": 0
+	},
+	"arsarsenal:source_steel_pickaxe":
+	{
+		"gathering": 27,
+		"mining": 0
+	},
+	"arsarsenal:source_steel_axe":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"atum:ptahs_decadence":
+	{
+		"gathering": 27,
+		"mining": 0
+	},
+	"atum:gebs_undoing":
+	{
+		"gathering": 27,
+		"mining": 0,
+		"woodcutting": 0
+	},
+	"atum:gebs_toil":
+	{
+		"gathering": 18,
+		"excavation": 0
+	},
+	"atum:montus_strike":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"atum:shus_exile":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"byg:pendorite_pickaxe":
+	{
+		"gathering": 100,
+		"mining": 0
+	},
+	"byg:pendorite_axe":
+	{
+		"gathering": 100,
+		"woodcutting": 0
+	},
+	"byg:pendorite_shovel":
+	{
+		"gathering": 100,
+		"excavation": 0
+	},
+	"byg:pendorite_battleaxe":
+	{
+		"gathering": 20,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_electrum":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"spartanweaponry:battleaxe_platinum":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"spartanweaponry:battleaxe_nickel":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"spartanweaponry:battleaxe_lead":
+	{
+		"gathering": 9,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_stone":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_copper":
+	{
+		"gathering": 10,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_silver":
+	{
+		"gathering": 10,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_tin":
+	{
+		"gathering": 11,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_diamond":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_invar":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"spartanweaponry:battleaxe_steel":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"spartanweaponry:battleaxe_iron":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_netherite":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"spartanweaponry:battleaxe_bronze":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"spartanweaponry:battleaxe_gold":
+	{
+		"gathering": 24,
+		"woodcutting": 0
+	},
+	"mysticalworld:copper_knife":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+	"mysticalworld:lead_knife":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+	"mysticalworld:cactus_knife":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+	"mysticalworld:stone_knife":
+	{
+		"gathering": 8,
+		"woodcutting": 0
+	},
+	"mysticalworld:silver_knife":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+	"mysticalworld:iron_knife":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+	"mysticalworld:quicksilver_knife":
+	{
+		"gathering": 999,
+		"woodcutting": 999
+	},
+	"mysticalworld:tin_knife":
+	{
+		"gathering": 13,
+		"woodcutting": 0
+	},
+	"mysticalworld:diamond_knife":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+	"mysticalworld:sapphire_knife":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+	"mysticalworld:gold_knife":
+	{
+		"gathering": 24,
+		"woodcutting": 0
+	},
+	"mowziesmobs:wrought_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+	"eidolon:cleaving_axe":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+	"spartantwilight:battleaxe_ironwood":
+	{
+		"gathering": 12,
+		"woodcutting": 0
+	},
+	"spartantwilight:battleaxe_knightly":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+	"spartantwilight:battleaxe_steeleaf":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+	"spartantwilight:battleaxe_fiery":
+	{
+		"gathering": 18,
+		"woodcutting": 0
+	},
+	"twilightforest:minotaur_axe":
+	{
+		"gathering": 16,
+		"woodcutting": 0
+	},
+	"twilightforest:minotaur_axe_gold":
+	{
+		"gathering": 24,
+		"woodcutting": 0
+	}
+}
