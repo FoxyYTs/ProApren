@@ -1,0 +1,236 @@
+[20:50:05] [INFO ] Loaded script server_scripts:championsStandardLootBuff.js in 0.009 s
+[20:50:05] [INFO ] Loaded script server_scripts:lootNuker.js in 0.001 s
+[20:50:05] [INFO ] New recipes script is loading...
+[20:50:05] [INFO ] Loaded script server_scripts:script.js in 0.017 s
+[20:50:05] [INFO ] Loaded 3/3 KubeJS server scripts in 0.046 s
+[20:50:05] [INFO ] Scripts loaded
+[20:50:05] [INFO ] Scanning recipes...
+[20:50:12] [INFO ] [blocks] Found 857 tags, added 2 objects, removed 0 objects
+[20:50:12] [INFO ] [blocks] Found 857 tags, added 2 objects, removed 0 objects
+[20:50:12] [INFO ] [items] Found 1699 tags, added 254 objects, removed 1 objects
+[20:50:12] [INFO ] [items] Found 1699 tags, added 220 objects, removed 0 objects
+[20:50:12] [INFO ] [fluids] Found 36 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [fluids] Found 36 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [entity_types] Found 70 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [entity_types] Found 70 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [potions] Found 1 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [potions] Found 1 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [enchantments] Found 7 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [enchantments] Found 7 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [tile_entity_types] Found 0 tags, added 0 objects, removed 0 objects
+[20:50:12] [INFO ] [tile_entity_types] Found 0 tags, added 0 objects, removed 0 objects
+[20:50:12] [WARN ] Failed to parse recipe 'greek:altar_zeus[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:12] [WARN ] Failed to parse recipe greek:altar_zeus[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:12] [WARN ] Failed to parse recipe 'nethers_delight:mimicry/abnormals/endergetic/bollom_fruit_mimic[farmersdelight:cooking]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'endergetic:bollom_fruit'
+[20:50:12] [WARN ] Failed to parse recipe nethers_delight:mimicry/abnormals/endergetic/bollom_fruit_mimic[farmersdelight:cooking]: com.google.gson.JsonSyntaxException: Unknown item 'endergetic:bollom_fruit'
+[20:50:12] [WARN ] Failed to parse recipe 'buddycards:byg/glacial_oak_card_display[minecraft:crafting_shaped]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'byg:glacial_oak_planks'
+[20:50:12] [WARN ] Failed to parse recipe buddycards:byg/glacial_oak_card_display[minecraft:crafting_shaped]: com.google.gson.JsonSyntaxException: Unknown item 'byg:glacial_oak_planks'
+[20:50:12] [WARN ] Failed to parse recipe 'irregularchef:environmental/cutting/wanderer_boots[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'environmental:wanderer_boots'
+[20:50:12] [WARN ] Failed to parse recipe irregularchef:environmental/cutting/wanderer_boots[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'environmental:wanderer_boots'
+[20:50:12] [WARN ] Failed to parse recipe 'bygonenether:gilded_netherite_helmet[unknown:type]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:12] [WARN ] Failed to parse recipe bygonenether:gilded_netherite_helmet[unknown:type]: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:12] [WARN ] Failed to parse recipe 'bygonenether:gilded_netherite_leggings[unknown:type]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:12] [WARN ] Failed to parse recipe bygonenether:gilded_netherite_leggings[unknown:type]: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:12] [WARN ] Failed to parse recipe 'irregularchef:environmental/cutting/architect_belt[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'environmental:architect_belt'
+[20:50:12] [WARN ] Failed to parse recipe irregularchef:environmental/cutting/architect_belt[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'environmental:architect_belt'
+[20:50:12] [WARN ] Failed to parse recipe 'farmersdelightintegrations:example[forge:conditional]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Missing modid, expected to find a string
+[20:50:12] [WARN ] Failed to parse recipe farmersdelightintegrations:example[forge:conditional]: com.google.gson.JsonSyntaxException: Missing modid, expected to find a string
+[20:50:12] [WARN ] Failed to parse recipe 'rats:dragon_wing_iaf[minecraft:crafting_shaped]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item tag 'iceandfire:dragon_bone'
+[20:50:12] [WARN ] Failed to parse recipe rats:dragon_wing_iaf[minecraft:crafting_shaped]: com.google.gson.JsonSyntaxException: Unknown item tag 'iceandfire:dragon_bone'
+[20:50:12] [WARN ] Failed to parse recipe 'greek:altar_athena[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:12] [WARN ] Failed to parse recipe greek:altar_athena[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:12] [WARN ] Failed to parse recipe 'quark:building/crafting/chests/jungle_trapped_chest[minecraft:crafting_shapeless]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'quark:jungle_oak_chest'
+[20:50:12] [WARN ] Failed to parse recipe quark:building/crafting/chests/jungle_trapped_chest[minecraft:crafting_shapeless]: com.google.gson.JsonSyntaxException: Unknown item 'quark:jungle_oak_chest'
+[20:50:12] [WARN ] Failed to parse recipe 'irregularchef:better_badlands/cutting/kindling_stairs[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'better_badlands:kindling_stairs'
+[20:50:12] [WARN ] Failed to parse recipe irregularchef:better_badlands/cutting/kindling_stairs[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'better_badlands:kindling_stairs'
+[20:50:12] [WARN ] Failed to parse recipe 'greek:altar_artemis[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:12] [WARN ] Failed to parse recipe greek:altar_artemis[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:12] [WARN ] Failed to parse recipe 'extrabows:recipe_emerald_bow[minecraft:crafting_shaped]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'extrabows:diamond_bow'
+[20:50:12] [WARN ] Failed to parse recipe extrabows:recipe_emerald_bow[minecraft:crafting_shaped]: com.google.gson.JsonSyntaxException: Unknown item 'extrabows:diamond_bow'
+[20:50:13] [WARN ] Failed to parse recipe 'irregularchef:better_badlands/cutting/kindling_slab[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'better_badlands:kindling_slab'
+[20:50:13] [WARN ] Failed to parse recipe irregularchef:better_badlands/cutting/kindling_slab[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'better_badlands:kindling_slab'
+[20:50:13] [WARN ] Failed to parse recipe 'irregularchef:environmental/cutting/healer_pouch[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'environmental:healer_pouch'
+[20:50:13] [WARN ] Failed to parse recipe irregularchef:environmental/cutting/healer_pouch[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'environmental:healer_pouch'
+[20:50:13] [WARN ] Failed to parse recipe 'buddycards:create/create_pack[create:sequenced_assembly]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: create:sequenced_assembly
+[20:50:13] [WARN ] Failed to parse recipe buddycards:create/create_pack[create:sequenced_assembly]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'create:sequenced_assembly'
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_hades[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_hades[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'rats:rat_upgrade_dragon_vanilla[minecraft:crafting_shapeless]'! Falling back to vanilla: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:13] [WARN ] Failed to parse recipe rats:rat_upgrade_dragon_vanilla[minecraft:crafting_shapeless]: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_hera[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_hera[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_ares[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_ares[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'rats:assorted_vegetables[minecraft:crafting_shapeless]'! Falling back to vanilla: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:13] [WARN ] Failed to parse recipe rats:assorted_vegetables[minecraft:crafting_shapeless]: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:13] [WARN ] Failed to parse recipe 'bygonenether:gilded_netherite_chestplate[unknown:type]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:13] [WARN ] Failed to parse recipe bygonenether:gilded_netherite_chestplate[unknown:type]: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:13] [WARN ] Failed to parse recipe 'rad_recipes:farmersdelight/pythadendron_wood[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'betterendforge:pythadendron_wood'
+[20:50:13] [WARN ] Failed to parse recipe rad_recipes:farmersdelight/pythadendron_wood[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'betterendforge:pythadendron_wood'
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_apollo[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_apollo[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'bayou_blues:crafting/gooseberry_jam_cookie_bent[minecraft:crafting_shaped]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Invalid pattern: each row must be the same width
+[20:50:13] [WARN ] Failed to parse recipe bayou_blues:crafting/gooseberry_jam_cookie_bent[minecraft:crafting_shaped]: com.google.gson.JsonSyntaxException: Invalid pattern: each row must be the same width
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_hermes[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_hermes[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_hecate[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_hecate[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'irregularchef:environmental/cutting/thief_hood[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'environmental:thief_hood'
+[20:50:13] [WARN ] Failed to parse recipe irregularchef:environmental/cutting/thief_hood[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'environmental:thief_hood'
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_hephaestus[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_hephaestus[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'bygonenether:gilded_netherite_boots[unknown:type]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:13] [WARN ] Failed to parse recipe bygonenether:gilded_netherite_boots[unknown:type]: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_persephone[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_persephone[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'rad_recipes:apotheosis/phantasmal_arrow[apotheosis:fletching]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'minecraft:cofh_core_ectoplasm'
+[20:50:13] [WARN ] Failed to parse recipe rad_recipes:apotheosis/phantasmal_arrow[apotheosis:fletching]: com.google.gson.JsonSyntaxException: Unknown item 'minecraft:cofh_core_ectoplasm'
+[20:50:13] [WARN ] Failed to parse recipe 'roughtweaks:salve4[minecraft:crafting_shapeless]': {"item":"minecraft:air"} is not a valid result!
+[20:50:13] [WARN ] Failed to parse recipe 'greek:altar_poseidon[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:13] [WARN ] Failed to parse recipe greek:altar_poseidon[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:13] [WARN ] Failed to parse recipe 'rad_recipes:betterendinfusion_modded/sharpshooter_book[betterendforge:infusion]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'minecraft:eye_of_ender'
+[20:50:13] [WARN ] Failed to parse recipe rad_recipes:betterendinfusion_modded/sharpshooter_book[betterendforge:infusion]: com.google.gson.JsonSyntaxException: Unknown item 'minecraft:eye_of_ender'
+[20:50:13] [WARN ] Failed to parse recipe 'infernalexp:stonecutting/basalt_bricks_vertical_slab[minecraft:stonecutting]': "infernalexp:basalt_bricks_vertical_slab" is not a valid result!
+[20:50:13] [WARN ] Failed to parse recipe 'mushroomquest:glowinggoor[minecraft:crafting_shapeless]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'mushroomquest:deleted_mod_element'
+[20:50:13] [WARN ] Failed to parse recipe mushroomquest:glowinggoor[minecraft:crafting_shapeless]: com.google.gson.JsonSyntaxException: Unknown item 'mushroomquest:deleted_mod_element'
+[20:50:13] [WARN ] Failed to parse recipe 'irregularchef:better_badlands/cutting/kindling[farmersdelight:cutting]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'better_badlands:kindling'
+[20:50:13] [WARN ] Failed to parse recipe irregularchef:better_badlands/cutting/kindling[farmersdelight:cutting]: com.google.gson.JsonSyntaxException: Unknown item 'better_badlands:kindling'
+[20:50:13] [WARN ] Failed to parse recipe 'twilightdelight:lily_chicken_block[minecraft:crafting_shaped]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'twilightforest:huge_lily_pad'
+[20:50:13] [WARN ] Failed to parse recipe twilightdelight:lily_chicken_block[minecraft:crafting_shaped]: com.google.gson.JsonSyntaxException: Unknown item 'twilightforest:huge_lily_pad'
+[20:50:13] [WARN ] Failed to parse recipe 'twilightdelight:iron_lotus[minecraft:crafting_shaped]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'twilightforest:huge_water_lily'
+[20:50:13] [WARN ] Failed to parse recipe twilightdelight:iron_lotus[minecraft:crafting_shaped]: com.google.gson.JsonSyntaxException: Unknown item 'twilightforest:huge_water_lily'
+[20:50:14] [WARN ] Failed to parse recipe 'villagertools:restock[minecraft:stonecutting]': "villagertools:restock" is not a valid result!
+[20:50:14] [WARN ] Failed to parse recipe 'extrabows:recipe_emerald_upgrade_kit[minecraft:crafting_shaped]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'extrabows:diamond_upgrade_kit'
+[20:50:14] [WARN ] Failed to parse recipe extrabows:recipe_emerald_upgrade_kit[minecraft:crafting_shaped]: com.google.gson.JsonSyntaxException: Unknown item 'extrabows:diamond_upgrade_kit'
+[20:50:14] [WARN ] Failed to parse recipe 'greek:altar_aphrodite[rpggods:altar_shapeless]'! Falling back to vanilla: java.lang.NullPointerException: Unknown recipe type: rpggods:altar_shapeless
+[20:50:14] [WARN ] Failed to parse recipe greek:altar_aphrodite[rpggods:altar_shapeless]: com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rpggods:altar_shapeless'
+[20:50:14] [WARN ] Failed to parse recipe 'rad_recipes:betterendinfusion_modded/expanse_book[betterendforge:infusion]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Unknown item 'ironchest:gold_to_diamond_chest_upgrade'
+[20:50:14] [WARN ] Failed to parse recipe rad_recipes:betterendinfusion_modded/expanse_book[betterendforge:infusion]: com.google.gson.JsonSyntaxException: Unknown item 'ironchest:gold_to_diamond_chest_upgrade'
+[20:50:14] [WARN ] Failed to parse recipe 'relics:rage_glove[unknown:type]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:14] [WARN ] Failed to parse recipe relics:rage_glove[unknown:type]: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:14] [WARN ] Failed to parse recipe 'relics:ice_breaker[unknown:type]'! Falling back to vanilla: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:14] [WARN ] Failed to parse recipe relics:ice_breaker[unknown:type]: com.google.gson.JsonSyntaxException: Missing type, expected to find a string
+[20:50:14] [WARN ] Failed to parse recipe 'iceandfire:dragonmeal[minecraft:crafting_shapeless]'! Falling back to vanilla: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:14] [WARN ] Failed to parse recipe iceandfire:dragonmeal[minecraft:crafting_shapeless]: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:14] [WARN ] Failed to parse recipe 'byg:therium_shard_and_steel[minecraft:crafting_shapeless]'! Falling back to vanilla: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:14] [WARN ] Failed to parse recipe byg:therium_shard_and_steel[minecraft:crafting_shapeless]: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:14] [WARN ] Failed to parse recipe 'alexsmobs:flint_n_steel_dropbear_claw[minecraft:crafting_shapeless]'! Falling back to vanilla: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:14] [WARN ] Failed to parse recipe alexsmobs:flint_n_steel_dropbear_claw[minecraft:crafting_shapeless]: com.google.gson.JsonParseException: No ingredients for shapeless recipe
+[20:50:14] [INFO ] Found 14353 recipes and 0 failed recipes in 1.908 s
+[20:50:14] [INFO ] server_scripts:script.js:13: + kubejs:shaped: ['kubejs:diamond_nugget'] -> ['minecraft:diamond']
+[20:50:14] [INFO ] server_scripts:script.js:20: + kubejs:shapeless: ['minecraft:diamond'] -> ['9x kubejs:diamond_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:22: + kubejs:shaped: ['kubejs:emerald_nugget'] -> ['minecraft:emerald']
+[20:50:14] [INFO ] server_scripts:script.js:29: + kubejs:shapeless: ['minecraft:emerald'] -> ['9x kubejs:emerald_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:31: + kubejs:shaped: ['kubejs:coin_01'] -> ['kubejs:coin_02']
+[20:50:14] [INFO ] server_scripts:script.js:38: + kubejs:shapeless: ['kubejs:coin_02'] -> ['9x kubejs:coin_01']
+[20:50:14] [INFO ] server_scripts:script.js:40: + kubejs:shaped: ['kubejs:coin_02'] -> ['kubejs:coin_03']
+[20:50:14] [INFO ] server_scripts:script.js:47: + kubejs:shapeless: ['kubejs:coin_03'] -> ['9x kubejs:coin_02']
+[20:50:14] [INFO ] server_scripts:script.js:50: + kubejs:shaped: ['kubejs:coin_03'] -> ['kubejs:coin_04']
+[20:50:14] [INFO ] server_scripts:script.js:57: + kubejs:shapeless: ['kubejs:coin_04'] -> ['9x kubejs:coin_03']
+[20:50:14] [INFO ] server_scripts:script.js:59: + kubejs:shaped: ['kubejs:coin_04'] -> ['kubejs:coin_05']
+[20:50:14] [INFO ] server_scripts:script.js:66: + kubejs:shapeless: ['kubejs:coin_05'] -> ['9x kubejs:coin_04']
+[20:50:14] [INFO ] server_scripts:script.js:68: + kubejs:shaped: ['kubejs:coin_05'] -> ['kubejs:coin_06']
+[20:50:14] [INFO ] server_scripts:script.js:75: + kubejs:shapeless: ['kubejs:coin_06'] -> ['9x kubejs:coin_05']
+[20:50:14] [INFO ] server_scripts:script.js:97: - rad_recipes:terrasteel_shield_nobotania[minecraft:crafting_shaped]: ['#forge:ingots/terrasteel', 'spartanshields:shield_basic_wood'] -> [Item.of('spartanshields:shield_botania_terrasteel', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:100: - spartanshields:shield_mekanism_osmium[minecraft:crafting_shaped]: ['spartanshields:shield_basic_wood', '#forge:gems/lapis'] -> [Item.of('spartanshields:shield_mekanism_lapis_lazuli', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:109: - mysticalworld:copper_spear[minecraft:crafting_shaped]: ['mysticalworld:copper_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:copper_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:110: - mysticalworld:lead_spear[minecraft:crafting_shaped]: ['mysticalworld:lead_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:lead_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:111: - mysticalworld:tin_spear[minecraft:crafting_shaped]: ['mysticalworld:tin_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:tin_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:112: - mysticalworld:stone_spear[minecraft:crafting_shaped]: ['minecraft:stone_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:stone_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:113: - mysticalworld:wood_spear[minecraft:crafting_shaped]: ['minecraft:wooden_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:wood_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:114: - mysticalworld:diamond_spear[minecraft:crafting_shaped]: ['minecraft:diamond_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:diamond_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:115: - mysticalworld:gold_spear[minecraft:crafting_shaped]: ['minecraft:golden_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:gold_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:116: - mysticalworld:iron_spear[minecraft:crafting_shaped]: ['minecraft:iron_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:iron_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:118: - mysticalworld:cactus_knife[minecraft:crafting_shaped]: ['minecraft:cactus', '#forge:rods/wooden'] -> [Item.of('mysticalworld:cactus_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:119: - minecraft:lead_knife_from_ingots_lead[minecraft:crafting_shaped]: ['#forge:ingots/lead', '#forge:rods/wooden'] -> [Item.of('mysticalworld:lead_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:120: - minecraft:stone_knife_from_cobblestone[minecraft:crafting_shaped]: ['#forge:cobblestone', '#forge:rods/wooden'] -> [Item.of('mysticalworld:stone_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:120: - minecraft:stone_knife_from_stone[minecraft:crafting_shaped]: ['#forge:stone', '#forge:rods/wooden'] -> [Item.of('mysticalworld:stone_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:121: - minecraft:wood_knife_from_planks[minecraft:crafting_shaped]: ['#minecraft:planks', '#forge:rods/wooden'] -> [Item.of('mysticalworld:wood_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:122: - minecraft:diamond_knife_from_gems_diamond[minecraft:crafting_shaped]: ['#forge:gems/diamond', '#forge:rods/wooden'] -> [Item.of('mysticalworld:diamond_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:123: - minecraft:gold_knife_from_ingots_gold[minecraft:crafting_shaped]: ['#forge:ingots/gold', '#forge:rods/wooden'] -> [Item.of('mysticalworld:gold_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:124: - minecraft:iron_knife_from_ingots_iron[minecraft:crafting_shaped]: ['#forge:ingots/iron', '#forge:rods/wooden'] -> [Item.of('mysticalworld:iron_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:126: - mysticalworld:ingots_quicksilver_to_storage_block[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver'] -> ['mysticalworld:quicksilver_block']
+[20:50:14] [INFO ] server_scripts:script.js:127: - mysticalworld:quicksilver_sword[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:quicksilver_sword', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:128: - mysticalworld:silver_leggings[minecraft:crafting_shaped]: ['#forge:ingots/silver'] -> [Item.of('mysticalworld:silver_leggings', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:129: - mysticalworld:silver_spear[minecraft:crafting_shaped]: ['mysticalworld:silver_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:silver_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:130: - mysticalworld:quicksilver_boots[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver'] -> [Item.of('mysticalworld:quicksilver_boots', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:131: - mysticalworld:silver_pickaxe[minecraft:crafting_shaped]: ['#forge:ingots/silver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:silver_pickaxe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:132: - mysticalworld:silver_wide_post[minecraft:crafting_shaped]: ['mysticalworld:silver_block'] -> ['6x mysticalworld:silver_wide_post']
+[20:50:14] [INFO ] server_scripts:script.js:133: - mysticalworld:ingots_silver_to_9_nuggets[minecraft:crafting_shapeless]: ['#forge:ingots/silver'] -> ['9x mysticalworld:silver_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:133: - mysticalworld:silver_nugget_from_blasting[minecraft:blasting]: ['#mysticalworld:silver_items'] -> ['mysticalworld:silver_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:133: - mysticalworld:silver_nugget_from_smelting[minecraft:smelting]: ['#mysticalworld:silver_items'] -> ['mysticalworld:silver_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:134: - mysticalworld:quicksilver_spear[minecraft:crafting_shaped]: ['mysticalworld:quicksilver_sword', '#forge:rods/wooden'] -> [Item.of('mysticalworld:quicksilver_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:135: - mysticalworld:quicksilver_nugget_from_smelting[minecraft:smelting]: ['#mysticalworld:quicksilver_items'] -> ['mysticalworld:quicksilver_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:135: - mysticalworld:ingots_quicksilver_to_9_nuggets[minecraft:crafting_shapeless]: ['#forge:ingots/quicksilver'] -> ['9x mysticalworld:quicksilver_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:135: - mysticalworld:quicksilver_nugget_from_blasting[minecraft:blasting]: ['#mysticalworld:quicksilver_items'] -> ['mysticalworld:quicksilver_nugget']
+[20:50:14] [INFO ] server_scripts:script.js:136: - mysticalworld:silver_sword[minecraft:crafting_shaped]: ['#forge:ingots/silver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:silver_sword', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:137: - mysticalworld:quicksilver_wide_post[minecraft:crafting_shaped]: ['mysticalworld:quicksilver_block'] -> ['6x mysticalworld:quicksilver_wide_post']
+[20:50:14] [INFO ] server_scripts:script.js:138: - mysticalworld:silver_ingot_from_smelting_dust[minecraft:smelting]: ['#forge:dusts/silver'] -> ['mysticalworld:silver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:138: - mysticalworld:nuggets_silver_to_ingot[minecraft:crafting_shaped]: ['#forge:nuggets/silver'] -> ['mysticalworld:silver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:138: - mysticalworld:silver_ingot_from_smelting[minecraft:smelting]: ['#forge:ores/silver'] -> ['mysticalworld:silver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:138: - mysticalworld:silver_ingot_from_blasting[minecraft:blasting]: ['#forge:ores/silver'] -> ['mysticalworld:silver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:138: - mysticalworld:storage_blocks_silver_to_9_ingots[minecraft:crafting_shapeless]: ['#forge:storage_blocks/silver'] -> ['9x mysticalworld:silver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:138: - mysticalworld:silver_ingot_from_blasting_dust[minecraft:blasting]: ['#forge:dusts/silver'] -> ['mysticalworld:silver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:139: - mysticalworld:quicksilver_chestplate[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver'] -> [Item.of('mysticalworld:quicksilver_chestplate', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:140: - mysticalworld:silver_hoe[minecraft:crafting_shaped]: ['#forge:ingots/silver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:silver_hoe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:141: - mysticalworld:silver_shovel[minecraft:crafting_shaped]: ['#forge:ingots/silver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:silver_shovel', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:142: - mysticalworld:quicksilver_helmet[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver'] -> [Item.of('mysticalworld:quicksilver_helmet', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:143: - mysticalworld:quicksilver_small_post[minecraft:crafting_shaped]: ['mysticalworld:quicksilver_block'] -> ['4x mysticalworld:quicksilver_small_post']
+[20:50:14] [INFO ] server_scripts:script.js:144: - mysticalworld:silver_slab[minecraft:crafting_shaped]: ['mysticalworld:silver_block'] -> ['6x mysticalworld:silver_slab']
+[20:50:14] [INFO ] server_scripts:script.js:145: - mysticalworld:quicksilver_stairs[minecraft:crafting_shaped]: ['mysticalworld:quicksilver_block'] -> ['4x mysticalworld:quicksilver_stairs']
+[20:50:14] [INFO ] server_scripts:script.js:146: - mysticalworld:quicksilver_wall[minecraft:crafting_shaped]: ['mysticalworld:quicksilver_block'] -> ['6x mysticalworld:quicksilver_wall']
+[20:50:14] [INFO ] server_scripts:script.js:146: - mysticalworld:quicksilver_wall_from_quicksilver_block_stonecutting[minecraft:stonecutting]: ['mysticalworld:quicksilver_block'] -> ['mysticalworld:quicksilver_wall']
+[20:50:14] [INFO ] server_scripts:script.js:148: - mysticalworld:silver_axe[minecraft:crafting_shaped]: ['#forge:ingots/silver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:silver_axe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:149: - mysticalworld:silver_wall[minecraft:crafting_shaped]: ['mysticalworld:silver_block'] -> ['6x mysticalworld:silver_wall']
+[20:50:14] [INFO ] server_scripts:script.js:149: - mysticalworld:silver_wall_from_silver_block_stonecutting[minecraft:stonecutting]: ['mysticalworld:silver_block'] -> ['mysticalworld:silver_wall']
+[20:50:14] [INFO ] server_scripts:script.js:150: - mysticalworld:quicksilver_hoe[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:quicksilver_hoe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:151: - mysticalworld:quicksilver_pickaxe[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:quicksilver_pickaxe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:153: - mysticalworld:quicksilver_slab[minecraft:crafting_shaped]: ['mysticalworld:quicksilver_block'] -> ['6x mysticalworld:quicksilver_slab']
+[20:50:14] [INFO ] server_scripts:script.js:154: - mysticalworld:quicksilver_axe[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:quicksilver_axe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:155: - mysticalworld:silver_stairs[minecraft:crafting_shaped]: ['mysticalworld:silver_block'] -> ['4x mysticalworld:silver_stairs']
+[20:50:14] [INFO ] server_scripts:script.js:156: - mysticalworld:quicksilver_leggings[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver'] -> [Item.of('mysticalworld:quicksilver_leggings', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:157: - mysticalworld:silver_small_post[minecraft:crafting_shaped]: ['mysticalworld:silver_block'] -> ['4x mysticalworld:silver_small_post']
+[20:50:14] [INFO ] server_scripts:script.js:158: - mysticalworld:ingots_silver_to_storage_block[minecraft:crafting_shaped]: ['#forge:ingots/silver'] -> ['mysticalworld:silver_block']
+[20:50:14] [INFO ] server_scripts:script.js:159: - mysticalworld:silver_boots[minecraft:crafting_shaped]: ['#forge:ingots/silver'] -> [Item.of('mysticalworld:silver_boots', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:160: - minecraft:quicksilver_knife_from_ingots_quicksilver[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:quicksilver_knife', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:161: - mysticalworld:silver_helmet[minecraft:crafting_shaped]: ['#forge:ingots/silver'] -> [Item.of('mysticalworld:silver_helmet', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:162: - mysticalworld:silver_chestplate[minecraft:crafting_shaped]: ['#forge:ingots/silver'] -> [Item.of('mysticalworld:silver_chestplate', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:163: - mysticalworld:quicksilver_ingot_from_blasting[minecraft:blasting]: ['#forge:ores/quicksilver'] -> ['mysticalworld:quicksilver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:163: - mysticalworld:quicksilver_ingot_from_smelting_dust[minecraft:smelting]: ['#forge:dusts/quicksilver'] -> ['mysticalworld:quicksilver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:163: - mysticalworld:quicksilver_ingot_from_smelting[minecraft:smelting]: ['#forge:ores/quicksilver'] -> ['mysticalworld:quicksilver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:163: - mysticalworld:nuggets_quicksilver_to_ingot[minecraft:crafting_shaped]: ['#forge:nuggets/quicksilver'] -> ['mysticalworld:quicksilver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:163: - mysticalworld:quicksilver_ingot_from_blasting_dust[minecraft:blasting]: ['#forge:dusts/quicksilver'] -> ['mysticalworld:quicksilver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:163: - mysticalworld:storage_blocks_quicksilver_to_9_ingots[minecraft:crafting_shapeless]: ['#forge:storage_blocks/quicksilver'] -> ['9x mysticalworld:quicksilver_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:164: - mysticalworld:quicksilver_shovel[minecraft:crafting_shaped]: ['#forge:ingots/quicksilver', '#forge:rods/wooden'] -> [Item.of('mysticalworld:quicksilver_shovel', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:185: - greekfantasy:wooden_spear[minecraft:crafting_shaped]: ['#forge:rods/wooden', '#minecraft:planks', 'minecraft:string'] -> [Item.of('greekfantasy:wooden_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:186: - greekfantasy:stone_spear[minecraft:crafting_shaped]: ['#forge:rods/wooden', '#forge:stone', 'minecraft:string'] -> [Item.of('greekfantasy:stone_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:187: - greekfantasy:iron_spear[minecraft:crafting_shaped]: ['#forge:rods/wooden', 'minecraft:iron_ingot', 'minecraft:string'] -> [Item.of('greekfantasy:iron_spear', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:189: - iceandfire:copper_sword[minecraft:crafting_shaped]: ['#forge:ingots/copper', '#forge:rods/wooden'] -> [Item.of('iceandfire:copper_sword', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:190: - iceandfire:copper_shovel[minecraft:crafting_shaped]: ['#forge:ingots/copper', '#forge:rods/wooden'] -> [Item.of('iceandfire:copper_shovel', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:191: - iceandfire:copper_pickaxe[minecraft:crafting_shaped]: ['#forge:ingots/copper', '#forge:rods/wooden'] -> [Item.of('iceandfire:copper_pickaxe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:192: - iceandfire:copper_axe[minecraft:crafting_shaped]: ['#forge:ingots/copper', '#forge:rods/wooden'] -> [Item.of('iceandfire:copper_axe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:193: - iceandfire:copper_hoe[minecraft:crafting_shaped]: ['#forge:ingots/copper', '#forge:rods/wooden'] -> [Item.of('iceandfire:copper_hoe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:197: - iceandfire:copper_helmet[minecraft:crafting_shaped]: ['#forge:ingots/copper'] -> [Item.of('iceandfire:armor_copper_metal_helmet', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:198: - iceandfire:copper_chestplate[minecraft:crafting_shaped]: ['#forge:ingots/copper'] -> [Item.of('iceandfire:armor_copper_metal_chestplate', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:199: - iceandfire:copper_leggings[minecraft:crafting_shaped]: ['#forge:ingots/copper'] -> [Item.of('iceandfire:armor_copper_metal_leggings', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:200: - iceandfire:copper_boots[minecraft:crafting_shaped]: ['#forge:ingots/copper'] -> [Item.of('iceandfire:armor_copper_metal_boots', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:208: - byg:raw_pendorite_from_blasting[minecraft:blasting]: ['byg:pendorite_ore'] -> ['byg:raw_pendorite']
+[20:50:14] [INFO ] server_scripts:script.js:209: - byg:pendorite_ingot[minecraft:crafting_shapeless]: ['byg:pendorite_scraps', 'byg:pendorite_scraps', 'byg:pendorite_scraps', 'byg:pendorite_scraps', 'minecraft:diamond', 'minecraft:diamond', 'byg:emeraldite_shards', 'byg:emeraldite_shards'] -> ['byg:pendorite_ingot']
+[20:50:14] [INFO ] server_scripts:script.js:210: - byg:pendorite_scraps_from_blasting[minecraft:blasting]: ['byg:raw_pendorite'] -> ['byg:pendorite_scraps']
+[20:50:14] [INFO ] server_scripts:script.js:211: - byg:raw_pendorite_block[minecraft:crafting_shaped]: ['byg:raw_pendorite'] -> ['byg:raw_pendorite_block']
+[20:50:14] [INFO ] server_scripts:script.js:212: - byg:pendorite_block[minecraft:crafting_shaped]: ['byg:pendorite_ingot'] -> ['byg:pendorite_block']
+[20:50:14] [INFO ] server_scripts:script.js:213: - byg:pendorite_axe[minecraft:smithing]: ['minecraft:netherite_axe', 'byg:pendorite_ingot'] -> [Item.of('byg:pendorite_axe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:214: - byg:pendorite_pickaxe[minecraft:smithing]: ['minecraft:netherite_pickaxe', 'byg:pendorite_ingot'] -> [Item.of('byg:pendorite_pickaxe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:215: - byg:pendorite_sword[minecraft:smithing]: ['minecraft:netherite_sword', 'byg:pendorite_ingot'] -> [Item.of('byg:pendorite_sword', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:216: - byg:pendorite_battleaxe[minecraft:smithing]: ['byg:pendorite_axe', 'byg:pendorite_axe'] -> [Item.of('byg:pendorite_battleaxe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:217: - byg:pendorite_shovel[minecraft:smithing]: ['minecraft:netherite_shovel', 'byg:pendorite_ingot'] -> [Item.of('byg:pendorite_shovel', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:218: - byg:pendorite_hoe[minecraft:smithing]: ['minecraft:netherite_hoe', 'byg:pendorite_ingot'] -> [Item.of('byg:pendorite_hoe', '{Damage:0}')]
+[20:50:14] [INFO ] server_scripts:script.js:219: - byg:pendorite_horse_armor[minecraft:crafting_shaped]: ['byg:pendorite_ingot'] -> ['byg:pendorite_horse_armor']
+[20:50:14] [INFO ] server_scripts:script.js:226: - archers_paradox:phantasmal_arrow[minecraft:crafting_shaped]: ['minecraft:arrow', 'cofh_core:ectoplasm'] -> ['2x archers_paradox:phantasmal_arrow']
+[20:50:14] [INFO ] server_scripts:script.js:228: - spawnermod:spawner_key[minecraft:crafting_shaped]: ['minecraft:diamond', 'minecraft:spawner'] -> [Item.of('spawnermod:spawner_key', '{Damage:0}')]
+[20:50:14] [INFO ] Posted recipe events in 564.7 ms
+[20:50:15] [INFO ] Modified & removed recipes in 570.5 ms
+[20:50:15] [INFO ] Added recipes in 9.631 ms
+[20:50:15] [INFO ] Added 14 recipes, removed 97 recipes, modified 0 recipes, with 0 failed recipes and 0 fall-backed recipes
+[20:50:20] [INFO ] [functions] Found 0 tags, added 0 objects, removed 0 objects
+[20:50:20] [INFO ] [functions] Found 0 tags, added 0 objects, removed 0 objects
