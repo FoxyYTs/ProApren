@@ -1,0 +1,12 @@
+{
+   "Name": "Wren's Expanded Greenhouse",
+   "Author": "Tlitookilakin",
+   "Version": "1.5.1",
+   "Description": "Wren's custom greenhouse map",
+   "UniqueID": "tlitookilakin.xgreenhouse",
+   "UpdateKeys": ["Nexus:5431", "ModDrop:825475"],
+   "MinimumApiVersion": "1.19.3",
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   }
+}

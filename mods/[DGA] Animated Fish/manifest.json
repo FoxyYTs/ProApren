@@ -1,0 +1,11 @@
+{
+  "Name": "Animated Fish",
+  "Author": "Gervig91 & Fermi",
+  "Version": "1.2.0",
+  "Description": "Animates fish and fishing related items.  DGA conversion by Fermi.",
+  "UniqueID": "Gervig91.AnimatedFish.DGA",
+  "ContentPackFor": { "UniqueID": "spacechase0.DynamicGameAssets" },
+  "UpdateKeys": [ "Nexus:5735" ],
+  "DGA.FormatVersion": 2,
+  "DGA.ConditionsFormatVersion": "1.27.1"
+}

@@ -1,0 +1,616 @@
+[
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 144, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "albacore.png:0..3@20",
+		"EnableConditions": { "Query: {{Albacore}} = true": true },
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 144, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "anchovy.png:0..3@20",
+		"EnableConditions": { "Query: {{Anchovy}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 256, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "angler.png:0..3@20",
+		"EnableConditions": { "Query: {{Angler}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 128, "Y": 528, "Width": 16, "Height": 16 },
+		"DynamicFields":
+		[
+			{
+			"Conditions": { "Query: {{Blobfish}} = '1'": true },
+			"SourceTexture": "blobfish1.png:0..7@20"
+			},
+			{
+			"Conditions": { "Query: {{Blobfish}} = '2'": true },
+			"SourceTexture": "blobfish2.png:0..18@20"
+			},
+			{
+			"Conditions": { "Query: {{Blobfish}} = '3'": true },
+			"SourceTexture": "blobfish3.png:0..7@20"
+			}
+		]
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 192, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "bream.png:0..3@20",
+		"EnableConditions": { "Query: {{Bream}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 48, "Y": 112, "Width": 16, "Height": 16 },
+        "SourceTexture": "brokencd.png:0..15@20",
+		"EnableConditions": { "Query: {{Broken CD}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 32, "Y": 112, "Width": 16, "Height": 16 },
+        "SourceTexture": "brokenglasses.png:0..7@20",
+		"EnableConditions": { "Query: {{Broken Glasses}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 64, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "bullhead.png:0..3@20",
+		"EnableConditions": { "Query: {{Bullhead}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 352, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "carp.png:0..3@20",
+		"EnableConditions": { "Query: {{Carp}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 368, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "catfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Catfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 96, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "chub.png:0..3@20",
+		"EnableConditions": { "Query: {{Chub}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 192, "Y": 240, "Width": 16, "Height": 16 },
+        "SourceTexture": "clam.png:0..15@10",
+		"EnableConditions": { "Query: {{Clam}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 352, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "cockle.png:0..11@40",
+		"EnableConditions": { "Query: {{Cockle}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 336, "Y": 464, "Width": 16, "Height": 16 },
+		"DynamicFields":
+		[
+			{
+			"Conditions": { "Query: {{Crab}} = '1'": true },
+			"SourceTexture": "crab1.png:0..3@20"
+			},
+			{
+			"Conditions": { "Query: {{Crab}} = '2'": true },
+			"SourceTexture": "crab2.png:0..3@20"
+			}
+		]
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 320, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "crayfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Crayfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 240, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "crimsonfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Crimsonfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 128, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "dorado.png:0..3@20",
+		"EnableConditions": { "Query: {{Dorado}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 16, "Y": 112, "Width": 16, "Height": 16 },
+        "SourceTexture": "driftwood.png:0..7@15",
+		"EnableConditions": { "Query: {{Driftwood}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 64, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "eel.png:0..3@20",
+		"EnableConditions": { "Query: {{Eel}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 48, "Y": 176, "Width": 16, "Height": 16 },
+        "SourceTexture": "flounder.png:0..3@20",
+		"EnableConditions": { "Query: {{Flounder}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 192, "Y": 96, "Width": 16, "Height": 16 },
+		"DynamicFields":
+		[
+			{
+			"Conditions": { "Query: {{Ghostfish}} = '1'": true },
+			"SourceTexture": "ghostfish1.png:0..3@20"
+			},
+			{
+			"Conditions": { "Query: {{Ghostfish}} = '2'": true },
+			"SourceTexture": "ghostfish2.png:0..15@15"
+			}
+		]
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 112, "Y": 512, "Width": 16, "Height": 16 },
+        "SourceTexture": "glacierfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Glacierfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 144, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "greenalgae.png:0..3@40",
+		"EnableConditions": { "Query: {{Green Algae}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 192, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "halibut.png:0..3@20",
+		"EnableConditions": { "Query: {{Halibut}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 48, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "herring.png:0..3@20",
+		"EnableConditions": { "Query: {{Herring}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 272, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "icepip.png:0..3@20",
+		"EnableConditions": { "Query: {{Ice Pip}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 256, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "largemouthbass.png:0..3@20",
+		"EnableConditions": { "Query: {{Largemouth Bass}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 288, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "lavaeel.png:0..3@20",
+		"EnableConditions": { "Query: {{Lava Eel}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 304, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "legend.png:0..3@20",
+		"EnableConditions": { "Query: {{Legend}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 176, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "lingcod.png:0..3@20",
+		"EnableConditions": { "Query: {{Lingcod}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 304, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "lobster.png:0..3@20",
+		"EnableConditions": { "Query: {{Lobster}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 80, "Y": 176, "Width": 16, "Height": 16 },
+        "SourceTexture": "midnightcarp.png:0..3@20",
+		"EnableConditions": { "Query: {{Midnight Carp}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 96, "Y": 528, "Width": 16, "Height": 16 },
+		"DynamicFields":
+		[
+			{
+			"Conditions": { "Query: {{Midnight Squid}} = '1'": true },
+			"SourceTexture": "midnightsquid1.png:0..3@20"
+			},
+			{
+			"Conditions": { "Query: {{Midnight Squid}} = '2'": true },
+			"SourceTexture": "midnightsquid2.png:0..3@20"
+			}
+		]
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 368, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "mussel.png:0..7@40",
+		"EnableConditions": { "Query: {{Mussel}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 160, "Y": 448, "Width": 16, "Height": 16 },
+        "SourceTexture": "mutantcarp.png:0..3@20",
+		"EnableConditions": { "Query: {{Mutant Carp}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 128, "Y": 256, "Width": 16, "Height": 16 },
+        "SourceTexture": "nautilusshell.png:0..15@10",
+		"EnableConditions": { "Query: {{Nautilus Shell}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 80, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "octopus.png:0..6@10",
+		"EnableConditions": { "Query: {{Octopus}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 48, "Y": 480, "Width": 16, "Height": 16 },
+        "SourceTexture": "oyster.png:0..11@40",
+		"EnableConditions": { "Query: {{Oyster}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 336, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "perch.png:0..3@20",
+		"EnableConditions": { "Query: {{Perch}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 32, "Y": 480, "Width": 16, "Height": 16 },
+        "SourceTexture": "periwinkle.png:0..7@40",
+		"EnableConditions": { "Query: {{Periwinkle}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 0, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "pike.png:0..3@20",
+		"EnableConditions": { "Query: {{Pike}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 128, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "pufferfish.png:0..14@15",
+		"EnableConditions": { "Query: {{Pufferfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 160, "Y": 256, "Width": 16, "Height": 16 },
+        "SourceTexture": "rainbowshell.png:0..11@12",
+		"EnableConditions": { "Query: {{Rainbow Shell}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 288, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "rainbowtrout.png:0..3@20",
+		"EnableConditions": { "Query: {{Rainbow Trout}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 32, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "redmullet.png:0..3@20",
+		"EnableConditions": { "Query: {{Red Mullet}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 96, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "redsnapper.png:0..3@20",
+		"EnableConditions": { "Query: {{Red Snapper}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 64, "Y": 496, "Width": 16, "Height": 16 },
+        "SourceTexture": "rottenplant.png:0..7@20",
+		"EnableConditions": { "Query: {{Rotten Plant}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 304, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "salmon.png:0..3@20",
+		"EnableConditions": { "Query: {{Salmon}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 320, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "sandfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Sandfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 176, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "sardine.png:0..3@20",
+		"EnableConditions": { "Query: {{Sardine}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 336, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "scorpioncarp.png:0..3@20",
+		"EnableConditions": { "Query: {{Scorpion Carp}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 160, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "seacucumber.png:0..6@20",
+		"EnableConditions": { "Query: {{Sea Cucumber}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 208, "Y": 256, "Width": 16, "Height": 16 },
+        "SourceTexture": "seaurchin.png:0..3@80",
+		"EnableConditions": { "Query: {{Sea Urchin}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 128, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "seaweed.png:0..3@40",
+		"EnableConditions": { "Query: {{Seaweed}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 160, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "shad.png:0..3@20",
+		"EnableConditions": { "Query: {{Shad}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 0, "Y": 480, "Width": 16, "Height": 16 },
+        "SourceTexture": "shrimp.png:0..3@20",
+		"EnableConditions": { "Query: {{Shrimp}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 64, "Y": 528, "Width": 16, "Height": 16 },
+        "SourceTexture": "slimejack.png:0..3@20",
+		"EnableConditions": { "Query: {{Slimejack}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 272, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "smallmouthbass.png:0..3@20",
+		"EnableConditions": { "Query: {{Smallmouth Bass}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 16, "Y": 480, "Width": 16, "Height": 16 },
+        "SourceTexture": "snail.png:0..19@40",
+		"EnableConditions": { "Query: {{Snail}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 64, "Y": 112, "Width": 16, "Height": 16 },
+        "SourceTexture": "soggynewspaper.png:0..5@15",
+		"EnableConditions": { "Query: {{Soggy Newspaper}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 112, "Y": 528, "Width": 16, "Height": 16 },
+        "SourceTexture": "spookfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Spook Fish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 112, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "squid.png:0..3@20",
+		"EnableConditions": { "Query: {{Squid}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 224, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "stonefish.png:0..5@30",
+		"EnableConditions": { "Query: {{Stonefish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 32, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "sturgeon.png:0..3@20",
+		"EnableConditions": { "Query: {{Sturgeon}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 16, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "sunfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Sunfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 176, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "supercucumber.png:0..6@20",
+		"EnableConditions": { "Query: {{Super Cucumber}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 48, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "tigertrout.png:0..3@20",
+		"EnableConditions": { "Query: {{Tiger Trout}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 80, "Y": 464, "Width": 16, "Height": 16 },
+        "SourceTexture": "tilapia.png:0..3@20",
+		"EnableConditions": { "Query: {{Tilapia}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 0, "Y": 112, "Width": 16, "Height": 16 },
+        "SourceTexture": "trash.png:0..3@10",
+		"EnableConditions": { "Query: {{Trash}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 160, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "tuna.png:0..3@20",
+		"EnableConditions": { "Query: {{Tuna}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 48, "Y": 528, "Width": 16, "Height": 16 },
+        "SourceTexture": "voidsalmon.png:0..3@20",
+		"EnableConditions": { "Query: {{Void Salmon}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 320, "Y": 80, "Width": 16, "Height": 16 },
+        "SourceTexture": "walleye.png:0..3@20",
+		"EnableConditions": { "Query: {{Walleye}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 208, "Y": 96, "Width": 16, "Height": 16 },
+        "SourceTexture": "whitealgae.png:0..3@40",
+		"EnableConditions": { "Query: {{White Algae}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 224, "Y": 480, "Width": 16, "Height": 16 },
+        "SourceTexture": "woodskip.png:0..3@20",
+		"EnableConditions": { "Query: {{Woodskip}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 160, "Y": 592, "Width": 16, "Height": 16 },
+        "SourceTexture": "son_of_crimsonfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Son of Crimsonfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 176, "Y": 592, "Width": 16, "Height": 16 },
+        "SourceTexture": "ms_angler.png:0..3@20",
+		"EnableConditions": { "Query: {{Ms Angler}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 192, "Y": 592, "Width": 16, "Height": 16 },
+        "SourceTexture": "legend_ii.png:0..3@20",
+		"EnableConditions": { "Query: {{Legend II}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 208, "Y": 592, "Width": 16, "Height": 16 },
+        "SourceTexture": "radioactive_carp.png:0..3@20",
+		"EnableConditions": { "Query: {{Radioactive Carp}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 224, "Y": 592, "Width": 16, "Height": 16 },
+        "SourceTexture": "glacierfish_jr.png:0..3@20",
+		"EnableConditions": { "Query: {{Glacierfish Jr}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 320, "Y": 544, "Width": 16, "Height": 16 },
+        "SourceTexture": "stingray.png:0..3@20",
+		"EnableConditions": { "Query: {{Stingray}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 336, "Y": 544, "Width": 16, "Height": 16 },
+        "SourceTexture": "lionfish.png:0..3@20",
+		"EnableConditions": { "Query: {{Lionfish}} = true": true }
+    },
+	{
+        "$ItemType": "TextureOverride",
+        "TargetTexture": "Maps/springobjects",
+        "TargetRect": { "X": 352, "Y": 544, "Width": 16, "Height": 16 },
+        "SourceTexture": "blue_discus.png:0..3@20",
+		"EnableConditions": { "Query: {{Blue Discus}} = true": true }
+    }
+]

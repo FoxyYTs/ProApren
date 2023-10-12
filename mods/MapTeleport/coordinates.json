@@ -1,0 +1,292 @@
+{
+  "coordinates": [
+    {
+      "name": null,
+      "mapName": "Desert",
+      "x": 6,
+      "y": 52,
+      "id": 1001,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Farm",
+      "x": 64,
+      "y": 15,
+      "id": 1002,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Backwoods",
+      "x": 22,
+      "y": 16,
+      "id": 1003,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "BusStop",
+      "x": 14,
+      "y": 22,
+      "id": 1004,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Forest",
+      "x": 5,
+      "y": 27,
+      "id": 1005,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Forest",
+      "x": 90,
+      "y": 16,
+      "id": 1006,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Forest",
+      "x": 104,
+      "y": 33,
+      "id": 1007,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 10,
+      "y": 86,
+      "id": 1008,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 20,
+      "y": 89,
+      "id": 1009,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 28,
+      "y": 67,
+      "id": 1010,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 36,
+      "y": 56,
+      "id": 1011,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 43,
+      "y": 57,
+      "id": 1012,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 94,
+      "y": 82,
+      "id": 1013,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 45,
+      "y": 71,
+      "id": 1014,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 58,
+      "y": 86,
+      "id": 1015,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 101,
+      "y": 90,
+      "id": 1016,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Beach",
+      "x": 49,
+      "y": 11,
+      "id": 1017,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 34,
+      "y": 97,
+      "id": 1018,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 46,
+      "y": 90,
+      "id": 1019,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 72,
+      "y": 69,
+      "id": 1020,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 57,
+      "y": 64,
+      "id": 1021,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Mountain",
+      "x": 12,
+      "y": 26,
+      "id": 1022,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Mountain",
+      "x": 29,
+      "y": 8,
+      "id": 1023,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Mine",
+      "x": 18,
+      "y": 13,
+      "id": 1024,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Mountain",
+      "x": 76,
+      "y": 9,
+      "id": 1025,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Mountain",
+      "x": 127,
+      "y": 11,
+      "id": 1026,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 95,
+      "y": 51,
+      "id": 1027,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Beach",
+      "x": 30,
+      "y": 34,
+      "id": 1028,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Railroad",
+      "x": 10,
+      "y": 57,
+      "id": 1029,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Woods",
+      "x": 58,
+      "y": 15,
+      "id": 1030,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Forest",
+      "x": 34,
+      "y": 96,
+      "id": 1031,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Town",
+      "x": 52,
+      "y": 20,
+      "id": 1032,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Forest",
+      "x": 94,
+      "y": 100,
+      "id": 1033,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "Railroad",
+      "x": 29,
+      "y": 45,
+      "id": 1034,
+      "enabled": true
+    },
+    {
+      "name": null,
+      "mapName": "IslandWest",
+      "x": 77,
+      "y": 41,
+      "id": 1035,
+      "enabled": true
+    },
+    {
+      "name": "Roca solitaria",
+      "mapName": null,
+      "x": 0,
+      "y": 0,
+      "id": -500,
+      "enabled": false
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+[
+	{
+        "Name": "Albacore",
+        "Description": "Set this to 'true' to see changes for this fish",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Anchovy",
+        "Description": "Set this to 'true' to see changes for this fish",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Angler",
+        "Description": "Set this to 'true' to see changes for this fish",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Blobfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "String",
+		"ValidValues": "1, 2, 3",
+        "DefaultValue": "1"
+    },
+	{
+        "Name": "Bream",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Broken CD",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Broken Glasses",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Bullhead",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Carp",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Catfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Chub",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Clam",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Cockle",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Crab",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "String",
+		"ValidValues": "1, 2",
+        "DefaultValue": "1"
+    },
+	{
+        "Name": "Crayfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Crimsonfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Dorado",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Driftwood",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Eel",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Flounder",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Ghostfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "String",
+		"ValidValues": "1, 2",
+        "DefaultValue": 1
+    },
+	{
+        "Name": "Glacierfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Green Algae",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Halibut",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Herring",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Ice Pip",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Largemouth Bass",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Lava Eel",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Legend",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Lingcod",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Lobster",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Midnight Carp",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Midnight Squid",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "String",
+		"ValidValues": "1, 2",
+        "DefaultValue": "1"
+    },
+	{
+        "Name": "Mussel",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Mutant Carp",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Nautilus Shell",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Octopus",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Oyster",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Perch",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Periwinkle",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Pike",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Pufferfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Rainbow Shell",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Rainbow Trout",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Red Mullet",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Red Snapper",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Rotten Plant",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Salmon",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Sandfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Sardine",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Scorpion Carp",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Sea Cucumber",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Sea Urchin",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Seaweed",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Shad",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Shrimp",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Slimejack",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Smallmouth Bass",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Snail",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Soggy Newspaper",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Spook Fish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Squid",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Stonefish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Sturgeon",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Sunfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Super Cucumber",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Tiger Trout",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Tilapia",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Trash",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Tuna",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Void Salmon",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Walleye",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "White Algae",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Woodskip",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Son of Crimsonfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Ms Angler",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Legend II",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Radioactive Carp",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Glacierfish Jr",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Stingray",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Lionfish",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    },
+	{
+        "Name": "Blue Discus",
+        "Description": "Set this to 'true' to see changes for this fish.",
+        "ValueType": "Boolean",
+        "DefaultValue": true
+    }	
+]

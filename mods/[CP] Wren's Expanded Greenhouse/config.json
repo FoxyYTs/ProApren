@@ -1,0 +1,14 @@
+{
+  "Frame": "vanilla",
+  "Glass": "glossy",
+  "Expansion": "disabled",
+  "Backdrop": "auto",
+  "Style": "default",
+  "Pool": "default",
+  "Irrigation": "small",
+  "BigCropStyle": "default",
+  "SmallCropStyle": "default",
+  "Floor": "default",
+  "SeasonMode": "auto",
+  "CellarTunnel": "true"
+}
