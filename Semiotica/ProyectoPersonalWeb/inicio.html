@@ -67,25 +67,90 @@
           </ul>
         </div>
       </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 class="text-center mt-5">Iniciar sesión</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-outline-primary btn-block">Iniciar sesión</button>
-
-                    <a type="submit" class="btn btn-outline-secondary btn-block" href="registro.html" role="button">Registrar</a>
-                </form>
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="MenuPerfil" data-bs-theme="dark">
+        <div class="offcanvas-header" data-bs-theme="dark">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu Navegacion</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between px-0">
+          <ul class="navbar-nav fs-5 justify.content-evenly">
+            <li class="nav-item p-3 py-xxxl-1">
+              <a href="" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                </svg>
+                Perfil
+              </a>
+            </li>
+            <li class="nav-item p-3 py-xxxl-1">
+              <a href="" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                Favoritos
+              </a>
+            </li>
+            <li class="nav-item p-3 py-xxxl-1">
+              <a href="" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                </svg>
+                Colaboraciones
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <main class="d-flex justify-content-center align-item-center vh-100 mt-5">
+        <div class="shadow bg-white p-5 rounded-5 text-secondary" style="width:25rem; height: 30rem;">
+            <div class="d-flex justify-content-center">
+                
+            </div>
+            <div class="text-center fs-1 fw-bold">Login</div>
+            <div class="input-group mt-4">
+                <div class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>
+                </div>
+                <input class="form-control bg-light" type="text" placeholder="Username">
+            </div>
+            <div class="input-group mt-1">
+                <div class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+                      </svg>
+                </div>
+                <input class="form-control bg-light" type="password" placeholder="Password">
+            </div>
+            <div class="d-flex justify-content-around mt-1">
+                <div class="d-flex align-items-center gap-1">
+                    <input class="form-check-input" type="checkbox">
+                    <div class="pt-1" style="font-size:0.9rem">Recuerdame</div>
+                </div>
+                <div>
+                    <a href="#" class="text-decoration-none fst-italic
+                    fw-semibold" style="font-size:0.rem">Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+            <div class="btn btn-danger text-white w-100 mt-4 fw-semibold">Login</div>
+            <div class="d-flex gap-1 justify-content-center mt-1">
+                <div>No estas registrado?</div>
+                <a href="registro.html" class="text-decoration-none fw-semibold">Registrate</a>
+            </div>
+            <div class="p-3">
+                <div class="border-bottom text-center border-secondary" style="height:0.8rem;">
+                    <span class="bg-white px-2">O</span>
+                </div>
+            </div>
+            <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                  </svg>
+                <div class="fw-semibold text-secondary">Continuar con Google</div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html> 
