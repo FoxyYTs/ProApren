@@ -1,0 +1,30 @@
+nav,
+  .offcanvas {
+    background-color: #1A0033;
+  }
+  .navbar-toggler{
+    border: none;
+  }
+  .navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-nav >li:hover{
+    background-color: #5c0000;
+  }
+body,
+  .bd-placeholder-img {
+    background-color: #33334D;
+  }
+  .sidebar{
+    background-color: #48586F;;
+  }
+  .border{
+    background-color: #48586F;
+  }
+  .h4{
+    color: white;
+  }
+footer{
+  background-color: #1A0033;
+}
