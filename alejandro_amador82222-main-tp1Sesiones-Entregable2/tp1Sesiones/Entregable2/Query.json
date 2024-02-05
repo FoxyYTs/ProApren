@@ -1,9 +1,0 @@
-{
-    "CrearTabla" : "CREATE TABLE if not exists {} ({})",
-    "InsertarDato" : "INSERT INTO {} VALUES ({})", 
-    "LeerDato" : "SELECT * FROM {} WHERE id='{}'",
-    "ActualizarDato" : "UPDATE {} SET {} = '{}' WHERE id='{}'",
-    "EliminarDato" : "DELETE FROM {} WHERE Id='{}'",
-    "ColumnasVehiculo" : "Id VARCHAR(20) PRIMARY KEY, Nombre VARCHAR(30) NOT NULL, Anio INTEGER NOT NULL, Marca VARCHAR(20) NOT NULL, Tipo VARCHAR(20) NOT NULL, Combustible VARCHAR(20) NOT NULL, Precio DOUBLE NOT NULL",
-    "ColumnasAutomovil" : "Id VARCHAR(20) PRIMARY KEY, NumeroPuertas INTEGER NOT NULL, Descapotable BOOLEAN NOT NULL, NumeroLlantas INTEGER NOT NULL, TipoAutomovil VARCHAR(20) NOT NULL, Propulsion VARCHAR(20) NOT NULL, FOREIGN KEY (Id) REFERENCES Vehiculo(Id)"
-}
