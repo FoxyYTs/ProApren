@@ -1,4 +1,4 @@
-package TrabajosDeClase.TallerMadrid;
+package AlgoritmosYProgramacion.SegundoSemestre.TallerMadrid;
 
 import java.util.Scanner;
 import java.lang.Math;

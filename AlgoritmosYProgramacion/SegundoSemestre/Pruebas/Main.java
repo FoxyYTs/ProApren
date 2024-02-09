@@ -1,4 +1,4 @@
-package TrabajosDeClase.Pruebas;
+package AlgoritmosYProgramacion.SegundoSemestre.Pruebas;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package TrabajosDeClase.listasligadascirculares;
+package AlgoritmosYProgramacion.SegundoSemestre.listasligadascirculares;
 
 public class Main {
     public static void main(String[] args) {

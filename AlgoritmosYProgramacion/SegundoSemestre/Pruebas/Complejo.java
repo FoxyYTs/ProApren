@@ -1,4 +1,4 @@
-package TrabajosDeClase.Pruebas;
+package AlgoritmosYProgramacion.SegundoSemestre.Pruebas;
 
 public class Complejo {
     private double real;

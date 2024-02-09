@@ -1,4 +1,4 @@
-package TrabajosDeClase.TallerMadrid;
+package AlgoritmosYProgramacion.SegundoSemestre.TallerMadrid;
 
 public class Complejo2 {
     private double real;

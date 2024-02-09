@@ -1,4 +1,4 @@
-package TrabajosDeClase.listas;
+package AlgoritmosYProgramacion.SegundoSemestre.listas;
 
 import java.util.*;
 public class eje1 {

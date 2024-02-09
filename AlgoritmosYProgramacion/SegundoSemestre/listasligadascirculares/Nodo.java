@@ -1,4 +1,4 @@
-package TrabajosDeClase.listasligadascirculares;
+package AlgoritmosYProgramacion.SegundoSemestre.listasligadascirculares;
 
 public class Nodo {
     public String dato;

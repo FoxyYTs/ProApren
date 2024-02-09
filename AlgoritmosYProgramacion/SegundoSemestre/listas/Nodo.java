@@ -1,4 +1,4 @@
-package TrabajosDeClase.listas;
+package AlgoritmosYProgramacion.SegundoSemestre.listas;
 
 public class Nodo {
     public int dato;

@@ -1,4 +1,4 @@
-package TrabajosDeClase.listas;
+package AlgoritmosYProgramacion.SegundoSemestre.listas;
 
 public class ListasLigadas {
     private Nodo cabeza;

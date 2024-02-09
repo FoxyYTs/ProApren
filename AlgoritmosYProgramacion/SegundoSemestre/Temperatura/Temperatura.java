@@ -1,4 +1,4 @@
-package TrabajosDeClase.Temperatura;
+package AlgoritmosYProgramacion.SegundoSemestre.Temperatura;
 
 public class Temperatura {
 

@@ -1,4 +1,4 @@
-package TrabajosDeClase.Temperatura;
+package AlgoritmosYProgramacion.SegundoSemestre.Temperatura;
 import java.util.Scanner;
 
 public class Main {

@@ -1,4 +1,4 @@
-package TrabajosDeClase.listasligadasdobles;
+package AlgoritmosYProgramacion.SegundoSemestre.listasligadasdobles;
 
 public class Nodo {
     public String dato;

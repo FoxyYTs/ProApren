@@ -1,4 +1,4 @@
-package TrabajosDeClase.Calculadora;
+package AlgoritmosYProgramacion.SegundoSemestre.Calculadora;
 
 public class Calculadora {
     public int sumar(int a, int b){

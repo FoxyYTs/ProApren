@@ -1,4 +1,4 @@
-package TrabajosDeClase.listas;
+package AlgoritmosYProgramacion.SegundoSemestre.listas;
 
 public class Pedro {
     public static void main(String[] args) {

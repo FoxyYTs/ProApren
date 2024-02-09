@@ -1,4 +1,4 @@
-package TrabajosDeClase.listasligadasdobles;
+package AlgoritmosYProgramacion.SegundoSemestre.listasligadasdobles;
 
 public class Main {
     public static void main(String[] args) {

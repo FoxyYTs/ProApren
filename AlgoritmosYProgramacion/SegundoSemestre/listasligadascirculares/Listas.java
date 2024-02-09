@@ -1,4 +1,4 @@
-package TrabajosDeClase.listasligadascirculares;
+package AlgoritmosYProgramacion.SegundoSemestre.listasligadascirculares;
 
 public class Listas {
     private static Nodo cabeza;
