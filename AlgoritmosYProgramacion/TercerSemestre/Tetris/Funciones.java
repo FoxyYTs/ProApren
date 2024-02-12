@@ -379,7 +379,7 @@ public class Funciones extends JPanel implements ActionListener {
 
     private int readTB() {
         try {
-            BufferedReader input = new BufferedReader(new FileReader("Tetris.score"));
+            BufferedReader input = new BufferedReader(new FileReader("./AlgoritmosYProgramacion/TercerSemestre/Tetris/Tetris.txt"));
             String tbMaxScore = input.readLine();
             input.close();
             return Integer.parseInt(tbMaxScore);
@@ -392,7 +392,7 @@ public class Funciones extends JPanel implements ActionListener {
 
     private void writeTB(int tbScore) {
         try {
-            File UIFile = new File("Tetris.score");
+            File UIFile = new File("./AlgoritmosYProgramacion/TercerSemestre/Tetris/Tetris.txt");
             if (!UIFile.exists()) {
                 UIFile.createNewFile();
             }
