@@ -2,17 +2,18 @@ package AlgoritmosYProgramacion.CuartoSemestre.PrimerTrabajo;
 
 public class Estudiante {
     private String nombre;
+    private String Apellido;
     private float[] notas = new float[5];
     private float promedio;
     Estudiante next;
 
-    public Estudiante(){}
-    public Estudiante(String nombre, float[] notas, float promedio, Estudiante next){
-        this.nombre = null;
+    public Estudiante(){
+        this.nombre = "asd";
+        this.Apellido = null;
         this.notas = null;
-        this.promedio = (Float) null;
-        this.next = null;
+        this.promedio = 0;
     }
+
 
 
     public String getNombre(){
@@ -21,6 +22,14 @@ public class Estudiante {
 
     public void setNombre(String nombre){
         this.nombre = nombre;
+    }
+
+    public String getApellido(){
+        return Apellido;
+    }
+
+    public void setApellido(String Apellido){
+        this.Apellido = Apellido;
     }
 
     public float[] getNotas(){
