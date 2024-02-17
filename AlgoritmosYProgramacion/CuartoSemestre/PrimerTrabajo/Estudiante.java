@@ -3,7 +3,7 @@ package AlgoritmosYProgramacion.CuartoSemestre.PrimerTrabajo;
 public class Estudiante {
     private String nombre;
     private String Apellido;
-    private float[] notas = new float[5];
+    private float[] notas = {0,0,0,0,0};
     private float promedio;
     Estudiante next;
 

@@ -1,1 +1,1 @@
-Ana Maria,Gomez Soto,5.0,4.9,4.8,4.7,4.6-Nombre2,Apellido2,4.5,4.4,4.3,4.2,4.1
+Ana Maria,Gomez Soto,5.0,4.9,4.8,4.7,4.6-Nombre2,Apellido2,4.5,4.4,4.3,4.2,4.1-Nombre3,Apellido3,0,0,0,0,0-Nombre4,Apellido4,5,5,5,5,5

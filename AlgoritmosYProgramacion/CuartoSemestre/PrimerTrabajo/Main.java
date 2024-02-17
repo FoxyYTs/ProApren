@@ -1,72 +1,60 @@
 package AlgoritmosYProgramacion.CuartoSemestre.PrimerTrabajo;
-
-import java.io.*;
+import java.util.Scanner;
 
 public class Main {
-    private static Estudiante estudiante;
-
     public static void main(String[] args) {
-        String[] studen = readTB().split("-");
+        Scanner leer = new Scanner(System.in);
+        Lista list = new Lista();
         float[] notas = new float[5];
-        for (int x = 0; x < studen.length; x++) {
-            String[] parts = studen[x].split(",");
-            for (int i = 6; i < parts.length; i++) {
+        int opcion = 0;
+        boolean seguir = true;
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println("Cargando los estudiantes del Archivo");
+        leer.nextLine();
+        list.fillFile();
+        while (seguir) {
+            list.ordenar();
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println("MENU\n1) Ingresar estudiante\n2) Mostrar estudiante\n3) Borrar estudiante\n4) Cerrar");
+            opcion = Integer.parseInt(leer.nextLine());
+            if (opcion == 1) {
+                System.out.println("Ingresando Estudiantes");
                 Estudiante nuevo = new Estudiante();
-                nuevo.setNombre(parts[i-6]);
-                nuevo.setApellido(parts[i-5]);
-                notas[0] = Float.parseFloat(parts[i-4]);
-                notas[1] = Float.parseFloat(parts[i-3]);
-                notas[2] = Float.parseFloat(parts[i-2]);
-                notas[3] = Float.parseFloat(parts[i-1]);
-                notas[4] = Float.parseFloat(parts[i]);
+                System.out.println("Ingresa el nombre");
+                nuevo.setNombre(leer.nextLine());
+                System.out.println("Ingresa el Apellido");
+                nuevo.setApellido(leer.nextLine());
+                for (int i = 0; i < 5; i++) {
+                    System.out.println("Ingresa la nota "+(i+1));
+                    notas[i] = Float.parseFloat(leer.nextLine());
+                }
                 nuevo.setNotas(notas);
-    
-                System.out.println(nuevo.getNombre());
-                System.out.println(nuevo.getApellido());
-                for (int j = 0; j < 5; j++) {
-                    System.out.println(nuevo.getNotas()[j]);
+                nuevo.setPromedio((notas[0]+notas[1]+notas[2]+notas[3]+notas[4])/5);
+                list.insert(nuevo);
+            } else if (opcion == 2) {
+                System.out.print("\033[H\033[2J");
+                System.out.println("que estudiantes quieres mostrar?\n1) Los mejores \n2) Todos");
+                opcion = Integer.parseInt(leer.nextLine());
+                if (opcion == 1) {
+                    list.mostrarprom();
+                } else if (opcion == 2){
+                    list.mostrar();
+                } else {
+                    System.out.println("Opcion no valida");
                 }
+                leer.nextLine();
+            } else if (opcion == 3){
+                System.out.println("Borrando estudiantes con promedios menores a 2");
+                list.borrar();
+                leer.nextLine();
+            } else if (opcion == 4){
 
-            }
-            if (cabeza == null) {
-                cabeza = nuevo;
+                seguir = false;
             } else {
-                Nodo actual = cabeza;
-                while(actual.siguiente != null){
-                    actual = actual.siguiente;
-                }
-                actual.siguiente = nuevo;
+                System.out.println("Opcion no valida");
             }
-        }
-
-        
-        
-    }
-    private static String readFile() {
-        try {
-            BufferedReader input = new BufferedReader(new FileReader("./AlgoritmosYProgramacion/CuartoSemestre/PrimerTrabajo/Estudiantes.txt"));
-            String tbMaxScore = input.readLine();
-            input.close();
-            return tbMaxScore;
-        } catch (IOException e) {
-            return null;
-        } catch (NumberFormatException e) {
-            return null;
-        }
-    }
-
-    private static void writeTB(int tbScore) {
-        try {
-            File UIFile = new File("./AlgoritmosYProgramacion/CuartoSemestre/PrimerTrabajo/Tetris.txt   ");
-            if (!UIFile.exists()) {
-                UIFile.createNewFile();
-            }
-            FileWriter filewriter = new FileWriter(UIFile.getAbsoluteFile());
-            BufferedWriter outputStream = new BufferedWriter(filewriter);
-            outputStream.write(String.valueOf(tbScore));
-            outputStream.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
         }
     }
 }
