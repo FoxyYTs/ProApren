@@ -1,0 +1,3 @@
+Insertar la cadena y dividela en caracteres, pasarlos por una condicional para determinar el tipo de dato que sea, si es un parentecis de apertura que cree un nodo tipo SubLista
+para colocarle la cabeza de la nueva lista y si encuentra una mayuscula haga el mismo proceso de crear un nodo SubLista, despues de eso buscar la nueva lista que se incluira 
+remplazando la letra mayuscula

@@ -5,6 +5,7 @@ public class Main {
     static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) {
         Balanceador bal = new Balanceador();
+        ColaG colas = new ColaG();
         System.out.println("Ingresa una cadena");
         String cadena = leer.nextLine();
         if (!cadena.equals("")) {
@@ -12,5 +13,8 @@ public class Main {
         }else{
             System.out.println("Esa cosa esta vacia");
         }
+        
+        colas.head = null;
     }
 }
+  
