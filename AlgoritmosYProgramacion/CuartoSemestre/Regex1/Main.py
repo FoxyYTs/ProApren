@@ -1,7 +1,7 @@
 import re
 
 def es_correo_valido(correo):
-  patron = r'^[a-z]+[_-]+[a-z]+[0-9]{5}+@elpoli.edu.co$'
+  patron = r'^[a-zA-Z0-9_.+-]++@elpoli.edu.co$'
 
   regex = re.compile(patron)
 
@@ -31,24 +31,17 @@ def es_contraseña_valida(contraseña):
 
   return match is not None
 
-contraseña1 = "contraseña"
-contraseña2 = "Contraseña"
-contraseña3 = "Contraseña1234"
+contraseñas = ["contraseña1234", "contraseña", "Contraseña1234", "contraseña123456789"]
 
-numero1 = "604 2998772"
-numero2 = "3713777"
-numero3 = "2998772"
+numeros = ["604 2998772", "3022173922", "2998772", "604299877"]
 
-correo1 = "juan.perez@gmail.com"
-correo2 = "jose_daza82222@elpoli.edu.co"
+correos = ["juan.perez@gmailcom", "jose_daza82222@elpoli.edu.co", "luzjaramillo@elpoli.edu.co", "labintegradorio@elpoli.edu.co"]
 
-print(f"{contraseña1} es una contraseña válida: {es_contraseña_valida(contraseña1)}")
-print(f"{contraseña2} es una contraseña válida: {es_contraseña_valida(contraseña2)}")
-print(f"{contraseña3} es una contraseña valida: {es_contraseña_valida(contraseña3)}")
-
-print(f"{numero1} es un teléfono fijo de Colombia: {es_telefono_fijo_colombia(numero1)}")
-print(f"{numero2} es un teléfono fijo de Colombia: {es_telefono_fijo_colombia(numero2)}")
-print(f"{numero3} es un teléfono fijo de Colombia: {es_telefono_fijo_colombia(numero3)}")
-
-print(f"{correo1} es un correo válido: {es_correo_valido(correo1)}")
-print(f"{correo2} es un correo válido: {es_correo_valido(correo2)}")
+for contraseña in contraseñas:
+  print(f"{contraseña} es una contraseña válida: {es_contraseña_valida(contraseña)}\n")
+print("\n")
+for numero in numeros:
+  print(f"{numero} es un teléfono fijo de Colombia: {es_telefono_fijo_colombia(numero)}\n")
+print("\n")
+for correo in correos:
+  print(f"{correo} es un correo válido: {es_correo_valido(correo)}\n")
