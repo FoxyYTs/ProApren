@@ -8,21 +8,16 @@ public class Main {
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
-        for (int i = 1; i <= 10; i+=2) {
-            conjunto1.insertar("conjunto1 " + i);
+        for (int i = 0; i <= 10; i+=1) {
+            conjunto1.insertar(" "+i);
         }
-        conjunto2.insertar("asd");
-        for (int i = 0; i <= 10; i+=2) {
-            conjunto2.insertar("conjunto2 " + i);
+        for (int i = 5; i <= 15; i+=1) {
+            conjunto2.insertar(" " + i);
         }
-
-        conjunto1.pertenece("hola7");
-
-        conjunto1.pertenece("hola8");
-
-        conjunto2.pertenece("hola7");
-
-        conjunto2.pertenece("hola8");
+        if (Conjunto.pertenece(conjunto1.getHead(), " 1") == null) {
+            System.out.println("No pertenece");
+        }else{
+            System.out.println("Pertenece");}
         
         System.out.println("Conjunto 1");
         conjunto1.mostrar();
@@ -30,30 +25,10 @@ public class Main {
         System.out.println("Conjunto 2");
         conjunto2.mostrar();
 
-        union(conjunto1, conjunto2);
-
-        conjunto2.mostrar();
-
+        Conjunto.union(conjunto1, conjunto2);
+        Conjunto.diferenciaSimetrica(conjunto1, conjunto2);
         
     }
 
-    public static void union(Conjunto set1, Conjunto set2){
-        Nodo pointer1 = set1.getHead();
-        while (pointer1 != null){
-            int x = 0;
-            Nodo pointer2 = set2.getHead();
-            while (pointer2 != null){
-                if (pointer1.getDato().equals(pointer2.getDato())){
-                    x++;
-                }
-                System.out.println(x);
-                System.out.println(pointer2.getDato());
-                pointer2 = pointer2.getNext();
-            }
-            if (x==0){
-                set2.insertar(pointer1.getDato());
-            }
-            pointer1 = pointer1.getNext();
-        }
-    }
+    
 }
