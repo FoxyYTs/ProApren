@@ -3,6 +3,7 @@ package AlgoritmosYProgramacion.CuartoSemestre.Conjuntos1;
 public class Conjunto {
     private Nodo head;
     private Nodo tail;
+    private int cant = 0;
 
     public Conjunto(){
         this.head = null;
@@ -13,7 +14,8 @@ public class Conjunto {
         return head;
     }
 
-    public void insertar(String dato){
+    public void insertar(int dato){
+        cant++;
         Nodo nuevo = new Nodo(dato);
         if (head == null){
             head = nuevo;
@@ -24,10 +26,10 @@ public class Conjunto {
         }
     }
 
-    public static Nodo pertenece(Nodo head,String dato){
+    public static Nodo pertenece(Nodo head,int dato){
         Nodo pointer = head;
         while (pointer != null){
-            if (pointer.getDato().equals(dato)){
+            if (pointer.getDato()==dato){
                 return pointer;
             }
             pointer = pointer.getNext();
@@ -72,8 +74,6 @@ public class Conjunto {
         return conjunto;
     }
 
-    public void difSimetrica(){
-    }
 
     public static Conjunto diferenciaSimetrica(Conjunto lista1, Conjunto lista2) {
         Conjunto diferencia = new Conjunto();
@@ -98,5 +98,24 @@ public class Conjunto {
         System.out.println("Diferencia simetrica");
         diferencia.mostrar();
         return diferencia;
+    }
+
+    public void ordenarMayorMenor() {
+        Nodo pointer = head;
+        tail = head;
+        Nodo temp = null;
+        int intentos = 0;
+        while (pointer.getNext() != null && intentos < cant){
+            if (pointer.getNext().getDato() > head.getDato()) {
+                temp = pointer.getNext();
+                pointer.setNext(pointer.getNext().getNext());
+                temp.setNext(head);
+                head = temp;
+                intentos = 0;
+                pointer = head;
+            }
+            pointer = pointer.getNext();
+            intentos++;
+        }
     }
 }

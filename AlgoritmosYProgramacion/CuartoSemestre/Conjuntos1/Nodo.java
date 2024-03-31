@@ -1,21 +1,21 @@
 package AlgoritmosYProgramacion.CuartoSemestre.Conjuntos1;
 
 public class Nodo {
-    private String dato;
+    private int dato;
     private Nodo next;
     private Nodo prev;
 
-    public Nodo(String dato){
+    public Nodo(int dato){
         this.dato = dato;
         this.next = null;
         this.prev = null;
     }
 
-    public String getDato() {
+    public int getDato() {
         return dato;
     }
 
-    public void setDato(String dato) {
+    public void setDato(int dato) {
         this.dato = dato;
     }
 

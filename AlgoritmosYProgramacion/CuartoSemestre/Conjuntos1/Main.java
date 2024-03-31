@@ -5,16 +5,13 @@ public class Main {
         Conjunto conjunto1 = new Conjunto();
         Conjunto conjunto2 = new Conjunto();
 
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-
         for (int i = 0; i <= 10; i+=1) {
-            conjunto1.insertar(" "+i);
+            conjunto1.insertar(i);
         }
         for (int i = 5; i <= 15; i+=1) {
-            conjunto2.insertar(" " + i);
+            conjunto2.insertar(i);
         }
-        if (Conjunto.pertenece(conjunto1.getHead(), " 1") == null) {
+        if (Conjunto.pertenece(conjunto1.getHead(), 1) == null) {
             System.out.println("No pertenece");
         }else{
             System.out.println("Pertenece");}
@@ -26,8 +23,10 @@ public class Main {
         conjunto2.mostrar();
 
         Conjunto.union(conjunto1, conjunto2);
-        Conjunto.diferenciaSimetrica(conjunto1, conjunto2);
-        
+        Conjunto.diferenciaSimetrica(conjunto1, conjunto2); 
+
+        conjunto2.ordenarMayorMenor();
+        conjunto2.mostrar();
     }
 
     
