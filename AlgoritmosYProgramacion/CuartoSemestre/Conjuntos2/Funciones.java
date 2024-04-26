@@ -29,6 +29,7 @@ public class Funciones {
             if (encontrado == null) {
                 conjunto.insert(pointer2);
             }
+
             pointer2 = pointer2.getNext();
         }
         System.out.println("Union");
