@@ -13,10 +13,10 @@ public class Main {
         int fila = 1, columna = 1, piso = (int) (Math.floor(Math.random()*2+1));;
 
 
-        while (!opcion.equals("5")) {
+        while (!opcion.equals("4")) {
             System.out.flush();
             System.out.print("\033[H\033[2J");
-            System.out.println("Bienvenido Al\n\tExpreso-Poli\n1) Comprar Tiquete\n2) Mostrar Ocupacion B1\n3) Mostrar Ocupacion B2\n4) Buscar Recerva\n5) Cerrar");
+            System.out.println("Bienvenido Al\n\tExpreso-Poli\n1) Comprar Tiquete\n2) Mostrar Ocupacion B1\n3) Mostrar Ocupacion B2\n4) Cerrar");
             opcion = leer.nextLine();
             if (opcion.equals("1")) {
                 System.out.println("Selecciona el Bus\n1) Bus Basico\n2) Bus 2 pisos");
@@ -91,7 +91,6 @@ public class Main {
                 fun.mapaB2();
                 leer.nextLine();    
             } else if (opcion.equals("4")){
-            } else if (opcion.equals("5")){
                 System.out.println("Cerrando...");
                 leer.nextLine();
             }

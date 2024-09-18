@@ -1,14 +1,7 @@
-import pygame
-import numpy as np
-
-pygame.init()
-
-width, height = 1000, 1000
-screen = pygame.display.set_mode((height, width))
-
-bg = 255,0,0
-
-screen.fill(bg)
-
-while true:
-    pass
+operacion = int(input("1) Sumar\n2) Restar\nIngresa Opcion: "))
+x = float(input("Ingresa un numero"))
+y = float(input("Ingresa otro numero"))
+if operacion == 1:
+    print("La Suma es: ", x + y)
+elif operacion == 2:
+    print("La Resta es: ", x - y)
