@@ -64,42 +64,48 @@ def huffman_decoding(encoded_data, huffman_code):
                 current_code = ""
     return decoded_data
 
-def seleccionar_archivo():
-    archivo_seleccionado = filedialog.askopenfilename()
+def seleccionar_archivo(tipo):
+    try:
+        archivo_seleccionado = filedialog.askopenfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
 
-    if archivo_seleccionado:
-        with open(archivo_seleccionado, 'r') as archivo:
-            return archivo.read()
-        
-    else:
-        messagebox.showerror("Error", "No se seleccionó ningun archivo.")
+        if archivo_seleccionado:
+            if tipo == "comprimir":
+                with open(archivo_seleccionado, 'r') as archivo:
+                    return archivo.read()
+
+            elif tipo == "descomprimir":
+                with open(archivo_seleccionado, 'r') as archivo:
+        # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
+                    primera_linea = archivo.readline().strip()
+                    diccionario = eval(primera_linea)  # ¡Cuidado con eval! Solo utilízalo si confías en el formato del archivo.
+
+                    # Leemos la segunda línea y la asignamos a una cadena
+                    segunda_linea = archivo.readline().strip()
+                return diccionario, segunda_linea
+        else:
+            messagebox.showerror("Error", "No se seleccionó ningún archivo.")
+    except FileNotFoundError:
+        messagebox.showerror("Error", "El archivo seleccionado no existe o no se puede abrir.")
+    except Exception as e:
+        messagebox.showerror("Error", f"Ocurrió un error inesperado: {str(e)}")
 
 def guardar_archivo(contenido):
     # Abrir un diálogo para seleccionar una carpeta
-    carpeta_seleccionada = filedialog.askdirectory()
+    archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
 
-    if carpeta_seleccionada:
-        # Pedir al usuario el nombre del archivo
-        nombre_archivo = simpledialog.askstring("Nombre de archivo", "Ingrese el nombre del archivo (sin extensión):")
-
-        # Agregar la extensión si el usuario no la incluyó (por defecto .txt)
-        if not nombre_archivo.endswith(".txt"):
-            nombre_archivo += ".txt"
-
-        ruta_completa = f"{carpeta_seleccionada}/{nombre_archivo}"
-
+    if archivo:
         # Guardar el archivo
-        with open(ruta_completa, "w") as archivo:
+        with open(archivo, "w") as archivo:
             archivo.write(contenido)
 
-        messagebox.showinfo("Información", f"Archivo guardado en: {ruta_completa}")
+        messagebox.showinfo("Información", f"Archivo guardado en: {archivo}")
     else:
         messagebox.showerror("Error", "No se seleccionó ninguna carpeta.")
 
 def main():
 
     def comprimir():
-        data = seleccionar_archivo()
+        data = seleccionar_archivo("comprimir")
 
         tamano_original = len(data.encode('utf-8'))
         encoded_data, huffman_code = huffman_encoding(data)
@@ -115,8 +121,9 @@ def main():
         ventana.destroy()
 
     def descomprimir():
-        # Aquí implementarías la lógica para descomprimir
-        print("Descomprimiendo...")
+        huffman_code, encoded_data = seleccionar_archivo("descomprimir")
+        decode_data= huffman_decoding(encoded_data, huffman_code)
+        guardar_archivo(decode_data)
 
     ventana = tk.Tk()
     ventana.title("Comprimir/Descomprimir")
