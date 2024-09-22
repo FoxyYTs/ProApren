@@ -14,6 +14,7 @@ def seleccionar_archivo():
 
     archivo_seleccionado = filedialog.askopenfilename()
 
+    print("Archivo seleccionado:", archivo_seleccionado)
     if archivo_seleccionado:
         with open(archivo_seleccionado, 'r') as archivo:
             return archivo.read()
@@ -51,4 +52,5 @@ def guardar_archivo(contenido):
     else:
         messagebox.showerror("Error", "No se seleccionó ninguna carpeta.")
 
-guardar_archivo("Esto se compone" + seleccionar_archivo())
+print(seleccionar_archivo())
+#guardar_archivo("Esto se compone" + seleccionar_archivo())
