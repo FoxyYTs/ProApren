@@ -1,3 +1,22 @@
+
+//#define ESPALEXA_DEBUG            //Activa depuraccion
+
+#if defined(ESP32)
+#include <WiFi.h>
+#else
+#include <ESP8266WiFiMulti.h>
+#include <ESP8266WiFi.h>
+
+#endif
+#include <Espalexa.h>
+
+
+const uint32_t connectTimeoutMs = 50;
+const char* ssid = " ";
+const char* password = "1022002153";
+
+ESP8266WiFiMulti wifiMulti;
+Espalexa miAlexa;
 #define D0 16
 #define D1 05
 #define D2 04
@@ -5,18 +24,7 @@
 #define D4 02
 #define D5 14
 #define D6 12
-#define time 1000
 
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(D0, OUTPUT);
-  pinMode(D1, OUTPUT);
-  pinMode(D2, OUTPUT);
-  pinMode(D3, OUTPUT);
-  pinMode(D4, OUTPUT);
-  pinMode(D5, OUTPUT);
-  pinMode(D6, OUTPUT);
-}
 void numero0() {
   digitalWrite(D0, HIGH);
   digitalWrite(D1, HIGH);
@@ -104,65 +112,123 @@ void apagar() {
   digitalWrite(D6, LOW);
 }
 
-void test() {
-  digitalWrite(D0, HIGH);
-  delay(time);    
-  digitalWrite(D1, HIGH);
-  delay(time);
-  digitalWrite(D2, HIGH);
-  delay(time);    
-  digitalWrite(D3, HIGH);
-  delay(time);
-  digitalWrite(D4, HIGH);
-  delay(time);
-  digitalWrite(D5, HIGH);
-  delay(time);    
-  digitalWrite(D6, HIGH);
-  delay(time);
-  digitalWrite(D7, HIGH);
-  delay(time);    
-  digitalWrite(D8, HIGH);
-  delay(time);
-  digitalWrite(D0, LOW);
-  delay(time);   
-  digitalWrite(D1, LOW);
-  delay(time);
-  digitalWrite(D2, LOW);
-  delay(time);   
-  digitalWrite(D3, LOW);
-  delay(time);
-  digitalWrite(D4, LOW);
-  delay(time);
-  digitalWrite(D5, LOW);
-  delay(time);   
-  digitalWrite(D6, LOW);
-  delay(time);
-  digitalWrite(D7, LOW);
-  delay(time);   
-  digitalWrite(D8, LOW);
-  delay(time);
+void cambiarLampara(uint8_t brillo) {
+  Serial.print("Cambiando Lampara a: ");
+  float x = (float)brillo/255;
+  Serial.println(x);
+
+  if (x > 0 && x < 0.1)
+  {
+    Serial.print("Numero 0, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero0();
+  } 
+  else if (x >= 0.1 && x < 0.2)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero1();
+  }
+  else if (x >= 0.2 && x < 0.3)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero2();
+  }
+  else if (x >= 0.3 && x < 0.4)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero3();
+  }
+  else if (x >= 0.4 && x < 0.5)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero4();
+  }
+  else if (x >= 0.5 && x < 0.6)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero5();
+  }
+  else if (x >= 0.6 && x < 0.7)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero6();
+  }
+  else if (x >= 0.7 && x < 0.8)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero7();
+  }
+  else if (x >= 0.8 && x < 0.9)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero8();
+  }
+  else if (x >= 0.9 && x <= 1)
+  {
+    Serial.print("Encendido, brillo ");
+    Serial.println(brillo);
+    apagar();
+    numero9();
+  }
+  else
+  {
+    Serial.println("Apagado");
+    apagar();
+  }
 }
 
-// the loop function runs over and over again forever
+void setup() {
+  WiFi.persistent(false);
+  Serial.begin(115200);
+  pinMode(D0, OUTPUT);
+  pinMode(D1, OUTPUT);
+  pinMode(D2, OUTPUT);
+  pinMode(D3, OUTPUT);
+  pinMode(D4, OUTPUT);
+  pinMode(D5, OUTPUT);
+  pinMode(D6, OUTPUT);
+  apagar();
+  WiFi.mode(WIFI_STA);
+  wifiMulti.addAP("DAZA", "1022002153");
+  wifiMulti.addAP("HONOR", "superclave");
+  wifiMulti.addAP("TP-LINK_0C96", "LabIntegrado101");
+  Serial.println("");
+  Serial.println("Iniciar sistema");
+
+  while (wifiMulti.run() != WL_CONNECTED) {
+    Serial.print(".");
+  }
+
+  Serial.println("");
+  Serial.print("Conectado a ");
+  Serial.println(WiFi.SSID());
+  Serial.print("IP: ");
+  Serial.println(WiFi.localIP());
+
+  miAlexa.addDevice("foco", cambiarLampara);
+  miAlexa.begin();
+
+}
+
 void loop() {
-  numero0();
-  apagar();
-  numero1();
-  apagar();
-  numero2();
-  apagar();
-  numero3();
-  apagar();
-  numero4();
-  apagar();
-  numero5();
-  apagar();
-  numero6();
-  apagar();
-  numero7();
-  apagar();
-  numero8();
-  apagar();
-  numero9();
-  apagar();
-}  
+  // Alexa, busca dispositivos
+  miAlexa.loop();
+  delay(1);
+}

@@ -5,11 +5,12 @@
 #include <WiFi.h>
 #else
 #include <ESP8266WiFi.h>
+
 #endif
 #include <Espalexa.h>
 
-const char* ssid = "DAZA";
-const char* password = "1022002153";
+const char* ssid = "TP-LINK_0C96";
+const char* password = "LabIntegrado101";
 
 Espalexa miAlexa;
 #define D0 16
