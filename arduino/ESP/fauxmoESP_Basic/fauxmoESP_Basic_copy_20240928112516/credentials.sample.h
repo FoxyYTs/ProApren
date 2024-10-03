@@ -1,0 +1,2 @@
+#define WIFI_SSID "DAZA"
+#define WIFI_PASS "1022002153"
