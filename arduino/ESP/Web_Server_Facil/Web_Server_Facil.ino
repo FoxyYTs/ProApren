@@ -80,6 +80,8 @@ void loop() {
               numero0();
             } else if (Estado==1){
               apagar();
+              Serial.println("Cliente Desconectado");
+              Serial.println("Cliente Desconectado");
               numero1();
             } else if (Estado==2){
               apagar();
@@ -105,8 +107,12 @@ void loop() {
             } else if (Estado==9){
               apagar();
               numero9();
+              Serial.println("Cliente Desconectado");
+              Serial.println("Cliente Desconectado");
+              Serial.println("Cliente Desconectado");
             } else if (Estado==10){
               apagar();
+              Serial.println("Cliente ASDASDASDASD");
             }
             ResponderCliente(cliente);
             break;
@@ -171,13 +177,14 @@ void ResponderCliente(WiFiClient& cliente) {
   cliente.print("<br>Estado del led: ");
   cliente.print(Estado);
   cliente.print("<br>Cambia el Led: <br>");
-  for(int i = 0; i <=10; i++){
+  for(int i = 0; i <10; i++){
     cliente.print("<br><a href = '/");
     cliente.print(i);
     cliente.print("'>BOTON");
     cliente.print(i);
     cliente.print("</a><br>");
   }
+  cliente.print("<br><a href = '/20'>BOTON</a><br>");
   cliente.print("</html>");
 }
 
