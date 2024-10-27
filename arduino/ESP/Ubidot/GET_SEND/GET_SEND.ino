@@ -9,6 +9,8 @@
 #define TOKEN "BBUS-bXgmuWeuji822RqGKmFwSHXva4h8hO" // Your Ubidots TOKEN
 #define WIFINAME "DAZA" //Your SSID
 #define WIFIPASS "1022002153" // Your Wifi Pass
+#define DEVICE_LABEL  "elaparato"  // Put here your Ubidots device label
+#define D0 16
 
 Ubidots client(TOKEN);
 
@@ -17,13 +19,12 @@ Ubidots client(TOKEN);
  ****************************************/
 
 void callback(char* topic, byte* payload, unsigned int length) {
-  //Serial.print("Message arrived [");
-  //Serial.print(topic);
-  //Serial.print("] ");
-  for (int i=0;i<length;i++) {
-    Serial.print((char)payload[i]);
+  Serial.println((char)payload[0]);
+  if((char)payload[0] == '1'){
+    digitalWrite(D0, HIGH);
+  }else{
+    digitalWrite(D0, LOW);
   }
-  Serial.println();
 }
 
 /****************************************
@@ -31,19 +32,20 @@ void callback(char* topic, byte* payload, unsigned int length) {
  ****************************************/
 
 void setup() {
-  // put your setup code here, to run once:
-  //client.ubidotsSetBroker("industrial.api.ubidots.com"); // Sets the broker properly for the business account
-  //client.setDebug(true); // Pass a true or false bool value to activate debug messages
+  pinMode(D0, OUTPUT);
   Serial.begin(115200);
   client.wifiConnection(WIFINAME, WIFIPASS);
   client.begin(callback);
+  client.ubidotsSubscribe(DEVICE_LABEL, "led");
   }
 
 void loop() {
   // put your main code here, to run repeatedly:
   if(!client.connected()){
-      client.reconnect();
-      }
+    client.reconnect();
+    client.ubidotsSubscribe(DEVICE_LABEL, "led");
+    Serial.print("Que chulo");
+  }
   
   float value1 = analogRead(0);
   //float value2 = analogRead(2)
