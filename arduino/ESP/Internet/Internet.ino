@@ -4,8 +4,8 @@
 
 #define ledWifi D4
 
-String ssid     = "DAZA";
-String password = "1022002153";
+String ssid     = "HONOR";
+String password = "superclave32";
 
 Ticker tic_WifiLed;
 

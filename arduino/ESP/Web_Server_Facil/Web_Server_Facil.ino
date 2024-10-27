@@ -44,6 +44,7 @@ void setup() {
   apagar();
 
   wifiMulti.addAP(ssid_1, password_1);
+  wifiMulti.addAP(ssid_2, password_2);
 
   WiFi.mode(WIFI_STA);
   Serial.print("Conectando a Wifi ..");

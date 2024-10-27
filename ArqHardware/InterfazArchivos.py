@@ -1,56 +1,33 @@
-import tkinter as tk
-from tkinter import filedialog
-from tkinter import simpledialog
-from tkinter import messagebox
-from collections import Counter
+from os import strerror
 
-def seleccionar_archivo():
-    """
-    Abre un diálogo de selección de archivos y devuelve la ruta del archivo seleccionado.
-    """
+cadena_a_codificar ="Unas"
+data = bytearray(len(cadena_a_codificar))
 
-    root = tk.Tk()
-    root.withdraw()  # Oculta la ventana principal
+for i in cadena_a_codificar:
+                     
+        data.append(ord(i))
 
-    archivo_seleccionado = filedialog.askopenfilename()
 
-    print("Archivo seleccionado:", archivo_seleccionado)
-    if archivo_seleccionado:
-        with open(archivo_seleccionado, 'r') as archivo:
-            return archivo.read()
+try:
+    binary_file = open('file.bin', 'wb')
+    binary_file.write(data)
+    binary_file.close()
+except IOError as e:
+    print("Se produjo un error de E/S:", strerror(e.errno))
+
+# Ingresa aquí el código que lee los bytes del stream.
+
+data2 = bytearray(len(cadena_a_codificar))
+try:
+    binary_file = open('file.bin', 'rb')
+    binary_file.readinto(data2)
+    binary_file.close()
+
+    for b in data2:
+        print(hex(b), end=' ')
+
+    for b in data2:
+        print(chr(b)+'-', end=' ')
         
-    else:
-        messagebox.showerror("Error", "No se seleccionó ninguño archivo.")
-
-def guardar_archivo(contenido):
-    """
-    Abre un diálogo para seleccionar una carpeta y permite al usuario ingresar el nombre del archivo.
-    """
-
-    # Crear una ventana raíz (oculta)
-    root = tk.Tk()
-    root.withdraw()
-
-    # Abrir un diálogo para seleccionar una carpeta
-    carpeta_seleccionada = filedialog.askdirectory()
-
-    if carpeta_seleccionada:
-        # Pedir al usuario el nombre del archivo
-        nombre_archivo = simpledialog.askstring("Nombre de archivo", "Ingrese el nombre del archivo (sin extensión):")
-
-        # Agregar la extensión si el usuario no la incluyó (por defecto .txt)
-        if not nombre_archivo.endswith(".txt"):
-            nombre_archivo += ".txt"
-
-        ruta_completa = f"{carpeta_seleccionada}/{nombre_archivo}"
-
-        # Guardar el archivo
-        with open(ruta_completa, "w") as archivo:
-            archivo.write(contenido)
-
-        messagebox.showinfo("Información", f"Archivo guardado en: {ruta_completa}")
-    else:
-        messagebox.showerror("Error", "No se seleccionó ninguna carpeta.")
-
-print(seleccionar_archivo())
-#guardar_archivo("Esto se compone" + seleccionar_archivo())
+except IOError as e:
+    print("Se produjo un error de E/S:", strerror(e.errno))
