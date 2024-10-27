@@ -9,8 +9,8 @@
 #include <WiFiClientSecureBearSSL.h>
 
 // Replace with your network credentials
-const char* ssid = "DAZA";
-const char* password = "1022002153";
+const char* ssid = "POLI_WIFI";
+const char* password = "";
 
 void setup() {
   Serial.begin(115200);
@@ -44,7 +44,7 @@ void loop() {
     
     //Initializing an HTTPS communication using the secure client
     Serial.print("[HTTPS] begin...\n");
-    if (https.begin(*client, "https://foxyyts.github.io/ArqHard/esp32_update.php")) {  // HTTPS
+    if (https.begin(*client, "http://10.51.12.158/e4/ArqHard/esp32_update.php")) {  // HTTPS
       Serial.print("[HTTPS] GET...\n");
       // start connection and send HTTP header
       int httpCode = https.GET();
@@ -58,7 +58,7 @@ void loop() {
           Serial.println(payload);
         }
       } else {
-        Serial.printf("[HTTPS] GET... failed, error: %s\n", https.errorToString(httpCode).c_str());
+        Serial.printf("[HTTPS] GET... failed, error: %s\n", https.errorToString(httpCode).c_str(), httpCode);
       }
 
       https.end();
@@ -67,6 +67,6 @@ void loop() {
     }
   }
   Serial.println();
-  Serial.println("Waiting 2min before the next round...");
+  Serial.println("Waiting 10 segundos before the next round...");
   delay(10000);
 }

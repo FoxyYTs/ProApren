@@ -7,8 +7,8 @@
  * Define Constants
  ****************************************/
 #define TOKEN "BBUS-bXgmuWeuji822RqGKmFwSHXva4h8hO" // Your Ubidots TOKEN
-#define WIFINAME "DAZA" //Your SSID
-#define WIFIPASS "1022002153" // Your Wifi Pass
+#define WIFINAME "HONOR" //Your SSID
+#define WIFIPASS "superclave32" // Your Wifi Pass
 
 Ubidots client(TOKEN);
 

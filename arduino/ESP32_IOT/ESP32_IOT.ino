@@ -5,8 +5,8 @@
 
 
 //Add WIFI data
-const char* ssid = "DAZA";              //Add your WIFI network name 
-const char* password =  "1022002153";           //Add WIFI password
+const char* ssid = "TP-LINK_0C96";              //Add your WIFI network name 
+const char* password =  "LabIntegrado101";           //Add WIFI password
 
 
 //Variables used in the code
@@ -18,7 +18,8 @@ int refresh_time = 200;               //Refresh rate of connection to website (r
 
 
 //Inputs/outputs                   //Connect push button on this pin
-int LED = 16;                          //Connect LED on this pin (add 150ohm resistor)
+int button1 = 13;                     //Connect push button on this pin
+int LED = 2;                          //Connect LED on this pin (add 150ohm resistor)
 
 
 //Button press interruption
@@ -30,9 +31,11 @@ void setup() {
   delay(10);
   Serial.begin(115200);                   //Start monitor
   pinMode(LED, OUTPUT);                   //Set pin 2 as OUTPUT
+  pinMode(button1, INPUT_PULLDOWN);       //Set pin 13 as INPUT with pulldown
+  attachInterrupt(button1, isr, RISING);                   //Set pin 2 as OUTPUT
 
   WiFi.begin(ssid, password);             //Start wifi connection
-  Serial.print("Connecting...");
+  Serial.print("\nConnecting...");
   while (WiFi.status() != WL_CONNECTED) { //Check for the connection
     delay(500);
     Serial.print(".");
@@ -73,12 +76,12 @@ void loop() {
         toggle_pressed = false;                         //Also equal this variable back to false 
       }
       else{
-        data_to_send = "check_LED_status=" + LED_id;    //If button wasn't pressed we send text: "check_LED_status"
+        data_to_send = "check_led_status=" + LED_id;    //If button wasn't pressed we send text: "check_LED_status"
       }
       
       //Begin new connection to website       
       Serial.print("[HTTPS] begin...\n");
-      if (https.begin(*client, "https://foxyyts.github.io/ArqHard/esp32_update.php")) {         //Prepare the header
+      if (https.begin(*client, "https://http://10.51.12.158/e4/ArqHard/esp32_update.php")) {         //Prepare the header
         Serial.print("[HTTPS] GET...\n");
         int response_code = https.POST(data_to_send);                                //Send the POST. This will giveg us a response code
       
@@ -86,7 +89,7 @@ void loop() {
         if(response_code > 0){
           Serial.println("HTTP code " + String(response_code));                     //Print return code
     
-          if(response_code == 405){                                                 //If code is 200, we received a good response and we can read the echo data
+          if(response_code == 200){                                                 //If code is 200, we received a good response and we can read the echo data
             String response_body = https.getString();                                //Save the data comming from the website
             Serial.print("Server reply: ");                                         //Print data to the monitor for debug
             Serial.println(response_body);
