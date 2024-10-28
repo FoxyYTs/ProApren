@@ -1,7 +1,6 @@
 import heapq
 from collections import Counter
 import json
-from os import strerror
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import simpledialog
@@ -67,53 +66,41 @@ def huffman_decoding(encoded_data, huffman_code):
 
 def seleccionar_archivo(tipo):
     try:
-        if tipo == "comprimir":
-            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
-            with open(archivo_seleccionado, 'r') as archivo:
-                return archivo.read()
+        archivo_seleccionado = filedialog.askopenfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
 
-        elif tipo == "descomprimir":
-            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".bin", filetypes=[("Archivos Binario", "*.bin")])
-            binary_file = open('archivo_seleccionado', 'rb')
+        if archivo_seleccionado:
+            if tipo == "comprimir":
+                with open(archivo_seleccionado, 'r') as archivo:
+                    return archivo.read()
 
-            # esto lee un objeto bytes, si necesitás que sea mutable, envolvelo con bytearray
-            data2 = binary_file.read()
+            elif tipo == "descomprimir":
+                with open(archivo_seleccionado, 'r') as archivo:
+        # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
+                    primera_linea = archivo.readline().strip()
+                    diccionario = eval(primera_linea)  # ¡Cuidado con eval! Solo utilízalo si confías en el formato del archivo.
 
-            binary_file.close()
-
-            for b in data2:
-                print(chr(b)+'-', end=' ')
+                    # Leemos la segunda línea y la asignamos a una cadena
+                    segunda_linea = archivo.readline().strip()
+                return diccionario, segunda_linea
+        else:
+            messagebox.showerror("Error", "No se seleccionó ningún archivo.")
     except FileNotFoundError:
         messagebox.showerror("Error", "El archivo seleccionado no existe o no se puede abrir.")
     except Exception as e:
         messagebox.showerror("Error", f"Ocurrió un error inesperado: {str(e)}")
 
-def guardar_archivo(contenido, tipo):
+def guardar_archivo(contenido):
     # Abrir un diálogo para seleccionar una carpeta
-    if tipo == "comprimir":
-        archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
+    archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
 
-        if archivo:
-            # Guardar el archivo
-            with open(archivo, "w") as archivo:
-                archivo.write(contenido)
+    if archivo:
+        # Guardar el archivo
+        with open(archivo, "w") as archivo:
+            archivo.write(contenido)
 
-            messagebox.showinfo("Información", f"Archivo guardado en: {archivo}")
-        else:
-            messagebox.showerror("Error", "No se seleccionó ninguna carpeta.")
-    
-    elif tipo == "descomprimir":
-        archivo = filedialog.askopenfilename(defaultextension=".bin", filetypes=[("Archivos Binario", "*.bin")])
-
-        if archivo:
-            binary_file = open(archivo, 'wb')
-
-            # creo un objeto bytes a partir de una cadena utf-8
-            binary_file.write(contenido.encode())
-
-            binary_file.close()
-        else:
-            messagebox.showerror("Error", "No se seleccionó ninguño archivo.")
+        messagebox.showinfo("Información", f"Archivo guardado en: {archivo}")
+    else:
+        messagebox.showerror("Error", "No se seleccionó ninguna carpeta.")
 
 def main():
 
@@ -130,13 +117,13 @@ def main():
         datos = [diccionario_str, encoded_data]
         contenido = "\n".join(datos)
 
-        guardar_archivo(contenido, "comprimir")
+        guardar_archivo(contenido)
         ventana.destroy()
 
     def descomprimir():
         huffman_code, encoded_data = seleccionar_archivo("descomprimir")
         decode_data= huffman_decoding(encoded_data, huffman_code)
-        guardar_archivo(decode_data, "descomprimir")
+        guardar_archivo(decode_data)
 
     ventana = tk.Tk()
     ventana.title("Comprimir/Descomprimir")

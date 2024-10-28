@@ -1,33 +1,12 @@
-from os import strerror
+import pickle
+import struct
 
-cadena_a_codificar ="Unas"
-data = bytearray(len(cadena_a_codificar))
+with open('archivo_binario.bin', 'rb') as f:
+    
 
-for i in cadena_a_codificar:
-                     
-        data.append(ord(i))
+    datos_leidos = f.read()
+    entero_leido = struct.unpack('>I', datos_leidos)[0]
+    cadena_binaria_recuperada = bin(entero_leido)[2:].zfill()  # Ajustar la longitud si es necesario
+    print(cadena_binaria_recuperada)
 
-
-try:
-    binary_file = open('file.bin', 'wb')
-    binary_file.write(data)
-    binary_file.close()
-except IOError as e:
-    print("Se produjo un error de E/S:", strerror(e.errno))
-
-# Ingresa aquí el código que lee los bytes del stream.
-
-data2 = bytearray(len(cadena_a_codificar))
-try:
-    binary_file = open('file.bin', 'rb')
-    binary_file.readinto(data2)
-    binary_file.close()
-
-    for b in data2:
-        print(hex(b), end=' ')
-
-    for b in data2:
-        print(chr(b)+'-', end=' ')
-        
-except IOError as e:
-    print("Se produjo un error de E/S:", strerror(e.errno))
+    
