@@ -66,39 +66,61 @@ def huffman_decoding(encoded_data, huffman_code):
 
 def seleccionar_archivo(tipo):
     try:
-        archivo_seleccionado = filedialog.askopenfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
+        if tipo == "comprimir":
+            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
+            with open(archivo_seleccionado, 'r') as archivo:
+                return archivo.read()
 
-        if archivo_seleccionado:
-            if tipo == "comprimir":
-                with open(archivo_seleccionado, 'r') as archivo:
-                    return archivo.read()
+        elif tipo == "descomprimir":
+            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".daz", filetypes=[("Archivos tipo Daza", "*.daz")])
+            with open(archivo_seleccionado, 'r') as archivo:
+    # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
+                primera_linea = archivo.readline().strip()
+                diccionario = eval(primera_linea)  # ¡Cuidado con eval! Solo utilízalo si confías en el formato del archivo.
 
-            elif tipo == "descomprimir":
-                with open(archivo_seleccionado, 'r') as archivo:
-        # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
-                    primera_linea = archivo.readline().strip()
-                    diccionario = eval(primera_linea)  # ¡Cuidado con eval! Solo utilízalo si confías en el formato del archivo.
-
-                    # Leemos la segunda línea y la asignamos a una cadena
-                    segunda_linea = archivo.readline().strip()
-                return diccionario, segunda_linea
-        else:
-            messagebox.showerror("Error", "No se seleccionó ningún archivo.")
+                # Leemos la segunda línea y la asignamos a una cadena
+                segunda_linea = archivo.readline().strip()
+            return diccionario, segunda_linea
+        
     except FileNotFoundError:
         messagebox.showerror("Error", "El archivo seleccionado no existe o no se puede abrir.")
     except Exception as e:
         messagebox.showerror("Error", f"Ocurrió un error inesperado: {str(e)}")
 
-def guardar_archivo(contenido):
+def guardar_archivo(contenido, tipo):
+    try:
+        if tipo == "comprimir":
+            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
+            with open(archivo_seleccionado, "w") as archivo_seleccionado:
+                archivo_seleccionado.write(contenido)
+
+        elif tipo == "descomprimir":
+            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".daz", filetypes=[("Archivos tipo Daza", "*.daz")])
+            with open(archivo_seleccionado, "w") as archivo_seleccionado:
+                archivo_seleccionado.write(contenido)
+    # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
+                primera_linea = archivo.readline().strip()
+                diccionario = eval(primera_linea)  # ¡Cuidado con eval! Solo utilízalo si confías en el formato del archivo.
+
+                # Leemos la segunda línea y la asignamos a una cadena
+                segunda_linea = archivo.readline().strip()
+            return diccionario, segunda_linea
+        
+    except FileNotFoundError:
+        messagebox.showerror("Error", "El archivo seleccionado no existe o no se puede abrir.")
+    except Exception as e:
+        messagebox.showerror("Error", f"Ocurrió un error inesperado: {str(e)}")
     # Abrir un diálogo para seleccionar una carpeta
     archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
 
-    if archivo:
-        # Guardar el archivo
-        with open(archivo, "w") as archivo:
+    with open(archivo, "w") as archivo:
             archivo.write(contenido)
 
         messagebox.showinfo("Información", f"Archivo guardado en: {archivo}")
+
+    if archivo:
+        # Guardar el archivo
+        
     else:
         messagebox.showerror("Error", "No se seleccionó ninguna carpeta.")
 
@@ -117,13 +139,13 @@ def main():
         datos = [diccionario_str, encoded_data]
         contenido = "\n".join(datos)
 
-        guardar_archivo(contenido)
+        guardar_archivo(contenido, "comprimido")
         ventana.destroy()
 
     def descomprimir():
         huffman_code, encoded_data = seleccionar_archivo("descomprimir")
         decode_data= huffman_decoding(encoded_data, huffman_code)
-        guardar_archivo(decode_data)
+        guardar_archivo(decode_data, "descomprimido")
 
     ventana = tk.Tk()
     ventana.title("Comprimir/Descomprimir")
