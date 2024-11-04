@@ -1,44 +1,37 @@
-import heapq
-from collections import Counter
 import json
-import tkinter as tk
-from tkinter import filedialog
-from tkinter import simpledialog
-from tkinter import messagebox
-from collections import Counter
-
-def seleccionar_archivo():
-    """
-    Abre un diálogo de selección de archivos y devuelve la ruta del archivo seleccionado.
-    """
-
-    archivo_seleccionado = filedialog.askopenfilename()
-
-    print("Archivo seleccionado:", archivo_seleccionado)
-    if archivo_seleccionado:
-        with open(archivo_seleccionado, 'r') as archivo:
-            return archivo.read()
-        
-    else:
-        messagebox.showerror("Error", "No se seleccionó ninguño archivo.")
 
 
-def main():
-    def comprimir():
-        print(seleccionar_archivo())
-    def descomprimir():
-        print("Descomprimiendo...")
+def stringToByte(text):
+    while len(text) % 8 != 0:
+        text += "0"
 
-    ventana = tk.Tk()
-    ventana.title("Comprimir/Descomprimir")
+    bytes = bytearray()
+    for i in range(0, len(text), 8):
+        byte = text[i:i+8]
+        bytes.append(int(byte,2))
 
-    boton_comprimir = tk.Button(ventana, text="Comprimir", command=comprimir)
-    boton_comprimir.pack()
+    print(bytes)
+    return bytes
 
-    boton_descomprimir = tk.Button(ventana, text="Descomprimir", command=descomprimir)
-    boton_descomprimir.pack()
+def byteToString(bytes):
+    text = ""
+    bits = bin(0)
+    for byte in bytes:
+        bits = bin(byte)[2:]
+        bits = bits.zfill(8)
+        text += bits
 
-    ventana.mainloop()
+    print(text)
 
-if __name__ == "__main__":
-    main()
+
+diccionario = {"e": "00", "l": "01", " ": "100", "a": "1010", "h": "1011", "s": "11"}
+
+dic = json.dumps(diccionario)
+
+print(dic)
+
+# Codificar la cadena en UTF-8
+cadena_codificada = dic.encode()
+
+# Imprimir la cadena codificada como bytes
+print(cadena_codificada)

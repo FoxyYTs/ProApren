@@ -23,6 +23,7 @@ def byteToString(bytes):
         text += bits
 
     print(text)
+    return text
 
 
 def guardar_datos_huffman(diccionario, cadena_bits, nombre_archivo):
@@ -36,26 +37,19 @@ def guardar_datos_huffman(diccionario, cadena_bits, nombre_archivo):
     """
 
     papa = pickle.dumps(diccionario)
+
+    print(byteToString(stringToByte(cadena_bits)))
     # Serializar el diccionario
     cadena_bits = stringToByte(cadena_bits)
 
-    a = pickle.loads(papa)
-
-    print(a)    
+    
 
     # Escribir los datos en el archivo
     with open(nombre_archivo, 'wb') as f:
-        f.write(cadena_bits + b'\r\n')
-        f.write(papa)
+        f.write(papa + b'\r\n' + cadena_bits)
 
 # Ejemplo de uso:
 diccionario = {"e": "00", "l": "01", " ": "100", "a": "1010", "h": "1011", "s": "11"}
-
-a = json.dumps(diccionario)
-
-test = a.encode("")
-
-print(test)
 
 cadena_bits = "1110110010011000101111001100101010011101100010111"
 

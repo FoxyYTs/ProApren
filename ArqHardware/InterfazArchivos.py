@@ -13,11 +13,10 @@ def byteToString(bytes):
 
 
 with open('datos_huffmasn.bin', 'rb') as f:
-    datos = f.readline()
-    print(datos)
-    print(byteToString(datos))
+    
     datoss = f.readline()
-    print(datoss)
     print(pickle.loads(datoss))
+    datos = f.readline()
+    print(byteToString(datos))
 
     
