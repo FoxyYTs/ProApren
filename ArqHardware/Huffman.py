@@ -96,7 +96,7 @@ def guardar_archivo(contenido, tipo):
 
         elif tipo == "descomprimir":
             archivo_seleccionado = filedialog.askopenfilename(defaultextension=".daz", filetypes=[("Archivos tipo Daza", "*.daz")])
-            with open(archivo_seleccionado, "w") as archivo_seleccionado:
+            with open(archivo_seleccionado, "wb") as archivo_seleccionado:
                 archivo_seleccionado.write(contenido)
     # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
                 primera_linea = archivo.readline().strip()
@@ -114,15 +114,9 @@ def guardar_archivo(contenido, tipo):
     archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
 
     with open(archivo, "w") as archivo:
-            archivo.write(contenido)
+        archivo.write(contenido)
 
         messagebox.showinfo("Información", f"Archivo guardado en: {archivo}")
-
-    if archivo:
-        # Guardar el archivo
-        
-    else:
-        messagebox.showerror("Error", "No se seleccionó ninguna carpeta.")
 
 def main():
 

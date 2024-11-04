@@ -38,7 +38,7 @@ def publish():
 
         print(msg)
 
-        client.publish(b"/v1.6/devices/ESP32", msg)
+        client.publish(b"/v1.6/devices/elaparato", msg)
 
         time.sleep(20)
 
