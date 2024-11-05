@@ -11,12 +11,12 @@ def byteToString(bytes):
 
     return text
 
-
-with open('datos_huffmasn.bin', 'rb') as f:
+with open('ArqHardware/Pruebas/wi.bin', 'rb') as f:
     
-    datoss = f.readline()
-    print(pickle.loads(datoss))
-    datos = f.readline()
-    print(byteToString(datos))
+    datos = f.readline().strip()
+    code = byteToString(datos)
+    print(code)
+
+
 
     

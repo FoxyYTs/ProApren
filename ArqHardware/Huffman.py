@@ -1,6 +1,7 @@
 import heapq
 from collections import Counter
 import json
+import pickle
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import simpledialog
@@ -23,6 +24,29 @@ class Node:
         if(not isinstance(other, Node)):
             return False
         return self.freq == other.freq
+    
+def stringToByte(text):
+    while len(text) % 8 != 0:
+        text += "0"
+
+    bytes = bytearray()
+    for i in range(0, len(text), 8):
+        byte = text[i:i+8]
+        bytes.append(int(byte,2))
+
+    print(bytes)
+    return bytes
+
+def byteToString(bytes):
+    text = ""
+    bits = bin(0)
+    for byte in bytes:
+        bits = bin(byte)[2:]
+        bits = bits.zfill(8)
+        text += bits
+
+    print(text)
+    return text
 
 def build_huffman_tree(freq_dict):
     heap = []
@@ -72,16 +96,13 @@ def seleccionar_archivo(tipo):
                 return archivo.read()
 
         elif tipo == "descomprimir":
-            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".daz", filetypes=[("Archivos tipo Daza", "*.daz")])
-            with open(archivo_seleccionado, 'r') as archivo:
-    # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
+            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".bin", filetypes=[("Archivos Binario", "*.bin")])
+            with open(archivo_seleccionado, 'rb') as archivo:
                 primera_linea = archivo.readline().strip()
-                diccionario = eval(primera_linea)  # ¡Cuidado con eval! Solo utilízalo si confías en el formato del archivo.
+                diccionario = pickle.loads(primera_linea)
 
-                # Leemos la segunda línea y la asignamos a una cadena
-                segunda_linea = archivo.readline().strip()
+                segunda_linea = byteToString(archivo.readline().strip())
             return diccionario, segunda_linea
-        
     except FileNotFoundError:
         messagebox.showerror("Error", "El archivo seleccionado no existe o no se puede abrir.")
     except Exception as e:
@@ -90,33 +111,20 @@ def seleccionar_archivo(tipo):
 def guardar_archivo(contenido, tipo):
     try:
         if tipo == "comprimir":
-            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
-            with open(archivo_seleccionado, "w") as archivo_seleccionado:
-                archivo_seleccionado.write(contenido)
+            archivo = filedialog.asksaveasfilename(defaultextension=".bin", filetypes=[("Archivos Binario", "*.bin")])
+            with open(archivo, 'wb') as archivo:
+                archivo.write(contenido)
 
         elif tipo == "descomprimir":
-            archivo_seleccionado = filedialog.askopenfilename(defaultextension=".daz", filetypes=[("Archivos tipo Daza", "*.daz")])
-            with open(archivo_seleccionado, "wb") as archivo_seleccionado:
-                archivo_seleccionado.write(contenido)
-    # Leemos la primera línea y la convertimos a un diccionario (asumimos formato clave:valor)
-                primera_linea = archivo.readline().strip()
-                diccionario = eval(primera_linea)  # ¡Cuidado con eval! Solo utilízalo si confías en el formato del archivo.
-
-                # Leemos la segunda línea y la asignamos a una cadena
-                segunda_linea = archivo.readline().strip()
-            return diccionario, segunda_linea
-        
+            archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
+            with open(archivo, 'w') as archivo:
+                archivo.write(contenido)
+                
     except FileNotFoundError:
-        messagebox.showerror("Error", "El archivo seleccionado no existe o no se puede abrir.")
+        messagebox.showerror("Error", "La ubicacion no se pudo encontrar.")
     except Exception as e:
         messagebox.showerror("Error", f"Ocurrió un error inesperado: {str(e)}")
     # Abrir un diálogo para seleccionar una carpeta
-    archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
-
-    with open(archivo, "w") as archivo:
-        archivo.write(contenido)
-
-        messagebox.showinfo("Información", f"Archivo guardado en: {archivo}")
 
 def main():
 
@@ -129,17 +137,17 @@ def main():
         tasa_compresion = (1 - (tamano_codificado / (tamano_original * 7))) * 100
         messagebox.showinfo("Información", f"Archivo original: {tamano_original*7} bytes\nArchivo codificado: {tamano_codificado} bits\nTasa de compresión: {tasa_compresion:.2f}%")
 
-        diccionario_str = json.dumps(huffman_code)
-        datos = [diccionario_str, encoded_data]
-        contenido = "\n".join(datos)
+        diccionario = pickle.dumps(huffman_code)
+        datos = stringToByte(encoded_data)
+        contenido = diccionario + b'\r\n' + datos
 
-        guardar_archivo(contenido, "comprimido")
+        guardar_archivo(contenido, "comprimir")
         ventana.destroy()
 
     def descomprimir():
         huffman_code, encoded_data = seleccionar_archivo("descomprimir")
         decode_data= huffman_decoding(encoded_data, huffman_code)
-        guardar_archivo(decode_data, "descomprimido")
+        guardar_archivo(decode_data, "descomprimir")
 
     ventana = tk.Tk()
     ventana.title("Comprimir/Descomprimir")
