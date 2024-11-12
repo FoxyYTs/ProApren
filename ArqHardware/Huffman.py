@@ -34,7 +34,6 @@ def stringToByte(text):
         byte = text[i:i+8]
         bytes.append(int(byte,2))
 
-    print(bytes)
     return bytes
 
 def byteToString(bytes):
@@ -45,7 +44,6 @@ def byteToString(bytes):
         bits = bits.zfill(8)
         text += bits
 
-    print(text)
     return text
 
 def build_huffman_tree(freq_dict):
@@ -98,10 +96,9 @@ def seleccionar_archivo(tipo):
         elif tipo == "descomprimir":
             archivo_seleccionado = filedialog.askopenfilename(defaultextension=".bin", filetypes=[("Archivos Binario", "*.bin")])
             with open(archivo_seleccionado, 'rb') as archivo:
-                primera_linea = archivo.readline().strip()
-                diccionario = pickle.loads(primera_linea)
+                diccionario = json.loads(archivo.readline().strip())
 
-                segunda_linea = byteToString(archivo.readline().strip())
+                segunda_linea = byteToString(archivo.readline().strip()) + "00001010" + byteToString(archivo.readline().strip())
             return diccionario, segunda_linea
     except FileNotFoundError:
         messagebox.showerror("Error", "El archivo seleccionado no existe o no se puede abrir.")
@@ -137,7 +134,9 @@ def main():
         tasa_compresion = (1 - (tamano_codificado / (tamano_original * 7))) * 100
         messagebox.showinfo("Información", f"Archivo original: {tamano_original*7} bytes\nArchivo codificado: {tamano_codificado} bits\nTasa de compresión: {tasa_compresion:.2f}%")
 
-        diccionario = pickle.dumps(huffman_code)
+        diccionario = json.dumps(huffman_code).encode('utf-8')
+        print(huffman_code)
+        print(encoded_data)
         datos = stringToByte(encoded_data)
         contenido = diccionario + b'\r\n' + datos
 

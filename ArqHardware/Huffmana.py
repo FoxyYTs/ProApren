@@ -31,7 +31,7 @@ dic = json.dumps(diccionario)
 print(dic)
 
 # Codificar la cadena en UTF-8
-cadena_codificada = dic.encode()
+cadena_codificada = dic.encode('utf-8')
 
 # Imprimir la cadena codificada como bytes
 print(cadena_codificada)

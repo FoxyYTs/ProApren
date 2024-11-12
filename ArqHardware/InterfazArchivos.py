@@ -1,3 +1,4 @@
+import json
 import pickle
 import struct
 
@@ -13,9 +14,12 @@ def byteToString(bytes):
 
 with open('ArqHardware/Pruebas/wi.bin', 'rb') as f:
     
-    datos = f.readline().strip()
-    code = byteToString(datos)
-    print(code)
+    
+    datos2 = f.readline().strip()
+    datos3 = f.readline().strip()
+    code = byteToString(datos2)
+    code2 = byteToString(datos3)
+    print(code + "00001010" + code2)
 
 
 

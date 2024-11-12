@@ -1,56 +1,76 @@
-/****************************************
- * Include Libraries
- ****************************************/
-#include "UbidotsESPMQTT.h"
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+const int Sensor = 7;
+const int Bomba = 13;
 
-/****************************************
- * Define Constants
- ****************************************/
-#define TOKEN "BBUS-bXgmuWeuji822RqGKmFwSHXva4h8hO" // Your Ubidots TOKEN
-#define WIFINAME "DAZA" //Your SSID
-#define WIFIPASS "1022002153" // Your Wifi Pass
-#define DEVICE_LABEL  "elaparato"  // Put here your Ubidots device label
-#define D0 16
+//Crear el objeto lcd  dirección  0x3F y 16 columnas x 2 filas
+LiquidCrystal_I2C lcd(0x20,16,2);  //
 
-Ubidots client(TOKEN);
 
-/****************************************
- * Auxiliar Functions
- ****************************************/
 
-void callback(char* topic, byte* payload, unsigned int length) {
-  Serial.println((char)payload[0]);
-  if((char)payload[0] == '1'){
-    digitalWrite(D0, HIGH);
-  }else{
-    digitalWrite(D0, LOW);
+void setup() {
+  Serial.begin(9600);
+  pinMode(Bomba, OUTPUT);
+  // Inicializar el LCD
+  lcd.init();
+  
+  //Encender la luz de fondo.
+  lcd.backlight();
+  
+  // Escribimos el Mensaje en el LCD.
+  llenado();
+}
+
+void loop() {
+  long duration, cm;
+
+  pinMode(Sensor, OUTPUT);
+  digitalWrite(Sensor, LOW);
+  delayMicroseconds(2);
+  digitalWrite(Sensor, HIGH);
+  delayMicroseconds(5);
+  digitalWrite(Sensor, LOW);
+  
+  pinMode(Sensor, INPUT);
+  duration = pulseIn(Sensor, HIGH);
+
+  
+  cm = microsecondsToCentimeters(duration);
+
+  
+  Serial.print("Distance: ");
+  Serial.print(cm);
+  Serial.print("cm");
+  Serial.println();
+  
+  if(cm <= 100) {//Modificar para determinar la distancia de activacion
+    llenado();
+  }
+  else {
+    espera();
   }
 }
 
-/****************************************
- * Main Functions
- ****************************************/
-
-void setup() {
-  pinMode(D0, OUTPUT);
-  Serial.begin(115200);
-  client.wifiConnection(WIFINAME, WIFIPASS);
-  client.begin(callback);
-  client.ubidotsSubscribe(DEVICE_LABEL, "led");
-  }
-
-void loop() {
-  // put your main code here, to run repeatedly:
-  if(!client.connected()){
-    client.reconnect();
-    client.ubidotsSubscribe(DEVICE_LABEL, "led");
-    Serial.print("Que chulo");
-  }
+void espera() {
+  digitalWrite(Bomba, LOW);
+  lcd.setCursor(0,0);
+  lcd.print("BOMBA APAGADA  ");
+  lcd.setCursor(0,1);
+  lcd.print("Esperando vaso");
+  delay(10);
   
-  float value1 = analogRead(0);
-  //float value2 = analogRead(2)
-  client.add("temperature", value1);
-  //client.add("status", value2);
-  client.ubidotsPublish("elaparato");
-  client.loop();
+}
+
+void llenado() {
+  digitalWrite(Bomba, HIGH);
+  lcd.setCursor(0,0);
+  lcd.print("ACTIVANDO BOMBA");
+  lcd.setCursor(0,1);
+  lcd.print("Llenando vaso ");
+  delay(10);
+}
+
+long microsecondsToCentimeters(long microseconds) {
+  
+  return microseconds / 29 / 2;
 }
