@@ -1,37 +1,3 @@
-import json
+test = "La canción 'Sigo Aquí' de Alex Ubago se sumerge en la introspección y la lucha por la autenticidad en un mundo que constantemente intenta moldearnos. La letra refleja la tensión entre la autoaceptación y la presión externa para conformarse a las expectativas de los demás. Ubago utiliza la metáfora de ser 'la pregunta del millón' para expresar cómo se siente incomprendido y cómo su identidad es un enigma para los demás, lo que sugiere que no se conforma fácilmente a las categorías simples o a las respuestas predecibles.\n\nEl estribillo, 'Y yo solo quiero ser real y sentir el mundo igual que los otros', revela un deseo de conexión y de vivir una experiencia auténtica, sin renunciar a su esencia. La canción también toca la soledad que viene con ser fiel a uno mismo, 'Estoy solo y sigo aquí', lo que implica que a pesar de las dificultades, el narrador elige permanecer fiel a su identidad. La presencia de un amigo que entiende y acepta al narrador sin miedo ofrece un contraste reconfortante con el aislamiento que siente en otros aspectos de su vida.\n\nAlex Ubago es conocido por sus baladas emotivas y letras introspectivas que a menudo exploran temas de amor, soledad y búsqueda personal. 'Sigo Aquí' es un ejemplo de cómo su música puede resonar con aquellos que se sienten incomprendidos o que luchan por mantener su individualidad en un mundo que favorece la conformidad."
 
-
-def stringToByte(text):
-    while len(text) % 8 != 0:
-        text += "0"
-
-    bytes = bytearray()
-    for i in range(0, len(text), 8):
-        byte = text[i:i+8]
-        bytes.append(int(byte,2))
-
-    print(bytes)
-    return bytes
-
-def byteToString(bytes):
-    text = ""
-    bits = bin(0)
-    for byte in bytes:
-        bits = bin(byte)[2:]
-        bits = bits.zfill(8)
-        text += bits
-
-    print(text)
-
-
-diccionario = {"e": "00", "l": "01", " ": "100", "a": "1010", "h": "1011", "s": "11"}
-
-dic = json.dumps(diccionario)
-
-print(dic)
-
-# Codificar la cadena en UTF-8
-cadena_codificada = dic.encode('utf-8')
-
-# Imprimir la cadena codificada como bytes
-print(cadena_codificada)
+print(len(test))

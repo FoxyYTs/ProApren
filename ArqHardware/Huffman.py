@@ -1,10 +1,9 @@
 import heapq
 from collections import Counter
 import json
-import pickle
 import tkinter as tk
+from tkinter import ttk
 from tkinter import filedialog
-from tkinter import simpledialog
 from tkinter import messagebox
 from collections import Counter
 
@@ -121,7 +120,6 @@ def guardar_archivo(contenido, tipo):
         messagebox.showerror("Error", "La ubicacion no se pudo encontrar.")
     except Exception as e:
         messagebox.showerror("Error", f"Ocurrió un error inesperado: {str(e)}")
-    # Abrir un diálogo para seleccionar una carpeta
 
 def main():
 
@@ -130,34 +128,38 @@ def main():
 
         tamano_original = len(data.encode('utf-8'))
         encoded_data, huffman_code = huffman_encoding(data)
-        tamano_codificado = len(encoded_data)
-        tasa_compresion = (1 - (tamano_codificado / (tamano_original * 7))) * 100
-        messagebox.showinfo("Información", f"Archivo original: {tamano_original*7} bytes\nArchivo codificado: {tamano_codificado} bits\nTasa de compresión: {tasa_compresion:.2f}%")
-
         diccionario = json.dumps(huffman_code).encode('utf-8')
-        print(huffman_code)
-        print(encoded_data)
         datos = stringToByte(encoded_data)
         contenido = diccionario + b'\r\n' + datos
+        tamano_codificado = len(contenido)
+        tasa_compresion = (1 - (tamano_codificado / (tamano_original))) * 100
+        messagebox.showinfo("Información", f"Archivo original: {tamano_original} bytes\n Aproximado Archivo codificado: {tamano_codificado} bits\nTasa de compresión: {tasa_compresion:.2f}%")
+
+        
+        print(huffman_code)
+        print(encoded_data)
+        print(tamano_codificado)
+        
 
         guardar_archivo(contenido, "comprimir")
-        ventana.destroy()
 
     def descomprimir():
         huffman_code, encoded_data = seleccionar_archivo("descomprimir")
         decode_data= huffman_decoding(encoded_data, huffman_code)
         guardar_archivo(decode_data, "descomprimir")
 
-    ventana = tk.Tk()
-    ventana.title("Comprimir/Descomprimir")
-
-    boton_comprimir = tk.Button(ventana, text="Comprimir", command=comprimir)
-    boton_comprimir.pack()
-
-    boton_descomprimir = tk.Button(ventana, text="Descomprimir", command=descomprimir)
-    boton_descomprimir.pack()
+    ventana = tk.Tk() 
+    ventana.title("Comprimir/Descomprimir") 
+    ventana.geometry("300x200") 
+    ventana.configure(bg='lightgrey') # Crear un marco para los botones 
+    marco_botones = ttk.Frame(ventana, padding="10") 
+    marco_botones.pack(padx=20, pady=20, fill=tk.BOTH, expand=True) # Botón Comprimir 
+    boton_comprimir = ttk.Button(marco_botones, text="Comprimir", command=comprimir) 
+    boton_comprimir.pack(side=tk.LEFT, padx=10, pady=10, expand=True) # Botón Descomprimir 
+    boton_descomprimir = ttk.Button(marco_botones, text="Descomprimir", command=descomprimir) 
+    boton_descomprimir.pack(side=tk.RIGHT, padx=10, pady=10, expand=True)
 
     ventana.mainloop()
 
 if __name__ == "__main__":
-    main()
+    main()  
