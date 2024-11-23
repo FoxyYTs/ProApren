@@ -1,54 +1,80 @@
-class Puente:
-    def __init__(self, tipo_material, longitud, ancho, altura, costo_por_metro_cubico):
-        self.tipo_material = tipo_material
-        self.longitud = longitud
+class Lote:
+    def __init__(self, ubicacion, tipo_lote, ancho, largo, costo_metro_cuadrado, vendido):
+        self.ubicacion = ubicacion
+        self.tipo_lote = tipo_lote
+        self.metro_cuadrado = ancho * largo
         self.ancho = ancho
-        self.altura = altura
-        self.costo_por_metro_cubico = costo_por_metro_cubico
+        self.largo = largo
+        self.costo_metro_cuadrado = costo_metro_cuadrado
+        self.vendido = vendido
 
-    def cal_volumen(self):
-        return self.longitud * self.ancho * self.altura
+    def cal_costo(self):
+        return self.metro_cuadrado * self.costo_metro_cuadrado
+    
+class Comprador:
+    def __init__(self, nombre, telefono, identificacion, nombre_referencia, telefono_referencia):
+        self.nombre = nombre
+        self.telefono = telefono
+        self.identificacion = identificacion
+        self.nombre_referencia = nombre_referencia
+        self.telefono_referencia = telefono_referencia
 
-    def cal_costo_mat(self):
-        volumen = self.cal_volumen()
-        return volumen * self.costo_por_metro_cubico
+def solicitar_datos_lote():
+    ubicacion = input("Ingrese la ubicación del lote: ")
+    tipo_lote = input("Ingrese el tipo de lote: ")
+    ancho = float(input("Ingrese el ancho del lote en metros: "))
+    largo = float(input("Ingrese el largo del lote en metros: "))
+    costo_metro_cuadrado = float(input("Ingrese el costo por metro cuadrado: "))
+    return Lote(ubicacion, tipo_lote, ancho, largo, costo_metro_cuadrado, False)
 
-    def aplicar_descuento(self, costo_total):
-        if costo_total >= 2000000 and costo_total < 40000000:
-            descuento = costo_total * 0.1
-        elif costo_total >= 40000000:
-            descuento = costo_total * 0.2
+def solicitar_datos_comprador():
+    nombre = input("Ingrese el nombre del comprador: ")
+    telefono = input("Ingrese el teléfono del comprador: ")
+    identificacion = input("Ingrese la identificación del comprador: ")
+    nombre_referencia = input("Ingrese el nombre de la persona de referencia: ")
+    telefono_referencia = input("Ingrese el teléfono de la persona de referencia: ")
+    return Comprador(nombre, telefono, identificacion, nombre_referencia, telefono_referencia)
+
+def menu():
+    while True:
+        print("\nMenú Principal")
+        print("1. Crear nuevo comprador")
+        print("2. Crear nuevo lote")
+        print("3. Cotizar lote para un comprador")
+        print("4. Ver lista de compradores")
+        print("5. Ver lista de lotes")
+        print("6. Salir")
+
+        opcion = input("Ingrese una opción: ")
+
+        if opcion == '1':
+            nuevo_comprador = solicitar_datos_comprador()
+            # Aquí deberías agregar el código para guardar al comprador en una lista o base de datos
+            print("Comprador creado exitosamente.")
+        elif opcion == '2':
+            nuevo_lote = solicitar_datos_lote()
+            # Aquí deberías agregar el código para guardar el lote en una lista o base de datos
+            print("Lote creado exitosamente.")
+        elif opcion == '3':
+            # Implementa la lógica para buscar un lote, buscar un comprador y generar una cotización
+            print("Cotización generada.")
+        elif opcion == '4':
+            # Implementa la lógica para mostrar la lista de compradores
+            print("Lista de compradores:")
+            # ...
+        elif opcion == '5':
+            # Implementa la lógica para mostrar la lista de lotes
+            print("Lista de lotes:")
+            # ...
+        elif opcion == '6':
+            print("¡Hasta luego!")
+            break
         else:
-            descuento = 0
-        return costo_total - descuento
+            print("Opción inválida. Por favor, intente nuevamente.")
 
-def solicitar_datos_puente():
-    tipo_material = input("Ingrese el tipo de material (ej: concreto, acero): ")
-    longitud = float(input("Ingrese la longitud del puente en metros: "))
-    ancho = float(input("Ingrese el ancho del puente en metros: "))
-    altura = float(input("Ingrese la altura del puente en metros: "))
-    costo_por_metro_cubico = float(input("Ingrese el costo por metro cúbico del material: "))
-    return Puente(tipo_material, longitud, ancho, altura, costo_por_metro_cubico)
-
-def cal_y_mostrar_costo(puente, nombre_usuario):
-    costo_materiales = puente.cal_costo_materiales()
-    iva = costo_materiales * 0.19  # Suponiendo un IVA del 19%
-    costo_total = costo_materiales + iva
-    costo_final = puente.aplicar_descuento(costo_total)
-
-    print("\nCotización para", nombre_usuario)
-    print("Tipo de material:", puente.tipo_material)
-    print("Costo total de los materiales (sin IVA):", costo_materiales)
-    print("IVA:", iva)
-    print("Costo total antes de descuento:", costo_total)
-    print("Descuento aplicado:", costo_total - costo_final)
-    print("Costo final:", costo_final)
+# Inicialización de listas (o bases de datos) para almacenar los objetos
+lista_compradores = []
+lista_lotes = []
 
 if __name__ == "__main__":
-    while True:
-        nombre_usuario = input("Ingrese su nombre (o escriba 'salir' para terminar): ")
-        if nombre_usuario.lower() == "salir":
-            break
-
-        puente = solicitar_datos_puente()
-        cal_y_mostrar_costo(puente, nombre_usuario)
+    menu()
