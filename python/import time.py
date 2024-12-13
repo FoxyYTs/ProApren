@@ -1,6 +1,16 @@
 import time
 import pyautogui
-import subprocess
+pyautogui.FAILSAFE = False
+
+def countdown(t):
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        t -= 1
+
+    print('¡Tiempo cumplido!')
 
 def ejecutar_aplicacion_y_cerrar():
     # Iniciar la aplicación (reemplaza 'ruta_a_la_aplicacion.exe' con la ruta correcta)
@@ -29,4 +39,4 @@ def ejecutar_aplicacion_y_cerrar():
 
 while True:
     ejecutar_aplicacion_y_cerrar()
-    time.sleep(11400)
+    countdown(11400)
