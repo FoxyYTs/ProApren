@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'CSS/styles.css '%}">
+    </head>
+    <body style="background-color: papayawhip;">
+        <nav style="background-color: #997F56;">
+            <a href="/">
+                <button>CERRAR SESION</button>
+            </a>
+            <img src="{% static 'img/logoNoFondo.png' %}" width="100">
+        </nav>
+        <main id="pagCategorias">
+            <section id="cuadroInfoP">
+                <h2>Categoria 1</h2>
+                <a style="margin: 10px;" href="{% url 'infoCategoria' categoria='1' %}"><button>Ver Mas</button></a>
+                <div id="categoria">
+                    <div id="subCategoria">
+                        <img style="margin: 10px;" src="{% static 'img/Producto1/obj1.jpeg' %}" width="200">
+                        <div>
+                            <strong>Nombre: </strong>
+                            <p>Aguacate</p>
+                            <strong>Valor: </strong>
+                            <p>$1500,0</p>
+                            <strong>Categoria: </strong>
+                            <p>Aguacate</p>
+                        </div>
+                    </div>
+                    <div id = "subCategoria">
+                        <img style="margin: 10px;" src="{% static 'img/Producto2/obj1.jpg' %}" width="200">
+                        <div>
+                            <strong>Nombre: </strong>
+                            <p>Crostini de aguacate</p>
+                            <strong>Valor: </strong>
+                            <p>$25000,0</p>
+                            <strong>Categoria: </strong>
+                            <p>Aguacate</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cuadroInfoP">
+                <h2>Categoria 2</h2>
+                <a href="{% url 'infoCategoria' categoria='2' %}"><button>Ver Mas</button></a>
+                <div id="categoria">
+                    <div id="subCategoria">
+                        <img style="margin: 10px;" src="{% static 'img/Producto5/obj1.jpeg' %}" width="200">
+                        <div>
+                            <strong>Nombre</strong>
+                            <p>Tomate</p>
+                            <strong>Precio</strong>
+                            <p>$1500,0</p>
+                            <strong>Categoria:</strong>
+                            <p>Tomate</p>
+                        </div>
+                    </div>
+                    <div id="subCategoria">
+                        <img style="margin: 10px;" src="{% static 'img/Producto6/obj1.jpeg' %}" width="200">
+                        <div>
+                            <strong>Nombre</strong>
+                            <p>Hamburguesas de tomates sin pan</p>
+                            <strong>Precio</strong>
+                            <p>$10000,0</p>
+                            <strong>Categoria:</strong>
+                            <p>Tomate</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

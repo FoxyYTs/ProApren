@@ -1,0 +1,81 @@
+:root{}
+body {
+    background: papayawhip;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #332308;
+    background: papayawhip;
+    padding: 20px;
+    
+}
+
+button {
+    background: #664D25;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+}
+
+header {
+    background: #997F56;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    border-bottom: 1px solid ;
+}
+
+#logoPoli {
+    padding: 20px;
+    width: 25%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: papayawhip;
+    padding: 20px;
+}
+
+#infoPersonal {
+    display: flex;
+    align-items: center;
+}
+
+#infoPersonal img {
+    margin-right: 20px;
+}
+
+#cuadroInfoP {
+    box-shadow: 0px 0px 10px #000;
+    padding: 20px;
+}
+
+
+#datosPersonal{
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+}
+
+#datosPersonaldiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+
+#product-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+#proimg {
+    max-width: 30%;
+    height: auto;
+}

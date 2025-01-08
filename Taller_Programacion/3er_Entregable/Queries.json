@@ -1,0 +1,11 @@
+{
+    "create": "CREATE TABLE if not exists {} ( {} )",
+    "select": "SELECT EXISTS(SELECT 1 FROM {} WHERE {} = {})",
+    "select_all": "SELECT * FROM {}",
+    "insert": "INSERT INTO {} VALUES ( NULL, {} )",
+    "update": "UPDATE {} SET {}='{}' WHERE {}={}",
+    "delete": "DELETE FROM {} WHERE {}={}",
+    "delete_all": "DELETE FROM {} WHERE {} = {}",
+    "Zoo":"ID INTEGER primary key, NOMBRE VARCHAR(30) not null, UBICACION VARCHAR(30)",
+    "Animal":"ID INTEGER primary key, NOMBRE VARCHAR(30) not null, ESPECIE VARCHAR(30) not null, ZOO_ID INTEGER, foreign key (ID) references Zoo(ZOO_ID)"
+}

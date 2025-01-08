@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css '%}">
+</head>
+<body style="background-color: papayawhip;">
+    <nav>
+        <a href="/">
+            <button>LOGIN</button>
+        </a>
+        <img src="{% static 'img/logoNoFondo.png' %}" width="100">
+    </nav>
+    <header id="pagLogin">
+        <section>
+            <h4>Cuarto Entregable</h4>
+            <form method="post">
+                {% csrf_token %}
+                <div id="#datosPersonal div">
+                    <strong>Nombre: </strong>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div id="#datosPersonal div">
+                    <strong>Primer Apellido: </strong>
+                    <input type="text" name="papellido" required>
+                </div>
+                <div id="#datosPersonal div">
+                    <strong>Segundo Apellido: </strong>
+                    <input type="text" name="sapellido" required>
+                </div>
+                <div id="#datosPersonal div">
+                    <strong>Correo: </strong>
+                    <input type="text" name="correo" required>
+                </div>
+                <div id="#datosPersonal div">
+                    <strong>Usuario: </strong>
+                    <input type="text" name="usuario" required>
+                </div>
+                <div id="#datosPersonal div">
+                    <strong>Contraseña: </strong>
+                    <input type="text" name="clave" required>
+                </div>
+                <button type="submit">REGISTRO</button>
+            </form>
+            <a href="/login"><button>LOGIN</button></a>
+            <p>{{error}}</p>
+        </section>
+    </header>
+    <main>
+        <section id="cuadroInfoP">
+            <img id="infoPersonal img" src="{% static 'img/YoMero.jpg' %}" width="300">
+            <strong id="infoPersonal">Nombre: </strong>
+            <p>Jose Andres</p>
+            <strong id="infoPersonal">Apellido: </strong>
+            <p>Daza Gallego</p>
+            <strong id="infoPersonal">Cedula: </strong>
+            <p>1022002153</p>
+            <strong id="infoPersonal">Correo: </strong>
+            <p>jose_daza82222@elpoli.edu.co</p>
+        </section>
+    </main>
+</body>
+</html>

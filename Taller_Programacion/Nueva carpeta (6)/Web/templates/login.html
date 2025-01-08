@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css '%}">
+</head>
+<body style="background-color: papayawhip;">
+    <nav>
+        <a href="/">
+            <button>INICIO</button>
+        </a>
+        <img src="{% static 'img/logoNoFondo.png' %}" width="100">
+    </nav>
+    <header>
+        <img id="logoPoli" src="https://www.redttu.edu.co/es/wp-content/uploads/2015/12/15.-POLI-JIC.png" width="200">
+        <section>
+            <h4>Cuarto Entregable</h4>
+            <form method="post">
+                {% csrf_token %}
+                <div id="datosPersonal div">
+                    <strong id="#infoPersonal">Usuario: </strong>
+                    <input type="text" name="usuario" required>
+                </div>
+                <div id="datosPersonal div">
+                    <strong id="#infoPersonal">Contraseña: </strong>
+                    <input type="text" name="clave" required>
+                </div>
+                <button type="submit">INICIAR SESION</button>
+            </form>
+            <a href="/registro"><button>REGISTRO</button></a>
+        </section>
+        <p>{{error}}</p>
+    </header>
+    <main>
+        <section id="cuadroInfoP">
+            <strong id="infoPersonal">HABILIDADES</strong>
+            <p>Un Dios entre Humanos</p>
+            <strong id="infoPersonal">HERRAMIENTAS</strong>
+            <p>Sus Poderosas Manos</p>
+        </section>
+        <section id="cuadroInfoP">
+            <img id="infoPersonal img" src="{% static 'img/YoMero.jpg' %}" width="300">
+            <strong id="infoPersonal">Nombre: </strong>
+            <p>Jose Andres</p>
+            <strong id="infoPersonal">Apellido: </strong>
+            <p>Daza Gallego</p>
+            <strong id="infoPersonal">Cedula: </strong>
+            <p>1022002153</p>
+            <strong id="infoPersonal">Correo: </strong>
+            <p>jose_daza82222@elpoli.edu.co</p>
+        </section>
+    </main>
+</body>
+</html>

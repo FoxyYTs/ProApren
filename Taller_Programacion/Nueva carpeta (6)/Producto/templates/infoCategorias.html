@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'CSS/styles.css'%}">
+    </head>
+    <body style="background-color: papayawhip;">
+        <nav>
+            <a href="/productos">
+                <button>ATRAS</button>
+            </a>
+            <img src="{% static 'img/logoNoFondo.png' %}" width="100">
+        </nav>
+        <header id="pagLogin">
+            <section>
+                <h4>Cuarto Entregable</h4>
+                {% if categoria == "1" %}
+                    <h1>AGUACATE</h1>
+                {% elif categoria == "2" %}
+                    <h1>TOMATE</h1>
+                {%endif%}  
+            </section>
+        </header>
+        <main>
+            {% for i in arreglo %}
+                {% if i.categoria == "Tomate" and categoria == "2" %}
+                    <section id="cuadroInfoP">
+                        <img src="{% static '' %}{{i.img1_prod}}" width="300" alt="">
+                        <strong id="infoPersonal">Nombre: </strong>
+                        <p>{{i.nombre_prod}}</p>
+                        <strong id="infoPersonal">Valor: </strong>
+                        <p>{{i.valor}}</p>
+                        <strong id="infoPersonal">Categoria: </strong>
+                        <p>{{i.categoria}}</p>
+                        <a href="{% url 'consultaP' id=i.ID %}"><button>LOGIN</button></a>
+                    </section>
+                {% elif i.categoria == "Aguacate" and categoria == "1" %}
+                    <section id="cuadroInfoP">
+                        <img src="{% static '' %}{{i.img1_prod}}" width="300" alt="">
+                        <strong id="infoPersonal">Nombre: </strong>
+                        <p>{{i.nombre_prod}}</p>
+                        <strong id="infoPersonal">Valor: </strong>
+                        <p>{{i.valor}}</p>
+                        <strong id="infoPersonal">Categoria: </strong>
+                        <p>{{i.categoria}}</p>
+                        <a href="{% url 'consultaP' id=i.ID %}">"><button>LOGIN</button></a>
+                    </section>
+                {% endif %}
+            {% endfor %}
+        </main>
+    </body>
+</html>

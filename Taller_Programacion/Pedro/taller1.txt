@@ -1,0 +1,10 @@
+N° sesión;Fecha;Contenido por desarrollar;Descripción del trabajo presencial; Descripción trabajo independiente
+1;9/08/2023;Introducción a archivos planos;Presentación de la unidad y ejemplos básicos;Lectura recomendada sobre archivos en Python
+2;10/08/2023;Leer archivos planos;Práctica de lectura de archivos;Ejercicios de lectura de archivos
+3;16/08/2023;Escribir archivos planos;Práctica de escritura en archivos;Ejercicios de escritura de archivos
+4;17/08/2023;Manipulación de archivos CSV;Introducción a archivos CSV y práctica;Ejercicios con archivos CSV
+5;23/08/2023;Uso de librerías para archivos;Introducción a la librería Pandas;Práctica con Pandas
+6;24/08/2023;Integración de Python con Excel;Demostración de lectura/escritura con Excel;Ejercicios de integración con Excel
+7;30/08/2023;Repaso general;Repaso de los temas cubiertos;Preparación para el entregable
+8;31/08/2023;Workshop;Taller práctico de integración de lo aprendido;Desarrollo de un proyecto pequeño
+9;6/09/2023;Entregable 1;Evaluación del proyecto;Entrega del proyecto

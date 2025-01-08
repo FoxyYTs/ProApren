@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'CSS/styles.css '%}">
+    </head>
+    <body style="background-color: papayawhip;">
+        <nav style="background-color: #997F56;">
+            <a href="/productos">
+                <button>Atras</button>
+            </a>
+            <img src="{% static 'img/logoNoFondo.png' %}" width="100">
+        </nav>
+        <main id="pagCategorias">
+            {% for i in arreglo %}
+            <section id="cuadroInfoP">
+                <h1>{{i.nombre_prod}}</h1>
+                <div id="product-images">
+                    <img id="proimg" style="margin: 10px;" width="300" src="{% static '' %}{{i.img1_prod}}" alt="">
+                    <img id="proimg" style="margin: 10px;" width="300" src="{% static '' %}{{i.img2_prod}}" alt="">
+                    <img id="proimg" style="margin: 10px;" width="300" src="{% static '' %}{{i.img3_prod}}" alt="">
+                </div>
+                <div id="datosPersonaldiv">
+                    <strong>Descripcion</strong>
+                    <p>{{i.descripcion_prod}}</p>
+                    <strong id="infoPersonal">Valor: </strong>
+                    <p>{{i.valor}}</p>
+                    <strong id="infoPersonal">Cantidad: </strong>
+                    <p>este producto trae {{i.cantidad_prod}} Unidad y sera multiplicado por el valor que coloque a continuacion</p>
+                    <input type="number">
+                    <a href="/productos"><button>COMPRAR</button></a>
+                </div>
+            </section>
+            {% endfor %}
+        </main>
+    </body>
+</html>

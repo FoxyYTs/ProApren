@@ -1,0 +1,112 @@
+:root{
+    --pri-color: #29CC57;
+    --seg-color: #3D9957;
+    --ter-color: #00FF4A;
+    --cua-color: #3D6649;
+    --qui-color: #29332C;
+    --sex-color: #29CCC7;
+    --sep-color: #3D9996;
+    --oct-color: #00FFF5;
+    --nov-color: #3D6665;
+    --dec-color: #293333;
+}
+
+body{
+    background-color: var(--dec-color);
+    color: white;
+}
+#cuadro{
+    background-color: var(--sex-color);
+}
+
+section{
+    box-shadow: 0px 0px 10px #000;
+    padding: 20px;
+    margin: 2rem;
+}
+
+#cosa{
+    box-shadow: 0px 0px 10px #000;
+    padding: 20px;
+    margin: 2rem;
+}
+
+nav{
+    margin-left: 50px;
+    justify-content: space-between;
+    display: flex;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    float: left;
+    margin: 40px;
+}
+
+nav ul li{
+    margin: 10px;
+    font-size: 20px;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#btn{
+    background-color: var(--seg-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--nov-color);
+}
+
+#te1{
+    position: absolute;
+    top: 700px;
+    left: 200px;
+}
+#te2{
+    position: absolute;
+    top: 700px;
+    left: 900px;
+}
+#te3{
+    position: absolute;
+    top: 700px;
+    left: 1600px;
+}
+#te4{
+    position: absolute;
+    top: 1300px;
+    left: 200px;
+}
+#te5{
+    position: absolute;
+    top: 1300px;
+    left: 900px;
+}
+#te6{
+    position: absolute;
+    top: 1300px;
+    left: 1600px;
+}
+#te7{
+    position: absolute;
+    top: 2100px;
+    left: 200px;
+}
+#te8{
+    position: absolute;
+    top: 2100px;
+    left: 900px;
+}
+#te9{
+    position: absolute;
+    top: 2100px;
+    left: 1600px;
+}

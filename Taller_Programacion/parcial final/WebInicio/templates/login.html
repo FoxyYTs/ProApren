@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css '%}">
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="{% static 'IMG/logo.png' %}">
+            <h1 style="margin-top: 40px;color: #00FF4A;" >Obscur</h1>
+            <ul>
+                <li><a href="/Login"><button class="btn btn-success text-white w-100 fw-semibold">LOGIN</button></a></li>
+                <li><a href="/Registrar"><button class="btn btn-success text-white w-100 fw-semibold">REGISTER</button></a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main class="d-flex justify-content-center align-item-center vh-100 mt-5">
+        <div class="shadow bg-white p-5 rounded-5 text-secondary" style="width:25rem; height: 25rem;">
+            <form method="post">
+                {% csrf_token %}
+                <div class="d-flex justify-content-center">
+                    
+                </div>
+                <div class="text-center fs-1 fw-bold">Login</div>
+                <div class="input-group mt-4">
+                    <div class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                    </div>
+                    <input class="form-control bg-light" type="text" id="user" placeholder="Username" name="user" required>
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+                        </svg>
+                    </div>
+                    <input class="form-control bg-light" type="password" id="pss" placeholder="Password" name="pssw" required>
+                </div>
+                <div class="d-flex justify-content-around mt-1">
+                    <div class="d-flex align-items-center gap-1">
+                        <input class="form-check-input" type="checkbox">
+                        <div class="pt-1" style="font-size:0.9rem">Recuerdame</div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-decoration-none fst-italic
+                        fw-semibold" style="font-size:0.rem">Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+                <button class="btn btn-danger text-white w-100 mt-4 fw-semibold" type="submit">Login</button>
+                <p>{{error}}</p>
+            </form>
+            <div class="d-flex gap-1 justify-content-center mt-1">
+                <div>No estas registrado?</div>
+                <a href="/Registrar/" class="text-decoration-none fw-semibold">Registrate</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
