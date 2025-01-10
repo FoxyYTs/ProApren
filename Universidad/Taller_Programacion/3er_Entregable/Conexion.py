@@ -12,9 +12,9 @@ class Conexion:
         Retorna:
             Nada
         """
-        self.DB = sqlite3.connect("3er_Entregable/DB.sqlite")
+        self.DB = sqlite3.connect("Universidad/Taller_Programacion/3er_Entregable/DB.sqlite")
         self.iterador = self.DB.cursor()
-        with open("3er_Entregable/Queries.json", "r") as queries:
+        with open("Universidad/Taller_Programacion/3er_Entregable/Queries.json", "r") as queries:
             self.Querys = json.load(queries)
     
     def buscar_id(self, id, tabla):

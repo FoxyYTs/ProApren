@@ -133,7 +133,6 @@ class Interfaz:
         self.ZCancelar = tk.Button(self.zooInfoMenu, text = "Cancelar", bg = "#428C00", width=10, height=1, command = self.EvZCancelar)
         self.ZCancelar.config(state = "disabled")
         self.ZCancelar.grid(row = 2, column = 2, padx = 10, pady = 10)
-
     # Diseño del Menu Animal y Funcionalidad
     def animalCampo(self):
         """
@@ -178,7 +177,6 @@ class Interfaz:
         self.ACancelar = tk.Button(self.animalInfoMenu, text = "Cancelar", bg = "#428C00", width=10, height=1, command = self.EvACancelar)
         self.ACancelar.config(state = "disabled")
         self.ACancelar.grid(row = 3, column = 2, padx = 10, pady = 10)
-
     # Modificar Datos
     def zooMod(self):
         """
@@ -237,7 +235,6 @@ class Interfaz:
 
         self.AEliminar = tk.Button(self.animalModMenu, text = "Eliminar", bg = "#428C00", width=10, height=1, command = self.EvAEliminar)
         self.AEliminar.grid(row = 1, column = 1, padx = 10, pady = 10)
-
     # DB ZOO
     def zooTabla(self):
         """
@@ -259,7 +256,6 @@ class Interfaz:
         self.zooScroll = tk.Scrollbar(self.zooTablaMenu, command = self.tablaZoo.yview)
         self.zooScroll.grid(row = 0, column = 1, sticky = "ns")
         self.tablaZoo.config(yscrollcommand = self.zooScroll.set)
-
     # DB ANIMAL
     def animalTabla(self):
         """
@@ -282,7 +278,6 @@ class Interfaz:
         self.animalScroll = tk.Scrollbar(self.animalTablaMenu, command = self.tablaAnimal.yview)
         self.animalScroll.grid(row = 0, column = 1, sticky = "ns")
         self.tablaAnimal.config(yscrollcommand = self.animalScroll.set)
-
     # Carga La Base de Datos en Interfaz
     def animalCargar(self):
         """
