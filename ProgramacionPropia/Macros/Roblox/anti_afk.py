@@ -24,5 +24,5 @@ def move():
     pyautogui.keyUp('d')
 
 while True:
-    countdown(120)
+    countdown(15)
     move()
