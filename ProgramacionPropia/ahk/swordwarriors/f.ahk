@@ -7,7 +7,9 @@ FuncionF() {
 ^f::
     flagF := !flagF
     if (flagF) {
-        SetTimer, FuncionF, 27000
+        Send, f
+        SetTimer, FuncionF, 28000
+        
     } else {
         SetTimer, FuncionF, Off
     }
