@@ -5,7 +5,7 @@ funcionResetStats() {
     Click
     MouseMove, 555, 500
     Click
-    MouseMove, 465, 785
+    MouseMove, 465, 800
     Click
 }
 
