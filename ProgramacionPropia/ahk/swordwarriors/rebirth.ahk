@@ -39,7 +39,7 @@ funciondelay() {
     if (flagRebirth) {
         funcionRebirth()
         funcionResetStats()
-        SetTimer, funcionRebirth, 900000
+        SetTimer, funcionRebirth, 1800000
         SetTimer, funcionResetStats, 15
     } else {
         SetTimer, funcionRebirth, Off
