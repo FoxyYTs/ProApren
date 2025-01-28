@@ -1,17 +1,19 @@
 flagReset := false
 
 funcionResetStats() {
+    MouseMove, 465, 800
+    Click
     MouseMove, 555, 425
     Click
     MouseMove, 555, 500
     Click
-    MouseMove, 465, 800
-    Click
 }
 
-^g::
+^Numpad1::
     flagReset := !flagReset
     if (flagReset) {
+        MouseMove, 160, 500
+        Click
         funcionResetStats()
         SetTimer, funcionResetStats, 15
     } else {

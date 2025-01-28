@@ -4,11 +4,11 @@ FuncionE() {
     Send, e
 }
 
-^e::
+^Numpad5::
     flagE := !flagE
     if (flagE) {
         Send, e
-        SetTimer, FuncionE, 5500
+        SetTimer, FuncionE, 38500
     } else {
         SetTimer, FuncionE, Off
     }

@@ -20,13 +20,10 @@ funcionRebirth() {
 funcionResetStats() {
     MouseMove, 465, 800
     Click
-    Sleep 50
     MouseMove, 555, 425
     Click
-    Sleep 50
     MouseMove, 555, 500
     Click
-    Sleep 50
 }
 
 funciondelay() {
@@ -34,16 +31,17 @@ funciondelay() {
     Click
 }
 
-^j::
+^Numpad3::
     flagRebirth := !flagRebirth
     if (flagRebirth) {
         funcionRebirth()
         funcionResetStats()
-        SetTimer, funcionRebirth, 1800000
+        SetTimer, funcionRebirth, 600000
         SetTimer, funcionResetStats, 15
     } else {
         SetTimer, funcionRebirth, Off
         SetTimer, funcionResetStats, Off
+        Msgbox "Macro Auto Rebirth Desactivado"
     }
 return
 
@@ -53,3 +51,6 @@ return
 ; 45mins = 2700000
 ; 30mins = 1800000
 ; 15mins = 900000
+; 10mins = 600000
+; 5mins = 300000
+; 1mins = 60000

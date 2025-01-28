@@ -4,11 +4,11 @@ FuncionQ() {
     Send, q
 }
 
-^q::
+^Numpad4::
     flagQ := !flagQ
     if (flagQ) {
         Send, q
-        SetTimer, FuncionQ, 61000
+        SetTimer, FuncionQ, 60500
     } else {
         SetTimer, FuncionQ, Off
     }
