@@ -21,8 +21,6 @@ funcionResetStats() {
         SetTimer, funcionResetStats, 15
     } else {
         SetTimer, funcionResetStats, Off
-        run "B:\programacion\ProApren\ProgramacionPropia\ahk\swordwarriors\rebirth.exe"
+        run "B:\programacion\ProApren\ProgramacionPropia\ahk\swordwarriors\exe\rebirth.exe"
     }
 return
-
-MouseMove, 160, 500

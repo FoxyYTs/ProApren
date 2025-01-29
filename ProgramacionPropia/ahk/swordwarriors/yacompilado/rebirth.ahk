@@ -42,7 +42,7 @@ funciondelay() {
     } else {
         SetTimer, funcionRebirth, Off
         SetTimer, funcionResetStats, Off
-        run "B:\programacion\ProApren\ProgramacionPropia\ahk\swordwarriors\statsReset.exe"
+        run "B:\programacion\ProApren\ProgramacionPropia\ahk\swordwarriors\exe\statsReset.exe"
     }
 return
 
