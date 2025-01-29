@@ -34,6 +34,7 @@ funciondelay() {
 ^Numpad3::
     flagRebirth := !flagRebirth
     if (flagRebirth) {
+        Process, Close, statsReset.exe
         funcionRebirth()
         funcionResetStats()
         SetTimer, funcionRebirth, 600000
@@ -41,6 +42,7 @@ funciondelay() {
     } else {
         SetTimer, funcionRebirth, Off
         SetTimer, funcionResetStats, Off
+        run "B:\programacion\ProApren\ProgramacionPropia\ahk\swordwarriors\statsReset.exe"
     }
 return
 

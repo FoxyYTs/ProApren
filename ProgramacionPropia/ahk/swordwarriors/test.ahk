@@ -1,0 +1,1 @@
+Process, Close, rebirth.exe

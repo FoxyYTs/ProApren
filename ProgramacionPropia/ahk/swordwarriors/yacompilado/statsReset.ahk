@@ -12,6 +12,7 @@ funcionResetStats() {
 ^Numpad1::
     flagReset := !flagReset
     if (flagReset) {
+        Process, Close, rebirth.exe
         MouseMove, 695, 295
         Click
         MouseMove, 160, 500
@@ -20,6 +21,7 @@ funcionResetStats() {
         SetTimer, funcionResetStats, 15
     } else {
         SetTimer, funcionResetStats, Off
+        run "B:\programacion\ProApren\ProgramacionPropia\ahk\swordwarriors\rebirth.exe"
     }
 return
 

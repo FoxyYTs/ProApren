@@ -1,25 +1,28 @@
-flagQ := false
+flagHabilidad := false
 
-FuncionQ() {
+funcionQ() {
     Send, q
-    Sleep 5000
 }
 
-FuncionE() {
+funcionE() {
     Send, e
-    Sleep 5000
 }
 
-^Numpad4::
-    flagQ := !flagQ
-    if (flagQ) {
-        FuncionQ()
-        Sleep 5000
-        FuncionE()
-        SetTimer, FuncionQ, 60000
-        SetTimer, FuncionE, 38000
+^Numpad2::
+    flagHabilidad := !flagHabilidad
+    if (flagHabilidad) {
+        funcionE()
+        SetTimer, funcionE, 36500
+        SetTimer, funcionQ, 58500
     } else {
-        SetTimer, FuncionQ, Off
-        SetTimer, FuncionE, Off
+        SetTimer, funcionQ, Off
+        SetTimer, funcionE, Off
     }
-returnf
+return
+
+; CDQ = 60 segs
+; ACTQ = 3 segs
+
+
+; CDE = 38 segs
+; ACTE = 3 segs
