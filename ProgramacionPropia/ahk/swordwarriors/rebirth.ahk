@@ -41,7 +41,6 @@ funciondelay() {
     } else {
         SetTimer, funcionRebirth, Off
         SetTimer, funcionResetStats, Off
-        Msgbox "Macro Auto Rebirth Desactivado"
     }
 return
 

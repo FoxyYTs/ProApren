@@ -12,6 +12,8 @@ funcionResetStats() {
 ^Numpad1::
     flagReset := !flagReset
     if (flagReset) {
+        MouseMove, 695, 295
+        Click
         MouseMove, 160, 500
         Click
         funcionResetStats()
