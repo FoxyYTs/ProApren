@@ -12,8 +12,8 @@ funcionE() {
     flagHabilidad := !flagHabilidad
     if (flagHabilidad) {
         funcionE()
-        SetTimer, funcionE, 36500
-        SetTimer, funcionQ, 58500
+        SetTimer, funcionE, 38500
+        SetTimer, funcionQ, 53500
     } else {
         SetTimer, funcionQ, Off
         SetTimer, funcionE, Off
