@@ -1,1 +1,1 @@
-Process, Close, rebirth.exe
+^h::WinActivate "Roblox"

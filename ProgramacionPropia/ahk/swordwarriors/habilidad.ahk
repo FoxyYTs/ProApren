@@ -8,12 +8,12 @@ funcionE() {
     Send, e
 }
 
-^Numpad2::
+^Numpad4::
     flagHabilidad := !flagHabilidad
     if (flagHabilidad) {
         funcionE()
-        SetTimer, funcionE, 38500
-        SetTimer, funcionQ, 53500
+        SetTimer, funcionE, 4000
+        SetTimer, funcionQ, 6000
     } else {
         SetTimer, funcionQ, Off
         SetTimer, funcionE, Off
