@@ -23,7 +23,7 @@ funcionRepost() {
 }
 
 ^Numpad5::
-    if (flagRepost) {
+    if (!flagRepost) {
         flagHero := !flagHero
         if (flagHero) {
             funcionStart()
@@ -35,7 +35,7 @@ funcionRepost() {
 return
 
 ^Numpad9::
-    if (flagHero) {
+    if (!flagHero) {
         flagRepost := !flagRepost
         if (flagRepost) {
             funcionRepost()
