@@ -16,8 +16,8 @@ funcionStart() {
 funcionRepost() {
     MouseMove, 1380, 105
     Click
-    Sleep 50
-    MouseMove, 965, 165
+    Sleep 500
+    MouseMove, 965, 160
     Click
     Sleep 50
 }
