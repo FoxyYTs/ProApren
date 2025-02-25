@@ -1,17 +1,13 @@
-sudo /opt/lampp/lampp stop
+Ejecutar() {
+    ; Definir el comando SSH con ssh (OpenSSH)
+    comando := "ssh foxyyts@192.168.1.143 cat /home/foxyyts/ahk/text.txt > D:\ahk\cmd_output.txt 2>&1"
+    
+    ; Mostrar el comando en un MsgBox (opcional, para depuración)
+    MsgBox, %comando%
 
-sshUser := "foxyyts"  ; Usuario SSH
-sshPass := "1987"  ; Contraseña SSH
-sshHost := "192.168.1.143"  ; Dirección IP o nombre del servidor SSH
-sshPath := "/home/foxyyts/ahk"  ; Ruta en el servidor SSH para los archivos de confirmación
-
-EjecutarSSH(comando) {
-    ; Ejecutar comando SSH usando OpenSSH
-    comandoSSH := "ssh " sshUser "@" sshHost " " comando
-    MsgBox, Ejecutando comando SSH: %comandoSSH%
-    RunWait, % comandoSSH,, Hide
-    If (ErrorLevel != 0) {
-        MsgBox, Error al ejecutar comando SSH: %comandoSSH%
-        ExitApp
-    }
+    ; Ejecutar el comando usando cmd.exe
+    RunWait, %ComSpec% /c %comando%,, Hide
 }
+
+; Llamar a la función
+Ejecutar()
