@@ -7,7 +7,7 @@ funcionStart() {
     Sleep 50
     MouseMove, 370, 794
     Click
-    Sleep 1000
+    Sleep 3000
     MouseMove, 965, 120
     Click
     Sleep 50
@@ -39,7 +39,7 @@ return
         flagRepost := !flagRepost
         if (flagRepost) {
             funcionRepost()
-            SetTimer, funcionRepost, 300000
+            SetTimer, funcionRepost, 302500
         } else {
             SetTimer, funcionRepost, off
         }
