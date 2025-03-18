@@ -4,13 +4,13 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import javax.swing.ImageIcon;
+import javax.swing.ImageIcon; // no se usa
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
-import javax.swing.UIManager;
+import javax.swing.UIManager; //No se usa
  
 public class AbrirArchivoTexto extends JFrame implements ActionListener {
  
@@ -71,7 +71,9 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
         			//txp.setText(texto);
                     txp.setText( contenido );
  
-                }catch( Exception exp){}
+                }catch( Exception exp){
+					System.out.println( exp ); //imprimir el error para poder verlo
+				}
             }
         }
     }
@@ -99,20 +101,27 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
                 lineaToken=anaLex(linea);
                 System.out.println("Linea: "+numLinea);
                 for (int x=0 ; x < lineaToken.length; x++){
-                	if (lineaToken[x]== null){break;} 
+                	if (lineaToken[x]== null){
+						break; //faltaba indentar
+					} 
                 	System.out.println("Token posicion "+x+": "+lineaToken[x]);
                 }
             }
  
-        }catch( Exception e ){ System.out.println(e); }
+        }catch( Exception e ){ 
+			System.out.println(e); //faltaba indentar
+		}
         //finally se utiliza para que si todo ocurre correctamente o si ocurre 
         //algun error se cierre el archivo que anteriormente abrimos
-        finally
-        {
+        finally{
             try{
-                br.close();
+				//antes solo cerraba el br ahora cierra los 2 solo cuando no eran nulos
+                if (br != null) br.close();
+                if (fr != null) fr.close();
                 
-            }catch( Exception ex ){}
+            }catch( Exception ex ){
+				System.out.println( ex );//visualiar el error
+			}
         }
         return contenido;
     }
@@ -172,7 +181,6 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
 					t+=1;
 				}
 			}
-			
 			else if(Character.isDigit(palabra[i])){
 				System.out.println("Es un numero: " + Character.isDigit(palabra[i]));
 				
@@ -181,14 +189,15 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
 				while (Character.isDigit(palabra[j]) || palabra[j]=='.'){
 					token+=palabra[j];
 					j+=1;
-					if (j == palabra.length){break;} //Si llego al fin, se lee el next char
+					if (j == palabra.length){
+						break;
+					} //Si llego al fin, se lee el next char
 				}
 				//System.out.println(token);
 				tokens[t]=token;
 				t+=1;
 				i=j-1;//Para que continue en la siguiente palabra
 			}
-			
 			else if (Character.isLetter(palabra[i])){
 				System.out.println("Es una letra: " + Character.isLetter(palabra[i]));
 				
@@ -197,7 +206,9 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
 				while (Character.isLetter(palabra[j])){
 					token+=palabra[j];
 					j+=1;
-					if (j == palabra.length){break;} //Si llego al fin, se lee el next char
+					if (j == palabra.length){
+						break;
+					} //Si llego al fin, se lee el next char
 				}
 				System.out.println(token);
 				tokens[t]=token;
@@ -205,7 +216,6 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
 				i=j-1;//Para que continue en la siguiente palabra
 					
 			}
-			
 			else if (palabra[i]=='\''){
 				//System.out.println("Es una cadena de texto");
 				//Character.isLetter(palabra[i]);
@@ -224,8 +234,6 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
 				i=j;//Para que continue en la siguiente palabra
 					
 			}
-			
-			
 			else{
 				//System.out.println("Es otro caracter");
 				tokens[t]=""+palabra[i];
