@@ -77,10 +77,8 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
         BufferedReader br = null;
         // Cadena de texto donde se guardara el contenido del archivo
         String contenido = "";
-        String lineaToken[] = new String[200];
         boolean programaEncontrado = false;
-        boolean inicioEncontrado = false;
-        boolean finEncontrado = false;
+        boolean primeraLineaValida = false;
 
         try {
             // ruta puede ser de tipo String o tipo File
@@ -93,48 +91,45 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
             while ((linea = br.readLine()) != null) {
                 contenido += linea + "\n";
                 numLinea += 1;
-                lineaToken = anaLex(linea);
-                System.out.println("Linea: " + numLinea);
-                for (int x = 0; x < lineaToken.length; x++) {
-                    if (lineaToken[x] == null) {
-                        break;
-                    }
-                    System.out.println("Token posicion " + x + ": " + lineaToken[x]);
-                }
 
-                // Verificamos si la primera línea comienza con "programa"
-                if (numLinea == 1 && !linea.trim().equals("programa")) {
-                    contenido += "Error: La primera línea debe comenzar con la palabra clave 'programa'\n";
-                }
-
-                // Verificamos si la línea contiene "programa"
-                if (linea.trim().equals("programa")) {
-                    programaEncontrado = true;
-                }
-
-                // Verificamos si la línea siguiente a "programa" es vacía o "inicio"
-                if (programaEncontrado && !inicioEncontrado) {
-                    String siguienteLinea = br.readLine();
-                    if (siguienteLinea != null) {
-                        contenido += siguienteLinea + "\n";
-                        numLinea += 1;
-                        if (!siguienteLinea.trim().isEmpty() && !siguienteLinea.trim().equals("inicio")) {
-                            contenido += "Error: Después de 'programa' debe haber una línea vacía o 'inicio'\n";
+                // Verificamos si es la primera línea
+                if (numLinea == 1) {
+                    if (!linea.trim().startsWith("programa ")) {
+                        contenido += "Error: La primera línea debe comenzar con 'programa' seguido de un identificador válido\n";
+                    } else {
+                        String[] partes = linea.trim().split("\\s+");
+                        if (partes.length < 2 || !esIdentificadorValido(partes[1])) {
+                            contenido += "Error: El identificador después de 'programa' debe comenzar con una letra y no contener números ni símbolos\n";
                         } else {
-                            inicioEncontrado = true;
+                            primeraLineaValida = true;
+                            programaEncontrado = true;
+                        }
+                    }
+                } else {
+                    // Verificamos si la línea no está vacía y comienza con una palabra clave
+                    if (!linea.trim().isEmpty()) {
+                        String primeraPalabra = obtenerPrimeraPalabra(linea);
+                        if (!esPalabraClave(primeraPalabra)) {
+                            contenido += "Error: La línea debe comenzar con una palabra clave (inicio, imprimir, leer, fin)\n";
                         }
                     }
                 }
 
-                // Verificamos si la línea contiene "fin"
-                if (linea.trim().equals("fin")) {
-                    finEncontrado = true;
+                // Verificamos si la palabra "programa" aparece en otra línea
+                if (numLinea > 1 && linea.trim().startsWith("programa")) {
+                    contenido += "Error: La palabra 'programa' solo puede aparecer en la primera línea\n";
+                }
+
+                // Llamamos a anaLex para detectar errores léxicos
+                String erroresLexicos = anaLex(linea);
+                if (!erroresLexicos.isEmpty()) {
+                    contenido += erroresLexicos + "\n";
                 }
             }
 
-            // Verificamos si se encontró la palabra "fin" al final del archivo
-            if (!finEncontrado) {
-                contenido += "Error: El archivo debe terminar con la palabra 'fin'\n";
+            // Verificamos si se encontró la palabra "programa" en la primera línea
+            if (!programaEncontrado) {
+                contenido += "Error: La primera línea debe comenzar con 'programa'\n";
             }
 
         } catch (Exception e) {
@@ -152,27 +147,23 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
     }
     // ------------------------------------------------------------------------------//
 
-    public String[] anaLex(String lineas) {
+    public String anaLex(String lineas) {
         // ----------------------------------------------------
         // Analisis lexico
-        String token = ""; // almacena cada token
-        String tokens[] = new String[200]; // vector para almacenar los tokens de cada línea
-        int t = 0; // puntero de tokens
+        String errores = ""; // almacena los errores léxicos
         char palabra[] = lineas.toCharArray();
 
         // Verificación de líneas vacías o que comiencen con palabras clave
         if (!lineas.trim().isEmpty()) {
             String primeraPalabra = obtenerPrimeraPalabra(lineas);
             if (!esPalabraClave(primeraPalabra)) {
-                tokens[t] = "Error: La línea debe comenzar con una palabra clave (programa, inicio, imprimir, leer, fin)";
-                t += 1;
+                errores += "Error: La línea debe comenzar con una palabra clave (programa, inicio, imprimir, leer, fin)\n";
             }
 
             // Verificación de terminación con ; si no es inicio o fin
             if (!primeraPalabra.equals("inicio") && !primeraPalabra.equals("fin")) {
                 if (!lineas.trim().endsWith(";")) {
-                    tokens[t] = "Error: La línea debe terminar con ;";
-                    t += 1;
+                    errores += "Error: La línea debe terminar con ;\n";
                 }
             }
         }
@@ -182,76 +173,50 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
                 // Ignorar espacios
             } else if (palabra[i] == '<') {
                 if (i + 1 < palabra.length && palabra[i + 1] == '=') {
-                    tokens[t] = "<=";
-                    t += 1;
                     i += 1;
                 } else if (i + 1 < palabra.length && palabra[i + 1] == '>') {
-                    tokens[t] = "<>";
-                    t += 1;
                     i += 1;
-                } else {
-                    tokens[t] = "<";
-                    t += 1;
                 }
             } else if (palabra[i] == '=') {
-                tokens[t] = "=";
-                t += 1;
+                // No se necesita acción adicional
             } else if (palabra[i] == '>') {
                 if (i + 1 < palabra.length && palabra[i + 1] == '=') {
-                    tokens[t] = ">=";
-                    t += 1;
                     i += 1;
-                } else {
-                    tokens[t] = ">";
-                    t += 1;
                 }
             } else if (Character.isDigit(palabra[i])) {
                 int j = i;
-                token = "";
                 while (j < palabra.length && (Character.isDigit(palabra[j]) || palabra[j] == '.')) {
-                    token += palabra[j];
                     j += 1;
                 }
-                tokens[t] = token;
-                t += 1;
                 i = j - 1;
             } else if (Character.isLetter(palabra[i])) {
                 int j = i;
-                token = "";
                 while (j < palabra.length && Character.isLetter(palabra[j])) {
-                    token += palabra[j];
                     j += 1;
                 }
-                tokens[t] = token;
-                t += 1;
                 i = j - 1;
             } else if (palabra[i] == '"') {
-                token = "";
-                token += palabra[i];
                 int j = i + 1;
                 while (j < palabra.length && palabra[j] != '"') {
-                    token += palabra[j];
                     j += 1;
                 }
                 if (j >= palabra.length) {
-                    tokens[t] = "Error: Cadena de texto no cerrada correctamente con comillas dobles";
-                    t += 1;
+                    errores += "Error: Cadena de texto no cerrada correctamente con comillas dobles\n";
                 } else {
-                    token += palabra[j];
-                    tokens[t] = token;
-                    t += 1;
                     i = j;
                 }
             } else {
-                tokens[t] = "" + palabra[i];
-                t += 1;
+                if (palabra[i] != ';') {
+                    errores += "Error: Carácter no válido: " + palabra[i] + "\n";
+                }
+                
             }
         }
 
         // Fin analisis lexico
         // ----------------------------------------------------
 
-        return tokens;
+        return errores;
     }
 
     private String obtenerPrimeraPalabra(String lineas) {
@@ -261,6 +226,25 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
 
     private boolean esPalabraClave(String palabra) {
         return palabra.equals("programa") || palabra.equals("inicio") || palabra.equals("imprimir") || palabra.equals("leer") || palabra.equals("fin");
+    }
+
+    private boolean esIdentificadorValido(String identificador) {
+        if (identificador == null || identificador.isEmpty()) {
+            return false;
+        }
+        // Verifica que el primer carácter sea una letra
+        if (!Character.isLetter(identificador.charAt(0))) {
+            return false;
+        }
+        // Verifica que el resto de los caracteres sean letras o números
+        for (int i = 1; i < identificador.length(); i++) {
+            if (!Character.isLetterOrDigit(identificador.charAt(i))) {
+                if (identificador.charAt(i) != ';') {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public static void main(String[] arg) {
