@@ -77,8 +77,8 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
         BufferedReader br = null;
         // Cadena de texto donde se guardara el contenido del archivo
         String contenido = "";
-        boolean programaEncontrado = false;
-        boolean primeraLineaValida = false;
+        boolean inicioEncontrado = false;
+        boolean finEncontrado = false;
 
         try {
             // ruta puede ser de tipo String o tipo File
@@ -87,6 +87,8 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
 
             String linea;
             int numLinea = 0;
+            // ----------------------------------------------------
+            // Analisis lexico
             // Obtenemos el contenido del archivo linea por linea
             while ((linea = br.readLine()) != null) {
                 contenido += linea + "\n";
@@ -101,14 +103,18 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
                         if (partes.length < 2 || !esIdentificadorValido(partes[1])) {
                             contenido += "Error: El identificador después de 'programa' debe comenzar con una letra y no contener números ni símbolos\n";
                         } else {
-                            primeraLineaValida = true;
-                            programaEncontrado = true;
                         }
                     }
                 } else {
                     // Verificamos si la línea no está vacía y comienza con una palabra clave
                     if (!linea.trim().isEmpty()) {
                         String primeraPalabra = obtenerPrimeraPalabra(linea);
+                        if (primeraPalabra.equals("inicio")) {
+                            inicioEncontrado = true;
+                        }
+                        if (primeraPalabra.equals("fin")) {
+                            finEncontrado = true;
+                        }
                         if (!esPalabraClave(primeraPalabra)) {
                             contenido += "Error: La línea debe comenzar con una palabra clave (inicio, imprimir, leer, fin)\n";
                         }
@@ -126,11 +132,13 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
                     contenido += erroresLexicos + "\n";
                 }
             }
-
-            // Verificamos si se encontró la palabra "programa" en la primera línea
-            if (!programaEncontrado) {
-                contenido += "Error: La primera línea debe comenzar con 'programa'\n";
+            if (!inicioEncontrado) {
+                contenido += "Error: La palabra 'inicio' no fue encontrada\n";
             }
+            if (!finEncontrado) {
+                contenido += "Error: La palabra 'fin' no fue encontrada\n";
+            }
+
 
         } catch (Exception e) {
             System.out.println(e);
@@ -148,18 +156,13 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
     // ------------------------------------------------------------------------------//
 
     public String anaLex(String lineas) {
-        // ----------------------------------------------------
-        // Analisis lexico
+        
         String errores = ""; // almacena los errores léxicos
         char palabra[] = lineas.toCharArray();
 
-        // Verificación de líneas vacías o que comiencen con palabras clave
+        // Verificación de líneas vacías
         if (!lineas.trim().isEmpty()) {
             String primeraPalabra = obtenerPrimeraPalabra(lineas);
-            if (!esPalabraClave(primeraPalabra)) {
-                errores += "Error: La línea debe comenzar con una palabra clave (programa, inicio, imprimir, leer, fin)\n";
-            }
-
             // Verificación de terminación con ; si no es inicio o fin
             if (!primeraPalabra.equals("inicio") && !primeraPalabra.equals("fin")) {
                 if (!lineas.trim().endsWith(";")) {
@@ -171,19 +174,7 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
         for (int i = 0; i < palabra.length; i++) {
             if (palabra[i] == ' ') {
                 // Ignorar espacios
-            } else if (palabra[i] == '<') {
-                if (i + 1 < palabra.length && palabra[i + 1] == '=') {
-                    i += 1;
-                } else if (i + 1 < palabra.length && palabra[i + 1] == '>') {
-                    i += 1;
-                }
-            } else if (palabra[i] == '=') {
-                // No se necesita acción adicional
-            } else if (palabra[i] == '>') {
-                if (i + 1 < palabra.length && palabra[i + 1] == '=') {
-                    i += 1;
-                }
-            } else if (Character.isDigit(palabra[i])) {
+            }  else if (Character.isDigit(palabra[i])) {
                 int j = i;
                 while (j < palabra.length && (Character.isDigit(palabra[j]) || palabra[j] == '.')) {
                     j += 1;
@@ -213,11 +204,9 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
             }
         }
 
-        // Fin analisis lexico
-        // ----------------------------------------------------
-
         return errores;
     }
+
 
     private String obtenerPrimeraPalabra(String lineas) {
         String[] palabras = lineas.trim().split("\\s+");
@@ -246,6 +235,9 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
         }
         return true;
     }
+
+    // Fin analisis lexico
+    // ----------------------------------------------------
 
     public static void main(String[] arg) {
         try {

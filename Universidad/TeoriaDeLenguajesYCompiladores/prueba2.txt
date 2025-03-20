@@ -1,0 +1,8 @@
+programa prueba2;
+
+inicio
+imprimir "buenos dias;
+leer b;
+imprimir "cuatro";
+leer x;
+fin

@@ -1,0 +1,6 @@
+programa p7;
+
+inicio
+imprimir a";
+fin
+leer

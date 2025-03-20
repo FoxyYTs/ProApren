@@ -1,0 +1,5 @@
+programa p5;
+
+inicio
+
+fin

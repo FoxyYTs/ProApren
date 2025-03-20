@@ -1,0 +1,8 @@
+programa 8p4
+
+inicion
+imprimir "buenos días;
+leer b;
+imprimir "cuatro";
+leer x;
+fin

@@ -1,0 +1,6 @@
+programa p8;
+
+inicio
+imprimir imprimir
+fin
+leer

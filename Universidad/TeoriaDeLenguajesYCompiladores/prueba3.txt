@@ -1,4 +1,4 @@
-programa prueba266;
+programa
 
 inicio
 imprimir "buenos días;

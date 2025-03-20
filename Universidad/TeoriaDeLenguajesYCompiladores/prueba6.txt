@@ -1,0 +1,6 @@
+programa p6;
+
+inicio
+imprimir "
+leer
+fin
