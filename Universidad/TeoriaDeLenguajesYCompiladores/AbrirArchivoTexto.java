@@ -1,6 +1,3 @@
-// Melany Palacio Fonnegra
-// Jose Andres Daza Gallego
-
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -186,3 +183,13 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
         new AbrirArchivoTexto();
     }
 }
+=======
+if (a < b) { 
+	System.out.println("a es menor que b"); 
+} else if (num > 5) { 
+	System.out.println("num es mayor que 5"); 
+} else if (nombre != "juan") { 
+	System.out.println("el nombre no es juan"); 
+} else { 
+	System.out.println("ninguna de las condiciones se cumplio"); }
+>>>>>>> Stashed changes
