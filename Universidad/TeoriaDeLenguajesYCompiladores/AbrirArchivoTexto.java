@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -182,6 +183,9 @@ public class AbrirArchivoTexto extends JFrame implements ActionListener {
         }
         new AbrirArchivoTexto();
     }
+
+    JTextPane txp;
+    JFileChooser abrirArchivo;
 }
 =======
 if (a < b) { 
