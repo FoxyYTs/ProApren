@@ -3,7 +3,10 @@ flagRebirth2 := false
 flagReset := false
 
 funcionClaim() {
-    MouseMove, 1882, 104
+    MouseMove, 1880, 95
+    Click
+    Sleep 500
+    MouseMove, 191, 254
     Click
     Sleep 500
     MouseMove, 1653, 972
