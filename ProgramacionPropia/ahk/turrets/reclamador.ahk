@@ -20,6 +20,10 @@ funcionClaim() {
 funcionDelay() {
     MouseMove, 1050, 50
     Click
+    Sleep 1000
+    Send {Space Down}
+    Sleep 2000
+    Send {Space Up}
 }
 
 ^Numpad2::
