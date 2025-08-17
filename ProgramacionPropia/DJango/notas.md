@@ -1,49 +1,51 @@
 # Notas de Uso de DJango
 
-## Manejo Entorno Virual
+## Manejo del Entorno Virtual
 
-* Comando para crear entornos virtuales `python -m venv [nombre_entorno]`
-* activacion de entorno virtual `.\[nombre_entorno]\Scripts\activate`
-* cerrar entorno virtual "Sin importar en que carpeta estes" `deactivate`
+* Comando para crear entornos virtuales: `python -m venv [nombre_entorno]`
+* Activación del entorno virtual:
+  * **Windows:** `.\<nombre_entorno>\Scripts\activate`
+  * **Linux/macOS:** `source [nombre_entorno]/bin/activate`
+* Cerrar entorno virtual (no importa en qué carpeta estés): `deactivate`
 
-*Recuerda Instalar Django dentro de este entorno `pip install Django`*
+*Recuerda instalar Django dentro de este entorno:* `pip install Django`
 
 ## Manejo de DJango
 
-* Crea el proyecto DJango `django-admin startproject [nombre_proyecto] .` *El punto crea el proyecto en la carpeta que estes ubicado*
-* Crea aplicaciones en el proyecto `python manage.py startapp [nombre_aplicacion]`
-* Arrancar servidor Django `python manage.py runserver`
+* Crea el proyecto Django: `django-admin startproject [nombre_proyecto] .` **El punto** crea el proyecto en la carpeta actual.
+* Crea aplicaciones en el proyecto: `python manage.py startapp [nombre_aplicacion]`
+* Arrancar el servidor de desarrollo de Django: `python manage.py runserver`
 
-## Manejo de DB
+## Manejo de la Base de Datos
 
-* instalar el paquete de comunicacion entre DJango y la Base de datos
-  * PostgreSQL: `pip install psycopg2-binary`
+* Instala el paquete de comunicación entre Django y la base de datos:
 
-    ```
-    
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'nombre_de_tu_db',
-            'USER': 'tu_usuario',
-            'PASSWORD': 'tu_contraseña',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
-    }
-    ```
+  * **PostgreSQL:** `pip install psycopg2-binary`
 
-  * MySQL/MariaDB: `pip install mysqlclient`
+      ```python
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.postgresql',
+              'NAME': 'nombre_de_tu_db',
+              'USER': 'tu_usuario',
+              'PASSWORD': 'tu_contraseña',
+              'HOST': 'localhost',
+              'PORT': '5432',
+          }
+      }
+      ```
 
-    ```
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'nombre_de_tu_db',
-            'USER': 'tu_usuario',
-            'PASSWORD': 'tu_contraseña',
-            'HOST': 'localhost',
-            'PORT': '3306',
-        }
-    }
-    ```
+  * **MySQL/MariaDB:** `pip install mysqlclient`
+
+      ```python
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.mysql',
+              'NAME': 'nombre_de_tu_db',
+              'USER': 'tu_usuario',
+              'PASSWORD': 'tu_contraseña',
+              'HOST': 'localhost',
+              'PORT': '3306',
+          }
+      }
+      ```
