@@ -10,4 +10,4 @@
 
 ## Manejo de DJango
 
-* Crea el proyecto DJango `django-admin startproject mi_proyecto .`
+* Crea el proyecto DJango `django-admin startproject [nombre_proyecto] .` *El punto crea el proyecto en la carpeta que estes ubicado*
