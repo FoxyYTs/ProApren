@@ -11,3 +11,5 @@
 ## Manejo de DJango
 
 * Crea el proyecto DJango `django-admin startproject [nombre_proyecto] .` *El punto crea el proyecto en la carpeta que estes ubicado*
+* Crea aplicaciones en el proyecto `python manage.py startapp [nombre_aplicacion]`
+* Arrancar servidor Django `python manage.py runserver`
