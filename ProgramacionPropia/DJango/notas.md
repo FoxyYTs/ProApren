@@ -52,3 +52,8 @@
 * Aplica las migraciones de la base de datos:
   * `python manage.py makemigrations`
   * `python manage.py migrate`
+
+## Herramientas extra
+
+* Permite usar el autocompletar en el shell `pip install ipython`
+* Permite guardar todas las librerias instaladas en el entorno `pip freeze > requirements.txt`
