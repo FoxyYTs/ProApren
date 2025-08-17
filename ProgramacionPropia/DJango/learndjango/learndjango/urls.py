@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core.views import view_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cars/', view_list),  # Include URLs from the core app
 ]
