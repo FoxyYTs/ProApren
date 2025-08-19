@@ -75,15 +75,14 @@ WSGI_APPLICATION = 'learndjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lean_django',       # El nombre de tu base de datos
-        'USER': 'postgres',            # Tu usuario de PostgreSQL
-        'PASSWORD': '1987',     # Tu contraseña de PostgreSQL
-        'HOST': '10.144.253.101',             # La dirección del servidor de la base de datos (generalmente 'localhost')
-        'PORT': '5432',                  # El puerto por defecto de PostgreSQL
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'learn_django',
+        'USER': 'foxyyts',
+        'PASSWORD': 'k4Su67vWTC',
+        'HOST': '10.144.253.101',
+        'PORT': '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

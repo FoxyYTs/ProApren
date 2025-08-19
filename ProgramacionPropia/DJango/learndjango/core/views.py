@@ -1,4 +1,7 @@
+from django.http import HttpResponse
 from django.shortcuts import render
+
+from ProgramacionPropia.DJango.learndjango.core.models import Author, Profile
 
 # Create your views here.
 def view_list(request):
@@ -10,3 +13,15 @@ def view_list(request):
     ]
     context = {'car_list': car_list}
     return render(request, 'core/car_list.html', context)
+
+def my_author(request, *args, **kwargs):
+    print(args)
+    print(kwargs)
+    return HttpResponse("")
+
+def author_view(request, *args, **kwargs):
+    print(args)
+    print(kwargs)
+    author = Author.objects.get(id=kwargs['id'])
+    profile = Profile.objects.get(Author_id=kwargs['id'])
+    return HttpResponse(f"Author: {author.name} - Biografia: {profile.bio} ")
