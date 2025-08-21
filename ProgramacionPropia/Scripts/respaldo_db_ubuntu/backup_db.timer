@@ -1,0 +1,13 @@
+[Unit]
+Description=Ejecuta el servicio de respaldo de la base de datos a las 2 AM
+
+[Timer]
+# Horario en el que se ejecutará el servicio.
+# Esto es equivalente a '0 2 * * *' en crontab.
+OnCalendar=*-*-* 02:00:00
+# Reinicia el servicio si no fue exitoso
+# y lo notifica a journalctl.
+Persistent=true
+
+[Install]
+WantedBy=timers.target
