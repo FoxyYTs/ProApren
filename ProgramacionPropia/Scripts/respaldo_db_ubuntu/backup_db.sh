@@ -31,9 +31,9 @@ for DB in $DATABASES; do
     /opt/lampp/bin/mysqldump -u $USER -p$PASSWORD $DB > $BACKUP_FILE
     if [ $? -ne 0 ]; then
         BACKUP_STATUS=1
-        ERROR_LOG+="\n❌ Falló el respaldo de $DB"
+        ERROR_LOG+="• \`$DB\`"$'\n'
     else
-        SUCCESSFUL_DBS+="$DB "
+        SUCCESSFUL_DBS+="• \`$DB\`"$'\n'
     fi
 done
 
@@ -41,8 +41,8 @@ done
 cd $REPO_DIR
 
 # Configurar Git solo para este repositorio
-git config --local user.name "FoxyYTs"
-git config --local user.email "foxy200442@gmail.com"
+git config --local user.name "" # Nombre de usuario de Git
+git config --local user.email "" # Email de usuario de Git
 
 # Inicializar repo (solo primera vez)
 if [ ! -d ".git" ]; then
@@ -54,6 +54,14 @@ git pull origin main
 
 # Copiar nuevos respaldos (sobrescribiendo los existentes)
 cp -f $BACKUP_DIR/*.sql .
+
+FILES_LIST=""
+for f in "$BACKUP_DIR"/*.sql; do
+    [ -e "$f" ] || continue
+    base=$(basename "$f")
+    FILES_LIST+="• \`$base\`"$'\n'
+done
+
 
 # Commit y push
 git add .
@@ -68,22 +76,27 @@ if [ $BACKUP_STATUS -eq 0 ] && [ $PUSH_STATUS -eq 0 ]; then
     MESSAGE="✅ *Respaldo exitoso*
     *Servidor*: $SERVER_NAME
     *Fecha*: $(date '+%d/%m/%Y %H:%M')
-    *Bases de datos respaldadas*: \`${SUCCESSFUL_DBS}\`
-    *Archivos subidos a GitHub*: $(ls $BACKUP_DIR/*.sql | xargs -n 1 basename | tr '\n' ' ')"
+    *Bases de datos respaldadas*:
+	${SUCCESSFUL_DBS}
+    *Archivos subidos a GitHub*:
+	${FILES_LIST}"
 elif [ $BACKUP_STATUS -ne 0 ]; then
     # Fallo en el respaldo de al menos una BD
     MESSAGE="⚠️ *Fallo parcial en el respaldo*
     *Servidor*: $SERVER_NAME
     *Fecha*: $(date '+%d/%m/%Y %H:%M')
-    *Bases de datos con error*:\`${ERROR_LOG}\`
-    *Bases de datos exitosas*: \`${SUCCESSFUL_DBS}\`
+    *Bases de datos con error*:
+	${ERROR_LOG}
+    *Bases de datos exitosas*:
+	${SUCCESSFUL_DBS}
     *Estado de Git*: ${PUSH_STATUS}"
 elif [ $PUSH_STATUS -ne 0 ]; then
     # Fallo en el push a Git
     MESSAGE="❌ *Fallo en la subida a GitHub*
     *Servidor*: $SERVER_NAME
     *Fecha*: $(date '+%d/%m/%Y %H:%M')
-    *Bases de datos respaldadas*: \`${SUCCESSFUL_DBS}\`
+    *Bases de datos respaldadas*:
+	${SUCCESSFUL_DBS}
     *Error*: No se pudo subir los archivos. Por favor, revisa manualmente."
 fi
 
@@ -92,5 +105,5 @@ if [ -n "$MESSAGE" ]; then
     curl -s -X POST $TELEGRAM_API \
         -d chat_id=$TELEGRAM_CHAT_ID \
         -d text="$MESSAGE" \
-        -d parse_mode="Markdown"
+        -d parse_mode="Markdown" > /dev/null
 fi
