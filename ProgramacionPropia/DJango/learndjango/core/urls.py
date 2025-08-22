@@ -1,12 +1,13 @@
 
 from django.urls import path
-from .views import view_list, author_view, my_author
+from .views import my_view, my_test_view, author_view, CarListView
 
 
 
 urlpatterns = [
-    path('listado/', view_list),
-    path('detalle/<int:id>', my_author),
-    path('marcas/<str:brand>', my_author),
-    path('autor/<int:id>', author_view),
+    path('/listado', my_view),
+    path('/detalle/<int:id>', my_test_view),
+    path('/marcas/<str:brand>', my_test_view),
+    path('/autor/<int:id>', author_view),
+    path('/clist', CarListView.as_view()),
 ]

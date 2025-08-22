@@ -1,20 +1,35 @@
+from django import views
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
 
 from core.models import Author, Profile
 
-# Create your views here.
-def view_list(request):
-    """View to list all cars."""
+def my_view(request):
     car_list = [
         {'title': 'Carro1','description': 'primer_carro' , 'name': 'Toyota', 'year': 2020, 'color': 'Red'},
         {'title': 'Carro2','description': 'segundo_carro' , 'name': 'Honda', 'year': 2021, 'color': 'Blue'},
         {'title': 'Carro3','description': 'tercer_carro' , 'name': 'Ford', 'year': 2022, 'color': 'Green'},
     ]
-    context = {'car_list': car_list}
-    return render(request, 'core/car_list.html', context)
+    contex = {
+        "car_list": car_list,
+    }
+    return render(request, "core/car_list.html", contex)
 
-def my_author(request, *args, **kwargs):
+class CarListView(TemplateView):
+    template_name="core/car_list.html"
+    
+    def get_context_data(self):
+        car_list = [
+            {'title': 'Carro1','description': 'primer_carro' , 'name': 'Toyota', 'year': 2020, 'color': 'Red'},
+            {'title': 'Carro2','description': 'segundo_carro' , 'name': 'Honda', 'year': 2021, 'color': 'Blue'},
+            {'title': 'Carro3','description': 'tercer_carro' , 'name': 'Ford', 'year': 2022, 'color': 'Green'},
+        ]
+        return {
+            "car_list": car_list,
+        }
+
+def my_test_view(request, *args, **kwargs):
     print(args)
     print(kwargs)
     return HttpResponse("")
