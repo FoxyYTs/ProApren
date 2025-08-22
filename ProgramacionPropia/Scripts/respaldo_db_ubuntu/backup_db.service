@@ -1,0 +1,16 @@
+[Unit]
+Description=Servicio para el respaldo automático de bases de datos
+# Asegura que el servicio se ejecute solo si la base de datos está activa
+# y el directorio existe.
+Wants=mariadb.service
+After=mariadb.service
+
+[Service]
+Type=oneshot
+# Usuario con el que se ejecutará el script
+User=labintegrado
+# Ruta completa al script de respaldo
+ExecStart=/opt/lampp/backups/backup_db.sh
+# Redirige la salida a journald, mejor que un archivo de registro manual.
+StandardOutput=journal
+StandardError=journal
