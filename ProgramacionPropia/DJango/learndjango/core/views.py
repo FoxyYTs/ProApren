@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from ProgramacionPropia.DJango.learndjango.core.models import Author, Profile
+from core.models import Author, Profile
 
 # Create your views here.
 def view_list(request):
