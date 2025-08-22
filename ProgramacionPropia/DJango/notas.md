@@ -57,3 +57,4 @@
 
 * Permite usar el autocompletar en el shell `pip install ipython`
 * Permite guardar todas las librerias instaladas en el entorno `pip freeze > requirements.txt`
+* Permite la Instalacion de las librerias antes guardadas `pip install -r requirements.txt`
