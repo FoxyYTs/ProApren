@@ -74,17 +74,16 @@ def huffman_encoding(data):
     return encoded_data, huffman_code
 
 def huffman_decoding(encoded_data, huffman_code):
-    reverse_huffman = {v: k for k, v in huffman_code.items()}  # invertir diccionario
+    print(encoded_data)
     decoded_data = ""
     current_code = ""
-
     for bit in encoded_data:
         current_code += bit
-        if current_code in reverse_huffman:
-            decoded_data += reverse_huffman[current_code]
-            current_code = ""
+        for clave, valor in huffman_code.items():
+            if valor == current_code:
+                decoded_data += clave
+                current_code = ""
     return decoded_data
-
 
 def seleccionar_archivo(tipo):
     try:
