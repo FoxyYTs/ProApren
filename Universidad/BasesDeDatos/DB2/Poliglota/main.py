@@ -1,9 +1,9 @@
-import mysql.connector
-eq
-import redis
 import json
 
-from conexion import conectar
+from conexion.mysql import conectar as conectarsql
+from conexion.postgresql import conectar as conectarpostgresql
+from conexion.mongodb import conectar as conectarmongodb
+from conexion.redis import conectar as conectarredis
 
 def consulta(parametro):
     sql = "SELECT * From " + parametro
@@ -22,9 +22,9 @@ def consulta_g():
         return resultados
             
 
-conexion = conectar()
-if conexion:
-    mycursor = conexion.cursor()
+conexionmysql = conectarsql()
+if conexionmysql:
+    mycursor = conexionmysql.cursor()
     print(consulta("usuario"))
     print(consulta("productos"))
     print(consulta_g())
