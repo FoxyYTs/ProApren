@@ -1,12 +1,9 @@
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
 
-def conectar_mongodb():
+def conectar():
     try:
-        client = MongoClient(
-            'mongodb://10.144.253.101:27017/',
-            serverSelectionTimeoutMS=5000  # 5 segundos de timeout
-        )
+        client = MongoClient('mongodb://10.144.253.101:27017/', serverSelectionTimeoutMS=5000)
         client.admin.command('ping') # Verifica la conexión
         print("Conexión exitosa a la base de datos MongoDB.")
         return client
