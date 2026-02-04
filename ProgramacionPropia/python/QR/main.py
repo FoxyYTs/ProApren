@@ -1,31 +1,53 @@
 import qrcode
+import os
+from datetime import datetime
 
-# El enlace que quieres convertir en un código QR
-enlace_web = "https://forms.gle/BBx6Lz7rqEkWkjjG6"  # Puedes cambiar este enlace por el que desees
+def generar_qr(enlace, nombre_archivo=None, directorio="codigos_qr"):
+    """
+    Genera un código QR a partir de un enlace web
+    
+    Args:
+        enlace (str): URL o texto para convertir en QR
+        nombre_archivo (str): Nombre del archivo (opcional)
+        directorio (str): Directorio donde guardar el QR
+    """
+    
+    # Crear directorio si no existe
+    if not os.path.exists(directorio):
+        os.makedirs(directorio)
+    
+    # Generar nombre de archivo si no se proporciona
+    if not nombre_archivo:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        nombre_archivo = f"qr_{timestamp}.png"
+    
+    # Configuración del QR
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_H,
+        box_size=10,
+        border=4,
+    )
+    
+    # Añadir datos y generar QR
+    qr.add_data(enlace)
+    qr.make(fit=True)
+    
+    # Crear y guardar imagen
+    img = qr.make_image(fill_color="black", back_color="white")
+    ruta_completa = os.path.join(directorio, nombre_archivo)
+    img.save(ruta_completa)
+    
+    print(f"✅ Código QR generado exitosamente!")
+    print(f"📁 Guardado en: {ruta_completa}")
+    print(f"🔗 Enlace: {enlace}")
+    
+    return ruta_completa
 
-# Crear un objeto de código QR
-# version: 1 a 40 (determina el tamaño del QR, a mayor número, más grande y más datos puede almacenar)
-# error_correction: Nivel de corrección de errores (L, M, Q, H)
-# box_size: Tamaño de cada "caja" o píxel del código QR
-# border: Grosor del borde blanco alrededor del código
-qr = qrcode.QRCode(
-    version=1,
-    error_correction=qrcode.constants.ERROR_CORRECT_H,
-    box_size=10,
-    border=4,
-)
-
-# Añadir los datos (el enlace) al objeto QR
-qr.add_data(enlace_web)
-qr.make(fit=True)
-
-# Crear la imagen del código QR
-# fill_color: Color de los cuadrados del QR
-# back_color: Color del fondo
-img = qr.make_image(fill_color="black", back_color="white")
-
-# Guardar la imagen en un archivo
-nombre_archivo = "mi_qr.png"
-img.save(nombre_archivo)
-
-print(f"Código QR guardado como '{nombre_archivo}'")
+# Ejemplo de uso
+if __name__ == "__main__":
+    # El enlace que quieres convertir
+    enlace_web = "https://docs.google.com/document/u/1/d/1D7TtgA0Ky274nMDGHmMpWgyNzXfVWeVX/mobilebasic?pli=1"
+    
+    # Generar el QR
+    generar_qr(enlace_web, "mi_documento_qr.png")
