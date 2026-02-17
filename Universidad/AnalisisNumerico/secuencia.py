@@ -1,14 +1,14 @@
 
 def secuencia():
-    x = int(input("Ingrese el valor inicial: "))
+    x = float(input("Ingrese el valor inicial: "))
     for i in range(1, int(input("Ingrese el numero de iteraciones: "))+1):
-        x = x ** 2 - 1 
+        x = x ** 2 
         print("Iteracion: ",i ," Valor de x: ", x)
 
 def secuencia2():
-    x = int(input("Ingrese el valor inicial: "))
+    x = float(input("Ingrese el valor inicial: "))
     for i in range(1, int(input("Ingrese el numero de iteraciones: "))+1):
-        x = 2*(x ** 2) - 1 
+        x = 2*(x ** 2) 
         print("Iteracion: ",i ," Valor de x: ", x)
         
 if __name__ == "__main__":
