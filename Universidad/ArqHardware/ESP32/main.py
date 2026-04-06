@@ -2,7 +2,7 @@ from umqtt.robust import MQTTClient
 
 import machine as m
 
-ubidotsToken = "BBUS-bXgmuWeuji822RqGKmFwSHXva4h8hO"  
+  = "BBUS-bXgmuWeuji822RqGKmFwSHXva4h8hO"  
 
 clientID = "RANDOM-ALPHA-NUMERIC-NAME_OR_IMEI DEVICE ID"
 

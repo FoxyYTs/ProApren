@@ -1,17 +1,16 @@
 package CarreraBuses;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.io.File;
+import javax.swing.*;
 
 public class ventana extends JFrame implements GanadorListener {
     
     private JLabel titulo, subtitulo;
-    private JLabel labelBus1, labelBus2, labelBus3, labelBus4;
-    private JLabel labelPos1, labelPos2, labelPos3, labelPos4;
-    private JLabel imagenBus1, imagenBus2, imagenBus3, imagenBus4;
-    private JProgressBar barraBus1, barraBus2, barraBus3, barraBus4;
+    private JLabel labelBus1, labelBus2, labelBus3, labelBus4, labelBus5;
+    private JLabel labelPos1, labelPos2, labelPos3, labelPos4, labelPos5;
+    private JLabel imagenBus1, imagenBus2, imagenBus3, imagenBus4, imagenBus5;
+    private JProgressBar barraBus1, barraBus2, barraBus3, barraBus4, barraBus5;
     private JButton btnIniciar, btnReiniciar;
     private JLabel mensajeEstado, mensajeGanador;
     private ArrayList<bus> buses = new ArrayList<>();
@@ -20,17 +19,9 @@ public class ventana extends JFrame implements GanadorListener {
     private Sonido sonidoInicio;
     
     public ventana() {
-        setUIFont(new Font("Segoe UI Emoji", Font.PLAIN, 12));
         sonidoInicio = new Sonido();
         initComponents();
         iniciarActualizadorPosiciones();
-    }
-    
-    // Método para configurar la fuente de toda la interfaz
-    private void setUIFont(Font font) {
-        UIManager.put("Label.font", font);
-        UIManager.put("Button.font", font);
-        UIManager.put("ProgressBar.font", font);
     }
     
     private void initComponents() {
@@ -44,7 +35,7 @@ public class ventana extends JFrame implements GanadorListener {
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBackground(new Color(240, 248, 255));
         
-        // Panel superior con títulos (usando caracteres en lugar de emojis)
+        // Panel superior con títulos
         JPanel topPanel = new JPanel(new GridLayout(2, 1));
         topPanel.setBackground(new Color(240, 248, 255));
         
@@ -91,6 +82,11 @@ public class ventana extends JFrame implements GanadorListener {
                         labelBus4 = new JLabel(), barraBus4 = new JProgressBar(0, 100),
                         labelPos4 = new JLabel("-", JLabel.CENTER), 
                         imagenBus4 = new JLabel()));
+        
+        carreraPanel.add(crearCarril("BUS 5", new Color(0, 165, 0), 
+                        labelBus5 = new JLabel(), barraBus5 = new JProgressBar(0, 100),
+                        labelPos5 = new JLabel("-", JLabel.CENTER), 
+                        imagenBus5 = new JLabel()));
         
         JScrollPane scrollPane = new JScrollPane(carreraPanel);
         scrollPane.setBorder(BorderFactory.createTitledBorder("CARRILES DE CARRERA"));
@@ -183,7 +179,7 @@ public class ventana extends JFrame implements GanadorListener {
         
         // Panel central con la pista y el bus
         JPanel pistaPanel = new JPanel(null);
-        pistaPanel.setBackground(new Color(169, 169, 169)); // Color gris como la pista
+        pistaPanel.setBackground(new Color(169, 169, 169));
         pistaPanel.setPreferredSize(new Dimension(500, 100));
         
         // Meta
@@ -205,10 +201,6 @@ public class ventana extends JFrame implements GanadorListener {
         if (iconoBus != null) {
             imagen.setIcon(iconoBus);
         } else {
-            // Si no encuentra la imagen, muestra texto como respaldo
-            imagen.setText("[BUS]");
-            imagen.setFont(new Font("Arial", Font.BOLD, 12));
-            imagen.setForeground(color);
             imagen.setHorizontalAlignment(JLabel.CENTER);
             imagen.setVerticalAlignment(JLabel.CENTER);
             imagen.setOpaque(true);
@@ -272,7 +264,7 @@ public class ventana extends JFrame implements GanadorListener {
     
     private void actualizarPosiciones() {
         if (!buses.isEmpty() && carreraIniciada) {
-            // Ordenar buses por distancia recorrida (mayor a menor)
+            // Ordenar buses por distancia recorrida
             ArrayList<bus> busesOrdenados = new ArrayList<>(buses);
             busesOrdenados.sort((b1, b2) -> 
                 Integer.compare(b2.getDistanciaRecorrida(), b1.getDistanciaRecorrida()));
@@ -300,20 +292,24 @@ public class ventana extends JFrame implements GanadorListener {
             barraBus2.setValue(0);
             barraBus3.setValue(0);
             barraBus4.setValue(0);
+            barraBus5.setValue(0);
             labelBus1.setText("0 km");
             labelBus2.setText("0 km");
             labelBus3.setText("0 km");
             labelBus4.setText("0 km");
+            labelBus5.setText("0 km");
             labelPos1.setText("-");
             labelPos2.setText("-");
             labelPos3.setText("-");
             labelPos4.setText("-");
+            labelPos5.setText("-");
             
             // Reiniciar posición de las imágenes
             imagenBus1.setLocation(10, 30);
             imagenBus2.setLocation(10, 30);
             imagenBus3.setLocation(10, 30);
             imagenBus4.setLocation(10, 30);
+            imagenBus5.setLocation(10, 30);
             
             // Crear y iniciar los buses
             buses.clear();
@@ -323,11 +319,13 @@ public class ventana extends JFrame implements GanadorListener {
             bus bus2 = new bus("BUS 2", barraBus2, labelBus2, labelPos2, imagenBus2, this);
             bus bus3 = new bus("BUS 3", barraBus3, labelBus3, labelPos3, imagenBus3, this);
             bus bus4 = new bus("BUS 4", barraBus4, labelBus4, labelPos4, imagenBus4, this);
+            bus bus5 = new bus("BUS 5", barraBus5, labelBus5, labelPos5, imagenBus5, this);
             
             buses.add(bus1);
             buses.add(bus2);
             buses.add(bus3);
             buses.add(bus4);
+            buses.add(bus5);
             
             // Iniciar todos los hilos
             for (bus b : buses) {
@@ -355,20 +353,24 @@ public class ventana extends JFrame implements GanadorListener {
         barraBus2.setValue(0);
         barraBus3.setValue(0);
         barraBus4.setValue(0);
+        barraBus5.setValue(0);
         labelBus1.setText("0 km");
         labelBus2.setText("0 km");
         labelBus3.setText("0 km");
         labelBus4.setText("0 km");
+        labelBus5.setText("0 km");
         labelPos1.setText("-");
         labelPos2.setText("-");
         labelPos3.setText("-");
         labelPos4.setText("-");
+        labelPos5.setText("-");
         
         // Reiniciar posición de las imágenes
         imagenBus1.setLocation(10, 30);
         imagenBus2.setLocation(10, 30);
         imagenBus3.setLocation(10, 30);
         imagenBus4.setLocation(10, 30);
+        imagenBus5.setLocation(10, 30);
         
         bus.reiniciarGanador();
         buses.clear();

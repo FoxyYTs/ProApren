@@ -1,7 +1,7 @@
 package CarreraBuses;
 
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class bus extends Thread {
     private String nombreBus;
@@ -42,6 +42,7 @@ public class bus extends Thread {
                 });
 
                 if (distanciaRecorrida >= 100) {
+                    
                     synchronized (lock) {
                         if (!hayGanador) {
                             hayGanador = true;

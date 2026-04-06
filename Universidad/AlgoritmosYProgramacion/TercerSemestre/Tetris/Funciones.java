@@ -1,13 +1,11 @@
 package AlgoritmosYProgramacion.TercerSemestre.Tetris;
 
+import AlgoritmosYProgramacion.TercerSemestre.Tetris.Tetromino.Tetrominoes;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-
 import javax.sound.sampled.*;
 import javax.swing.*;
-
-import AlgoritmosYProgramacion.TercerSemestre.Tetris.Tetromino.Tetrominoes;
 
 public class Funciones extends JPanel implements ActionListener {
     public static final int ALTO = 22, ANCHO = 10;
@@ -146,7 +144,7 @@ public class Funciones extends JPanel implements ActionListener {
     public void musica() {
         try {
             clip = AudioSystem.getClip();
-            clip.open(AudioSystem.getAudioInputStream(new java.io.File("AlgoritmosYProgramacion/TercerSemestre/Tetris/song.wav")));
+            clip.open(AudioSystem.getAudioInputStream(new java.io.File("Universidad/AlgoritmosYProgramacion/TercerSemestre/Tetris/song.wav")));
             FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
             gainControl.setValue(-10.0f);
             clip.loop(Clip.LOOP_CONTINUOUSLY);
