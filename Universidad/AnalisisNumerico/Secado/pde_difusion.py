@@ -1,7 +1,7 @@
 """
 Modelo PDE de Difusión de Humedad en la Cama de Café
 Crank-Nicolson 1D + temperatura quasi-estacionaria
-Equivalente numérico del script FlexPDE secado_cafe.fde
+Equivalente numérico del script FlexPDE secado_cafe.pde
 
 z=0 → fondo (impermeable, adiabático)
 z=L → superficie expuesta al aire
