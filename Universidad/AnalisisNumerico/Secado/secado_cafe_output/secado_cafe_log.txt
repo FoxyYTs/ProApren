@@ -1,0 +1,9 @@
+FlexPDE Version 8.01/W64  12:40:29 Mar  4 2025  Time:22:24:53 5/16/26  Microsoft Windows [Versi¢n 10.0.26200.8246]
+Format:
+ +   wall | charged | 
+ +  clock |   CPU   | ...progress data...).
+
+START D:\Programacion\Github\ProApren\Universidad\AnalisisNumerico\Secado\secado_cafe.pde  22:24:53 5/16/26
+ +    0:00|     0:00| ***** Line 73 ERROR: 1D scripts support only POINT boundary conditions. Did you omit the POINT qualifier?
+
+ Stop Time:22:24:57 5/16/26  Elapsed Time:00:00:04

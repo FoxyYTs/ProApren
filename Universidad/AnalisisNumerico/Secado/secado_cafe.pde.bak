@@ -1,0 +1,108 @@
+{ ==============================================================================
+  Secado Solar de Café en Marquesina — Modelo Difusivo PDE 1D
+  FlexPDE 6.x / 7.x
+  
+  Facultad de Ingeniería — Rionegro, Antioquia, Colombia
+  ============================================================================== }
+
+TITLE 'Secado Solar de Cafe en Marquesina — Modelo Difusivo PDE 1D'
+
+COORDINATES
+  Xcart1      { Coordenadas cartesianas 1D — El eje X equivale a z (profundidad) }
+
+SELECT
+  errlim  = 1.0e-5    { Tolerancia de error relativo }
+  ngrid   = 80        { Nodos iniciales en la malla }
+
+VARIABLES
+  W                   { Contenido de humedad base seca [kg_agua/kg_seco] }
+  T                   { Temperatura del lecho [K] }
+
+DEFINITIONS
+  { --- Propiedades termofisicas del lecho de cafe --- }
+  rho_b    = 350.0    { Densidad aparente seca [kg/m³] }
+  Cp_b     = 1800.0   { Calor especifico [J/(kg·K)] }
+  k_b      = 0.15     { Conductividad termica [W/(m·K)] }
+  D_eff    = 5.0e-10  { Difusividad efectiva de humedad [m²/s] }
+  lambda_e = 2.26e6   { Calor latente de evaporacion [J/kg] }
+
+  { --- Coeficientes de transferencia en la superficie --- }
+  h_conv   = 15.0     { Coeficiente convectivo de calor [W/(m²·K)] }
+  h_mass   = 5.0e-5   { Coeficiente de transferencia de masa [m/s] }
+  W_eq     = 0.12     { Humedad de equilibrio [kg/kg] }
+
+  { --- Temperatura ambiente senoidal --- }
+  T_min    = 288.15   { 15 °C [K] }
+  T_max    = 301.15   { 28 °C [K] }
+  T_med    = (T_min + T_max) / 2.0
+  amp_T    = (T_max  - T_min) / 2.0
+  omega    = 2.0 * pi / 86400.0   { Frecuencia angular diaria [rad/s] }
+  T_amb    = T_med + amp_T * sin(omega * t - pi / 2.0)
+
+  { --- Condiciones iniciales --- }
+  W_ini    = 0.55     { Humedad inicial base seca [kg/kg] }
+  T_ini    = 288.15   { Temperatura inicial [K] }
+
+INITIAL VALUES
+  W = W_ini
+  T = T_ini
+
+EQUATIONS
+  { Difusion de humedad: dW/dt = d/dx(D_eff * dW/dx) }
+  dt(W) = dx(D_eff * dx(W))
+
+  { Conduccion de calor: rho*Cp*dT/dt = d/dx(k_b * dT/dx) }
+  rho_b * Cp_b * dt(T) = dx(k_b * dx(T))
+
+BOUNDARIES
+  REGION 1
+    { Punto x = 0: Fondo de la cama (Impermeable y Adiabatico) }
+    { Por defecto, si no se especifica NATURAL, el flujo es cero }
+    START(0.0) 
+    
+    { Trayectoria hasta la superficie }
+    LINE TO (0.04)
+    
+    { Frontera en x = 0.04: Superficie expuesta a evaporacion y conveccion }
+    { Convencion FlexPDE: NATURAL representa el flujo hacia afuera del dominio }
+    NATURAL(W) = h_mass * (W - W_eq)
+    NATURAL(T) = h_conv * (T - T_amb) + lambda_e * rho_b * h_mass * (W - W_eq)
+    
+    { En 1D el dominio termina en el ultimo punto, no se usa LINE TO CLOSE }
+    POINT(0.04) 
+
+TIME 0 TO 28800    { Simulación de 0 a 8 horas (en segundos) }
+
+MONITORS
+  { Muestreos en tiempo real mientras resuelve }
+  ELEVATION(W) FROM (0) TO (0.04) AS 'Perfil W(z)'
+  ELEVATION(T - 273.15) FROM (0) TO (0.04) AS 'Perfil T(z) [C]'
+
+PLOTS
+  { Perfiles finales vs Profundidad }
+  ELEVATION(W) FROM (0) TO (0.04) 
+    TITLE 'Perfil de humedad W(z) al finalizar t = 8 h'
+    XLABEL 'Profundidad z [m]' YLABEL 'W [kg/kg bs]'
+
+  ELEVATION(T - 273.15) FROM (0) TO (0.04) 
+    TITLE 'Perfil de temperatura T(z) al finalizar t = 8 h'
+    XLABEL 'Profundidad z [m]' YLABEL 'T [C]'
+
+  { Mapas espacio-temporales }
+  SURFACE(W) TITLE 'Evolucion espacio-temporal de la humedad W(z,t)'
+  SURFACE(T - 273.15) TITLE 'Evolucion espacio-temporal de la Temperatura T(z,t) [C]'
+
+  { Historiales a lo largo del tiempo }
+  HISTORY(W) AT 0.040 AT 0.030 AT 0.020 AT 0.010 AT 0.000 
+    TITLE 'Evolucion de la Humedad W en diferentes profundidades'
+    XLABEL 'Tiempo [s]' YLABEL 'W [kg/kg]'
+
+  HISTORY(T - 273.15) AT 0.040 AT 0.000 
+    TITLE 'Evolucion de la Temperatura del Cafe [C]'
+    XLABEL 'Tiempo [s]' YLABEL 'T [C]'
+
+  HISTORY(T_amb - 273.15) 
+    TITLE 'Evolucion de la Temperatura Ambiente [C]'
+    XLABEL 'Tiempo [s]' YLABEL 'T_amb [C]'
+
+END
