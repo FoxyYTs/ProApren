@@ -101,28 +101,13 @@ representa la excentricidad geométrica.
 
 \subsection{Transferencia de Calor por Convección}
 
-La transferencia convectiva de calor se modela mediante el número de Nusselt:
+El coeficiente convectivo de transferencia de calor $h_c$ se estima a partir del número de Nusselt~\cite{ref1}:
 
 \begin{equation}
-Nu=
-\frac{h_cL}{k}
+Nu = \frac{h_c\,L_c}{k_{aire}}
 \end{equation}
 
-donde:
-
-\begin{itemize}
-
-\item $Nu$: número de Nusselt
-
-\item $h_c$: coeficiente convectivo de transferencia de calor
-
-\item $L$: longitud característica
-
-\item $k$: conductividad térmica del fluido
-
-\end{itemize}
-
-El número de Nusselt permite relacionar los efectos de conducción y convección durante el proceso térmico de secado.
+donde $L_c$ es la longitud característica del grano y $k_{aire}$ la conductividad térmica del aire. Para las condiciones de la marquesina se adopta el valor $h_c = 15\,\text{W/(m}^2\text{·K)}$, correspondiente a convección natural moderada sobre la cama de café~\cite{ref2}.
 
 \subsection{Flujo de Calor y Evaporación}
 
@@ -143,23 +128,21 @@ donde:
 
 \begin{itemize}
 
-\item $C_q$: constante del sistema
+\item $C_q = 1.14\times10^{-7}\,\text{m}^2\text{/Pa}$: constante empírica del sistema que absorbe la geometría del grano y la relación entre flujo másico y diferencia de presiones
 
-\item $h_c$: coeficiente convectivo
+\item $h_c$: coeficiente convectivo superficial $[\text{W/(m}^2\text{·K)}]$
 
-\item $P(T_c)$: presión de vapor a temperatura del condensador
+\item $P(T_c)$, $P(T_e)$: presión de vapor a temperatura de referencia y de evaporación, calculadas con la ecuación de Antoine
 
-\item $P(T_e)$: presión de vapor a temperatura de evaporación
-
-\item $\gamma^e$: factor de corrección
+\item $\gamma^e$: factor de corrección evaporativa que pondera la contribución de la temperatura ambiente al potencial de evaporación
 
 \end{itemize}
 
-La expresión utilizada corresponde a una aproximación fenomenológica simplificada para representar la interacción térmica asociada al proceso evaporativo.
+La expresión constituye una aproximación fenomenológica calibrada para el grano de café, donde $C_q$ agrupa la geometría del grano, la difusividad de vapor y la resistencia de la capa límite. Bajo esta formulación, las unidades del producto $C_q h_c [P]$ resultan en $[\text{W}]$, siendo $C_q$ el factor de proporcionalidad dimensional que garantiza consistencia.
 
-\subsection{Sistema de Ecuaciones Diferenciales Acopladas}
+\subsection{Sistema de Ecuaciones Diferenciales}
 
-La evolución temporal de la energía térmica del sistema queda definida mediante:
+Bajo la hipótesis de que toda la energía transferida al grano se destina al cambio de fase (temperatura del grano aproximada a $T_{amb}$), la evolución temporal de la energía térmica acumulada y de la masa evaporada queda definida por el mismo forzamiento $\dot{Q}(t)$:
 
 \begin{equation}
 \boxed{
@@ -339,7 +322,7 @@ Humedad inicial & $X_0$ & 0.55 & kg/kg (bs) \\
 
 \section{Resultados y Discusión}
 
-El sistema de ecuaciones diferenciales acopladas fue integrado numéricamente mediante el método RK4 utilizando condiciones iniciales representativas del proceso de secado de café bajo condiciones ambientales variables.
+El sistema de ecuaciones diferenciales fue integrado numéricamente mediante el método RK4 utilizando condiciones iniciales representativas del proceso de secado de café bajo condiciones ambientales variables. Bajo la hipótesis de temperatura de grano igual a la temperatura ambiente, ambas ecuaciones comparten el mismo forzamiento $\dot{Q}(t)$ y se integran de forma simultánea.
 
 La simulación permitió analizar la evolución temporal de la energía térmica interna y la masa evaporada acumulada durante todo el intervalo de integración.
 
@@ -423,9 +406,63 @@ El método RK4 mostró estabilidad numérica durante todo el proceso de simulaci
 
 El uso de un paso temporal pequeño permitió mantener soluciones suaves y físicamente coherentes.
 
+\subsection{Diseño Conceptual de la Marquesina}
+
+Antes de presentar los resultados de la simulación, la Figura~\ref{fig:diseno_conceptual} muestra el diseño conceptual de la marquesina empleada como caso de estudio. La estructura consiste en un armazón de madera con techo a dos aguas de policarbonato translúcido y paredes laterales con malla de ventilación. En el interior se disponen \textbf{dos camas de secado elevadas} de $10\,\text{m} \times 1.60\,\text{m}$, soportadas por patas de madera a $0.80\,\text{m}$ del piso y separadas por un pasillo central de $0.60\,\text{m}$ para el volteo manual del café. Cada cama cuenta con un bastidor perimetral de madera, malla metálica en la base para favorecer la circulación de aire por debajo, y una capa de café de 4~cm de profundidad dividida en cinco capas horizontales que reciben el flujo de calor con atenuación exponencial. La sección A–A (Figura~\ref{fig:seccion_aa}) detalla la geometría de la cercha, las camas elevadas y el gradiente de factor de extinción entre capas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{marquesina_diseno_conceptual.png}
+\caption{Diseño conceptual de la marquesina: vista isométrica con camas elevadas (izquierda) y planta (derecha). Se muestran las dos camas de $10\,\text{m}\times1.60\,\text{m}$, el pasillo central de $0.60\,\text{m}$ y las principales cotas estructurales.}
+\label{fig:diseno_conceptual}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{camas_en_marquesina.png}
+\caption{Vista 3D del ensamble completo: marquesina con camas de secado elevadas a $0.80\,\text{m}$, bastidor de madera, malla metálica y capa de café de 4~cm (cinco capas). Los colores de la sección frontal indican el gradiente de extinción del flujo de calor.}
+\label{fig:camas_ensamble}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{marquesina_detalle_seccion.png}
+\caption{(a) Sección transversal A–A: dos camas elevadas con sus patas, bastidor, malla y capas de café. (b) Factor de extinción $f_i = e^{-k_{ext}z_i}$ por capa ($k_{ext} = 25\,\text{m}^{-1}$): la capa superficial recibe el 90.5\% del flujo disponible mientras la del fondo recibe el 40.7\%.}
+\label{fig:seccion_aa}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{camas_detalle_estructural.png}
+\caption{Detalle estructural de una cama de secado: (a) vista isométrica con patas, riostras, bastidor, malla metálica y capas de café; (b) vista frontal con cotas de altura, ancho y espesor de la capa de café.}
+\label{fig:camas_detalle}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Parámetros de las camas de secado elevadas}
+\begin{tabular}{llll}
+\toprule
+Parámetro & Símbolo & Valor & Unidad \\
+\midrule
+N$^\circ$ de camas & — & 2 & — \\
+Longitud de cada cama & $L_c$ & 10 & m \\
+Ancho de cada cama & $W_c$ & 1.60 & m \\
+Área útil total & $A_u$ & 32 & m$^2$ \\
+Pasillo central & — & 0.60 & m \\
+Altura de patas & $h_p$ & 0.80 & m \\
+Espesor del bastidor & — & 5 & cm \\
+Paso entre patas & — & 2 & m \\
+Paso de la malla & — & 15 & cm \\
+Profundidad de café & $p_c$ & 4 & cm \\
+N$^\circ$ de capas & $N_c$ & 5 & — \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{Simulación de la Marquesina Completa}
 
-El modelo por capas se aplicó a una marquesina de 10~m~$\times$~4~m con aproximadamente $N = 2\,438\,400$ granos. La Figura~\ref{fig:marquesina_3d} muestra la representación tridimensional de la estructura y la distribución espacial de la humedad de los granos a las 4~horas de simulación. Los granos en las capas superiores (mayor exposición al flujo de calor) presentan colores hacia el rojo, indicando mayor pérdida de humedad, mientras que los granos del fondo conservan mayor contenido de agua.
+El modelo por capas se aplicó a una marquesina de 10~m~$\times$~4~m con aproximadamente $N = 2\,440\,966$ granos. La Figura~\ref{fig:marquesina_3d} muestra la representación tridimensional de la estructura y la distribución espacial de la humedad de los granos a las 4~horas de simulación. Los granos en las capas superiores (mayor exposición al flujo de calor) presentan colores hacia el rojo, indicando mayor pérdida de humedad, mientras que los granos del fondo conservan mayor contenido de agua.
 
 \begin{figure}[H]
 \centering
@@ -491,7 +528,16 @@ Como extensión del modelo de capas discretas, se plantea un modelo de difusión
 \label{eq:bc_sup}
 \end{align}
 
-donde $D_{eff} = 5\times10^{-10}\,\text{m}^2/\text{s}$ es la difusividad efectiva de humedad en el lecho, $h_m = 10^{-7}\,\text{m/s}$ el coeficiente de transferencia de masa y $W_{eq} = 0.12\,\text{kg/kg}$ la humedad de equilibrio. El número de Biot másico $Bi_m = h_m\,p_c/D_{eff} = 8$ indica un régimen de control mixto entre resistencia superficial y difusión interna.
+donde $D_{eff} = 5\times10^{-10}\,\text{m}^2/\text{s}$ es la difusividad efectiva de humedad en el lecho, $h_m = 10^{-7}\,\text{m/s}$ el coeficiente de transferencia de masa y $W_{eq} = 0.12\,\text{kg/kg}$ la humedad de equilibrio. El número de Biot másico $Bi_m = h_m\,p_c/D_{eff} = 8$ indica un régimen de control mixto entre resistencia superficial y difusión interna. El número de Fourier al finalizar la simulación,
+
+\begin{equation}
+Fo = \frac{D_{eff}\,t_{fin}}{p_c^2}
+   = \frac{5\times10^{-10}\times 28800}{(0.04)^2}
+   \approx 9\times10^{-3} \ll 1
+\label{eq:fourier}
+\end{equation}
+
+confirma que el proceso difusivo es lento respecto a la escala de la cama: en 8 horas el frente de secado alcanza apenas $\delta \approx 2\sqrt{D_{eff}\,t} \approx 0.76\,\text{cm}$ desde la superficie, mientras el interior permanece sin perturbación significativa.
 
 Este sistema fue resuelto numéricamente mediante el esquema Crank-Nicolson (CN) sobre una malla de 200 nodos con paso temporal $\Delta t = 60\,\text{s}$. El esquema CN requiere resolver en cada paso el sistema tridiagonal:
 
@@ -500,11 +546,11 @@ Este sistema fue resuelto numéricamente mediante el esquema Crank-Nicolson (CN)
 \label{eq:tridiag}
 \end{equation}
 
-resuelto eficientemente con el algoritmo de Thomas $\mathcal{O}(N)$. El script FlexPDE \texttt{secado\_cafe.fde} implementa esta misma formulación mediante elementos finitos adaptativos.
+resuelto eficientemente con el algoritmo de Thomas $\mathcal{O}(N)$. El script FlexPDE \texttt{secado\_cafe.pde} implementa esta misma formulación mediante elementos finitos adaptativos con malla de 60 nodos y tolerancia $\epsilon = 10^{-5}$.
 
 \subsection{Resultados del Modelo PDE}
 
-La Figura~\ref{fig:pde_mapa} muestra el mapa espacio-temporal de la humedad $W(z,t)$ y la evolución de la temperatura superficial quasi-estacionaria. El frente de secado avanza desde la superficie ($z = p_c = 4\,\text{cm}$) hacia el fondo, con una profundidad de penetración de $\delta \approx 2\sqrt{D_{eff}\,t} = 0.76\,\text{cm}$ a las 8 horas, coherente con el tiempo difusivo característico $\tau_D = p_c^2/D_{eff} \approx 889\,\text{h}$.
+La Figura~\ref{fig:pde_mapa} muestra el mapa espacio-temporal de la humedad $W(z,t)$ y la evolución de la temperatura superficial quasi-estacionaria. El frente de secado avanza desde la superficie ($z = p_c = 4\,\text{cm}$) hacia el fondo, con una profundidad de penetración de $\delta \approx 2\sqrt{D_{eff}\,t} = 0.76\,\text{cm}$ a las 8 horas, coherente con el tiempo difusivo característico $\tau_D = p_c^2/D_{eff} \approx 889\,\text{h}$ y con el bajo número de Fourier calculado en la Ec.~(\ref{eq:fourier}).
 
 \begin{figure}[H]
 \centering
@@ -553,7 +599,7 @@ El modelo matemático desarrollado permitió representar adecuadamente el proces
 
 La extensión del modelo a la marquesina mediante la formulación por capas con extinción exponencial captura el gradiente de humedad observado experimentalmente, donde la superficie de la cama se seca con mayor rapidez que las capas internas.
 
-La simulación de la marquesina de 10~m~$\times$~4~m con aproximadamente 2.4~millones de granos mostró que, en condiciones climáticas andinas colombianas, se remueve alrededor del 15.8\% del agua inicial en 8~horas, siendo necesario extender el proceso durante varios días para alcanzar la humedad comercial de 11\% (base seca).
+La simulación de la marquesina de 10~m~$\times$~4~m con aproximadamente 2.4~millones de granos mostró que, en condiciones climáticas andinas colombianas, se remueve alrededor del 33.4\% del agua inicial en 8~horas ($X_{bulk}$: 0.550 → 0.367~kg/kg~bs), siendo necesario extender el proceso durante varios días para alcanzar la humedad comercial de 11\% (base seca).
 
 La herramienta computacional desarrollada constituye una base sólida para analizar el efecto de parámetros de diseño de la marquesina (dimensiones, profundidad de la cama, orientación) y para optimizar las condiciones de secado en finca.
 
