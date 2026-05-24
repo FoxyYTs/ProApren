@@ -64,9 +64,9 @@ simulación computacional.
 
 \section{Introducción}
 
-El secado del café constituye una de las etapas más importantes dentro del proceso de producción y conservación del grano, debido a que influye directamente sobre la calidad final, la estabilidad microbiológica y las propiedades físicas del producto. En Colombia, el secado solar en marquesina es ampliamente empleado por pequeños y medianos caficultores como alternativa económica y efectiva para reducir la humedad del grano hasta los niveles comerciales requeridos ($X \leq 0.11$ kg/kg base seca)~\cite{ref3}.
+El secado del café constituye una de las etapas más importantes dentro del proceso de producción y conservación del grano, debido a que influye directamente sobre la calidad final, la estabilidad microbiológica y las propiedades físicas del producto. En Colombia, el secado solar en marquesina es ampliamente empleado por pequeños y medianos caficultores como alternativa económica y efectiva para reducir la humedad del grano hasta los niveles comerciales requeridos ($X \leq 0.11$ kg/kg base seca)~\cite{parra08}.
 
-Durante el secado ocurren fenómenos simultáneos de transferencia de calor y transferencia de masa, haciendo necesario el uso de modelos matemáticos capaces de representar adecuadamente el comportamiento dinámico del sistema térmico. A escala industrial o de finca, la cama de café presenta gradientes de humedad en profundidad que un modelo de grano individual no captura~\cite{ref2}.
+Durante el secado ocurren fenómenos simultáneos de transferencia de calor y transferencia de masa, haciendo necesario el uso de modelos matemáticos capaces de representar adecuadamente el comportamiento dinámico del sistema térmico. A escala industrial o de finca, la cama de café presenta gradientes de humedad en profundidad que un modelo de grano individual no captura~\cite{ciro10}.
 
 Los métodos numéricos permiten resolver sistemas dinámicos complejos mediante simulaciones computacionales, reduciendo la necesidad de pruebas experimentales extensas y permitiendo analizar diferentes escenarios climáticos y geométricos de la estructura de secado.
 
@@ -104,13 +104,13 @@ representa la excentricidad geométrica.
 
 \subsection{Transferencia de Calor por Convección}
 
-El coeficiente convectivo de transferencia de calor $h_c$ se estima a partir del número de Nusselt~\cite{ref1}:
+El coeficiente convectivo de transferencia de calor $h_c$ se estima a partir del número de Nusselt~\cite{cerci19}:
 
 \begin{equation}
 Nu = \frac{h_c\,L_c}{k_{aire}}
 \end{equation}
 
-donde $L_c$ es la longitud característica del grano y $k_{aire}$ la conductividad térmica del aire. Para las condiciones de la marquesina se adopta el valor $h_c = 15\,\text{W/(m}^2\text{·K)}$, correspondiente a convección natural moderada sobre la cama de café~\cite{ref2}.
+donde $L_c$ es la longitud característica del grano y $k_{aire}$ la conductividad térmica del aire. Para las condiciones de la marquesina se adopta el valor $h_c = 15\,\text{W/(m}^2\text{·K)}$, correspondiente a convección natural moderada sobre la cama de café~\cite{ciro10}.
 
 \subsection{Flujo de Calor y Evaporación}
 
@@ -132,11 +132,11 @@ donde:
 
 \begin{itemize}
 
-\item $C_q = 1.14\times10^{-7}\,\text{m}^2\text{·K/Pa}$: constante de calibración fenomenológica que agrupa la geometría superficial del grano, la difusividad de vapor en la capa límite y la resistencia al transporte másico. Fue determinada mediante ajuste paramétrico del modelo a curvas experimentales de secado de café tipo caturra en condiciones andinas colombianas reportadas en la literatura~\cite{ref2,ref3}, de modo que las tasas de evaporación predichas sean físicamente plausibles.
+\item $C_q = 1.14\times10^{-7}\,\text{m}^2\text{·K/Pa}$: constante de calibración fenomenológica que agrupa la geometría superficial del grano, la difusividad de vapor en la capa límite y la resistencia al transporte másico. Fue determinada mediante ajuste paramétrico del modelo a curvas experimentales de secado de café tipo caturra en condiciones andinas colombianas reportadas en la literatura~\cite{parra08,ciro10}, de modo que las tasas de evaporación predichas sean físicamente plausibles.
 
 \item $h_c = 15\,\text{W/(m}^2\text{·K)}$: coeficiente convectivo superficial $[\text{W/(m}^2\text{·K)}]$
 
-\item $P(T)$: presión de vapor saturado del agua a temperatura $T$, calculada mediante la ecuación de Antoine~\cite{ref1}:
+\item $P(T)$: presión de vapor saturado del agua a temperatura $T$, calculada mediante la ecuación de Antoine~\cite{cerci19}:
 \begin{equation}
 \log_{10}\!\left(\frac{P}{\text{mmHg}}\right)
 = A - \frac{B}{C + T_{^{\circ}\text{C}}},
@@ -198,6 +198,39 @@ M_{\text{evap}}(t) = \frac{N}{N_c}\sum_{i=0}^{N_c-1} m_{evap,i}(t),
 X_{\text{bulk}}(t) = \frac{M_{agua,0} - M_{\text{evap}}(t)}{N\,m_{seco}}
 \label{eq:macro}
 \end{equation}
+
+\subsection{Condiciones Iniciales}
+
+La simulación se inicia en $t = 0$, correspondiente al amanecer, cuando la temperatura ambiente alcanza su mínimo diurno. La condición inicial de la variable de estado por capa es:
+
+\begin{equation}
+m_{evap,i}(0) = 0\;\text{kg/grano}, \qquad i = 0,\,1,\,\ldots,\,N_c-1
+\label{eq:ci_mevap}
+\end{equation}
+
+indicando que al inicio ningún grano ha cedido agua al ambiente. Las condiciones iniciales derivadas son:
+
+\begin{align}
+X_i(0) &= X_0 = 0{,}55\;\text{kg/kg (bs)},\quad \forall\,i
+\label{eq:ci_Xi}\\[3pt]
+M_{\text{evap}}(0) &= 0\;\text{kg}
+\label{eq:ci_Mevap}\\[3pt]
+X_{\text{bulk}}(0) &= X_0 = 0{,}55\;\text{kg/kg (bs)}
+\label{eq:ci_Xbulk}
+\end{align}
+
+La temperatura ambiente inicial se obtiene directamente de la Ec.~(\ref{eq:Tamb_24h}) evaluada en $t = 0$:
+
+\begin{equation}
+T_{amb}(0)
+= T_{med} + A\sin\!\left(-\tfrac{\pi}{2}\right)
+= T_{med} - A
+= \frac{T_{max}+T_{min}}{2} - \frac{T_{max}-T_{min}}{2}
+= T_{min} = 15\,^{\circ}\text{C}
+\label{eq:ci_Tamb}
+\end{equation}
+
+confirmando que $t = 0$ corresponde al instante de mínima temperatura (amanecer) y máximo potencial de condensación nocturna, antes de que la radiación solar comience a calentar las camas.
 
 \subsection{Implementación Numérica mediante RK4}
 
@@ -517,7 +550,7 @@ El modelo presentado incorpora hipótesis simplificadoras que condicionan la int
 
 \item \textbf{Temperatura quasi-estacionaria del grano} ($T_{\text{grano}} \approx T_{\text{amb}}$). Se supone que la inercia térmica del grano es despreciable frente a la escala temporal del ciclo diurno. Esta hipótesis sobreestima la tasa de evaporación durante los transitorios de calentamiento y enfriamiento, introduciendo un sesgo positivo en $M_{\text{evap}}(t)$.
 
-\item \textbf{Ausencia de difusión interna en el grano.} El modelo asume que la resistencia a la transferencia de masa se localiza exclusivamente en la capa límite superficial, sin gradientes de humedad dentro del grano. En granos de café con perícarpo, la difusión interna puede ser el mecanismo controlante en etapas avanzadas del secado~\cite{ref2}.
+\item \textbf{Ausencia de difusión interna en el grano.} El modelo asume que la resistencia a la transferencia de masa se localiza exclusivamente en la capa límite superficial, sin gradientes de humedad dentro del grano. En granos de café con perícarpo, la difusión interna puede ser el mecanismo controlante en etapas avanzadas del secado~\cite{ciro10}.
 
 \item \textbf{Humedad relativa del aire confinado constante.} El modelo no realimenta el aumento de la humedad relativa del aire dentro de la marquesina causado por el propio proceso de evaporación. En la práctica, este efecto reduce el potencial de evaporación a medida que avanza el secado, especialmente durante las horas nocturnas con ventilación reducida.
 
@@ -527,7 +560,7 @@ El modelo presentado incorpora hipótesis simplificadoras que condicionan la int
 
 \end{enumerate}
 
-\noindent\textbf{Implicación sobre los resultados.} Las hipótesis anteriores producen, en conjunto, un escenario \emph{ideal y acelerado}: el modelo predice $X_{\text{bulk}}(24\,\text{h}) = 0{,}1207\,\text{kg/kg}$ (bs), próxima al objetivo comercial de $0{,}11\,\text{kg/kg}$, lo cual es optimista respecto a las 3–6 semanas reportadas en secado solar tradicional en Colombia~\cite{ref3}. Estos resultados deben interpretarse como un límite superior teórico del potencial de secado bajo condiciones ideales, y no como una predicción operacional directa.
+\noindent\textbf{Implicación sobre los resultados.} Las hipótesis anteriores producen, en conjunto, un escenario \emph{ideal y acelerado}: el modelo predice $X_{\text{bulk}}(24\,\text{h}) = 0{,}1207\,\text{kg/kg}$ (bs), próxima al objetivo comercial de $0{,}11\,\text{kg/kg}$, lo cual es optimista respecto a las 3–6 semanas reportadas en secado solar tradicional en Colombia~\cite{parra08}. Estos resultados deben interpretarse como un límite superior teórico del potencial de secado bajo condiciones ideales, y no como una predicción operacional directa.
 
 \subsection{Ciclo Diurno-Nocturno e Inflexiones Analíticas}
 
@@ -558,23 +591,24 @@ Bajo las hipótesis de temperatura quasi-estacionaria y ausencia de difusión in
 
 La ecuación de Antoine implementada ($A = 8{,}071$, $B = 1\,730{,}6$, $C = 233{,}4$) y la constante fenomenológica $C_q = 1{,}14\times10^{-7}\,\text{m}^2\text{·K/Pa}$ permiten una calibración sistemática del modelo ante nuevos datos experimentales. La herramienta computacional desarrollada constituye una base para analizar el efecto de parámetros de diseño de la marquesina (dimensiones de camas, profundidad del lecho, paso de volteo) y para orientar decisiones de gestión del proceso de secado en finca.
 
-\section{Referencias}
 
 \begin{thebibliography}{99}
 
-\bibitem{ref1}
+\bibitem{parra08}
 
-K. N. Çerçi y M. Das,
+A. Parra-Coronado,
+G. Roa-Mejía
+y
+C. E. Oliveros-Tascón,
 
-``Modeling of heat transfer coefficient in solar greenhouse type drying systems,''
+``SECAFÉ Parte I: modelamiento y simulación matemática del proceso de beneficio húmedo del café,''
 
-\textit{Sustainability},
+\textit{Revista Brasileira de Engenharia Agrícola e Ambiental},
 
-vol. 11,
-no. 19,
-2019.
+vol. 12, no. 5, pp. 501--509,
+2008.
 
-\bibitem{ref2}
+\bibitem{ciro10}
 
 H. J. Ciro-Velásquez et al.,
 
@@ -582,21 +616,19 @@ H. J. Ciro-Velásquez et al.,
 
 \textit{Dyna},
 
-vol. 77,
+vol. 77, no. 164, pp. 143--150,
 2010.
 
-\bibitem{ref3}
+\bibitem{cerci19}
 
-A. Parra-Coronado,
-G. Roa-Mejía
-y
-C. E. Oliveros-Tascón,
+K. N. Çerçi y M. Das,
 
-``SECAFÉ Parte I: modelamiento y simulación matemática,''
+``Modeling of heat transfer coefficient in solar greenhouse type drying systems,''
 
-\textit{Revista Brasileira de Engenharia Agrícola e Ambiental},
+\textit{Sustainability},
 
-2008.
+vol. 11, no. 19, p. 5127,
+2019.
 
 \end{thebibliography}
 
