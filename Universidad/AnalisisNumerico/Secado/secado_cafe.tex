@@ -137,12 +137,10 @@ donde:
 \item $h_c = 15\,\text{W/(m}^2\text{·K)}$: coeficiente convectivo superficial $[\text{W/(m}^2\text{·K)}]$
 
 \item $P(T)$: presión de vapor saturado del agua a temperatura $T$, calculada mediante la ecuación de Antoine~\cite{cerci19}:
-\begin{equation}
-\log_{10}\!\left(\frac{P}{\text{mmHg}}\right)
-= A - \frac{B}{C + T_{^{\circ}\text{C}}},
-\qquad P\,[\text{Pa}] = P\,[\text{mmHg}]\times 133{,}322
-\label{eq:antoine}
-\end{equation}
+\begin{align}
+\log_{10}\left(\frac{P}{\text{mmHg}}\right) &= A - \frac{B}{C + T}, \label{eq:antoine} \\[1ex]
+\text{donde } P_{\text{Pa}} &= P_{\text{mmHg}} \times 133{,}322 \nonumber
+\end{align}
 con constantes para el agua (rango $1\text{–}100\,^{\circ}$C): $A = 8{,}07131$, $B = 1\,730{,}63$, $C = 233{,}426$.
 
 \item $\gamma^e = 0{,}85$: factor de corrección evaporativa que pondera la contribución de la temperatura ambiente $T_e(t)$ al potencial de evaporación.
