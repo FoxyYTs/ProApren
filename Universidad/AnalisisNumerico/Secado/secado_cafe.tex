@@ -239,32 +239,10 @@ La EDO de cada capa fue integrada mediante el método Runge-Kutta de cuarto orde
 El método RK4 calcula cuatro aproximaciones intermedias:
 
 \begin{align}
-
-k_1 &= hf(t_n,x_n)
-
-\\
-
-k_2 &=
-hf
-\left(
-t_n+\frac{h}{2},
-x_n+\frac{k_1}{2}
-\right)
-
-\\
-
-k_3 &=
-hf
-\left(
-t_n+\frac{h}{2},
-x_n+\frac{k_2}{2}
-\right)
-
-\\
-
-k_4 &=
-hf(t_n+h,x_n+k_3)
-
+k_1 &= hf(t_n,\,x_n) \\
+k_2 &= hf\!\left(t_n+\tfrac{h}{2},\; x_n+\tfrac{k_1}{2}\right) \\
+k_3 &= hf\!\left(t_n+\tfrac{h}{2},\; x_n+\tfrac{k_2}{2}\right) \\
+k_4 &= hf(t_n+h,\,x_n+k_3)
 \end{align}
 
 La actualización del sistema se realiza mediante:
@@ -292,9 +270,11 @@ Masa seca & $m_{seco}$ & 0.3146 & g \\
 Agua inicial & $m_{agua,0}$ & 0.1730 & g \\
 Agua en equilibrio & $m_{agua,eq}$ & 0.0346 & g \\
 Máx.\ agua evaporable & $m_{evap,\max}$ & 0.1384 & g \\
-Energía de cambio de fase máx. & $U_{e,\max}$ & 313 & J \\
+Energía de cambio de fase máx. & $U_{e,\max}$ & 339 & J \\
 \bottomrule
 \end{tabular}
+\par\smallskip
+{\footnotesize \textit{Nota}: $U_{e,\max} = \lambda\,m_{evap,\max} = \qty{2450}{\joule\per\gram}\times\qty{0.1384}{\gram} = \qty{339}{\joule}$, usando $\lambda$ a 20--25\,°C.}
 \end{table}
 
 \subsection{Extensión a Escala de Marquesina}
@@ -515,12 +495,14 @@ Masa total húmeda inicial & 952.32 & kg \\
 Masa seca total & 614.40 & kg \\
 Agua total inicial & 337.92 & kg \\
 Agua evaporada acumulada (24~h) & 263.78 & kg \\
-Porcentaje de agua removida & 78.06 & \% \\
+Porcentaje de agua inicial removida$^*$ & 78.06 & \% \\
 Humedad inicial $X_0$ & 0.5500 & kg/kg (bs) \\
 Humedad final $X_{\text{bulk}}(24\,\text{h})$ & 0.1207 & kg/kg (bs) \\
 Energía total acumulada & 596.15 & MJ \\
 \bottomrule
 \end{tabular}
+\par\smallskip
+{\footnotesize $^*$Referenciado al agua total inicial ($337{,}92\,\text{kg}$); no al agua libre evaporable hasta $X_{eq}$.}
 \end{table}
 
 \begin{table}[H]
@@ -571,14 +553,14 @@ T_{amb}(t) = T_{med} + A\,\sin\!\left(\frac{2\pi t}{86400} - \frac{\pi}{2}\right
 \label{eq:Tamb_24h}
 \end{equation}
 
-provoca una variación periódica en el potencial de evaporación. La tasa de evaporación total de la marquesina $dM_{\text{evap}}/dt = \sum_i N_{capa}\,f_i\,\dot{Q}(t)/\lambda$ sigue el mismo patrón, con:
+provoca una variación periódica en el potencial de evaporación. La tasa de evaporación total de la marquesina $\mathrm{d}M_{\text{evap}}/\mathrm{d}t = \sum_i N_{capa}\,f_i\,\dot{Q}(t)/\lambda$ sigue el mismo patrón, con:
 
 \begin{itemize}
-  \item \textbf{Punto de inflexión diurno} en $t=12\,\text{h}$ (mediodía): tasa máxima, $d^2M/dt^2 = 0$ (cambio de concavidad de cóncava-arriba a cóncava-abajo).
-  \item \textbf{Punto de inflexión nocturno} en $t=0$ y $t=24\,\text{h}$ (amanecer): tasa mínima, segundo cambio de concavidad.
+  \item \textbf{Punto de inflexión diurno} en $t=\qty{12}{\hour}$ (mediodía): tasa máxima, $\mathrm{d}^2M/\mathrm{d}t^2 = 0$ (cambio de concavidad de cóncava-arriba a cóncava-abajo).
+  \item \textbf{Punto de inflexión nocturno} en $t=0$ y $t=\qty{24}{\hour}$ (amanecer): tasa mínima, segundo cambio de concavidad.
 \end{itemize}
 
-Analíticamente, los puntos de inflexión de $M_{\text{evap}}(t)$ ocurren donde $d^2M/dt^2 = 0$, es decir, donde $dQ/dt = 0$: los extremos de $T_{amb}(t)$, confirmando la coherencia entre el forzamiento físico y la respuesta numérica.
+Analíticamente, los puntos de inflexión de $M_{\text{evap}}(t)$ ocurren donde $\mathrm{d}^2M/\mathrm{d}t^2 = 0$, es decir, donde $\mathrm{d}Q/\mathrm{d}t = 0$: los extremos de $T_{amb}(t)$, confirmando la coherencia entre el forzamiento físico y la respuesta numérica.
 
 
 \section{Conclusiones}
