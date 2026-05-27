@@ -204,7 +204,7 @@ print("=" * 68)
 
 # COMPLEJIDAD ALGORÍTMICA:
 #   - El modelo discretiza el espacio en N_c=5 capas (no en N_granos bucles).
-#   - Bucle temporal: N_t × N_c = 1441 × 5 = 7 205 iteraciones por método.
+#   - Bucle temporal: (N_t-1) × N_c = 1440 × 5 = 7 200 iteraciones por método.
 #   - RK4: 4 evaluaciones de Q_dot(t) por paso → 4 × 7 205 = 28 820 eval.
 #   - Las métricas globales M_evap y X_bulk se calculan vectorizando sobre
 #     N_t, no sobre N_granos → O(N_t × N_c) independiente de N ≈ 1.95 M.
@@ -247,6 +247,15 @@ M_evap_euler, X_bulk_euler, U_e_euler = calc_metrics(m_evap_euler)
 dM_dt_rk4   = np.gradient(M_evap_rk4,   t_vals)
 dM_dt_euler = np.gradient(M_evap_euler, t_vals)
 
+# — Métricas de error RK4 vs Euler (calculadas aquí para consola y figura) —
+_eps        = 1e-20                                            # evitar div/0
+err_abs_g   = np.abs(M_evap_rk4 - M_evap_euler) * 1e3        # [g]
+err_rel_pct = np.where(                                        # [%]
+    M_evap_rk4 > _eps,
+    np.abs(M_evap_rk4 - M_evap_euler) / M_evap_rk4 * 100.0,
+    0.0
+)
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # 9. RESUMEN EN CONSOLA
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -277,20 +286,23 @@ for i in range(n_capas):
     print(f"    Capa {i+1} (f={factores[i]:.4f}, z={z_i[i]*100:.1f}cm): "
           f"X = {W_final_capa[i]:.4f} kg/kg bs  |  "
           f"m_evap = {m_evap_rk4[i,-1]*1e3:.4f} g/grano")
-print(f"\n  ► COMPARACIÓN MÉTODOS")
-print(f"    Error |RK4-Euler| en M_evap    : {err_RK4_Euler:.4f} g")
+print(f"\n  ► COMPARACIÓN MÉTODOS — ERROR RK4 vs EULER")
+print(f"    Error absoluto final  |ΔM_evap|: {err_abs_g[-1]:.4e} g")
+print(f"    Error absoluto máximo |ΔM_evap|: {np.max(err_abs_g):.4e} g")
+print(f"    Error relativo final  (M_evap) : {err_rel_pct[-1]:.4e} %")
+print(f"    Error relativo máximo (M_evap) : {np.max(err_rel_pct):.4e} %")
 print(f"    Inflexiones m_evap(t): t=12h (máx diurno), t=0/24h (mín nocturno)")
 print(f"\n  ► GRANO INDIVIDUAL (parámetros)")
 print(f"    V_g = {V_g*1e9:.4f} mm³  |  A_g = {A_g*1e6:.4f} mm²")
 print(f"    m_grano_ini = {m_grano_ini*1e3:.4f} g  |  m_agua_g0 = {m_agua_g0*1e3:.4f} g")
 print(f"    m_evap_max  = {m_evap_max*1e3:.4f} g/grano (hasta X_eq={X_eq})")
 print(f"\n  ► COSTO COMPUTACIONAL")
-print(f"    Pasos temporales (N_t)         : {N_t}")
+print(f"    Puntos temporales (N_t)        : {N_t}  (pasos de integración: {N_t-1})")
 print(f"    Capas × métodos                : {n_capas} × 2 = {n_capas*2}")
-print(f"    Iteraciones totales de bucle   : {N_t * n_capas * 2:,}")
-print(f"    Evaluaciones Q_dot (RK4×4)     : {N_t * n_capas * 4:,}")
+print(f"    Iteraciones totales de bucle   : {(N_t-1) * n_capas * 2:,}")
+print(f"    Evaluaciones Q_dot (RK4×4)     : {(N_t-1) * n_capas * 4:,}")
 print(f"    Tiempo de integración          : {t_integ*1e3:.2f} ms")
-print(f"    Complejidad                    : O(N_t × N_c) = O({N_t}×{n_capas})")
+print(f"    Complejidad                    : O(N_t × N_c) = O({N_t-1}×{n_capas})")
 print(f"    Nota: N_granos ({N_granos:,}) solo entra como factor de escala")
 print(f"          en calc_metrics(); no requiere bucle por grano.")
 print("=" * 68)
@@ -492,13 +504,63 @@ plt.close()
 print("  [✓] comparacion_rk4.png")
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# FIGURA 5 — error_metodos.png  (error absoluto acumulado y error relativo)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
+
+# — Panel a: Error absoluto acumulado —
+axes[0].plot(t_h, err_abs_g, color='#8e44ad', lw=1.8,
+             label=r'$|M_{RK4}(t) - M_{Euler}(t)|$')
+axes[0].fill_between(t_h, err_abs_g, alpha=0.15, color='#8e44ad')
+axes[0].set_xlabel('Tiempo (h)')
+axes[0].set_ylabel('Error absoluto acumulado (g)')
+axes[0].set_title(r'(a) Error absoluto — $M_{evap}$ total')
+axes[0].ticklabel_format(axis='y', style='sci', scilimits=(0, 0))
+deco_24h(axes[0])
+axes[0].legend(fontsize=8.5)
+
+# — Panel b: Error relativo (%) — omite t=0 donde M_evap=0 —
+t_h_nr   = t_h[1:]
+err_r_nr = err_rel_pct[1:]
+axes[1].plot(t_h_nr, err_r_nr, color='#e67e22', lw=1.8,
+             label=r'$|M_{RK4}-M_{Euler}|/M_{RK4}\times100\%$')
+axes[1].fill_between(t_h_nr, err_r_nr, alpha=0.15, color='#e67e22')
+axes[1].set_xlabel('Tiempo (h)')
+axes[1].set_ylabel('Error relativo (%)')
+axes[1].set_title(r'(b) Error relativo — $M_{evap}$ total')
+axes[1].ticklabel_format(axis='y', style='sci', scilimits=(0, 0))
+deco_24h(axes[1])
+axes[1].legend(fontsize=8.5)
+
+# Anotaciones de valores clave
+for ax, y_arr, col in [(axes[0], err_abs_g,  '#8e44ad'),
+                        (axes[1], err_r_nr,   '#e67e22')]:
+    y_max = float(np.max(y_arr if ax is axes[0] else err_r_nr))
+    t_max = t_h[np.argmax(err_abs_g)] if ax is axes[0] else t_h_nr[np.argmax(err_r_nr)]
+    ax.annotate(f'máx = {y_max:.2e}',
+                xy=(t_max, y_max),
+                xytext=(t_max + 2, y_max * 0.85),
+                fontsize=7.5, color=col,
+                arrowprops=dict(arrowstyle='->', color=col, lw=0.8))
+
+fig.suptitle(
+    f'Error Numérico RK4 vs Euler — Marquesina {Au:.0f} m² | {t_fin/3600:.0f} h\n'
+    r'Error en $M_{evap}(t)$: absoluto [g] y relativo [%]',
+    fontsize=9.5, fontweight='bold')
+plt.tight_layout()
+plt.savefig('./error_metodos.png')
+plt.close()
+print("  [✓] error_metodos.png")
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # HELPERS 3D PARA LA VISUALIZACIÓN
 # ═══════════════════════════════════════════════════════════════════════════════
 
 L_marq = 10.0; W_marq = 4.0; H_lat = 1.8; H_cumbr = 2.8; H_pata = 0.80
 t_bas  = 0.05
-e_p    = 0.25    # margen lateral desde la pared
-pasillo_w = W_marq - 2*e_p - 2*W_cama    # 4 - 0.5 - 3.2 = 0.3 m
+e_p    = 0.05    # margen lateral desde la pared (0.05×2 = 0.10 total)
+pasillo_w = W_marq - 2*e_p - 2*W_cama    # 4 - 0.10 - 3.20 = 0.70 m
 y_c1   = e_p
 y_c2   = e_p + W_cama + pasillo_w
 
@@ -555,7 +617,8 @@ def draw_cama_3d(ax, y0, m_evap_capa_t):
         seg3(ax,(tb,ym,H_pata),(L_marq-tb,ym,H_pata),'#90a4ae',lw=0.3,alpha=0.45)
     for i in range(n_capas):
         zi0 = z_b + i*dz_capa; zi1 = z_b + (i+1)*dz_capa
-        c   = CAFE_COLS[n_capas-1-i]
+        hum = np.clip(1.0 - m_evap_capa_t[i] / m_evap_max, 0.0, 1.0)
+        c   = plt.cm.RdYlBu_r(hum)
         quad3(ax,[[tb,y0+tb,zi1],[L_marq-tb,y0+tb,zi1],
                    [L_marq-tb,y1-tb,zi1],[tb,y1-tb,zi1]],
               c,ec='none',alpha=0.60,zo=4)
@@ -612,8 +675,9 @@ ax3d_b.set_title('Vista de planta (t = 12 h)', fontsize=9, fontweight='bold')
 ax3d_b.view_init(elev=82, azim=-90)
 ax3d_b.tick_params(labelsize=7)
 
-patches_3d = [mpatches.Patch(color=CAFE_COLS[n_capas-1-i],
-              label=f'Capa {i+1} f={factores[i]:.3f}') for i in range(n_capas)]
+patches_3d = [mpatches.Patch(
+    color=plt.cm.RdYlBu_r(np.clip(1.0 - m_evap_rk4[i, t_idx_noon]/m_evap_max, 0, 1)),
+    label=f'Capa {i+1}  f={factores[i]:.3f}') for i in range(n_capas)]
 fig.legend(handles=patches_3d, fontsize=7, loc='lower center', ncol=5,
            bbox_to_anchor=(0.5, -0.02), title='Capas de café', title_fontsize=7.5)
 fig.suptitle(f'Marquesina de Secado Solar — Au={Au:.0f} m²  |  N={N_granos:,} granos\n'
@@ -640,23 +704,17 @@ for k, (idx_t, t_label) in enumerate(zip(instantes_idx, instantes_h)):
     draw_cama_3d(ax, y_c1, m_evap_rk4[:, idx_t])
     draw_cama_3d(ax, y_c2, m_evap_rk4[:, idx_t])
 
-    for y0_c in [y_c1, y_c2]:
-        rng2 = np.random.default_rng(42)
-        xg = rng2.uniform(0.1,L_marq-0.1,n_vis)
-        yg = rng2.uniform(y0_c+0.05,y0_c+W_cama-0.05,n_vis)
-        zg = rng2.uniform(0,prof_cama,n_vis)
-        capa_g = np.minimum(n_capas-1,(zg/(prof_cama/n_capas)).astype(int))
-        hum_g  = np.array([(m_agua_g0-m_evap_rk4[c,idx_t])/m_agua_g0 for c in capa_g])
-        z_vis  = H_pata + t_bas + zg
-        ax.scatter(xg,yg,z_vis,c=hum_g,cmap='RdYlBu_r',s=4,alpha=0.75,
-                   vmin=0.0,vmax=1.0,depthshade=True)
-
     ax.set_xlim(0,L_marq); ax.set_ylim(0,W_marq); ax.set_zlim(0,H_cumbr+0.2)
     ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
     fase = ['Amanecer','Mañana','Mediodía','Tarde','Noche'][k]
     ax.set_title(f't = {t_label} h ({fase})\n$X_{{bulk}}$ = {X_bulk_rk4[idx_t]:.4f}',
                  fontsize=8.5, fontweight='bold', pad=4)
     ax.view_init(elev=22, azim=-52)
+
+sm_s = plt.cm.ScalarMappable(cmap='RdYlBu_r', norm=plt.Normalize(vmin=0.0, vmax=1.0))
+sm_s.set_array([])
+cbar_s = fig_s.colorbar(sm_s, ax=axs.tolist(), shrink=0.55, pad=0.02, aspect=25)
+cbar_s.set_label('Humedad retenida  (0 = seco · 1 = húmedo)', fontsize=8)
 
 fig_s.suptitle(
     r'Evolución del secado en la marquesina — RK4  (rojo $\rightarrow$ seco · azul $\rightarrow$ húmedo)',
@@ -669,4 +727,5 @@ print("  [✓] marquesina_snapshots.png")
 print("\n  ══ FIGURAS GENERADAS ══════════════════════════════════════")
 print("    temperatura.png       masa.png            marquesina_3d.png")
 print("    energia.png           comparacion_rk4.png marquesina_snapshots.png")
+print("    error_metodos.png")
 print("  ════════════════════════════════════════════════════════════")

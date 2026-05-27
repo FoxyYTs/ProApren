@@ -24,10 +24,10 @@ H_c  = 2.8    # Altura de cumbrera [m]
 
 # Camas elevadas (2 camas con pasillo central)
 H_cama   = 0.80    # altura de patas [m]
-W_cama   = 1.50    # ancho de cada cama [m]
+W_cama   = 1.60    # ancho de cada cama [m]
 t_bas    = 0.05    # espesor del bastidor [m]
-e_pared  = 0.10    # margen desde la pared lateral [m]
-pasillo  = W - 2*e_pared - 2*W_cama   # ancho pasillo central [m]
+e_pared  = 0.05    # margen desde la pared lateral [m]  (0.05×2 = 0.10 total)
+pasillo  = W - 2*e_pared - 2*W_cama   # 4 - 0.10 - 3.20 = 0.70 m
 y_c1     = e_pared                     # inicio cama 1
 y_c2     = e_pared + W_cama + pasillo  # inicio cama 2
 

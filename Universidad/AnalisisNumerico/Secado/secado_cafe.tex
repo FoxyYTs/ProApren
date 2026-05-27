@@ -263,7 +263,7 @@ x_n
 \toprule
 Parámetro & Símbolo & Valor & Unidad \\
 \midrule
-Masa húmeda inicial & $m_{g,0}$ & 0.4876 & g \\
+Masa húmeda inicial & $m_{g,0}$ & 0.4877 & g \\
 Masa seca & $m_{seco}$ & 0.3146 & g \\
 Agua inicial & $m_{agua,0}$ & 0.1730 & g \\
 Agua en equilibrio & $m_{agua,eq}$ & 0.0346 & g \\
@@ -329,6 +329,9 @@ Coef.\ extinción & $k_{ext}$ & 25 & m$^{-1}$ \\
 Factor de empaque & $\eta$ & 0.62 & — \\
 Humedad inicial & $X_0$ & 0.55 & kg/kg (bs) \\
 Humedad equilibrio & $X_{eq}$ & 0.11 & kg/kg (bs) \\
+Temperatura mínima (amanecer) & $T_{min}$ & 15 & $^{\circ}$C \\
+Temperatura máxima (mediodía) & $T_{max}$ & 28 & $^{\circ}$C \\
+Paso temporal RK4/Euler & $h$ & 60 & s \\
 Tiempo de simulación & $t_{fin}$ & 24 & h \\
 \bottomrule
 \end{tabular}
@@ -403,18 +406,27 @@ Se realizó una comparación entre RK4 y Euler con el fin de evaluar estabilidad
 
 El método RK4 exhibe un comportamiento más coherente con el fenómeno físico: su error de truncación local $O(h^5)$ produce una divergencia acumulada respecto a Euler inferior a $10^{-4}\,\text{g}$ en 24~h para el paso $h = 60\,\text{s}$ empleado. Ambos métodos capturan los puntos de inflexión en $t = 12\,\text{h}$ (máximo diurno) y $t = 0/24\,\text{h}$ (mínimo nocturno), confirmando que la diferencia entre métodos es atribuible al error de truncación de Euler.
 
+La Figura~\ref{fig:error_metodos} cuantifica esta divergencia de forma independiente mediante el error absoluto acumulado y el error relativo porcentual. El pico transitorio de error ($\approx 49{,}3\,\text{g}$, $\approx 0{,}031\%$ relativo) no refleja una inestabilidad numérica, sino un \emph{diferencial de saturación}: RK4 alcanza la humedad de equilibrio $X_{eq}$ en las capas superiores con mayor exactitud temporal que Euler, generando un desfase transitorio mientras Euler completa su propia saturación. Una vez que todas las capas han alcanzado $X_{eq}$ en ambos métodos, el error colapsa a la precisión de punto flotante de doble precisión ($\approx 1{,}7\times10^{-10}$~g).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{error_metodos.png}
+\caption{Análisis cuantitativo del error numérico RK4 vs.\ Euler: (a)~error absoluto acumulado $|M_{RK4}(t)-M_{Euler}(t)|$ y (b)~error relativo porcentual $|M_{RK4}-M_{Euler}|/M_{RK4}\times100\%$ en función del tiempo. El pico transitorio corresponde al diferencial de saturación de capas; el error final de $\approx 10^{-10}$~g confirma la convergencia a precisión de representación de punto flotante.}
+\label{fig:error_metodos}
+\end{figure}
+
 \subsection{Costo Computacional}
 
 La integración numérica opera sobre $N_c = 5$ capas con $N_t = 1\,440$ pasos de $h = 60\,\text{s}$. La complejidad algorítmica es $O(N_t \times N_c) = O(7\,200)$ iteraciones por método —independiente del número de granos $N \approx 1{,}95\times10^6$, que actúa únicamente como factor de escala en el cómputo vectorizado de métricas globales. El tiempo de integración medido fue de $206\,\text{ms}$ en el hardware de referencia.
 
 \subsection{Diseño Conceptual de la Marquesina}
 
-Antes de presentar los resultados de la simulación, la Figura~\ref{fig:diseno_conceptual} muestra el diseño conceptual de la marquesina empleada como caso de estudio. La estructura consiste en un armazón de madera con techo a dos aguas de policarbonato translúcido y paredes laterales con malla de ventilación. En el interior se disponen \textbf{dos camas de secado elevadas} de $10\,\text{m} \times 1.60\,\text{m}$, soportadas por patas de madera a $0{,}80\,\text{m}$ del piso y separadas por un pasillo central de $0{,}30\,\text{m}$ para el acceso operativo entre camas. Cada cama cuenta con un bastidor perimetral de madera, malla metálica en la base para favorecer la circulación de aire por debajo, y una capa de café de 4~cm de profundidad dividida en cinco capas horizontales que reciben el flujo de calor con atenuación exponencial. La sección A–A (Figura~\ref{fig:seccion_aa}) detalla la geometría de la cercha, las camas elevadas y el gradiente de factor de extinción entre capas.
+Antes de presentar los resultados de la simulación, la Figura~\ref{fig:diseno_conceptual} muestra el diseño conceptual de la marquesina empleada como caso de estudio. La estructura consiste en un armazón de madera con techo a dos aguas de policarbonato translúcido y paredes laterales con malla de ventilación. En el interior se disponen \textbf{dos camas de secado elevadas} de $10\,\text{m} \times 1.60\,\text{m}$, soportadas por patas de madera a $0{,}80\,\text{m}$ del piso y separadas por un pasillo central de $0{,}70\,\text{m}$ para el acceso operativo entre camas. Cada cama cuenta con un bastidor perimetral de madera, malla metálica en la base para favorecer la circulación de aire por debajo, y una capa de café de 4~cm de profundidad dividida en cinco capas horizontales que reciben el flujo de calor con atenuación exponencial. La sección A–A (Figura~\ref{fig:seccion_aa}) detalla la geometría de la cercha, las camas elevadas y el gradiente de factor de extinción entre capas.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.48\textwidth]{marquesina_diseno_conceptual.png}
-\caption{Diseño conceptual de la marquesina: vista isométrica con camas elevadas (izquierda) y planta (derecha). Se muestran las dos camas de $10\,\text{m}\times1{,}60\,\text{m}$, el pasillo central de $0{,}30\,\text{m}$ y las principales cotas estructurales.}
+\caption{Diseño conceptual de la marquesina: vista isométrica con camas elevadas (izquierda) y planta (derecha). Se muestran las dos camas de $10\,\text{m}\times1{,}60\,\text{m}$, el pasillo central de $0{,}70\,\text{m}$ y las principales cotas estructurales.}
 \label{fig:diseno_conceptual}
 \end{figure}
 
@@ -450,7 +462,7 @@ N$^\circ$ de camas & — & 2 & — \\
 Longitud de cada cama & $L_c$ & 10 & m \\
 Ancho de cada cama & $W_c$ & 1.60 & m \\
 Área útil total & $A_u$ & 32 & m$^2$ \\
-Pasillo central & — & 0.30 & m \\
+Pasillo central & — & 0.70 & m \\
 Altura de patas & $h_p$ & 0.80 & m \\
 Espesor del bastidor & — & 5 & cm \\
 Paso entre patas & — & 2 & m \\

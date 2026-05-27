@@ -26,9 +26,9 @@ H_cumbr = 2.8    # altura cumbrera [m]
 
 # Camas de secado (2 camas paralelas con pasillo central)
 H_cama   = 0.80   # altura de las patas [m]
-W_cama   = 1.50   # ancho de cada cama [m]
-e_pared  = 0.10   # margen lateral desde la pared [m]
-pasillo  = W_marq - 2*e_pared - 2*W_cama   # ancho del pasillo central [m]
+W_cama   = 1.60   # ancho de cada cama [m]
+e_pared  = 0.05   # margen lateral desde la pared [m]  (0.05×2 = 0.10 total)
+pasillo  = W_marq - 2*e_pared - 2*W_cama   # 4 - 0.10 - 3.20 = 0.70 m
 y_c1     = e_pared                           # borde Y cama 1
 y_c2     = e_pared + W_cama + pasillo        # borde Y cama 2
 
