@@ -100,7 +100,10 @@ print(f"  T = {T_ms:.6f} ms")
 
 print()
 print("=" * 60)
-print(f"  RESULTADO FINAL: T ≈ {T_ms:.4f} ms")
+print(f"  RESULTADO FINAL: T ≈ {T_seg:.10e} s")
+print(f"                     = {T_ms:.10e} ms")
+print(f"                     = {T_seg*1e6:.8f} μs")
+print(f"                     ≈ {T_seg*1e9:.4f} ns")
 print("=" * 60)
 
 # ─── Análisis de errores ─────────────────────────────────────────────────────

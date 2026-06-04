@@ -2,7 +2,7 @@
 
 % ── Paquetes ─────────────────────────────────────────────────────────────────
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel} % es-tabla cambia "Cuadro" por "Tabla"
 \usepackage{amsmath, amssymb}
 \usepackage{booktabs}
 \usepackage{array}
@@ -12,14 +12,15 @@
 \usepackage{fancyhdr}
 \usepackage{enumitem}
 \usepackage{float}
+\usepackage{graphicx} % Paquete necesario para añadir imágenes
 
 \geometry{margin=2.5cm}
 
 % ── Encabezado / pie de página ───────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Métodos Numéricos --- S1 2026}
-\lhead{Parcial I}
+\rhead{Análisis Numérico --- S1 2026}
+\lhead{Parcial II - Final}
 \cfoot{\thepage}
 
 % ── Macros útiles ────────────────────────────────────────────────────────────
@@ -39,20 +40,15 @@
     {\Large \textbf{Politécnico Colombiano Jaime Isaza Cadavid}}\\[0.4cm]
     {\large Facultad de Ingeniería --- Ingeniería en Informática}\\[0.4cm]
     \rule{\linewidth}{0.5pt}\\[0.8cm]
-    {\LARGE \textbf{Parcial I --- Métodos Numéricos}}\\[0.3cm]
+    {\LARGE \textbf{Parcial II - Final --- Análisis Numérico}}\\[0.3cm]
     {\large Semestre 1 --- 2026}\\[0.8cm]
     \rule{\linewidth}{0.5pt}\\[1cm]
     \begin{tabular}{ll}
         \textbf{Profesor:} & Víctor Hugo Borda Yepes \\[0.3cm]
-        \textbf{Código Formato:} & FD-GC195 (Versión 03) \\
     \end{tabular}\\[3cm]
-    {\large \textit{``El parcial debe ser sustentado en la siguiente clase.\\
-    La asistencia a la sustentación es obligatoria.''}}\\[3cm]
     \vfill
     {\large \today}
 \end{titlepage}
-
-\tableofcontents
 \newpage
 
 % =============================================================================
@@ -66,8 +62,7 @@ transitorio. La tasa de cambio de la carga eléctrica sigue la ecuación
 diferencial:
 
 \begin{equation}
-    \frac{dq}{dt} = -\frac{1}{R(q)\cdot C}
-                    \sqrt{\frac{2\,E(q)}{C}}
+    \frac{dq}{dt} = -\frac{1}{R(q)\cdot C} \sqrt{\frac{2\,E(q)}{C}}
     \label{eq:ode}
 \end{equation}
 
@@ -75,7 +70,7 @@ diferencial:
 \begin{itemize}
     \item $C = 2{,}5 \times 10^{-4}$ F (capacitancia fija).
     \item $E(q) = \dfrac{q^2}{2C}$ (energía remanente en el campo eléctrico).
-    \item $R(q)$: resistencia dinámica dada por datos experimentales (Cuadro~\ref{tab:Rq}).
+    \item $R(q)$: resistencia dinámica dada por datos experimentales (Tabla~\ref{tab:Rq}).
     \item Condición inicial: $q(0) = 6 \times 10^{-3}$ C.
 \end{itemize}
 
@@ -129,7 +124,7 @@ Por tanto, el integrando buscado es:
 
 \textbf{Nota sobre $q=0$:} En este punto $f(q)$ presenta una indeterminación
 $0/0$ (ya que $R(0)=0{,}05\,\Omega$ y $q\to 0$). Sin embargo, la integral
-es convergente pues $R(q)\sim O(q)$ near $q=0$, lo que implica que $f(q)\to 0$.
+es convergente pues $R(q)\sim O(q)$ cerca de $q=0$, lo que implica que $f(q)\to 0$.
 Para el cálculo numérico se adopta $f(0)=0$.
 
 \subsubsection*{Tabulación de $f(q)$}
@@ -188,14 +183,25 @@ Con $n=6$ subintervalos iguales de $\Delta q = 1\times10^{-3}$ C, la
 \begin{equation}
     T = \frac{\Delta q}{2}\cdot S
       = \frac{10^{-3}}{2}\times 1.1863\times10^{-4}
-      \approx 5.931\times10^{-8} \text{ s}
+      \approx 5.9315\times10^{-8} \text{ s}
 \end{equation}
 
 \begin{equation}
-    \boxed{T \approx 5{,}931\times10^{-5} \text{ ms}}
+    \boxed{T \approx 5{,}9315\times10^{-8} \text{ s}
+           = 5{,}9315\times10^{-5} \text{ ms}
+           \approx 0{,}059315\;\mu\text{s}}
 \end{equation}
 
-\textit{Nota: el valor exacto se obtiene ejecutando \texttt{problema1.py}.}
+En la Figura~\ref{fig:trapecio} se ilustra el comportamiento geométrico del integrando y los trapecios utilizados en la aproximación, junto con la curva experimental de resistencia dinámica.
+
+% ── Inserción de la Imagen del Proyecto ──────────────────────────────────────
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{grafica_problema1.png}
+    \caption{Integración de $f(q)$ mediante la regla del trapecio compuesta y curva de resistencia dinámica $R(q)$.}
+    \label{fig:trapecio}
+\end{figure}
+% ─────────────────────────────────────────────────────────────────────────────
 
 % ─────────────────────────────────────────────────────────────────────────────
 \subsection{1.3 Análisis de Errores}
@@ -220,10 +226,10 @@ Con $b-a = 6\times10^{-3}$, $\Delta q = 10^{-3}$ y $|f''(\xi)|$
 estimado numéricamente de la tabla:
 
 \begin{equation}
-    |E_T| \leq \frac{6\times10^{-3}}{12}\,(10^{-3})^2\,|f''|_{\max}
+    |E_T| \leq \frac{6\times10^{-3}}{12}\,(10^{-3})^2\,\max|f''|
 \end{equation}
 
-Este valor resulta en un error de truncamiento del orden de microsegundos,
+Este valor resulta en un error de truncamiento extremadamente pequeño,
 despreciable para la ingeniería del sistema analizado.
 
 \subsubsection*{Error por redondeo}
@@ -231,8 +237,8 @@ despreciable para la ingeniería del sistema analizado.
 La aritmética de punto flotante de doble precisión (IEEE 754, 64 bits)
 introduce un épsilon de máquina $\varepsilon_m \approx 2.22\times10^{-16}$.
 Tras $n=6$ operaciones de suma, el error acumulado por redondeo es del orden
-de $n\,\varepsilon_m\,|f|_{\max} \approx 10^{-20}$\,s, completamente
-negligible.
+de $n\,\varepsilon_m\,\max|f| \approx 10^{-20}$\,s, completamente
+insignificante.
 
 \subsubsection*{Cuadro analítico de errores}
 
@@ -246,13 +252,13 @@ negligible.
         \midrule
         Error de corte & Muestreo discreto de $R(q)$ & Medio & 6 puntos, $\Delta q=10^{-3}$ \\
         \midrule
-        Error por truncamiento & Método Trapecio O$(\Delta q^2)$ & Bajo & $\sim\mu$s \\
+        Error por truncamiento & Método Trapecio $\mathcal{O}(\Delta q^2)$ & Bajo & $\sim 10^{-8}$ s \\
         \midrule
         Error por redondeo & Float64, 6 sumas & Despreciable & $\sim10^{-20}$ s \\
         \midrule
-        Error absoluto & $|T_{\text{aprox}} - T_{\text{exacto}}|$ & Dominado por corte & $\sim\mu$s \\
+        Error absoluto & $|T_{\text{aprox}} - T_{\text{exacto}}|$ & Dominado por corte & $\sim 10^{-8}$ s \\
         \midrule
-        Error relativo & $E_{abs}/|T_{\text{exacto}}|$ & $<1\%$ & Aceptable para ingeniería \\
+        Error relativo & $E_{\text{abs}}/|T_{\text{exacto}}|$ & $<1\%$ & Aceptable para ingeniería \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -293,8 +299,8 @@ Dados dos nodos vecinos $q_k$ y $q_{k+1}$ tales que $q_k \leq q_i \leq q_{k+1}$:
 
 \noindent \textbf{Justificación:} Con $\Delta q = 10^{-3}$ (separación entre
 nodos tabulados), el error de la interpolación lineal es
-$O(\Delta q^2) = O(10^{-6})$, suficientemente pequeño para este problema.
-El costo computacional es $O(1)$ por evaluación.
+$\mathcal{O}(\Delta q^2) = \mathcal{O}(10^{-6})$, suficientemente pequeño para este problema.
+El costo computacional es $\mathcal{O}(1)$ por evaluación.
 
 \subsubsection*{Alternativa de mayor orden: Polinomios de Lagrange}
 
@@ -306,7 +312,7 @@ que pasa por los $n=7$ puntos tabulados:
     \frac{q - q_j}{q_k - q_j}
 \end{equation}
 
-Desventaja: mayor costo $O(n^2)$ y posible fenómeno de Runge en los extremos.
+Desventaja: mayor costo $\mathcal{O}(n^2)$ y posible fenómeno de Runge en los extremos.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \subsection{2.2 Simulación Manual --- Primeras Dos Iteraciones}
@@ -322,22 +328,24 @@ Desventaja: mayor costo $O(n^2)$ y posible fenómeno de Runge en los extremos.
         \phi(t_0,\,q_0) = -\frac{q_0}{R(q_0)\cdot C^2}
                         = -\frac{6\times10^{-3}}{1{,}17\times(2{,}5\times10^{-4})^2}
                         = -\frac{6\times10^{-3}}{7{,}3125\times10^{-8}}
-                        \approx -82{,}051{,}28 \text{ C/s}
+                        \approx -8{,}2051\times10^{4} \text{ C/s}
     \end{equation}
     \item Actualización:
     \begin{equation}
-        q_1 = q_0 + \phi(t_0,q_0)\cdot\Delta t
-            = 6\times10^{-3} + (-82{,}051{,}28)\times 5\times10^{-4}
-            \approx -41{,}02 \text{ C}
+        \begin{aligned}
+        q_1 &= q_0 + \phi(t_0,q_0)\cdot\Delta t \\
+            &= 6\times10^{-3} + (-8{,}2051\times10^{4})\times (5\times10^{-4}) \\
+            &= 6\times10^{-3} - 41{,}026 \approx -41{,}020 \text{ C}
+        \end{aligned}
     \end{equation}
 \end{itemize}
 
 \subsubsection*{Diagnóstico de inestabilidad numérica}
 
-El resultado $q_1 \approx -41$ C es físicamente imposible (la carga no puede
-ser negativa ni de esa magnitud). Esto evidencia una \textbf{inestabilidad
-numérica de Euler hacia adelante} causada por un paso $\Delta t$ demasiado
-grande para la dinámica del sistema.
+El resultado $q_1 \approx -41{,}02$ C es físicamente imposible (la carga no puede
+ser negativa ni de esa magnitud en este proceso). Esto evidencia una \textbf{inestabilidad
+numérica severa de Euler hacia adelante} causada por un paso $\Delta t$ demasiado
+grande para la rápida dinámica del sistema.
 
 La condición de estabilidad de Euler para una EDO lineal $dq/dt = \lambda q$
 es:
@@ -345,64 +353,56 @@ es:
     |1 + \lambda\,\Delta t| < 1
 \end{equation}
 
-En este sistema, el eigenvalor efectivo es:
+En este sistema, el eigenvalor efectivo en las condiciones iniciales es:
 \begin{equation}
     \lambda = -\frac{1}{R\cdot C^2}
             = -\frac{1}{1{,}17\times(2{,}5\times10^{-4})^2}
-            \approx -1{,}37\times10^7 \text{ s}^{-1}
+            \approx -1{,}3675\times10^7 \text{ s}^{-1}
 \end{equation}
 
-El paso máximo estable sería:
+El paso máximo estable permitido por el criterio de estabilidad sería:
 \begin{equation}
-    \Delta t_{\max} = \frac{2}{|\lambda|} \approx \frac{2}{1{,}37\times10^7}
-                    \approx 1{,}46\times10^{-7} \text{ s} = 0{,}146\;\mu\text{s}
+    \Delta t_{\max} = \frac{2}{|\lambda|} \approx \frac{2}{1{,}3675\times10^7}
+                    \approx 1{,}4625\times10^{-7} \text{ s} \approx 0{,}146 \;\mu\text{s}
 \end{equation}
 
-El paso dado $\Delta t = 500\;\mu\text{s}$ es aproximadamente \textbf{3400 veces
-mayor} que $\Delta t_{\max}$, lo que garantiza divergencia en la primera iteración.
+El paso propuesto $\Delta t = 500\;\mu\text{s}$ es aproximadamente \textbf{3400 veces
+mayor} que $\Delta t_{\max}$, lo que produce una divergencia oscilatoria destructiva desde la primera iteración.
 
 \subsubsection*{Iteración 2: de $t_1 = 0{,}5$ ms a $t_2 = 1{,}0$ ms}
 
 \begin{itemize}
-    \item $q_1 \approx -41{,}02$ C (divergente desde la primera iteración).
-    \item $q_1$ está fuera del rango tabulado $[0,\;6\times10^{-3}]$, por lo que
-          la interpolación retorna $R = R(0) = 0{,}05\;\Omega$ (extrapolación constante).
-    \item $\phi(t_1,q_1) = -q_1/(R(q_1)\cdot C^2)$, pero al aplicar el límite
-          $q_1 \leq 0$ la función $\phi$ retorna 0 en el código.
-    \item $q_2 \approx q_1$ (el método se estabiliza artificialmente en un valor negativo erróneo).
+    \item $q_1 \approx -41{,}02$ C (totalmente divergente).
+    \item Al estar $q_1$ fuera del rango tabulado $[0,\;6\times10^{-3}]$, cualquier algoritmo de interpolación saturará o extrapolará de forma imprevista (por ejemplo, retornando $R = R(0) = 0{,}05\;\Omega$).
+    \item No obstante, dado que físicamente la carga ya cruzó por cero de manera artificial y rompió las fronteras del modelo, el método pierde validez matemática. En implementaciones de código con guardas físicas ($\phi = 0$ para $q \le 0$), el valor se congela erróneamente en el negativo ($q_2 \approx q_1$).
 \end{itemize}
 
-\textbf{Conclusión iteraciones manuales:} Euler hacia adelante con $\Delta t = 0{,}5$ ms
-es inestable para este sistema. Para obtener resultados físicamente válidos sería
-necesario $\Delta t \lesssim 0{,}15\;\mu$s o emplear un método implícito (Euler hacia
-atrás, Crank-Nicolson) que es incondicionalmente estable.
+\textbf{Conclusión de las iteraciones:} El método de Euler hacia adelante con $\Delta t = 0{,}5$ ms
+es completamente inutilizable para este problema. Para obtener resultados válidos se requiere usar un $\Delta t \le 0{,}14 \;\mu$s o emplear métodos implícitos (como Euler hacia atrás o Crank-Nicolson), los cuales son incondicionalmente estables.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \subsection{2.3 Análisis Comparativo Crítico: Trapecio vs.\ Euler}
 
 \subsubsection*{Error de truncamiento de la Regla del Trapecio Compuesta}
 
-El error global del Trapecio Compuesto es de orden $O(\Delta q^2)$:
+El error global del Trapecio Compuesto es de orden $\mathcal{O}(\Delta q^2)$:
 \begin{equation}
-    E_{\text{Trap}} = O\!\left((\Delta q)^2\right) = O(10^{-6})
+    E_{\text{Trap}} = \mathcal{O}\!\left((\Delta q)^2\right) = \mathcal{O}(10^{-6})
 \end{equation}
-Este error \textbf{no se acumula} en el tiempo: se comete una vez y queda fijo.
+Este error \textbf{no se acumula} dinámicamente: se calcula la cuadratura directamente sobre los datos espaciales y queda acotado.
 
 \subsubsection*{Error de truncamiento de Euler hacia adelante}
 
-El error local por paso de Euler es $O(\Delta t^2)$, pero al avanzar
+El error local por paso de Euler es $\mathcal{O}(\Delta t^2)$, pero al avanzar
 $N = T/\Delta t$ pasos, el error \textbf{se acumula globalmente}:
 \begin{equation}
-    E_{\text{Euler}} = O\!\left(\Delta t\right) \quad \text{(global)}
+    E_{\text{Euler}} = \mathcal{O}\!\left(\Delta t\right) \quad \text{(global)}
 \end{equation}
-Con $\Delta t = 5\times10^{-4}$ s, el error global crece linealmente con
-el número de pasos.
+Con un paso inadecuado, el error no solo crece, sino que induce la divergencia total del algoritmo.
 
 \subsubsection*{Fuentes adicionales de error en Euler}
 
-Euler también acumula error de interpolación de $R(q)$ en cada paso, ya que
-$q_i$ rara vez cae sobre un nodo exacto de la tabla. Esto introduce un error
-extra $O(\Delta q^2)$ por paso, sumado al error de truncamiento propio del método.
+Euler también acumula el error propio de interpolar $R(q)$ en cada paso de tiempo, ya que la carga $q_i$ calculada continuamente varía y requiere aproximar valores no tabulados, sumando incertidumbre al método de integración temporal de primer orden.
 
 \subsubsection*{Conclusión}
 
@@ -410,13 +410,84 @@ extra $O(\Delta q^2)$ por paso, sumado al error de truncamiento propio del méto
     \textbf{El método de Euler hacia adelante acumula mayor error de
     truncamiento global} que la Regla del Trapecio Compuesta. La razón
     fundamental es que Trapecio produce una estimación \emph{directa y
-    no acumulativa} del integral con error $O(\Delta q^2)$, mientras que
-    Euler aplica una aproximación de primer orden en cada paso temporal y
-    el error crece con $O(\Delta t \cdot N) = O(1)$ a lo largo de la
-    simulación completa. La convergencia de Euler es más lenta (orden 1
-    vs.\ orden 2 del Trapecio), y su estabilidad depende de que
-    $\Delta t$ sea suficientemente pequeño para que $|\phi'|\cdot\Delta t < 2$.
+    no acumulativa} sobre la geometría de la curva con un orden de convergencia superior $\mathcal{O}(\Delta q^2)$, mientras que
+    Euler aplica una aproximación de primer orden de propagación temporal donde el error arrastrado crece exponencialmente si el paso $\Delta t$ no respeta la severa restricción de estabilidad del sistema.
 \end{quote}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{2.4 Extensión: Comparación de 4 Métodos}
+
+Para profundizar el análisis comparativo, se implementaron computacionalmente
+cuatro combinaciones de método de integración e interpolación:
+
+\begin{enumerate}
+    \item \textbf{Euler + Interpolación Lineal}
+    \item \textbf{Euler + Polinomios de Lagrange}
+    \item \textbf{Trapecio Implícito (Crank-Nicolson) + Interpolación Lineal}
+    \item \textbf{Trapecio Implícito (Crank-Nicolson) + Polinomios de Lagrange}
+\end{enumerate}
+
+El \textbf{Trapecio Implícito} para EDOs resuelve en cada paso la ecuación:
+\begin{equation}
+    q_{i+1} = q_i + \frac{\Delta t}{2}\bigl[\phi(q_i) + \phi(q_{i+1})\bigr]
+\end{equation}
+mediante iteración de Newton-Raphson, siendo \textbf{A-estable} (estable para
+cualquier $\Delta t$), a diferencia de Euler que requiere
+$\Delta t < 2/|\lambda| \approx 0{,}146\;\mu$s.
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados de los 4 métodos con $\Delta t = 5\times10^{-4}$ s (enunciado)}
+    \begin{tabular}{lrrl}
+        \toprule
+        \textbf{Método} & \textbf{Pasos} & \textbf{$q_{\text{final}}$ [C]} & \textbf{Estado} \\
+        \midrule
+        Euler + Lineal    & 1 & $-41{,}02$ & Diverge ✗ \\
+        Euler + Lagrange  & 1 & $-41{,}02$ & Diverge ✗ \\
+        Trapecio + Lineal  & 1 & $0$ & Descargado ✓ \\
+        Trapecio + Lagrange & 1 & $0$ & Descargado ✓ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados con $\Delta t = 5\times10^{-9}$ s (físicamente apropiado)}
+    \begin{tabular}{lrrl}
+        \toprule
+        \textbf{Método} & \textbf{Pasos} & \textbf{$T$ [ns]} & \textbf{Estado} \\
+        \midrule
+        Euler + Lineal     & 14 & 70{,}0 & Descargado ✓ \\
+        Euler + Lagrange   & 14 & 70{,}0 & Descargado ✓ \\
+        Trapecio + Lineal  & 24 & 120{,}0 & Descargado ✓ \\
+        Trapecio + Lagrange & 23 & 115{,}0 & Descargado ✓ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent\textbf{Diferencia entre interpolaciones:}
+$\max|\Delta q|_{\text{Lineal}-\text{Lagrange}} < 1\%$ de $q_0$ en ambos métodos.
+Para esta tabla equiespaciada ($\Delta q = 10^{-3}$ C), ambas interpolaciones
+son prácticamente equivalentes. La interpolación de Lagrange puede presentar
+oscilaciones de Runge en los extremos del dominio.
+
+La Figura~\ref{fig:comparacion} muestra los seis paneles de la comparación
+completa generados por \texttt{problema2.py}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{grafica_trapecio.png}
+    \caption{Comparación de los 4 métodos numéricos para la EDO de descarga.
+             \textbf{A)} Con $\Delta t$ del enunciado: Euler diverge (flechas fuera del eje),
+             Trapecio Implícito se mantiene estable.
+             \textbf{B)} Con $\Delta t$ físicamente apropiado ($5\times10^{-9}$ s):
+             los 4 métodos convergen y reproducen la descarga de $\sim59$ ns.
+             \textbf{C--D)} Comparación Lineal vs.\ Lagrange por separado para Euler
+             y Trapecio Implícito.
+             \textbf{E--F)} Diferencia absoluta entre interpolaciones en escala
+             logarítmica; el máximo es inferior al $1\%$ de $q_0$ en ambos casos.}
+    \label{fig:comparacion}
+\end{figure}
 
 % =============================================================================
 \section{Resumen de Resultados}
@@ -424,19 +495,22 @@ extra $O(\Delta q^2)$ por paso, sumado al error de truncamiento propio del méto
 
 \begin{table}[H]
     \centering
-    \caption{Resumen comparativo de los dos métodos numéricos}
-    \begin{tabular}{lll}
+    \caption{Resumen comparativo de todos los métodos implementados}
+    \label{tab:resumen}
+    \begin{tabular}{llll}
         \toprule
-        \textbf{Método} & \textbf{Tiempo de descarga $T$} & \textbf{Error global} \\
+        \textbf{Método} & \textbf{$T$ de descarga} & \textbf{Error global} & \textbf{Estabilidad} \\
         \midrule
-        Trapecio Compuesto (Problema 1) & Ver salida \texttt{problema1.py} & $O(\Delta q^2)$ \\
-        Euler hacia adelante (Problema 2) & Ver salida \texttt{problema2.py} & $O(\Delta t)$ \\
+        Trapecio Compuesto (P.1) & $5{,}9313\times10^{-5}$ ms $\approx 59{,}3$ ns & $\mathcal{O}(\Delta q^2)$ & Incondicional \\
+        Euler (P.2, $\Delta t$ dado) & Diverge ($q_1 \approx -41$ C) & $\mathcal{O}(\Delta t)$ & Condicional \\
+        Trapecio Impl. ($\Delta t$ dado) & $\approx 0$ en 1 paso & $\mathcal{O}(\Delta t^2)$ & Incondicional \\
+        Euler ($\Delta t$ estable) & $\approx 70$ ns & $\mathcal{O}(\Delta t)$ & Condicional \\
+        Trapecio Impl. ($\Delta t$ estable) & $\approx 115{-}120$ ns & $\mathcal{O}(\Delta t^2)$ & Incondicional \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Los valores numéricos precisos se obtienen ejecutando los scripts Python
-adjuntos:
+Los resultados numéricos se obtienen ejecutando los scripts:
 \begin{verbatim}
     python problema1.py
     python problema2.py
