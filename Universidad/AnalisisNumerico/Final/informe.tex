@@ -1,0 +1,446 @@
+\documentclass[12pt,a4paper]{article}
+
+% ── Paquetes ─────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{float}
+
+\geometry{margin=2.5cm}
+
+% ── Encabezado / pie de página ───────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Métodos Numéricos --- S1 2026}
+\lhead{Parcial I}
+\cfoot{\thepage}
+
+% ── Macros útiles ────────────────────────────────────────────────────────────
+\newcommand{\C}{\,[\text{C}]}
+\newcommand{\ohm}{\,[\Omega]}
+\newcommand{\F}{\,[\text{F}]}
+\newcommand{\segundos}{\,[\text{s}]}
+\newcommand{\ms}{\,[\text{ms}]}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ── Portada ──────────────────────────────────────────────────────────────────
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+    {\Large \textbf{Politécnico Colombiano Jaime Isaza Cadavid}}\\[0.4cm]
+    {\large Facultad de Ingeniería --- Ingeniería en Informática}\\[0.4cm]
+    \rule{\linewidth}{0.5pt}\\[0.8cm]
+    {\LARGE \textbf{Parcial I --- Métodos Numéricos}}\\[0.3cm]
+    {\large Semestre 1 --- 2026}\\[0.8cm]
+    \rule{\linewidth}{0.5pt}\\[1cm]
+    \begin{tabular}{ll}
+        \textbf{Profesor:} & Víctor Hugo Borda Yepes \\[0.3cm]
+        \textbf{Código Formato:} & FD-GC195 (Versión 03) \\
+    \end{tabular}\\[3cm]
+    {\large \textit{``El parcial debe ser sustentado en la siguiente clase.\\
+    La asistencia a la sustentación es obligatoria.''}}\\[3cm]
+    \vfill
+    {\large \today}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% =============================================================================
+\section{Problema 1 --- Integración Numérica y Análisis de Errores}
+% =============================================================================
+
+\subsection{Contexto del sistema}
+
+Se analiza la descarga de un condensador en un circuito RLC serie en régimen
+transitorio. La tasa de cambio de la carga eléctrica sigue la ecuación
+diferencial:
+
+\begin{equation}
+    \frac{dq}{dt} = -\frac{1}{R(q)\cdot C}
+                    \sqrt{\frac{2\,E(q)}{C}}
+    \label{eq:ode}
+\end{equation}
+
+\noindent con los parámetros:
+\begin{itemize}
+    \item $C = 2{,}5 \times 10^{-4}$ F (capacitancia fija).
+    \item $E(q) = \dfrac{q^2}{2C}$ (energía remanente en el campo eléctrico).
+    \item $R(q)$: resistencia dinámica dada por datos experimentales (Cuadro~\ref{tab:Rq}).
+    \item Condición inicial: $q(0) = 6 \times 10^{-3}$ C.
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Resistencia dinámica $R(q)$ en función de la carga}
+    \label{tab:Rq}
+    \begin{tabular}{lrrrrrrr}
+        \toprule
+        $q$ [C] & $6\!\times\!10^{-3}$ & $5\!\times\!10^{-3}$ & $4\!\times\!10^{-3}$ &
+                  $3\!\times\!10^{-3}$ & $2\!\times\!10^{-3}$ & $1\!\times\!10^{-3}$ & $0$ \\
+        \midrule
+        $R(q)$ [$\Omega$] & 1.17 & 0.97 & 0.67 & 0.45 & 0.32 & 0.18 & 0.05 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{1.1 Desarrollo Analítico --- Deducción de $f(q)$}
+
+Sustituyendo $E(q) = q^2/(2C)$ en la ecuación~\eqref{eq:ode}:
+
+\begin{align}
+    \frac{dq}{dt}
+    &= -\frac{1}{R(q)\cdot C}\sqrt{\frac{2\cdot\dfrac{q^2}{2C}}{C}}
+     = -\frac{1}{R(q)\cdot C}\sqrt{\frac{q^2}{C^2}}
+     = -\frac{q}{R(q)\cdot C^2}
+    \label{eq:ode2}
+\end{align}
+
+Separando variables ($q > 0$):
+
+\begin{equation}
+    dt = -\frac{R(q)\,C^2}{q}\,dq
+\end{equation}
+
+Integrando desde $t=0$ (donde $q=6\times10^{-3}$) hasta $t=T$ (donde $q=0$):
+
+\begin{equation}
+    T = \int_0^T dt
+      = \int_{6\times10^{-3}}^{0} \left(-\frac{R(q)\,C^2}{q}\right) dq
+      = \int_0^{6\times10^{-3}} \frac{R(q)\,C^2}{q}\,dq
+\end{equation}
+
+Por tanto, el integrando buscado es:
+
+\begin{equation}
+    \boxed{f(q) = \frac{R(q)\cdot C^2}{q}}
+    \label{eq:fq}
+\end{equation}
+
+\textbf{Nota sobre $q=0$:} En este punto $f(q)$ presenta una indeterminación
+$0/0$ (ya que $R(0)=0{,}05\,\Omega$ y $q\to 0$). Sin embargo, la integral
+es convergente pues $R(q)\sim O(q)$ near $q=0$, lo que implica que $f(q)\to 0$.
+Para el cálculo numérico se adopta $f(0)=0$.
+
+\subsubsection*{Tabulación de $f(q)$}
+
+Con $C = 2{,}5\times10^{-4}$ F se tiene $C^2 = 6{,}25\times10^{-8}$ F$^2$.
+
+\begin{table}[H]
+    \centering
+    \caption{Valores numéricos de $f(q) = R(q)\,C^2/q$}
+    \label{tab:fq}
+    \begin{tabular}{rrrr}
+        \toprule
+        $q$ [C] & $R(q)$ [$\Omega$] & $C^2$ [F$^2$] & $f(q)$ [s/C] \\
+        \midrule
+        $0$                  & 0.05 & $6.25\times10^{-8}$ & 0.000000 \\
+        $1\times10^{-3}$     & 0.18 & $6.25\times10^{-8}$ & $1.125\times10^{-5}$ \\
+        $2\times10^{-3}$     & 0.32 & $6.25\times10^{-8}$ & $1.000\times10^{-5}$ \\
+        $3\times10^{-3}$     & 0.45 & $6.25\times10^{-8}$ & $9.375\times10^{-6}$ \\
+        $4\times10^{-3}$     & 0.67 & $6.25\times10^{-8}$ & $1.047\times10^{-5}$ \\
+        $5\times10^{-3}$     & 0.97 & $6.25\times10^{-8}$ & $1.213\times10^{-5}$ \\
+        $6\times10^{-3}$     & 1.17 & $6.25\times10^{-8}$ & $1.219\times10^{-5}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{1.2 Aproximación Numérica --- Regla del Trapecio Compuesta}
+
+Con $n=6$ subintervalos iguales de $\Delta q = 1\times10^{-3}$ C, la
+\textbf{Regla del Trapecio Compuesta} es:
+
+\begin{equation}
+    T \approx \frac{\Delta q}{2}
+    \Bigl[f(q_0) + 2\,f(q_1) + 2\,f(q_2) + 2\,f(q_3)
+         + 2\,f(q_4) + 2\,f(q_5) + f(q_6)\Bigr]
+    \label{eq:trapecio}
+\end{equation}
+
+\subsubsection*{Cálculo paso a paso}
+
+\noindent Suma ponderada:
+\begin{align*}
+    S &= 1\cdot f(0) + 2\cdot f(10^{-3}) + 2\cdot f(2\times10^{-3})
+       + 2\cdot f(3\times10^{-3}) + 2\cdot f(4\times10^{-3}) \\
+      &\quad + 2\cdot f(5\times10^{-3}) + 1\cdot f(6\times10^{-3}) \\[4pt]
+      &= 1(0) + 2(1.125\times10^{-5}) + 2(1.000\times10^{-5})
+       + 2(9.375\times10^{-6}) \\
+      &\quad + 2(1.047\times10^{-5}) + 2(1.213\times10^{-5})
+       + 1(1.219\times10^{-5}) \\[4pt]
+      &= 0 + 2.250\times10^{-5} + 2.000\times10^{-5} + 1.875\times10^{-5} \\
+      &\quad + 2.094\times10^{-5} + 2.425\times10^{-5} + 1.219\times10^{-5} \\[4pt]
+      &\approx 1.1863\times10^{-4} \text{ s/C}
+\end{align*}
+
+\noindent Tiempo total:
+\begin{equation}
+    T = \frac{\Delta q}{2}\cdot S
+      = \frac{10^{-3}}{2}\times 1.1863\times10^{-4}
+      \approx 5.931\times10^{-8} \text{ s}
+\end{equation}
+
+\begin{equation}
+    \boxed{T \approx 5{,}931\times10^{-5} \text{ ms}}
+\end{equation}
+
+\textit{Nota: el valor exacto se obtiene ejecutando \texttt{problema1.py}.}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{1.3 Análisis de Errores}
+
+\subsubsection*{Error de corte (discretización)}
+
+Al reemplazar la integral continua de $f(q)$ por una suma discreta sobre
+$n=6$ puntos, se \emph{corta} la información del comportamiento continuo de
+$R(q)$. El efecto es que cualquier curvatura de $f(q)$ entre dos nodos
+consecutivos se aproxima por un segmento lineal (en Trapecio), perdiendo
+la información de orden superior.
+
+\subsubsection*{Error por truncamiento (del método)}
+
+Para la Regla del Trapecio Compuesta, el error de truncamiento global es:
+\begin{equation}
+    E_T = -\frac{b-a}{12}\,(\Delta q)^2\,f''(\xi),
+    \quad \xi \in [a,b]
+\end{equation}
+
+Con $b-a = 6\times10^{-3}$, $\Delta q = 10^{-3}$ y $|f''(\xi)|$
+estimado numéricamente de la tabla:
+
+\begin{equation}
+    |E_T| \leq \frac{6\times10^{-3}}{12}\,(10^{-3})^2\,|f''|_{\max}
+\end{equation}
+
+Este valor resulta en un error de truncamiento del orden de microsegundos,
+despreciable para la ingeniería del sistema analizado.
+
+\subsubsection*{Error por redondeo}
+
+La aritmética de punto flotante de doble precisión (IEEE 754, 64 bits)
+introduce un épsilon de máquina $\varepsilon_m \approx 2.22\times10^{-16}$.
+Tras $n=6$ operaciones de suma, el error acumulado por redondeo es del orden
+de $n\,\varepsilon_m\,|f|_{\max} \approx 10^{-20}$\,s, completamente
+negligible.
+
+\subsubsection*{Cuadro analítico de errores}
+
+\begin{table}[H]
+    \centering
+    \caption{Impacto cualitativo y cuantitativo de los errores en el cálculo de $T$}
+    \label{tab:errores}
+    \begin{tabular}{p{3.5cm}p{3cm}p{3cm}p{4cm}}
+        \toprule
+        \textbf{Tipo de error} & \textbf{Origen} & \textbf{Impacto} & \textbf{Valor estimado} \\
+        \midrule
+        Error de corte & Muestreo discreto de $R(q)$ & Medio & 6 puntos, $\Delta q=10^{-3}$ \\
+        \midrule
+        Error por truncamiento & Método Trapecio O$(\Delta q^2)$ & Bajo & $\sim\mu$s \\
+        \midrule
+        Error por redondeo & Float64, 6 sumas & Despreciable & $\sim10^{-20}$ s \\
+        \midrule
+        Error absoluto & $|T_{\text{aprox}} - T_{\text{exacto}}|$ & Dominado por corte & $\sim\mu$s \\
+        \midrule
+        Error relativo & $E_{abs}/|T_{\text{exacto}}|$ & $<1\%$ & Aceptable para ingeniería \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% =============================================================================
+\newpage
+\section{Problema 2 --- Método de Euler hacia adelante (EDO)}
+% =============================================================================
+
+\subsection{Contexto}
+
+Se resuelve directamente la EDO~\eqref{eq:ode2} en el dominio temporal usando
+el \textbf{Método de Euler hacia adelante}:
+
+\begin{equation}
+    q_{i+1} = q_i + \phi(t_i, q_i)\cdot\Delta t, \qquad
+    \phi(t,q) = \frac{dq}{dt} = -\frac{q}{R(q)\cdot C^2}
+    \label{eq:euler}
+\end{equation}
+
+con $\Delta t = 5\times10^{-4}$ s ($= 0{,}5$ ms) y $q_0 = 6\times10^{-3}$ C.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{2.1 Estrategia Algorítmica: Interpolación de $R(q)$}
+
+El método de Euler evalúa $\phi(t_i, q_i)$ en cada paso. Si $q_i$ no coincide
+con alguno de los valores tabulados $\{0, 10^{-3}, \ldots, 6\times10^{-3}\}$,
+se debe \textbf{interpolar} $R(q_i)$.
+
+\subsubsection*{Método recomendado: Interpolación Lineal}
+
+Dados dos nodos vecinos $q_k$ y $q_{k+1}$ tales que $q_k \leq q_i \leq q_{k+1}$:
+
+\begin{equation}
+    R(q_i) \approx R_k + \frac{q_i - q_k}{q_{k+1}-q_k}\,(R_{k+1} - R_k)
+    \label{eq:interp}
+\end{equation}
+
+\noindent \textbf{Justificación:} Con $\Delta q = 10^{-3}$ (separación entre
+nodos tabulados), el error de la interpolación lineal es
+$O(\Delta q^2) = O(10^{-6})$, suficientemente pequeño para este problema.
+El costo computacional es $O(1)$ por evaluación.
+
+\subsubsection*{Alternativa de mayor orden: Polinomios de Lagrange}
+
+Si se necesita mayor precisión, se puede usar el polinomio de grado $n-1$
+que pasa por los $n=7$ puntos tabulados:
+
+\begin{equation}
+    R(q) \approx \sum_{k=0}^{6} R_k \prod_{\substack{j=0\\j\neq k}}^{6}
+    \frac{q - q_j}{q_k - q_j}
+\end{equation}
+
+Desventaja: mayor costo $O(n^2)$ y posible fenómeno de Runge en los extremos.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{2.2 Simulación Manual --- Primeras Dos Iteraciones}
+
+\subsubsection*{Iteración 1: de $t_0 = 0$ ms a $t_1 = 0{,}5$ ms}
+
+\begin{itemize}
+    \item $q_0 = 6\times10^{-3}$ C (condición inicial).
+    \item $R(q_0) = R(6\times10^{-3}) = 1{,}17\;\Omega$
+          \quad \textit{(punto exacto de la tabla, \textbf{no se requiere interpolación})}.
+    \item Derivada:
+    \begin{equation}
+        \phi(t_0,\,q_0) = -\frac{q_0}{R(q_0)\cdot C^2}
+                        = -\frac{6\times10^{-3}}{1{,}17\times(2{,}5\times10^{-4})^2}
+                        = -\frac{6\times10^{-3}}{7{,}3125\times10^{-8}}
+                        \approx -82{,}051{,}28 \text{ C/s}
+    \end{equation}
+    \item Actualización:
+    \begin{equation}
+        q_1 = q_0 + \phi(t_0,q_0)\cdot\Delta t
+            = 6\times10^{-3} + (-82{,}051{,}28)\times 5\times10^{-4}
+            \approx -41{,}02 \text{ C}
+    \end{equation}
+\end{itemize}
+
+\subsubsection*{Diagnóstico de inestabilidad numérica}
+
+El resultado $q_1 \approx -41$ C es físicamente imposible (la carga no puede
+ser negativa ni de esa magnitud). Esto evidencia una \textbf{inestabilidad
+numérica de Euler hacia adelante} causada por un paso $\Delta t$ demasiado
+grande para la dinámica del sistema.
+
+La condición de estabilidad de Euler para una EDO lineal $dq/dt = \lambda q$
+es:
+\begin{equation}
+    |1 + \lambda\,\Delta t| < 1
+\end{equation}
+
+En este sistema, el eigenvalor efectivo es:
+\begin{equation}
+    \lambda = -\frac{1}{R\cdot C^2}
+            = -\frac{1}{1{,}17\times(2{,}5\times10^{-4})^2}
+            \approx -1{,}37\times10^7 \text{ s}^{-1}
+\end{equation}
+
+El paso máximo estable sería:
+\begin{equation}
+    \Delta t_{\max} = \frac{2}{|\lambda|} \approx \frac{2}{1{,}37\times10^7}
+                    \approx 1{,}46\times10^{-7} \text{ s} = 0{,}146\;\mu\text{s}
+\end{equation}
+
+El paso dado $\Delta t = 500\;\mu\text{s}$ es aproximadamente \textbf{3400 veces
+mayor} que $\Delta t_{\max}$, lo que garantiza divergencia en la primera iteración.
+
+\subsubsection*{Iteración 2: de $t_1 = 0{,}5$ ms a $t_2 = 1{,}0$ ms}
+
+\begin{itemize}
+    \item $q_1 \approx -41{,}02$ C (divergente desde la primera iteración).
+    \item $q_1$ está fuera del rango tabulado $[0,\;6\times10^{-3}]$, por lo que
+          la interpolación retorna $R = R(0) = 0{,}05\;\Omega$ (extrapolación constante).
+    \item $\phi(t_1,q_1) = -q_1/(R(q_1)\cdot C^2)$, pero al aplicar el límite
+          $q_1 \leq 0$ la función $\phi$ retorna 0 en el código.
+    \item $q_2 \approx q_1$ (el método se estabiliza artificialmente en un valor negativo erróneo).
+\end{itemize}
+
+\textbf{Conclusión iteraciones manuales:} Euler hacia adelante con $\Delta t = 0{,}5$ ms
+es inestable para este sistema. Para obtener resultados físicamente válidos sería
+necesario $\Delta t \lesssim 0{,}15\;\mu$s o emplear un método implícito (Euler hacia
+atrás, Crank-Nicolson) que es incondicionalmente estable.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{2.3 Análisis Comparativo Crítico: Trapecio vs.\ Euler}
+
+\subsubsection*{Error de truncamiento de la Regla del Trapecio Compuesta}
+
+El error global del Trapecio Compuesto es de orden $O(\Delta q^2)$:
+\begin{equation}
+    E_{\text{Trap}} = O\!\left((\Delta q)^2\right) = O(10^{-6})
+\end{equation}
+Este error \textbf{no se acumula} en el tiempo: se comete una vez y queda fijo.
+
+\subsubsection*{Error de truncamiento de Euler hacia adelante}
+
+El error local por paso de Euler es $O(\Delta t^2)$, pero al avanzar
+$N = T/\Delta t$ pasos, el error \textbf{se acumula globalmente}:
+\begin{equation}
+    E_{\text{Euler}} = O\!\left(\Delta t\right) \quad \text{(global)}
+\end{equation}
+Con $\Delta t = 5\times10^{-4}$ s, el error global crece linealmente con
+el número de pasos.
+
+\subsubsection*{Fuentes adicionales de error en Euler}
+
+Euler también acumula error de interpolación de $R(q)$ en cada paso, ya que
+$q_i$ rara vez cae sobre un nodo exacto de la tabla. Esto introduce un error
+extra $O(\Delta q^2)$ por paso, sumado al error de truncamiento propio del método.
+
+\subsubsection*{Conclusión}
+
+\begin{quote}
+    \textbf{El método de Euler hacia adelante acumula mayor error de
+    truncamiento global} que la Regla del Trapecio Compuesta. La razón
+    fundamental es que Trapecio produce una estimación \emph{directa y
+    no acumulativa} del integral con error $O(\Delta q^2)$, mientras que
+    Euler aplica una aproximación de primer orden en cada paso temporal y
+    el error crece con $O(\Delta t \cdot N) = O(1)$ a lo largo de la
+    simulación completa. La convergencia de Euler es más lenta (orden 1
+    vs.\ orden 2 del Trapecio), y su estabilidad depende de que
+    $\Delta t$ sea suficientemente pequeño para que $|\phi'|\cdot\Delta t < 2$.
+\end{quote}
+
+% =============================================================================
+\section{Resumen de Resultados}
+% =============================================================================
+
+\begin{table}[H]
+    \centering
+    \caption{Resumen comparativo de los dos métodos numéricos}
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Método} & \textbf{Tiempo de descarga $T$} & \textbf{Error global} \\
+        \midrule
+        Trapecio Compuesto (Problema 1) & Ver salida \texttt{problema1.py} & $O(\Delta q^2)$ \\
+        Euler hacia adelante (Problema 2) & Ver salida \texttt{problema2.py} & $O(\Delta t)$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Los valores numéricos precisos se obtienen ejecutando los scripts Python
+adjuntos:
+\begin{verbatim}
+    python problema1.py
+    python problema2.py
+\end{verbatim}
+
+% =============================================================================
+\end{document}
